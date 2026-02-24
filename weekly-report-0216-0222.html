@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>运营商行业周报 2026.02.16 - 02.22</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #E8ECF4;
+      padding: 40px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .report {
+      width: 860px;
+      background: #F8FAFF;
+      padding: 40px;
+      margin: 0 auto;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    }
+
+    /* Header */
+    .header { margin-bottom: 32px; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; }
+    .badge {
+      background: #E0E7FF; color: #6366F1; font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .header-date { color: #94A3B8; font-size: 11px; }
+    .header h1 {
+      font-size: 32px; font-weight: 900; color: #1E293B; margin-top: 16px; margin-bottom: 8px;
+    }
+    .header h1 span { color: #6366F1; }
+    .header p { color: #64748B; font-size: 13px; }
+
+    /* Grid layouts */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    /* Cards */
+    .card {
+      background: white; padding: 20px; border-radius: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04); border: 1px solid #F1F5F9;
+    }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .icon-box {
+      width: 36px; height: 36px; border-radius: 8px; display: flex;
+      align-items: center; justify-content: center; font-size: 18px;
+    }
+    .icon-indigo { background: #EEF2FF; color: #6366F1; }
+    .icon-green { background: #F0FDF4; color: #22C55E; }
+    .icon-orange { background: #FFF7ED; color: #F97316; }
+    .icon-red { background: #FEF2F2; color: #EF4444; }
+    .icon-purple { background: #F5F3FF; color: #8B5CF6; }
+    .icon-sky { background: #F0F9FF; color: #0EA5E9; }
+
+    .tag {
+      font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 9999px;
+    }
+    .tag-red { background: #FEF2F2; color: #EF4444; }
+    .tag-green { background: #F0FDF4; color: #16A34A; }
+    .tag-orange { background: #FFF7ED; color: #F97316; }
+    .tag-indigo { background: #EEF2FF; color: #6366F1; }
+    .tag-sky { background: #F0F9FF; color: #0EA5E9; }
+    .tag-purple { background: #F5F3FF; color: #8B5CF6; }
+
+    .card-label { color: #64748B; font-size: 10px; font-weight: 500; margin-bottom: 4px; }
+    .card-value { display: flex; align-items: baseline; gap: 8px; }
+    .card-value .big { font-size: 24px; font-weight: 700; color: #1E293B; }
+    .card-value .small { font-size: 10px; color: #94A3B8; }
+    .card-value .up { font-size: 10px; color: #22C55E; }
+
+    /* Section */
+    .section { margin-bottom: 24px; }
+    .section-title {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+    }
+    .section-bar {
+      width: 4px; height: 24px; border-radius: 9999px;
+    }
+    .section-title h2 { font-size: 18px; font-weight: 700; color: #1E293B; }
+    .section-title .subtitle { font-size: 10px; color: #94A3B8; margin-left: 4px; }
+
+    /* Policy content */
+    .policy-content {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .policy-icon {
+      min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+      border-radius: 8px; font-size: 16px; margin-top: 2px;
+    }
+    .policy-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .policy-text strong { font-weight: 700; }
+    .policy-text .red { color: #EF4444; font-weight: 700; }
+    .policy-text .indigo { color: #6366F1; font-weight: 700; }
+    .policy-text .green { color: #16A34A; font-weight: 700; }
+    .policy-note { font-size: 11px; color: #94A3B8; margin-top: 8px; line-height: 1.6; }
+
+    /* Dynamics */
+    .dyn-tag {
+      display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px;
+      border-radius: 9999px; margin-right: 6px;
+    }
+    .dyn-title { font-size: 14px; font-weight: 700; color: #1E293B; display: inline; }
+    .dyn-header { margin-bottom: 10px; display: flex; align-items: center; }
+    .dyn-body { font-size: 12px; color: #64748B; line-height: 1.7; }
+    .dyn-body strong { font-weight: 700; color: #334155; }
+
+    /* Data stats */
+    .stat-box {
+      text-align: center; padding: 12px; background: #F8FAFF; border-radius: 12px;
+    }
+    .stat-label { font-size: 10px; color: #94A3B8; margin-bottom: 4px; }
+    .stat-value { font-size: 22px; font-weight: 700; }
+    .stat-value.indigo { color: #6366F1; }
+    .stat-value.green { color: #22C55E; }
+    .stat-value.orange { color: #F97316; }
+    .stat-value.red { color: #EF4444; }
+    .stat-unit { font-size: 10px; color: #94A3B8; }
+    .stat-notes {
+      margin-top: 12px; display: flex; gap: 16px;
+      font-size: 10px; color: #94A3B8;
+    }
+
+    /* Personnel */
+    .person-card {
+      background: #F8FAFF; padding: 12px; border-radius: 12px; border: 1px solid #EEF2FF;
+    }
+    .person-name { font-size: 13px; color: #334155; font-weight: 500; margin-top: 8px; }
+    .person-role { font-size: 10px; color: #94A3B8; margin-top: 2px; }
+    .person-from { font-size: 9px; color: #CBD5E1; margin-top: 2px; }
+    .person-mini {
+      display: flex; align-items: center; gap: 8px;
+      background: #F8FAFF; padding: 8px; border-radius: 8px;
+    }
+    .person-avatar {
+      width: 28px; height: 28px; border-radius: 50%; color: white;
+      font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    }
+    .person-mini-name { font-size: 12px; color: #334155; font-weight: 500; }
+    .person-mini-role { font-size: 9px; color: #94A3B8; }
+
+    .sub-title {
+      font-size: 12px; font-weight: 700; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .trend-note {
+      font-size: 10px; color: #94A3B8; margin-top: 12px; padding-top: 12px;
+      border-top: 1px dashed #E2E8F0; line-height: 1.6;
+    }
+
+    /* Focus cards */
+    .focus-card {
+      padding: 20px; border-radius: 16px; color: white;
+    }
+    .focus-num { font-size: 28px; font-weight: 300; margin-bottom: 8px; opacity: 0.6; }
+    .focus-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .focus-body { font-size: 11px; opacity: 0.85; line-height: 1.6; }
+    .bg-grad-indigo { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
+    .bg-grad-green { background: linear-gradient(135deg, #22C55E, #16A34A); }
+    .bg-grad-orange { background: linear-gradient(135deg, #F97316, #EF4444); }
+    .bg-grad-sky { background: linear-gradient(135deg, #0EA5E9, #6366F1); }
+
+    /* Footer */
+    .footer {
+      margin-top: 32px; padding-top: 16px; border-top: 1px dashed #E2E8F0;
+      display: flex; justify-content: space-between; font-size: 10px; color: #94A3B8;
+    }
+
+    .mb-4 { margin-bottom: 16px; }
+    .policy-cards { display: grid; grid-template-columns: 1fr; gap: 12px; }
+
+    /* Timeline style for personnel */
+    .timeline-item {
+      display: flex; align-items: flex-start; gap: 12px; padding: 10px 0;
+      border-bottom: 1px solid #F1F5F9;
+    }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-dot {
+      width: 10px; height: 10px; border-radius: 50%; margin-top: 5px; flex-shrink: 0;
+    }
+    .timeline-content { flex: 1; }
+    .timeline-title { font-size: 12px; color: #334155; font-weight: 600; }
+    .timeline-desc { font-size: 10px; color: #94A3B8; margin-top: 2px; }
+  </style>
+</head>
+<body>
+
+<div class="report">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <span class="badge">Weekly Report</span>
+      <span class="header-date">2026年2月第4周 · 春节假期 & 节后开工</span>
+    </div>
+    <h1>运营商行业周报 <span>02.16 - 02.22</span></h1>
+    <p>国资委"AI+"专项行动深化部署，联通2026战略出炉，国产AI进入"亿级俱乐部"时代</p>
+  </div>
+
+  <!-- 数据概览卡片 -->
+  <div class="grid-3" style="margin-bottom: 32px;">
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-purple">🧠</div>
+        <span class="tag tag-purple">国策</span>
+      </div>
+      <div class="card-label">国资委央企"AI+"定位</div>
+      <div class="card-value">
+        <span class="big">新三者</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-green">📱</div>
+        <span class="tag tag-green">里程碑</span>
+      </div>
+      <div class="card-label">国产AI应用MAU破亿</div>
+      <div class="card-value">
+        <span class="big">4款</span>
+        <span class="up">豆包/元宝/千问/DeepSeek</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-sky">📡</div>
+        <span class="tag tag-sky">全量</span>
+      </div>
+      <div class="card-label">5G-A全量商用目标</div>
+      <div class="card-value">
+        <span class="big">2026年底</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 政策动向 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#6366F1;"></div>
+      <h2>政策动向</h2>
+      <span class="subtitle">国资委定调"新三者"，考核分配改革深化</span>
+    </div>
+    <div class="policy-cards">
+      <!-- 政策1 -->
+      <div class="card">
+        <div class="policy-content">
+          <div class="policy-icon" style="background:#F5F3FF;color:#8B5CF6;">🏛</div>
+          <div>
+            <div class="policy-text">
+              国务院国资委召开<strong>中央企业"AI+"专项行动深化部署会</strong>，明确要求四大运营商落实<span class="indigo">"新三者"</span>定位——<strong>智算基础设施的供给者、人工智能赋能千行百业的推动者、产业体系化布局的组织者</strong>。这标志着运营商在国家AI战略中的角色从"管道提供者"升级为"算力与智能服务平台"。
+            </div>
+            <div class="policy-note">
+              专家解析：国资委将AI能力建设纳入央企考核体系，运营商在算力投资、AI模型部署、行业应用拓展方面将面临更明确的KPI要求，预计2026年算力资本开支将进一步加码。
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 政策2 -->
+      <div class="card">
+        <div class="policy-content">
+          <div class="policy-icon" style="background:#EEF2FF;color:#6366F1;">📊</div>
+          <div>
+            <div class="policy-text">
+              国资委召开<strong>2026年度中央企业考核分配工作会议</strong>，强调深入实施<span class="indigo">"一企一策"分类考核</span>，健全科技创新激励保障机制，推动三项制度改革走深走实，引导国有企业做强做优做大，实现<strong>"十五五"良好开局</strong>。
+            </div>
+            <div class="policy-note">
+              关注点：分类考核下，运营商的新兴业务（云计算、AI、算力）增速将获得更高权重，传统通信业务增长承压但考核容忍度或有所提升。
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行业动态 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#22C55E;"></div>
+      <h2>行业动态</h2>
+      <span class="subtitle">联通四大战略出炉，AI应用"亿级俱乐部"成型</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#FEF2F2;color:#EF4444;">战略</span>
+          <span class="dyn-title">中国联通召开2026年工作会议</span>
+        </div>
+        <div class="dyn-body">
+          中国联通召开2026年工作会议，<strong>强调四项重点工作</strong>：聚焦"连接、算力、服务、安全"核心赛道，全力打造差异化优势。会议提出2026年<strong>每月推出新款eSIM手机</strong>，eSIM手机将全面覆盖三大移动OS生态和所有主流品牌，推动<strong>AI+eSIM融合驱动数智终端</strong>全球突围。
+        </div>
+      </div>
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#F5F3FF;color:#8B5CF6;">AI</span>
+          <span class="dyn-title">国产AI"亿级俱乐部"正式成型</span>
+        </div>
+        <div class="dyn-body">
+          春节假期结束后统计显示，<strong>豆包、元宝、千问、DeepSeek</strong>四款国产AI应用月活用户（MAU）均突破1亿大关，国产AI正式从极客圈层走向<strong>国民级应用工具</strong>。三大运营商作为DeepSeek算力方案提供方，在AI基础设施层面深度受益。
+        </div>
+      </div>
+    </div>
+    <div class="grid-2" style="margin-top:16px;">
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#F0F9FF;color:#0EA5E9;">5G-A</span>
+          <span class="dyn-title">5G-A全量商用冲刺年</span>
+        </div>
+        <div class="dyn-body">
+          中国移动此前制定的<strong>"三步走"计划</strong>进入最后冲刺阶段：2024年超300城启动5G-A商用部署→2025年规模发展→<strong>2026年底实现5G-A全量商用</strong>。ISSCC 2026上，imec发布业界最快<strong>7-bit 175GS/s ADC芯片</strong>（5nm工艺），为AI数据中心高速互联提供关键元器件支撑。
+        </div>
+      </div>
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#FFF7ED;color:#F97316;">终端</span>
+          <span class="dyn-title">2026终端三大趋势与三个变量</span>
+        </div>
+        <div class="dyn-body">
+          联通华盛副总经理陈丰伟发布年度终端市场展望，指出2026年<strong>三大趋势</strong>：AI终端全链爆发、eSIM多终端拓展、消费补贴政策延续。<strong>三个变量</strong>：折叠屏渗透率拐点、卫星通信终端降本、运营商补贴策略向<strong>AI手机+Wi-Fi 7路由器</strong>倾斜。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 市场数据 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#F97316;"></div>
+      <h2>市场数据</h2>
+      <span class="subtitle">节后开盘运营商板块分化，算力概念全线走强</span>
+    </div>
+    <div class="card">
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-label">中国移动市值</div>
+          <div class="stat-value indigo">1.7</div>
+          <div class="stat-unit">万亿元</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">中国电信市值</div>
+          <div class="stat-value green">5234</div>
+          <div class="stat-unit">亿元</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">中国联通市值</div>
+          <div class="stat-value orange">1673</div>
+          <div class="stat-unit">亿元</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">电信派息率</div>
+          <div class="stat-value green">70%</div>
+          <div class="stat-unit">2026年目标</div>
+        </div>
+      </div>
+      <div class="stat-notes">
+        <span>● 中国电信宣布2026年派息率提升至70%，云业务有望继续翻番</span>
+        <span>● 算力板块节后全线爆发，光通信企业春节接近满负荷运转</span>
+      </div>
+    </div>
+    <div class="card" style="margin-top:12px;">
+      <div class="sub-title" style="color:#F97316;">📈 春节假期通信数据亮点</div>
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-label">移动流量增速</div>
+          <div class="stat-value green">+35%</div>
+          <div class="stat-unit">5G流量同比</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">假期总流量</div>
+          <div class="stat-value indigo">660+</div>
+          <div class="stat-unit">万TB</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">重点区域峰值</div>
+          <div class="stat-value orange">3-5x</div>
+          <div class="stat-unit">较平日激增</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">AI保障效果</div>
+          <div class="stat-value green">0</div>
+          <div class="stat-unit">重点区域退服</div>
+        </div>
+      </div>
+      <div class="stat-notes">
+        <span>● 工信部：春节5G流量同比增长35%，AI智能调度首秀表现优异</span>
+        <span>● 微信春节数据：带封面红包超6亿次，广东登顶"最爱发红包"省份</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人事变动 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#8B5CF6;"></div>
+      <h2>人事变动</h2>
+      <span class="subtitle">何飚、王利民正式公告离任，继任悬念待解</span>
+    </div>
+    <div class="card">
+      <div class="sub-title" style="color:#EF4444;">📋 本周正式公告</div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:#6366F1;"></div>
+        <div class="timeline-content">
+          <div class="timeline-title">中国移动（2月12日港交所公告）</div>
+          <div class="timeline-desc"><strong>何飚</strong>因工作调动辞任执行董事、首席执行官、可持续发展委员会委员，已确认与董事会无不同意见。正式赴任<strong>国家广播电视总局副局长、党组成员</strong>。</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-dot" style="background:#EF4444;"></div>
+        <div class="timeline-content">
+          <div class="timeline-title">中国联通（2月12日港交所公告）</div>
+          <div class="timeline-desc"><strong>王利民</strong>因工作调动辞去高级副总裁职务。正式赴任<strong>中国电科党组副书记、董事</strong>。</div>
+        </div>
+      </div>
+
+      <div class="sub-title" style="color:#6366F1; margin-top: 16px;">🔍 待填补的关键岗位</div>
+      <div class="grid-2">
+        <div class="person-card">
+          <span class="tag tag-indigo">中国移动</span>
+          <div class="person-name" style="color:#EF4444;">CEO / 总经理 · 空缺</div>
+          <div class="person-role">何飚离任后，中国移动CEO一职暂由董事长代行管理。节后继任者人选为市场最大关注焦点。</div>
+        </div>
+        <div class="person-card">
+          <span class="tag tag-red">中国联通</span>
+          <div class="person-name" style="color:#EF4444;">高级副总裁 · 空缺</div>
+          <div class="person-role">王利民离任后，联通高管团队面临补位。考虑到联通正处于"连接+算力"转型关键期，继任者需兼具技术与市场背景。</div>
+        </div>
+      </div>
+      <div class="trend-note">
+        趋势分析：通信产业报（2月12日）发布三大运营商最新领导班子一览。何飚从运营商到广电总局的跨部委流动，体现了国家层面对<strong>"通信+广电+卫星"融合</strong>的战略布局。预计中国移动CEO继任者将在两会前后公布。
+      </div>
+    </div>
+  </div>
+
+  <!-- 本周三大关注点 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#EC4899;"></div>
+      <h2>下周三大关注点</h2>
+    </div>
+    <div class="grid-3">
+      <div class="focus-card bg-grad-indigo">
+        <div class="focus-num">01</div>
+        <div class="focus-title">MWC 2026（3月2日-5日）</div>
+        <div class="focus-body">世界移动通信大会将于巴塞罗那举行。中国移动、中国电信、中国联通及华为、中兴将集体亮相，5G-A全量商用方案和6G原型机将成为焦点。</div>
+      </div>
+      <div class="focus-card bg-grad-sky">
+        <div class="focus-num">02</div>
+        <div class="focus-title">运营商年报季预热</div>
+        <div class="focus-body">3月即将进入年报披露窗口期，市场将首次看到增值税"6改9"和DeepSeek接入对运营商财务的具体影响，云业务增长数据尤受关注。</div>
+      </div>
+      <div class="focus-card bg-grad-orange">
+        <div class="focus-num">03</div>
+        <div class="focus-title">算力节点申报启动</div>
+        <div class="focus-body">工信部"1+M+N"算力互联互通节点建设进入各省申报阶段，目标2026年建成平台体系、2028年全国互联，运营商数据中心布局将迎来实质性推进。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>数据来源：工信部、国资委、通信产业报、微信大数据、公开资料整理 | 报告周期：2026.02.16 - 2026.02.22</span>
+    <span>运营商行业咨询 · 仅供参考</span>
+  </div>
+</div>
+
+</body>
+</html>
