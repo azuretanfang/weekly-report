@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>运营商行业周报 02.23 - 02.28</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', 'PingFang SC', sans-serif; }
+  </style>
+</head>
+<body class="bg-slate-50">
+  <div class="w-[800px] bg-[#F8FAFF] p-10 font-sans shadow-2xl mx-auto my-8">
+    <!-- Header -->
+    <div class="mb-10">
+      <span class="bg-[#E0E7FF] text-[#6366F1] text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider">
+        Weekly Report
+      </span>
+      <h1 class="text-4xl font-extrabold text-[#1E293B] mt-4 mb-2">
+        运营商行业周报 <span class="text-[#6366F1]">02.23 - 02.28</span>
+      </h1>
+      <p class="text-[#64748B] text-sm">聚焦2月运营数据、MWC 2026前瞻、工信部算力节点布局与人事调整余波</p>
+    </div>
+
+    <!-- 🔥 市场数据：优先展示 -->
+    <div class="mb-10">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-[#1E293B] flex items-center">
+          <span class="bg-gradient-to-r from-blue-500 to-indigo-600 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-2 text-sm">📊</span>
+          市场数据
+        </h2>
+        <span class="bg-green-100 text-green-700 text-xs font-medium px-3 py-1 rounded-full">2月运营数据公布</span>
+      </div>
+
+      <!-- 四宫格数据卡片 -->
+      <div class="grid grid-cols-4 gap-4 mb-6">
+        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+          <div class="text-xs text-[#94A3B8] mb-1">5G套餐用户</div>
+          <div class="text-2xl font-bold text-[#1E293B]">13.9亿</div>
+          <div class="text-[10px] text-green-600 mt-1">↑ 净增2730万</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+          <div class="text-xs text-[#94A3B8] mb-1">中国移动占比</div>
+          <div class="text-2xl font-bold text-[#1E293B]">57.6%</div>
+          <div class="text-[10px] text-[#94A3B8] mt-1">8.0亿用户</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+          <div class="text-xs text-[#94A3B8] mb-1">电信渗透率</div>
+          <div class="text-2xl font-bold text-[#1E293B]">79.1%</div>
+          <div class="text-[10px] text-blue-600 mt-1">行业领跑</div>
+        </div>
+        <div class="bg-white p-4 rounded-xl border border-slate-200 text-center">
+          <div class="text-xs text-[#94A3B8] mb-1">联通5G用户</div>
+          <div class="text-2xl font-bold text-[#1E293B]">2.66亿</div>
+          <div class="text-[10px] text-green-600 mt-1">↑ 净增420万</div>
+        </div>
+      </div>
+
+      <!-- 运营商月度表现对比 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200">
+        <h3 class="text-sm font-bold text-[#1E293B] mb-4 flex items-center">
+          <span class="bg-blue-100 text-blue-600 w-6 h-6 rounded-full text-xs flex items-center justify-center mr-2">📈</span>
+          2月运营数据解读
+        </h3>
+        <div class="space-y-3">
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-24 text-xs font-medium text-[#6366F1] bg-indigo-50 px-2 py-1 rounded">中国移动</div>
+            <div class="flex-1 ml-3 text-xs text-[#64748B]">
+              移动用户净减51万户（总9.91亿），5G套餐用户净增<span class="text-[#1E293B] font-semibold">1127万</span>突破8亿户，有线宽带净增151万达3.02亿户
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-24 text-xs font-medium text-[#F59E0B] bg-amber-50 px-2 py-1 rounded">中国电信</div>
+            <div class="flex-1 ml-3 text-xs text-[#64748B]">
+              移动用户净增69万（总4.10亿），5G套餐用户净增<span class="text-[#1E293B] font-semibold">232万</span>达3.24亿户，渗透率79.1%稳居行业第一
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="flex-shrink-0 w-24 text-xs font-medium text-[#EC4899] bg-pink-50 px-2 py-1 rounded">中国联通</div>
+            <div class="flex-1 ml-3 text-xs text-[#64748B]">
+              "大联接"用户累计10.13亿户，5G套餐用户净增<span class="text-[#1E293B] font-semibold">420万</span>达2.66亿户，物联网终端连接净增1066万达5.16亿户
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 p-3 bg-gradient-to-r from-blue-50 to-indigo-50 rounded-lg text-[10px] text-[#475569]">
+          <strong>📌 核心看点：</strong>三家5G套餐用户总数逼近14亿户大关，中国电信以79.1%渗透率持续领跑；中国移动虽移动用户微降但5G套餐用户增长强劲；中国联通首次公开5G用户数后增长势头明显。
+        </div>
+      </div>
+    </div>
+
+    <!-- 🎯 人事变动 -->
+    <div class="mb-10">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-[#1E293B] flex items-center">
+          <span class="bg-gradient-to-r from-purple-500 to-pink-600 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-2 text-sm">👔</span>
+          人事变动
+        </h2>
+        <span class="bg-red-100 text-red-700 text-xs font-medium px-3 py-1 rounded-full">两大核心岗位待补</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 mb-4">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center text-white font-bold text-lg">何</div>
+          <div class="ml-3 flex-1">
+            <div class="text-sm font-bold text-[#1E293B]">何飚 → 国家广播电视总局</div>
+            <div class="text-xs text-[#64748B]">原中国移动董事、总经理、党组副书记</div>
+          </div>
+          <span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">已离任</span>
+        </div>
+        <div class="pl-13 text-xs text-[#475569] leading-relaxed">
+          <strong>离任时间：</strong>2026年2月12日港交所公告正式生效<br>
+          <strong>新职务：</strong>国家广播电视总局副局长、党组成员（2月27日国务院任命）<br>
+          <strong>背景：</strong>跨界路径与前任董昕相同（董昕2025年底从广电总局副局长调任联通董事长）
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 mb-4">
+        <div class="flex items-center mb-4">
+          <div class="w-10 h-10 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 flex items-center justify-center text-white font-bold text-lg">王</div>
+          <div class="ml-3 flex-1">
+            <div class="text-sm font-bold text-[#1E293B]">王利民 → 中国电科</div>
+            <div class="text-xs text-[#64748B]">原中国联通党组成员、副总经理（分管产品创新）</div>
+          </div>
+          <span class="bg-red-100 text-red-600 text-xs px-2 py-1 rounded">已离任</span>
+        </div>
+        <div class="pl-13 text-xs text-[#475569] leading-relaxed">
+          <strong>离任时间：</strong>2026年2月12日港交所公告<br>
+          <strong>新职务：</strong>中国电子科技集团有限公司党组副书记、董事<br>
+          <strong>影响：</strong>联通高级副总裁职位空缺，产品创新条线面临领导层重组
+        </div>
+      </div>
+
+      <div class="bg-gradient-to-r from-orange-50 to-amber-50 p-4 rounded-xl border-l-4 border-orange-400">
+        <div class="text-xs font-bold text-[#EA580C] mb-2">⏳ 待补岗位追踪</div>
+        <div class="text-xs text-[#78716C] space-y-1">
+          <div>• <strong>中国移动总经理（CEO）</strong>：何飚离任后空缺至今，3月预计公布继任者</div>
+          <div>• <strong>中国联通高级副总裁</strong>：王利民分管的产品创新条线亟待新领导接手</div>
+          <div>• <strong>关注焦点</strong>：央企人事调整进入密集期，预计MWC 2026期间或有新动向</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 🚀 行业动态 -->
+    <div class="mb-10">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-[#1E293B] flex items-center">
+          <span class="bg-gradient-to-r from-green-500 to-emerald-600 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-2 text-sm">🚀</span>
+          行业动态
+        </h2>
+        <span class="bg-blue-100 text-blue-700 text-xs font-medium px-3 py-1 rounded-full">MWC 2026倒计时</span>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4 mb-6">
+        <!-- MWC 2026前瞻 -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <div class="flex items-center mb-3">
+            <div class="bg-gradient-to-br from-purple-500 to-indigo-600 text-white text-xs font-bold px-2 py-1 rounded">全球聚焦</div>
+            <span class="ml-2 text-[10px] text-[#94A3B8]">3月3-6日</span>
+          </div>
+          <h3 class="text-sm font-bold text-[#1E293B] mb-2">MWC 2026巴塞罗那开幕在即</h3>
+          <div class="text-xs text-[#64748B] leading-relaxed space-y-1">
+            <div>• <strong>主题：</strong>Converge·Connect·Create（融合·连接·创造）</div>
+            <div>• <strong>中国移动：</strong>宣布年底在300城实现5G-A商用，全球算力网络首次亮相</div>
+            <div>• <strong>中国电信：</strong>展示800G广域智算中心网络+AI RAN深度赋能</div>
+            <div>• <strong>中国联通：</strong>首发自研AI新品，融合5G-A应用场景</div>
+            <div>• <strong>华为：</strong>5G-A与AI首次融合，AI-Centric Network解决方案发布</div>
+          </div>
+        </div>
+
+        <!-- 5G-A商用元年 -->
+        <div class="bg-white p-5 rounded-2xl border border-slate-200">
+          <div class="flex items-center mb-3">
+            <div class="bg-gradient-to-br from-blue-500 to-cyan-600 text-white text-xs font-bold px-2 py-1 rounded">技术突破</div>
+            <span class="ml-2 text-[10px] text-[#94A3B8]">商用加速</span>
+          </div>
+          <h3 class="text-sm font-bold text-[#1E293B] mb-2">5G-A商用元年加速落地</h3>
+          <div class="text-xs text-[#64748B] leading-relaxed space-y-1">
+            <div>• <strong>行业进展：</strong>全球60+运营商宣布5G-A商用元年启动</div>
+            <div>• <strong>三载波聚合：</strong>港口远程操控、工厂柔性生产、园区无人驾驶落地</div>
+            <div>• <strong>6G预演：</strong>6G智能体通信在应急救援场景实现智能化演绎</div>
+            <div>• <strong>终端侧：</strong>高通宣布6G+AI双引擎战略，2028年迎来6G预商用终端</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- AI+运营商深度融合 -->
+      <div class="bg-white p-6 rounded-2xl border border-slate-200">
+        <div class="flex items-center mb-4">
+          <div class="bg-gradient-to-r from-pink-500 to-rose-500 text-white text-xs font-bold px-2 py-1 rounded mr-2">AI赋能</div>
+          <h3 class="text-sm font-bold text-[#1E293B]">运营商AI能力全面提速</h3>
+        </div>
+        <div class="grid grid-cols-3 gap-3 text-xs">
+          <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-3 rounded-lg">
+            <div class="font-bold text-[#3730A3] mb-1">🔵 中国移动</div>
+            <div class="text-[#475569] text-[10px] leading-relaxed">移动云智算平台全版本覆盖DeepSeek，全国13个智算中心提供完整服务；算网大脑3.0+"国芯国连"超节点集群</div>
+          </div>
+          <div class="bg-gradient-to-br from-orange-50 to-amber-50 p-3 rounded-lg">
+            <div class="font-bold text-[#C2410C] mb-1">🟠 中国电信</div>
+            <div class="text-[#475569] text-[10px] leading-relaxed">天翼云"息壤"平台首家实现DeepSeek全栈国产化推理服务；派息率提升至70%，云业务翻番预期强劲</div>
+          </div>
+          <div class="bg-gradient-to-br from-pink-50 to-rose-50 p-3 rounded-lg">
+            <div class="font-bold text-[#BE123C] mb-1">🔴 中国联通</div>
+            <div class="text-[#475569] text-[10px] leading-relaxed">联通云"星罗"平台完成DeepSeek-R1多规格适配，全国270+骨干云池预部署；2026工作会强调四项AI+重点</div>
+          </div>
+        </div>
+        <div class="mt-3 p-3 bg-slate-50 rounded-lg text-[10px] text-[#64748B]">
+          <strong>💡 产业影响：</strong>银河证券研报指出，运营商全面接入DeepSeek有望带动云业务持续放量，成熟大模型运营将带来3169亿美元全球AI服务器增量市场。
+        </div>
+      </div>
+    </div>
+
+    <!-- 📋 政策动向 -->
+    <div class="mb-8">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-2xl font-bold text-[#1E293B] flex items-center">
+          <span class="bg-gradient-to-r from-amber-500 to-orange-600 text-white w-8 h-8 rounded-lg flex items-center justify-center mr-2 text-sm">📋</span>
+          政策动向
+        </h2>
+        <span class="bg-purple-100 text-purple-700 text-xs font-medium px-3 py-1 rounded-full">算力新基建启动</span>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 mb-4">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-2xl mr-4">
+            📡
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center mb-2">
+              <h3 class="text-sm font-bold text-[#1E293B] mr-2">工信部：启动"1+M+N"国家算力互联互通节点体系建设</h3>
+              <span class="bg-blue-100 text-blue-700 text-[10px] px-2 py-0.5 rounded">2月6日发布</span>
+            </div>
+            <div class="text-xs text-[#64748B] leading-relaxed mb-3">
+              《关于组织开展国家算力互联互通节点建设工作的通知》正式印发，贯彻落实《算力互联互通行动计划》，推动算力产业高质量发展。
+            </div>
+            <div class="space-y-2 text-xs">
+              <div class="flex items-start">
+                <span class="bg-indigo-100 text-indigo-700 px-2 py-0.5 rounded text-[10px] font-medium mr-2 flex-shrink-0">体系结构</span>
+                <span class="text-[#475569]">"1"个国家枢纽中心 + "M"个区域节点（算力需求旺盛地区）+ "N"个行业节点（重点行业垂直场景）</span>
+              </div>
+              <div class="flex items-start">
+                <span class="bg-purple-100 text-purple-700 px-2 py-0.5 rounded text-[10px] font-medium mr-2 flex-shrink-0">核心功能</span>
+                <span class="text-[#475569]">算力资源标识注册、互联调度、数据监测、选择平台，实现不同区域/主体/架构算力资源高效流动</span>
+              </div>
+              <div class="flex items-start">
+                <span class="bg-pink-100 text-pink-700 px-2 py-0.5 rounded text-[10px] font-medium mr-2 flex-shrink-0">申报门槛</span>
+                <span class="text-[#475569]">建设主体注册资金≥5000万元；运营主体需持有电信业务经营许可；近3年无重大失信记录</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200 mb-4">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center text-white text-2xl mr-4">
+            🏢
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center mb-2">
+              <h3 class="text-sm font-bold text-[#1E293B] mr-2">国资委：深化央企"AI+"专项行动，定位"新三者"</h3>
+              <span class="bg-orange-100 text-orange-700 text-[10px] px-2 py-0.5 rounded">全年部署</span>
+            </div>
+            <div class="text-xs text-[#64748B] leading-relaxed mb-3">
+              2026年度考核启动"一企一策"分类改革，央企被定位为<strong>"智算供给者+AI推动者+产业组织者"</strong>三重角色，推动AI与实体经济深度融合。
+            </div>
+            <div class="grid grid-cols-3 gap-2">
+              <div class="bg-gradient-to-br from-blue-50 to-indigo-50 p-2 rounded text-center">
+                <div class="text-[10px] text-[#3730A3] font-bold">智算供给者</div>
+                <div class="text-[9px] text-[#64748B] mt-1">布局算力基础设施</div>
+              </div>
+              <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-2 rounded text-center">
+                <div class="text-[10px] text-[#065F46] font-bold">AI推动者</div>
+                <div class="text-[9px] text-[#64748B] mt-1">自身业务AI化升级</div>
+              </div>
+              <div class="bg-gradient-to-br from-purple-50 to-pink-50 p-2 rounded text-center">
+                <div class="text-[10px] text-[#86198F] font-bold">产业组织者</div>
+                <div class="text-[9px] text-[#64748B] mt-1">构建AI产业生态链</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl border border-slate-200">
+        <div class="flex items-start">
+          <div class="flex-shrink-0 w-16 h-16 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-600 flex items-center justify-center text-white text-2xl mr-4">
+            📊
+          </div>
+          <div class="flex-1">
+            <div class="flex items-center mb-2">
+              <h3 class="text-sm font-bold text-[#1E293B] mr-2">多部委联动：数据要素市场化加速</h3>
+              <span class="bg-teal-100 text-teal-700 text-[10px] px-2 py-0.5 rounded">2月7日</span>
+            </div>
+            <div class="text-xs text-[#64748B] leading-relaxed mb-3">
+              国家数据局等四部委发布《关于培育数据流通服务机构 加快推进数据要素市场化价值化的意见》，首次明确三类数据流通服务机构定位。
+            </div>
+            <div class="flex items-center space-x-2 text-[10px]">
+              <span class="bg-cyan-100 text-cyan-700 px-2 py-1 rounded font-medium">数据交易所(中心)</span>
+              <span class="text-[#CBD5E1]">→</span>
+              <span class="bg-blue-100 text-blue-700 px-2 py-1 rounded font-medium">数据流通服务平台企业</span>
+              <span class="text-[#CBD5E1]">→</span>
+              <span class="bg-purple-100 text-purple-700 px-2 py-1 rounded font-medium">数据商</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 下周关注 -->
+    <div class="bg-gradient-to-r from-indigo-500 to-purple-600 p-6 rounded-2xl text-white">
+      <div class="flex items-center mb-4">
+        <div class="bg-white/20 backdrop-blur-sm w-10 h-10 rounded-full flex items-center justify-center mr-3">
+          <span class="text-2xl">👀</span>
+        </div>
+        <h2 class="text-xl font-bold">下周关注</h2>
+      </div>
+      <div class="grid grid-cols-3 gap-4 text-sm">
+        <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
+          <div class="font-bold mb-1">🌐 MWC 2026开幕</div>
+          <div class="text-xs opacity-90">3月3-6日巴塞罗那，关注5G-A+AI融合应用，中国科技军团集体"秀肌肉"</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
+          <div class="font-bold mb-1">📊 年报季预热</div>
+          <div class="text-xs opacity-90">运营商2025全年业绩预告陆续发布，关注AI+云业务增长曲线与市值管理策略</div>
+        </div>
+        <div class="bg-white/10 backdrop-blur-sm p-3 rounded-xl">
+          <div class="font-bold mb-1">🏗️ 算力节点申报</div>
+          <div class="text-xs opacity-90">各省市"1+M+N"算力节点建设方案启动申报，运营商抢滩算力新基建</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="mt-8 pt-6 border-t border-slate-200 text-center text-xs text-[#94A3B8]">
+      <p>数据来源：三大运营商公告、工信部、国资委、MWC官网、银河证券研报</p>
+      <p class="mt-1">制作日期：2026年2月28日</p>
+    </div>
+  </div>
+</body>
+</html>
