@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI专项探索 - 行业洞察工具汇报</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
+    body { font-family: 'Inter', 'PingFang SC', 'Microsoft YaHei', sans-serif; }
+    .slide {
+      width: 1280px;
+      height: 720px;
+      position: relative;
+      overflow: hidden;
+      page-break-after: always;
+    }
+    @media print {
+      body { margin: 0; padding: 0; }
+      .slide { page-break-after: always; margin: 0; }
+    }
+    .gradient-text {
+      background: linear-gradient(135deg, #6366F1, #8B5CF6, #A855F7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .glass-card {
+      background: rgba(255,255,255,0.85);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255,255,255,0.6);
+    }
+    .pain-arrow::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: -24px;
+      transform: translateY(-50%);
+      width: 0;
+      height: 0;
+      border-left: 12px solid #6366F1;
+      border-top: 8px solid transparent;
+      border-bottom: 8px solid transparent;
+    }
+    .phone-mockup {
+      border-radius: 24px;
+      box-shadow: 0 25px 60px rgba(0,0,0,0.15), 0 0 0 1px rgba(0,0,0,0.05);
+      overflow: hidden;
+    }
+    .phone-mockup img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top;
+    }
+    .stat-glow {
+      box-shadow: 0 0 30px rgba(99, 102, 241, 0.15);
+    }
+    .float-animation {
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+    .timeline-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      position: relative;
+    }
+    .timeline-dot::after {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 12px;
+      height: 2px;
+      width: 60px;
+      background: linear-gradient(to right, currentColor, transparent);
+      transform: translateY(-50%);
+    }
+    .timeline-dot:last-child::after { display: none; }
+  </style>
+</head>
+<body class="bg-slate-100 flex flex-col items-center gap-8 py-8">
+
+  <!-- ==================== Slide 1: 封面+痛点+价值 ==================== -->
+  <div class="slide bg-white rounded-xl shadow-2xl flex flex-col relative">
+    
+    <!-- 顶部标签栏 -->
+    <div class="flex items-center justify-between px-12 pt-8 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-2 h-8 rounded-full bg-gradient-to-b from-indigo-500 to-purple-600"></div>
+        <div>
+          <div class="text-xs text-slate-400 font-medium tracking-wider uppercase">AI专项探索 · 工具产品化</div>
+          <div class="text-2xl font-extrabold text-slate-800">运营商行业信息洞察</div>
+        </div>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">@芳姐</span>
+        <span class="bg-green-100 text-green-700 text-xs font-bold px-3 py-1 rounded-full">已上线运行</span>
+      </div>
+    </div>
+
+    <div class="flex-1 flex px-12 gap-8">
+      <!-- 左半部分：痛点 + 方案 + 价值 -->
+      <div class="flex-1 flex flex-col justify-center gap-5">
+        
+        <!-- 痛点区域 -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-red-500 to-orange-500 flex items-center justify-center text-white text-sm font-bold">!</div>
+            <h3 class="text-base font-bold text-slate-800">现状痛点</h3>
+          </div>
+          <div class="grid grid-cols-2 gap-3">
+            <div class="bg-red-50 border border-red-100 rounded-xl p-3.5 relative group">
+              <div class="flex items-start gap-2">
+                <div class="text-red-400 text-lg mt-0.5">1</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-700 mb-1">信息碎片化</div>
+                  <div class="text-xs text-slate-500 leading-relaxed">运营商动态分散在 10+ 渠道（工信部、港交所、行业媒体、券商研报），人工收集耗时 <span class="text-red-600 font-bold">4-6h/周</span></div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-orange-50 border border-orange-100 rounded-xl p-3.5">
+              <div class="flex items-start gap-2">
+                <div class="text-orange-400 text-lg mt-0.5">2</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-700 mb-1">时效性差</div>
+                  <div class="text-xs text-slate-500 leading-relaxed">人事变动、政策发布等关键信息滞后 <span class="text-orange-600 font-bold">3-5天</span> 才获悉，错失业务响应窗口</div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-amber-50 border border-amber-100 rounded-xl p-3.5">
+              <div class="flex items-start gap-2">
+                <div class="text-amber-400 text-lg mt-0.5">3</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-700 mb-1">缺乏结构化洞察</div>
+                  <div class="text-xs text-slate-500 leading-relaxed">零散消息难以形成系统性行业认知，决策缺乏数据支撑</div>
+                </div>
+              </div>
+            </div>
+            <div class="bg-yellow-50 border border-yellow-100 rounded-xl p-3.5">
+              <div class="flex items-start gap-2">
+                <div class="text-yellow-500 text-lg mt-0.5">4</div>
+                <div>
+                  <div class="text-sm font-bold text-slate-700 mb-1">分发效率低</div>
+                  <div class="text-xs text-slate-500 leading-relaxed">信息传递依赖口头/会议同步，覆盖面有限，团队认知不对齐</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 中间箭头过渡 -->
+        <div class="flex items-center justify-center">
+          <div class="flex items-center gap-2 bg-gradient-to-r from-indigo-500 to-purple-600 text-white text-xs font-bold px-5 py-2 rounded-full shadow-lg">
+            <span>AI + CodeBuddy Skill 自动化解决</span>
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"/></svg>
+          </div>
+        </div>
+
+        <!-- 方案 + 价值 -->
+        <div>
+          <div class="flex items-center gap-2 mb-3">
+            <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-sm font-bold">&#10003;</div>
+            <h3 class="text-base font-bold text-slate-800">AI 解决方案 & 实现价值</h3>
+          </div>
+          <div class="grid grid-cols-4 gap-3">
+            <div class="glass-card rounded-xl p-3.5 text-center stat-glow">
+              <div class="text-3xl font-black gradient-text mb-1">10min</div>
+              <div class="text-xs text-slate-500 font-medium">单期生成耗时</div>
+              <div class="text-[10px] text-green-600 mt-1.5 bg-green-50 rounded-full px-2 py-0.5">vs 原4-6h, 提效 95%</div>
+            </div>
+            <div class="glass-card rounded-xl p-3.5 text-center stat-glow">
+              <div class="text-3xl font-black gradient-text mb-1">4维</div>
+              <div class="text-xs text-slate-500 font-medium">结构化信息覆盖</div>
+              <div class="text-[10px] text-slate-400 mt-1.5 bg-slate-50 rounded-full px-2 py-0.5">市场·人事·行业·政策</div>
+            </div>
+            <div class="glass-card rounded-xl p-3.5 text-center stat-glow">
+              <div class="text-3xl font-black gradient-text mb-1">3渠道</div>
+              <div class="text-xs text-slate-500 font-medium">一键多端分发</div>
+              <div class="text-[10px] text-slate-400 mt-1.5 bg-slate-50 rounded-full px-2 py-0.5">网页·邮件·图片</div>
+            </div>
+            <div class="glass-card rounded-xl p-3.5 text-center stat-glow">
+              <div class="text-3xl font-black gradient-text mb-1">11人</div>
+              <div class="text-xs text-slate-500 font-medium">稳定周活跃覆盖</div>
+              <div class="text-[10px] text-slate-400 mt-1.5 bg-slate-50 rounded-full px-2 py-0.5">部门核心成员全覆盖</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右半部分：周报效果展示 -->
+      <div class="w-[340px] flex flex-col items-center justify-center relative">
+        <!-- 手机 mockup 展示周报截图 -->
+        <div class="relative float-animation">
+          <div class="phone-mockup w-[240px] h-[460px] bg-white border-4 border-slate-800 relative">
+            <!-- 状态栏 -->
+            <div class="h-6 bg-slate-800 flex items-center justify-center">
+              <div class="w-14 h-3 bg-slate-700 rounded-full"></div>
+            </div>
+            <!-- 周报内容 -->
+            <div class="w-full h-[calc(100%-24px)] overflow-hidden">
+              <img src="weekly-report-0223-0228-compressed.png" alt="周报示例" />
+            </div>
+          </div>
+          <!-- 背景装饰 -->
+          <div class="absolute -z-10 top-4 left-4 w-[240px] h-[460px] rounded-3xl bg-gradient-to-br from-indigo-200 to-purple-200 opacity-50"></div>
+        </div>
+        
+        <!-- 底部标签 -->
+        <div class="mt-4 text-center">
+          <div class="text-xs text-slate-400 mb-1">最新一期 · 02.23-02.28</div>
+          <div class="flex items-center gap-1.5 justify-center">
+            <span class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></span>
+            <span class="text-[10px] text-green-600 font-medium">已连续产出 5 期</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 底部技术架构简述 -->
+    <div class="px-12 pb-6 pt-2">
+      <div class="bg-slate-50 rounded-xl px-6 py-3 flex items-center justify-between">
+        <div class="flex items-center gap-6 text-xs text-slate-500">
+          <div class="flex items-center gap-1.5">
+            <div class="w-5 h-5 rounded bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-[10px] font-bold">AI</div>
+            <span>联网搜索 + 智能聚合</span>
+          </div>
+          <div class="text-slate-300">|</div>
+          <div class="flex items-center gap-1.5">
+            <div class="w-5 h-5 rounded bg-gradient-to-br from-blue-500 to-cyan-600 flex items-center justify-center text-white text-[10px] font-bold">CB</div>
+            <span>CodeBuddy Skill 自动化</span>
+          </div>
+          <div class="text-slate-300">|</div>
+          <div class="flex items-center gap-1.5">
+            <div class="w-5 h-5 rounded bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center text-white text-[10px] font-bold">GH</div>
+            <span>GitHub Pages 自动部署</span>
+          </div>
+          <div class="text-slate-300">|</div>
+          <div class="flex items-center gap-1.5">
+            <div class="w-5 h-5 rounded bg-gradient-to-br from-orange-500 to-red-500 flex items-center justify-center text-white text-[10px]">&#9993;</div>
+            <span>邮件一键群发</span>
+          </div>
+        </div>
+        <div class="text-[10px] text-slate-400">完整闭环：信息采集 → 报告生成 → 多渠道分发</div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- ==================== Slide 2: 工作流 + 效果对比 + 后续规划 ==================== -->
+  <div class="slide bg-white rounded-xl shadow-2xl flex flex-col relative">
+    
+    <!-- 顶部标签栏 -->
+    <div class="flex items-center justify-between px-12 pt-8 pb-4">
+      <div class="flex items-center gap-3">
+        <div class="w-2 h-8 rounded-full bg-gradient-to-b from-indigo-500 to-purple-600"></div>
+        <div>
+          <div class="text-xs text-slate-400 font-medium tracking-wider uppercase">AI专项探索 · 工具产品化</div>
+          <div class="text-2xl font-extrabold text-slate-800">工作流程 & 效果展示</div>
+        </div>
+      </div>
+      <span class="bg-indigo-100 text-indigo-700 text-xs font-bold px-3 py-1 rounded-full">@芳姐</span>
+    </div>
+
+    <div class="flex-1 flex px-12 gap-8 pb-6">
+      
+      <!-- 左侧：工作流 + Before/After -->
+      <div class="flex-1 flex flex-col gap-5 justify-center">
+        
+        <!-- AI 工作流 -->
+        <div>
+          <h3 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <div class="w-6 h-6 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600 text-xs font-bold">1</div>
+            AI 自动化工作流
+          </h3>
+          <div class="flex items-center gap-2">
+            <div class="bg-indigo-50 border border-indigo-100 rounded-xl px-4 py-3 text-center flex-1">
+              <div class="text-lg mb-1">&#128172;</div>
+              <div class="text-[10px] font-bold text-indigo-700">一句指令触发</div>
+              <div class="text-[9px] text-slate-400 mt-0.5">"生成本周运营商周报"</div>
+            </div>
+            <svg class="w-5 h-5 text-indigo-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="bg-blue-50 border border-blue-100 rounded-xl px-4 py-3 text-center flex-1">
+              <div class="text-lg mb-1">&#128269;</div>
+              <div class="text-[10px] font-bold text-blue-700">AI 联网采集</div>
+              <div class="text-[9px] text-slate-400 mt-0.5">10+ 信源并行搜索</div>
+            </div>
+            <svg class="w-5 h-5 text-blue-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="bg-purple-50 border border-purple-100 rounded-xl px-4 py-3 text-center flex-1">
+              <div class="text-lg mb-1">&#128196;</div>
+              <div class="text-[10px] font-bold text-purple-700">模板化渲染</div>
+              <div class="text-[9px] text-slate-400 mt-0.5">4维结构化HTML报告</div>
+            </div>
+            <svg class="w-5 h-5 text-purple-300 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/></svg>
+            <div class="bg-green-50 border border-green-100 rounded-xl px-4 py-3 text-center flex-1">
+              <div class="text-lg mb-1">&#128640;</div>
+              <div class="text-[10px] font-bold text-green-700">多渠道分发</div>
+              <div class="text-[9px] text-slate-400 mt-0.5">网页 + 邮件 + 图片</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Before / After 对比 -->
+        <div>
+          <h3 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <div class="w-6 h-6 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600 text-xs font-bold">2</div>
+            效率提升对比
+          </h3>
+          <div class="grid grid-cols-2 gap-4">
+            <!-- Before -->
+            <div class="bg-red-50 border border-red-100 rounded-xl p-4">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-red-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">BEFORE</span>
+                <span class="text-xs text-red-400">人工方式</span>
+              </div>
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">信息收集</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-red-200 rounded-full"><div class="w-full h-full bg-red-400 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-red-600">4-6h</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">整理编写</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-red-200 rounded-full"><div class="w-3/4 h-full bg-red-400 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-red-600">2-3h</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">排版美化</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-red-200 rounded-full"><div class="w-1/2 h-full bg-red-400 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-red-600">1-2h</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">分发触达</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-red-200 rounded-full"><div class="w-1/4 h-full bg-red-400 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-red-600">0.5-1h</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-red-200 flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-700">总计</span>
+                  <span class="text-base font-black text-red-600">8-12h/周</span>
+                </div>
+              </div>
+            </div>
+            
+            <!-- After -->
+            <div class="bg-green-50 border border-green-100 rounded-xl p-4">
+              <div class="flex items-center gap-2 mb-3">
+                <span class="bg-green-500 text-white text-[10px] font-bold px-2.5 py-0.5 rounded-full">AFTER</span>
+                <span class="text-xs text-green-500">AI 驱动</span>
+              </div>
+              <div class="space-y-2.5">
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">AI 联网搜索</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-green-200 rounded-full"><div class="w-1/6 h-full bg-green-500 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-green-600">3min</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">模板渲染</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-green-200 rounded-full"><div class="w-1/12 h-full bg-green-500 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-green-600">2min</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">人工校验调优</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-green-200 rounded-full"><div class="w-1/4 h-full bg-green-500 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-green-600">5min</span>
+                  </div>
+                </div>
+                <div class="flex items-center justify-between">
+                  <span class="text-xs text-slate-600">自动部署 + 邮件</span>
+                  <div class="flex items-center gap-1">
+                    <div class="w-32 h-2 bg-green-200 rounded-full"><div class="w-1/12 h-full bg-green-500 rounded-full"></div></div>
+                    <span class="text-xs font-bold text-green-600">1min</span>
+                  </div>
+                </div>
+                <div class="pt-2 border-t border-green-200 flex items-center justify-between">
+                  <span class="text-xs font-bold text-slate-700">总计</span>
+                  <div class="flex items-center gap-2">
+                    <span class="text-base font-black text-green-600">~10min/周</span>
+                    <span class="bg-green-500 text-white text-[10px] font-bold px-2 py-0.5 rounded-full">&#8595; 95%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 后续规划 -->
+        <div>
+          <h3 class="text-sm font-bold text-slate-800 mb-3 flex items-center gap-2">
+            <div class="w-6 h-6 rounded-lg bg-indigo-100 flex items-center justify-center text-indigo-600 text-xs font-bold">3</div>
+            后续迭代方向
+          </h3>
+          <div class="flex gap-3">
+            <div class="flex-1 bg-gradient-to-br from-indigo-50 to-blue-50 border border-indigo-100 rounded-xl p-3">
+              <div class="text-xs font-bold text-indigo-700 mb-1">&#127919; 智能化深挖</div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">接入更多数据源，增加趋势分析、竞品对比等深度洞察模块</div>
+            </div>
+            <div class="flex-1 bg-gradient-to-br from-purple-50 to-pink-50 border border-purple-100 rounded-xl p-3">
+              <div class="text-xs font-bold text-purple-700 mb-1">&#128276; 定时自动化</div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">实现定时触发 + 自动发布，完全无人值守的全自动周报流水线</div>
+            </div>
+            <div class="flex-1 bg-gradient-to-br from-green-50 to-emerald-50 border border-green-100 rounded-xl p-3">
+              <div class="text-xs font-bold text-green-700 mb-1">&#128640; 能力复用</div>
+              <div class="text-[10px] text-slate-500 leading-relaxed">沉淀为通用 Skill 模板，可快速复制到其他行业/领域的信息洞察场景</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 右侧：周报展示（电脑端） -->
+      <div class="w-[340px] flex flex-col items-center justify-center">
+        <div class="relative">
+          <!-- 电脑 mockup -->
+          <div class="bg-slate-800 rounded-t-xl pt-3 pb-0 px-0 w-[320px]">
+            <div class="flex items-center gap-1.5 px-4 mb-2">
+              <div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-yellow-400"></div>
+              <div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+              <div class="flex-1 bg-slate-700 h-5 rounded ml-2 flex items-center px-2">
+                <span class="text-[8px] text-slate-400">azuretanfang.github.io/weekly-report</span>
+              </div>
+            </div>
+            <div class="bg-white w-full h-[360px] overflow-hidden">
+              <img src="weekly-report-0216-0222.png" alt="周报桌面端展示" class="w-full object-cover object-top" />
+            </div>
+          </div>
+          <div class="w-[260px] h-3 bg-slate-700 rounded-b mx-auto"></div>
+          <div class="w-[200px] h-1.5 bg-slate-600 rounded-b mx-auto"></div>
+        </div>
+        
+        <!-- 周报列表标签 -->
+        <div class="mt-4 flex flex-wrap gap-1.5 justify-center">
+          <span class="bg-slate-100 text-slate-500 text-[9px] px-2 py-0.5 rounded-full">第2周 02.04-02.11</span>
+          <span class="bg-slate-100 text-slate-500 text-[9px] px-2 py-0.5 rounded-full">第3周 02.11-02.15</span>
+          <span class="bg-slate-100 text-slate-500 text-[9px] px-2 py-0.5 rounded-full">第4周 02.16-02.22</span>
+          <span class="bg-indigo-100 text-indigo-600 text-[9px] px-2 py-0.5 rounded-full font-bold">第5周 02.23-02.28 &#10003;</span>
+        </div>
+        <div class="text-[10px] text-slate-400 mt-2">已累计产出 5 期 · GitHub Pages 在线归档</div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

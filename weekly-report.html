@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>运营商行业周报 2026.02.04 - 02.11</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #E8ECF4;
+      padding: 40px 0;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    .report {
+      width: 860px;
+      background: #F8FAFF;
+      padding: 40px;
+      margin: 0 auto;
+      border-radius: 24px;
+      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.15);
+    }
+
+    /* Header */
+    .header { margin-bottom: 32px; }
+    .header-top { display: flex; align-items: center; justify-content: space-between; }
+    .badge {
+      background: #E0E7FF; color: #6366F1; font-size: 11px; font-weight: 700;
+      padding: 4px 12px; border-radius: 9999px; text-transform: uppercase; letter-spacing: 1px;
+    }
+    .header-date { color: #94A3B8; font-size: 11px; }
+    .header h1 {
+      font-size: 32px; font-weight: 900; color: #1E293B; margin-top: 16px; margin-bottom: 8px;
+    }
+    .header h1 span { color: #6366F1; }
+    .header p { color: #64748B; font-size: 13px; }
+
+    /* Grid layouts */
+    .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+    .grid-2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+    .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; }
+
+    /* Cards */
+    .card {
+      background: white; padding: 20px; border-radius: 16px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04); border: 1px solid #F1F5F9;
+    }
+    .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 12px; }
+    .icon-box {
+      width: 36px; height: 36px; border-radius: 8px; display: flex;
+      align-items: center; justify-content: center; font-size: 18px;
+    }
+    .icon-indigo { background: #EEF2FF; color: #6366F1; }
+    .icon-green { background: #F0FDF4; color: #22C55E; }
+    .icon-orange { background: #FFF7ED; color: #F97316; }
+    .icon-red { background: #FEF2F2; color: #EF4444; }
+    .icon-purple { background: #F5F3FF; color: #8B5CF6; }
+
+    .tag {
+      font-size: 10px; font-weight: 600; padding: 2px 8px; border-radius: 9999px;
+    }
+    .tag-red { background: #FEF2F2; color: #EF4444; }
+    .tag-green { background: #F0FDF4; color: #16A34A; }
+    .tag-orange { background: #FFF7ED; color: #F97316; }
+    .tag-indigo { background: #EEF2FF; color: #6366F1; }
+    .tag-sky { background: #F0F9FF; color: #0EA5E9; }
+    .tag-purple { background: #F5F3FF; color: #8B5CF6; }
+
+    .card-label { color: #64748B; font-size: 10px; font-weight: 500; margin-bottom: 4px; }
+    .card-value { display: flex; align-items: baseline; gap: 8px; }
+    .card-value .big { font-size: 24px; font-weight: 700; color: #1E293B; }
+    .card-value .small { font-size: 10px; color: #94A3B8; text-decoration: line-through; }
+    .card-value .up { font-size: 10px; color: #22C55E; }
+
+    /* Section */
+    .section { margin-bottom: 24px; }
+    .section-title {
+      display: flex; align-items: center; gap: 8px; margin-bottom: 16px;
+    }
+    .section-bar {
+      width: 4px; height: 24px; border-radius: 9999px;
+    }
+    .section-title h2 { font-size: 18px; font-weight: 700; color: #1E293B; }
+    .section-title .subtitle { font-size: 10px; color: #94A3B8; margin-left: 4px; }
+
+    /* Policy content */
+    .policy-content {
+      display: flex; align-items: flex-start; gap: 12px;
+    }
+    .policy-icon {
+      min-width: 28px; height: 28px; display: flex; align-items: center; justify-content: center;
+      background: #FEF2F2; color: #EF4444; border-radius: 8px; font-size: 16px; margin-top: 2px;
+    }
+    .policy-text { font-size: 13px; color: #334155; line-height: 1.7; }
+    .policy-text strong { font-weight: 700; }
+    .policy-text .red { color: #EF4444; font-weight: 700; }
+    .policy-note { font-size: 11px; color: #94A3B8; margin-top: 8px; line-height: 1.6; }
+
+    /* Dynamics */
+    .dyn-tag {
+      display: inline-block; font-size: 10px; font-weight: 700; padding: 2px 8px;
+      border-radius: 9999px; margin-right: 6px;
+    }
+    .dyn-title { font-size: 14px; font-weight: 700; color: #1E293B; display: inline; }
+    .dyn-header { margin-bottom: 10px; display: flex; align-items: center; }
+    .dyn-body { font-size: 12px; color: #64748B; line-height: 1.7; }
+    .dyn-body strong { font-weight: 700; color: #334155; }
+
+    /* Data stats */
+    .stat-box {
+      text-align: center; padding: 12px; background: #F8FAFF; border-radius: 12px;
+    }
+    .stat-label { font-size: 10px; color: #94A3B8; margin-bottom: 4px; }
+    .stat-value { font-size: 22px; font-weight: 700; }
+    .stat-value.indigo { color: #6366F1; }
+    .stat-value.green { color: #22C55E; }
+    .stat-value.orange { color: #F97316; }
+    .stat-unit { font-size: 10px; color: #94A3B8; }
+    .stat-notes {
+      margin-top: 12px; display: flex; gap: 16px;
+      font-size: 10px; color: #94A3B8;
+    }
+
+    /* Personnel */
+    .person-card {
+      background: #F8FAFF; padding: 12px; border-radius: 12px; border: 1px solid #EEF2FF;
+    }
+    .person-name { font-size: 13px; color: #334155; font-weight: 500; margin-top: 8px; }
+    .person-role { font-size: 10px; color: #94A3B8; }
+    .person-mini {
+      display: flex; align-items: center; gap: 8px;
+      background: #F8FAFF; padding: 8px; border-radius: 8px;
+    }
+    .person-avatar {
+      width: 28px; height: 28px; border-radius: 50%; color: white;
+      font-size: 11px; font-weight: 700; display: flex; align-items: center; justify-content: center;
+    }
+    .person-mini-name { font-size: 12px; color: #334155; font-weight: 500; }
+    .person-mini-role { font-size: 9px; color: #94A3B8; }
+
+    .sub-title {
+      font-size: 12px; font-weight: 700; margin-bottom: 10px;
+      display: flex; align-items: center; gap: 4px;
+    }
+    .trend-note {
+      font-size: 10px; color: #94A3B8; margin-top: 12px; padding-top: 12px;
+      border-top: 1px dashed #E2E8F0; line-height: 1.6;
+    }
+
+    /* Focus cards */
+    .focus-card {
+      padding: 20px; border-radius: 16px; color: white;
+    }
+    .focus-num { font-size: 28px; font-weight: 300; margin-bottom: 8px; opacity: 0.6; }
+    .focus-title { font-size: 14px; font-weight: 700; margin-bottom: 8px; }
+    .focus-body { font-size: 11px; opacity: 0.85; line-height: 1.6; }
+    .bg-grad-indigo { background: linear-gradient(135deg, #6366F1, #8B5CF6); }
+    .bg-grad-green { background: linear-gradient(135deg, #22C55E, #16A34A); }
+    .bg-grad-orange { background: linear-gradient(135deg, #F97316, #EF4444); }
+
+    /* Footer */
+    .footer {
+      margin-top: 32px; padding-top: 16px; border-top: 1px dashed #E2E8F0;
+      display: flex; justify-content: space-between; font-size: 10px; color: #94A3B8;
+    }
+
+    .mb-4 { margin-bottom: 16px; }
+  </style>
+</head>
+<body>
+
+<div class="report">
+  <!-- Header -->
+  <div class="header">
+    <div class="header-top">
+      <span class="badge">Weekly Report</span>
+      <span class="header-date">2026年2月第2周</span>
+    </div>
+    <h1>运营商行业周报 <span>02.04 - 02.11</span></h1>
+    <p>洞察税改影响，把握北斗商用进程与高层人事动向</p>
+  </div>
+
+  <!-- 数据概览卡片 -->
+  <div class="grid-3" style="margin-bottom: 32px;">
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-indigo">📊</div>
+        <span class="tag tag-red">↑ 风险</span>
+      </div>
+      <div class="card-label">核心增值税率</div>
+      <div class="card-value">
+        <span class="big">9.0%</span>
+        <span class="small">6.0%</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-green">👥</div>
+        <span class="tag tag-green">↑ 增长</span>
+      </div>
+      <div class="card-label">5G用户渗透率</div>
+      <div class="card-value">
+        <span class="big">65.9%</span>
+        <span class="up">+9.2pp</span>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-top">
+        <div class="icon-box icon-orange">💰</div>
+        <span class="tag tag-orange">稳健</span>
+      </div>
+      <div class="card-label">2025全年电信营收</div>
+      <div class="card-value">
+        <span class="big">1.75万亿</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 政策动向 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#6366F1;"></div>
+      <h2>政策动向</h2>
+      <span class="subtitle">增值税税率"6改9"，行业进入利润承压期</span>
+    </div>
+    <div class="card">
+      <div class="policy-content">
+        <div class="policy-icon">⚠</div>
+        <div>
+          <div class="policy-text">
+            财政部与国家税务总局发布《关于增值税征税具体范围有关事项的公告》（2026年第9号），自2026年1月1日起，手机流量、短彩信、互联网宽带接入服务的增值税适用税目由<strong>"增值电信服务"</strong>调整为<strong>"基础电信服务"</strong>，对应税率从 <span class="red">6%上调至9%</span>。
+          </div>
+          <div class="policy-note">
+            专家解析：此次调整反映国家对电信服务属性的重新界定，短期内将直接压降运营商净利润（预计影响金额达百亿元级）。运营商需通过精益管理和"提质增效"来对冲税负增加的压力。
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 行业动态 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#22C55E;"></div>
+      <h2>行业动态</h2>
+      <span class="subtitle">北斗短信商用提速，前沿技术布局深化</span>
+    </div>
+    <div class="grid-2">
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#F0FDF4;color:#16A34A;">北斗</span>
+          <span class="dyn-title">北斗三号短报文商用</span>
+        </div>
+        <div class="dyn-body">
+          继中国移动先行先试后，中国电信、中国联通于本月初正式获得工信部关于北斗三号短报文公众应用商用实验批复。<strong>"无信号区域短信通信"</strong>将成为三大运营商标配服务，重点覆盖山区、海上及应急救援场景。
+        </div>
+      </div>
+      <div class="card">
+        <div class="dyn-header">
+          <span class="dyn-tag" style="background:#EEF2FF;color:#6366F1;">前沿</span>
+          <span class="dyn-title">未来产业布局加速</span>
+        </div>
+        <div class="dyn-body">
+          工信部点名加快推动<strong>6G、量子通信、具身智能及脑机接口</strong>等领域攻关突破。中国移动等已开始规划更大规模的800G光模块部署，以应对未来AI算力需求对骨干网的冲击。
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 市场数据 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#F97316;"></div>
+      <h2>市场数据</h2>
+      <span class="subtitle">2025年年报收官，5G渗透率突破65%</span>
+    </div>
+    <div class="card">
+      <div class="grid-4">
+        <div class="stat-box">
+          <div class="stat-label">电信营收</div>
+          <div class="stat-value indigo">1.75</div>
+          <div class="stat-unit">万亿元</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">移动用户</div>
+          <div class="stat-value indigo">18.27</div>
+          <div class="stat-unit">亿户</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">5G用户</div>
+          <div class="stat-value green">12.04</div>
+          <div class="stat-unit">亿户</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-label">普及率</div>
+          <div class="stat-value orange">130</div>
+          <div class="stat-unit">部/百人</div>
+        </div>
+      </div>
+      <div class="stat-notes">
+        <span>● 千兆光网接入用户占比持续攀升</span>
+        <span>● 中国移动有线宽带用户稳居3.2亿+</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- 人事变动 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#8B5CF6;"></div>
+      <h2>人事变动</h2>
+      <span class="subtitle">领导班子"年轻化"与跨央企流动</span>
+    </div>
+    <div class="card">
+      <div class="sub-title" style="color:#6366F1;">👤 高层变动</div>
+      <div class="grid-3 mb-4">
+        <div class="person-card">
+          <span class="tag tag-indigo">中国移动</span>
+          <div class="person-name">陈怀达</div>
+          <div class="person-role">升任副总经理、党组成员</div>
+        </div>
+        <div class="person-card">
+          <span class="tag tag-sky">中国电信</span>
+          <div class="person-name">黄智勇</div>
+          <div class="person-role">升任副总经理、党组成员</div>
+        </div>
+        <div class="person-card">
+          <span class="tag tag-red">中国联通</span>
+          <div class="person-name">梁宝俊</div>
+          <div class="person-role">荣任中国星网总经理</div>
+        </div>
+      </div>
+      <div class="sub-title" style="color:#8B5CF6;">👥 中层及省分调整</div>
+      <div class="grid-3">
+        <div class="person-mini">
+          <div class="person-avatar" style="background:#6366F1;">杨</div>
+          <div>
+            <div class="person-mini-name">杨剑宇</div>
+            <div class="person-mini-role">浙江移动总经理</div>
+          </div>
+        </div>
+        <div class="person-mini">
+          <div class="person-avatar" style="background:#0EA5E9;">寇</div>
+          <div>
+            <div class="person-mini-name">寇凤达</div>
+            <div class="person-mini-role">北京电信总经理</div>
+          </div>
+        </div>
+        <div class="person-mini">
+          <div class="person-avatar" style="background:#EF4444;">杨</div>
+          <div>
+            <div class="person-mini-name">杨丽</div>
+            <div class="person-mini-role">联通政企BG副总裁</div>
+          </div>
+        </div>
+      </div>
+      <div class="trend-note">
+        趋势分析：本轮任免呈现明显的"70后"接棒趋势，省分总经理与集团部门负责人的岗位轮换更加频繁，旨在强化业务实操与总部管理能力的融合。
+      </div>
+    </div>
+  </div>
+
+  <!-- 2026年春节后三大关注点 -->
+  <div class="section">
+    <div class="section-title">
+      <div class="section-bar" style="background:#EC4899;"></div>
+      <h2>2026年春节后三大关注点</h2>
+    </div>
+    <div class="grid-3">
+      <div class="focus-card bg-grad-indigo">
+        <div class="focus-num">01</div>
+        <div class="focus-title">算力网络变现</div>
+        <div class="focus-body">春节流量洪峰期间，运营商如何利用AI算力进行流量预测与精准调度将是开年首战。</div>
+      </div>
+      <div class="focus-card bg-grad-green">
+        <div class="focus-num">02</div>
+        <div class="focus-title">Wi-Fi 7 普及年</div>
+        <div class="focus-body">预计2026年Wi-Fi 7终端将占90%+新增市场，运营商终端补贴策略可能向Wi-Fi 7路由器倾斜。</div>
+      </div>
+      <div class="focus-card bg-grad-orange">
+        <div class="focus-num">03</div>
+        <div class="focus-title">卫星互联网融合</div>
+        <div class="focus-body">北斗短报文商用开启"手机直连卫星"的大规模民用化，关注终端产业链与运营商的深度捆绑。</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <span>数据来源：工信部、财政部、公开资料整理 | 报告周期：2026.02.04 - 2026.02.11</span>
+    <span>运营商行业咨询 · 仅供参考</span>
+  </div>
+</div>
+
+</body>
+</html>
