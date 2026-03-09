@@ -2,3 +2,14 @@
 *.log
 node_modules/
 .env
+
+# 非周报内容 - 仅保留本地
+研发项管/
+营销短信供应商管理/
+测试结算对账/
+AI上下文归档/
+anydev-deploy/
+.codebuddy/
+CT闭门会_260305.pptx
+skills-lock.json
+tapd-timesheet-skill.zip
