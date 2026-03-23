@@ -20,13 +20,14 @@ def crop_image_intelligent(img_path, output_path):
     pixels = img.load()
     
     def is_background_color(pixel):
-        """判断是否为背景色（白色或浅色）"""
+        """判断是否为背景色（白色、浅灰色、slate-50等浅色背景）"""
         if isinstance(pixel, int):  # 灰度图
-            return pixel > 250
+            return pixel > 235
         if len(pixel) >= 3:
             r, g, b = pixel[:3]
-            # 判断是否为接近白色的背景
-            return r > 250 and g > 250 and b > 250
+            # 判断是否为接近白色或浅色的背景
+            # 覆盖 bg-slate-50(#F8FAFC)、bg-white(#FFF)、#F8FAFF、#f0f2f5 等
+            return r > 235 and g > 235 and b > 235
         return False
     
     # 从底部向上扫描，找到最后一行有内容的位置

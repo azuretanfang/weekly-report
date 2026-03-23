@@ -2,190 +2,257 @@
 # -*- coding: utf-8 -*-
 """
 运营商行业周报邮件发送脚本
+- 邮件正文以高清长图为主体（CID内嵌，不依赖外链）
+- 点击图片跳转在线HTML版本
+- 支持自动日期计算，无需手动修改参数
 """
 
+import os
+import sys
+import glob
 import smtplib
+from datetime import datetime, timedelta
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
+from email.mime.image import MIMEImage
 from email.header import Header
 
-def send_weekly_report():
-    """发送运营商行业周报邮件"""
-    
-    # 邮件配置（需要根据实际情况修改）
-    smtp_server = "smtp.qq.com"  # QQ邮箱SMTP服务器
-    smtp_port = 465  # SSL端口
-    sender_email = "340191272@qq.com"  # 发件人邮箱
-    sender_password = "pjbwfffghxmmbhge"  # QQ邮箱授权码（去除空格）
-    
-    # 收件人列表
-    recipients = [
-        "klauskuang@tencent.com",
-        "winnieezhu@tencent.com",
-        "rebeccaxrlu@tencent.com",
-        "estherfan@tencent.com",
-        "angelaxzhao@tencent.com",
-        "kimimczhang@tencent.com",
-        "peterxsun@tencent.com",
-        "mosessun@tencent.com",
-        "selinapang@tencent.com",
-        "davidmuxu@tencent.com",
-        "nikizzhang@tencent.com"
-    ]
-    
-    # 邮件主题
-    subject = "2026年2月第5周运营商行业周报"
-    
-    # HTML邮件正文
-    html_content = """
-<!DOCTYPE html>
+
+# ==================== 配置区域 ====================
+
+# SMTP 邮件服务器配置
+SMTP_SERVER = "smtp.qq.com"
+SMTP_PORT = 465  # SSL端口
+SENDER_EMAIL = "340191272@qq.com"
+SENDER_PASSWORD = "pjbwfffghxmmbhge"  # QQ邮箱授权码
+
+# 收件人列表
+RECIPIENTS = [
+    "fangtan@tencent.com",
+    "klauskuang@tencent.com",
+    "winnieezhu@tencent.com",
+    "rebeccaxrlu@tencent.com",
+    "estherfan@tencent.com",
+    "angelaxzhao@tencent.com",
+    "kimimczhang@tencent.com",
+    "peterxsun@tencent.com",
+    "mosessun@tencent.com",
+    "selinapang@tencent.com",
+    "davidmuxu@tencent.com",
+    "nikizzhang@tencent.com",
+    "eonefeng@tencent.com",
+]
+
+GITHUB_PAGES_BASE = "https://azuretanfang.github.io/weekly-report/运营商行业周报"
+
+# ==================== 配置区域结束 ====================
+
+
+def auto_detect_latest_report():
+    """自动检测最新一期周报文件，返回 (file_prefix, title, period)"""
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # 扫描所有 weekly-report-MMDD-MMDD.html 文件
+    pattern = os.path.join(script_dir, "weekly-report-????-????.html")
+    html_files = sorted(glob.glob(pattern))
+
+    if not html_files:
+        print("❌ 未找到任何周报 HTML 文件")
+        sys.exit(1)
+
+    # 取最后一个（按文件名排序，即日期最新的）
+    latest_html = os.path.basename(html_files[-1])
+    # 例: weekly-report-0309-0315.html
+    prefix = latest_html.replace(".html", "")  # weekly-report-0309-0315
+    parts = prefix.split("-")  # ['weekly', 'report', '0309', '0315']
+    start_mmdd = parts[2]  # 0309
+    end_mmdd = parts[3]    # 0315
+
+    # 格式化日期显示
+    start_display = f"{start_mmdd[:2]}.{start_mmdd[2:]}"  # 03.09
+    end_display = f"{end_mmdd[:2]}.{end_mmdd[2:]}"        # 03.15
+    period = f"{start_display} - {end_display}"
+
+    # 计算年份和周数 —— 用当前年份
+    year = datetime.now().year
+    start_month = int(start_mmdd[:2])
+
+    # 计算是当月第几周
+    start_day = int(start_mmdd[2:])
+    week_num = (start_day - 1) // 7 + 1
+    title = f"{year}年{start_month}月第{week_num}周运营商行业周报"
+
+    return prefix, title, period
+
+
+def auto_detect_or_manual(file_prefix=None):
+    """根据传入参数或自动检测来确定周报参数"""
+    if file_prefix:
+        # 手动指定文件前缀
+        parts = file_prefix.split("-")
+        start_mmdd = parts[2]
+        end_mmdd = parts[3]
+        start_display = f"{start_mmdd[:2]}.{start_mmdd[2:]}"
+        end_display = f"{end_mmdd[:2]}.{end_mmdd[2:]}"
+        period = f"{start_display} - {end_display}"
+        year = datetime.now().year
+        start_month = int(start_mmdd[:2])
+        start_day = int(start_mmdd[2:])
+        week_num = (start_day - 1) // 7 + 1
+        title = f"{year}年{start_month}月第{week_num}周运营商行业周报"
+        return file_prefix, title, period
+    else:
+        return auto_detect_latest_report()
+
+
+def build_html_content(report_title, report_period, report_file_prefix):
+    """构建邮件HTML正文 —— 高清长图通过 CID 内嵌，点击跳转在线HTML"""
+
+    html_url = f"{GITHUB_PAGES_BASE}/{report_file_prefix}.html"
+
+    # 图片使用 cid:report_image 引用内嵌附件
+    return f"""<!DOCTYPE html>
 <html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            font-family: "PingFang SC", "Microsoft YaHei", Arial, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-            background-color: #f5f5f5;
-        }
-        .email-container {
-            background: white;
-            border-radius: 8px;
-            padding: 30px;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-        }
-        .header {
-            border-bottom: 3px solid #6366F1;
-            padding-bottom: 20px;
-            margin-bottom: 30px;
-        }
-        h1 {
-            color: #1E293B;
-            font-size: 24px;
-            margin: 0 0 10px 0;
-        }
-        .subtitle {
-            color: #64748B;
-            font-size: 14px;
-            margin: 0;
-        }
-        .image-container {
-            text-align: center;
-            margin: 30px 0;
-        }
-        .report-image {
-            max-width: 100%;
-            height: auto;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        }
-        .link-button {
-            display: inline-block;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 12px 30px;
-            text-decoration: none;
-            border-radius: 6px;
-            font-weight: 600;
-            margin-top: 20px;
-        }
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid #E2E8F0;
-            text-align: center;
-            color: #94A3B8;
-            font-size: 12px;
-        }
-        .highlight {
-            background: #F0F9FF;
-            padding: 15px;
-            border-radius: 6px;
-            margin: 20px 0;
-            border-left: 4px solid #0EA5E9;
-        }
-    </style>
 </head>
-<body>
-    <div class="email-container">
-        <div class="header">
-            <h1>📡 2026年2月第5周运营商行业周报</h1>
-            <p class="subtitle">02.23 - 02.28 | 聚焦2月运营数据、MWC 2026前瞻、工信部算力节点布局与人事调整余波</p>
-        </div>
+<body style="margin: 0; padding: 0; background-color: #f0f2f5; font-family: 'PingFang SC', 'Microsoft YaHei', Arial, sans-serif;">
+    <table width="100%" cellpadding="0" cellspacing="0" border="0" style="background-color: #f0f2f5;">
+        <tr>
+            <td align="center" style="padding: 20px 10px;">
+                <table width="680" cellpadding="0" cellspacing="0" border="0" style="background: #ffffff; border-radius: 12px; overflow: hidden; box-shadow: 0 2px 12px rgba(0,0,0,0.08);">
 
-        <div class="highlight">
-            <strong>本周要点：</strong>
-            <ul style="margin: 10px 0; padding-left: 20px;">
-                <li>5G套餐用户达13.9亿，净增2730万</li>
-                <li>中国移动占比57.6%，电信渗透率79.1%</li>
-                <li>何腾→国家广电总局副局长（已就任）</li>
-                <li>MWC 2026前瞻：5G-A全量商用冲刺</li>
-            </ul>
-        </div>
+                    <!-- 顶部标题栏 -->
+                    <tr>
+                        <td style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); padding: 20px 30px; text-align: center;">
+                            <h1 style="color: #ffffff; font-size: 20px; margin: 0; font-weight: 600;">
+                                📡 {report_title}
+                            </h1>
+                            <p style="color: rgba(255,255,255,0.85); font-size: 13px; margin: 8px 0 0 0;">
+                                {report_period} · 点击长图可查看在线HTML版本
+                            </p>
+                        </td>
+                    </tr>
 
-        <div class="image-container">
-            <a href="https://azuretanfang.github.io/weekly-report/weekly-report-0223-0228.html" target="_blank">
-                <img src="https://azuretanfang.github.io/weekly-report/weekly-report-0223-0228-9x16.png" 
-                     alt="运营商行业周报" 
-                     class="report-image">
-            </a>
-            <p style="color: #64748B; font-size: 13px; margin-top: 10px;">
-                👆 点击图片查看在线HTML版本
-            </p>
-        </div>
+                    <!-- 高清长图主体（CID内嵌） -->
+                    <tr>
+                        <td style="padding: 0; text-align: center; font-size: 0; line-height: 0;">
+                            <a href="{html_url}" target="_blank" style="display: block; text-decoration: none;">
+                                <img src="cid:report_image"
+                                     alt="{report_title}"
+                                     width="680"
+                                     style="display: block; width: 100%; height: auto; border: none;">
+                            </a>
+                        </td>
+                    </tr>
 
-        <div style="text-align: center;">
-            <a href="https://azuretanfang.github.io/weekly-report/weekly-report-0223-0228.html" 
-               class="link-button" 
-               target="_blank">
-                📄 查看完整HTML版周报
-            </a>
-        </div>
+                    <!-- 底部操作区 -->
+                    <tr>
+                        <td style="padding: 24px 30px; text-align: center; background: #fafbfc;">
+                            <a href="{html_url}"
+                               target="_blank"
+                               style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: #ffffff; padding: 12px 32px; text-decoration: none; border-radius: 6px; font-size: 14px; font-weight: 600;">
+                                📄 查看在线HTML版周报
+                            </a>
+                            <p style="color: #94A3B8; font-size: 12px; margin: 16px 0 0 0;">
+                                👆 点击上方按钮或长图均可查看完整在线版本
+                            </p>
+                        </td>
+                    </tr>
 
-        <div class="footer">
-            <p>运营商行业咨询 · 数据来源：工信部、国资委、通信产业报等公开资料</p>
-            <p style="margin-top: 8px;">报告周期：2026.02.23 - 2026.02.28 · 仅供参考</p>
-        </div>
-    </div>
+                    <!-- 页脚 -->
+                    <tr>
+                        <td style="padding: 16px 30px; text-align: center; border-top: 1px solid #E2E8F0;">
+                            <p style="color: #94A3B8; font-size: 11px; margin: 0;">
+                                运营商行业资讯 · 数据来源：三大运营商公告、工信部、国资委、C114通信网、澎湃新闻、新华社、东方财富网
+                            </p>
+                            <p style="color: #94A3B8; font-size: 11px; margin: 6px 0 0 0;">
+                                报告周期：2026.{report_period} · 仅供内部参考
+                            </p>
+                        </td>
+                    </tr>
+
+                </table>
+            </td>
+        </tr>
+    </table>
 </body>
-</html>
+</html>"""
+
+
+def send_weekly_report(file_prefix=None):
+    """发送运营商行业周报邮件
+    
+    Args:
+        file_prefix: 可选，指定周报文件前缀（如 'weekly-report-0309-0315'）。
+                     如不传则自动检测最新一期。
     """
-    
-    # 创建邮件对象
-    message = MIMEMultipart('alternative')
-    message['From'] = sender_email  # QQ邮箱要求使用标准格式
-    message['To'] = ", ".join(recipients)
-    message['Subject'] = Header(subject, 'utf-8')
-    
-    # 添加HTML内容
+    # 自动检测或使用指定参数
+    report_file_prefix, report_title, report_period = auto_detect_or_manual(file_prefix)
+    report_image_file = f"{report_file_prefix}-hd.png"
+
+    print(f"📋 周报文件前缀: {report_file_prefix}")
+    print(f"📝 邮件标题: {report_title}")
+    print(f"📅 报告周期: {report_period}")
+
+    # 定位图片文件路径
+    script_dir = os.path.dirname(os.path.abspath(__file__))
+    image_path = os.path.join(script_dir, report_image_file)
+
+    if not os.path.exists(image_path):
+        print(f"❌ 找不到图片文件: {image_path}")
+        return False
+
+    image_size_mb = os.path.getsize(image_path) / (1024 * 1024)
+    print(f"📎 内嵌图片: {report_image_file} ({image_size_mb:.1f} MB)")
+
+    # 构建 related 类型的邮件（支持 CID 内嵌图片）
+    message = MIMEMultipart('related')
+    message['From'] = SENDER_EMAIL
+    message['To'] = ", ".join(RECIPIENTS)
+    message['Subject'] = Header(report_title, 'utf-8')
+
+    # HTML 正文部分
+    html_content = build_html_content(report_title, report_period, report_file_prefix)
     html_part = MIMEText(html_content, 'html', 'utf-8')
     message.attach(html_part)
-    
+
+    # 内嵌图片附件（CID: report_image）
+    with open(image_path, 'rb') as f:
+        img_data = f.read()
+
+    img_part = MIMEImage(img_data, _subtype='png')
+    img_part.add_header('Content-ID', '<report_image>')
+    img_part.add_header('Content-Disposition', 'inline', filename=report_image_file)
+    message.attach(img_part)
+
     try:
-        # 连接SMTP服务器 - 使用SSL方式（QQ邮箱）
         print("正在连接邮件服务器...")
-        server = smtplib.SMTP_SSL(smtp_server, smtp_port)
-        server.login(sender_email, sender_password)
-        
-        # 发送邮件
-        print(f"正在发送邮件到: {', '.join(recipients)}")
-        server.sendmail(sender_email, recipients, message.as_string())
+        server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
+        server.login(SENDER_EMAIL, SENDER_PASSWORD)
+
+        print(f"正在发送邮件到: {', '.join(RECIPIENTS)}")
+        server.sendmail(SENDER_EMAIL, RECIPIENTS, message.as_string())
         server.quit()
-        
-        print("✅ 邮件发送成功！")
+
+        print(f"✅ 邮件发送成功！共 {len(RECIPIENTS)} 位收件人")
         return True
-        
+
     except Exception as e:
         print(f"❌ 邮件发送失败: {str(e)}")
         return False
 
+
 if __name__ == "__main__":
+    # 支持命令行参数指定文件前缀，否则自动检测
+    file_prefix = sys.argv[1] if len(sys.argv) > 1 else None
+    report_file_prefix, report_title, report_period = auto_detect_or_manual(file_prefix)
+
     print("=" * 50)
     print("运营商行业周报邮件发送")
+    print(f"主题: {report_title}")
+    print(f"周期: {report_period}")
+    print(f"收件人: {len(RECIPIENTS)} 人")
     print("=" * 50)
-    send_weekly_report()
+    send_weekly_report(file_prefix)
