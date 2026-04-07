@@ -1,0 +1,409 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e5]:
+    - generic [ref=e6]:
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - text: 所属项目
+          - generic [ref=e11]:
+            - textbox "运营商合作部_技术研发中心的所有项目" [ref=e12]
+            - generic [ref=e13]: (选中 2 项目)
+        - text: 时间范围
+        - generic [ref=e14]:
+          - generic [ref=e15]:
+            - textbox "" [ref=e16]: 2026-03-23
+            - generic [ref=e17]: 
+          - text: "-"
+          - generic [ref=e18]:
+            - textbox "" [ref=e19]: 2026-03-28
+            - generic [ref=e20]: 
+        - text: 开发人员
+        - textbox [ref=e22]: conniesun;shuqigao;camdenwang;sigmoidguo;guoleluo;tealyao;allanwei;benzphuang;lintonliu;jiushugao;junyuzheng;v_jjiayuliu;kangkangran;juibyyang;
+        - generic "添加用户组成员" [ref=e23]: 
+        - generic [ref=e24]:
+          - checkbox [ref=e25] [cursor=pointer]
+          - text: 显示离职人员
+        - generic [ref=e26]: 对象类型
+        - generic [ref=e31] [cursor=pointer]: 
+        - generic [ref=e35] [cursor=pointer]: 生成报告
+      - generic [ref=e36]:
+        - generic [ref=e38] [cursor=pointer]: 导出明细报告
+        - generic [ref=e40] [cursor=pointer]: 导出工时记录
+    - generic [ref=e42]:
+      - generic [ref=e43]: "工作花费 ( 工作量单位: d-天；h-小时 )"
+      - table [ref=e45]:
+        - rowgroup [ref=e46]:
+          - row "开发人员 预估工时 星期一 03-23 星期二 03-24 星期三 03-25 星期四 03-26 星期五 03-27 总花费工时 详情" [ref=e47]:
+            - columnheader "开发人员" [ref=e48]
+            - columnheader "预估工时" [ref=e49]
+            - columnheader "星期一 03-23" [ref=e50]:
+              - generic [ref=e51]: 星期一
+              - generic [ref=e52]: 03-23
+            - columnheader "星期二 03-24" [ref=e53]:
+              - generic [ref=e54]: 星期二
+              - generic [ref=e55]: 03-24
+            - columnheader "星期三 03-25" [ref=e56]:
+              - generic [ref=e57]: 星期三
+              - generic [ref=e58]: 03-25
+            - columnheader "星期四 03-26" [ref=e59]:
+              - generic [ref=e60]: 星期四
+              - generic [ref=e61]: 03-26
+            - columnheader "星期五 03-27" [ref=e62]:
+              - generic [ref=e63]: 星期五
+              - generic [ref=e64]: 03-27
+            - columnheader "总花费工时" [ref=e65]
+            - columnheader "详情" [ref=e66]
+        - rowgroup [ref=e67]:
+          - row "合计 7d 9.3d 9.8d 18.3d 10.3d 17.3d 65d" [ref=e68]:
+            - cell "合计" [ref=e69]
+            - cell "7d" [ref=e70]
+            - cell "9.3d" [ref=e71]
+            - cell "9.8d" [ref=e72]
+            - cell "18.3d" [ref=e73]
+            - cell "10.3d" [ref=e74]
+            - cell "17.3d" [ref=e75]
+            - cell "65d" [ref=e76]
+            - cell [ref=e77]
+          - row "tealyao 0 1d 1d 1d 1d 1d 5d 查看明细" [ref=e78]:
+            - cell "tealyao" [ref=e79]
+            - cell "0" [ref=e80]:
+              - link "0" [ref=e81] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=tealyao&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e82]
+            - cell "1d" [ref=e83]
+            - cell "1d" [ref=e84]
+            - cell "1d" [ref=e85]
+            - cell "1d" [ref=e86]
+            - cell "5d" [ref=e87]
+            - cell "查看明细" [ref=e88]:
+              - link "查看明细" [ref=e89] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=tealyao&select_workspace=20398362%7C20452013&entity_type=
+          - row "sigmoidguo 2d 1d 1d 1d 1d 1d 5d 查看明细" [ref=e90]:
+            - cell "sigmoidguo" [ref=e91]
+            - cell "2d" [ref=e92]:
+              - link "2d" [ref=e93] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=sigmoidguo&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e94]
+            - cell "1d" [ref=e95]
+            - cell "1d" [ref=e96]
+            - cell "1d" [ref=e97]
+            - cell "1d" [ref=e98]
+            - cell "5d" [ref=e99]
+            - cell "查看明细" [ref=e100]:
+              - link "查看明细" [ref=e101] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=sigmoidguo&select_workspace=20398362%7C20452013&entity_type=
+          - row "conniesun 0 1d 1d 1d 1d 1d 5d 查看明细" [ref=e102]:
+            - cell "conniesun" [ref=e103]
+            - cell "0" [ref=e104]:
+              - link "0" [ref=e105] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=conniesun&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e106]
+            - cell "1d" [ref=e107]
+            - cell "1d" [ref=e108]
+            - cell "1d" [ref=e109]
+            - cell "1d" [ref=e110]
+            - cell "5d" [ref=e111]
+            - cell "查看明细" [ref=e112]:
+              - link "查看明细" [ref=e113] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=conniesun&select_workspace=20398362%7C20452013&entity_type=
+          - row "lintonliu 0 0.3d 0 2.7d 1d 1d 5d 查看明细" [ref=e114]:
+            - cell "lintonliu" [ref=e115]
+            - cell "0" [ref=e116]:
+              - link "0" [ref=e117] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=lintonliu&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.3d" [ref=e118]
+            - cell "0" [ref=e119]
+            - cell "2.7d" [ref=e120]
+            - cell "1d" [ref=e121]
+            - cell "1d" [ref=e122]
+            - cell "5d" [ref=e123]
+            - cell "查看明细" [ref=e124]:
+              - link "查看明细" [ref=e125] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=lintonliu&select_workspace=20398362%7C20452013&entity_type=
+          - row "junyuzheng 0 0.5d 1d 1.2d 0 2.3d 5d 查看明细" [ref=e126]:
+            - cell "junyuzheng" [ref=e127]
+            - cell "0" [ref=e128]:
+              - link "0" [ref=e129] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=junyuzheng&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.5d" [ref=e130]
+            - cell "1d" [ref=e131]
+            - cell "1.2d" [ref=e132]
+            - cell "0" [ref=e133]
+            - cell "2.3d" [ref=e134]
+            - cell "5d" [ref=e135]
+            - cell "查看明细" [ref=e136]:
+              - link "查看明细" [ref=e137] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=junyuzheng&select_workspace=20398362%7C20452013&entity_type=
+          - row "juibyyang 1d 1d 1d 1d 1d 1d 5d 查看明细" [ref=e138]:
+            - cell "juibyyang" [ref=e139]
+            - cell "1d" [ref=e140]:
+              - link "1d" [ref=e141] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=juibyyang&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e142]
+            - cell "1d" [ref=e143]
+            - cell "1d" [ref=e144]
+            - cell "1d" [ref=e145]
+            - cell "1d" [ref=e146]
+            - cell "5d" [ref=e147]
+            - cell "查看明细" [ref=e148]:
+              - link "查看明细" [ref=e149] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=juibyyang&select_workspace=20398362%7C20452013&entity_type=
+          - row "guoleluo 0 0.5d 0.2d 2.5d 1d 0.8d 5d 查看明细" [ref=e150]:
+            - cell "guoleluo" [ref=e151]
+            - cell "0" [ref=e152]:
+              - link "0" [ref=e153] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=guoleluo&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.5d" [ref=e154]
+            - cell "0.2d" [ref=e155]
+            - cell "2.5d" [ref=e156]
+            - cell "1d" [ref=e157]
+            - cell "0.8d" [ref=e158]
+            - cell "5d" [ref=e159]
+            - cell "查看明细" [ref=e160]:
+              - link "查看明细" [ref=e161] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=guoleluo&select_workspace=20398362%7C20452013&entity_type=
+          - row "camdenwang 0 1d 1d 1d 1d 1d 5d 查看明细" [ref=e162]:
+            - cell "camdenwang" [ref=e163]
+            - cell "0" [ref=e164]:
+              - link "0" [ref=e165] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=camdenwang&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e166]
+            - cell "1d" [ref=e167]
+            - cell "1d" [ref=e168]
+            - cell "1d" [ref=e169]
+            - cell "1d" [ref=e170]
+            - cell "5d" [ref=e171]
+            - cell "查看明细" [ref=e172]:
+              - link "查看明细" [ref=e173] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=camdenwang&select_workspace=20398362%7C20452013&entity_type=
+          - row "benzphuang 0 1d 1d 1d 1d 1d 5d 查看明细" [ref=e174]:
+            - cell "benzphuang" [ref=e175]
+            - cell "0" [ref=e176]:
+              - link "0" [ref=e177] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=benzphuang&select_workspace=20398362%7C20452013&entity_type=
+            - cell "1d" [ref=e178]
+            - cell "1d" [ref=e179]
+            - cell "1d" [ref=e180]
+            - cell "1d" [ref=e181]
+            - cell "1d" [ref=e182]
+            - cell "5d" [ref=e183]
+            - cell "查看明细" [ref=e184]:
+              - link "查看明细" [ref=e185] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=benzphuang&select_workspace=20398362%7C20452013&entity_type=
+          - row "allanwei 3d 0.9d 1d 1d 1d 1.1d 5d 查看明细" [ref=e186]:
+            - cell "allanwei" [ref=e187]
+            - cell "3d" [ref=e188]:
+              - link "3d" [ref=e189] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=allanwei&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.9d" [ref=e190]
+            - cell "1d" [ref=e191]
+            - cell "1d" [ref=e192]
+            - cell "1d" [ref=e193]
+            - cell "1.1d" [ref=e194]
+            - cell "5d" [ref=e195]
+            - cell "查看明细" [ref=e196]:
+              - link "查看明细" [ref=e197] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=allanwei&select_workspace=20398362%7C20452013&entity_type=
+          - row "kangkangran 0 0.6d 0.4d 2d 0 2d 5d 查看明细" [ref=e198]:
+            - cell "kangkangran" [ref=e199]
+            - cell "0" [ref=e200]:
+              - link "0" [ref=e201] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=kangkangran&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.6d" [ref=e202]
+            - cell "0.4d" [ref=e203]
+            - cell "2d" [ref=e204]
+            - cell "0" [ref=e205]
+            - cell "2d" [ref=e206]
+            - cell "5d" [ref=e207]
+            - cell "查看明细" [ref=e208]:
+              - link "查看明细" [ref=e209] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=kangkangran&select_workspace=20398362%7C20452013&entity_type=
+          - row "jiushugao 0 0 0 2.9d 0.3d 1.8d 5d 查看明细" [ref=e210]:
+            - cell "jiushugao" [ref=e211]
+            - cell "0" [ref=e212]:
+              - link "0" [ref=e213] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=jiushugao&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0" [ref=e214]
+            - cell "0" [ref=e215]
+            - cell "2.9d" [ref=e216]
+            - cell "0.3d" [ref=e217]
+            - cell "1.8d" [ref=e218]
+            - cell "5d" [ref=e219]
+            - cell "查看明细" [ref=e220]:
+              - link "查看明细" [ref=e221] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=jiushugao&select_workspace=20398362%7C20452013&entity_type=
+          - row "shuqigao 0 0.5d 1.2d 请假1天 1d 1.3d 4d ; 请假1天 查看明细" [ref=e222]:
+            - cell "shuqigao" [ref=e223]
+            - cell "0" [ref=e224]:
+              - link "0" [ref=e225] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=shuqigao&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0.5d" [ref=e226]
+            - cell "1.2d" [ref=e227]
+            - cell "请假1天" [ref=e228]:
+              - generic "0" [ref=e229]: 请假1天
+            - cell "1d" [ref=e230]
+            - cell "1.3d" [ref=e231]
+            - cell "4d ; 请假1天" [ref=e232]:
+              - generic "4d" [ref=e233]: 4d ; 请假1天
+            - cell "查看明细" [ref=e234]:
+              - link "查看明细" [ref=e235] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=shuqigao&select_workspace=20398362%7C20452013&entity_type=
+          - row "v_jjiayuliu 1d 0 0 0 0 1d 1d 查看明细" [ref=e236]:
+            - cell "v_jjiayuliu" [ref=e237]
+            - cell "1d" [ref=e238]:
+              - link "1d" [ref=e239] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_effort_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=v_jjiayuliu&select_workspace=20398362%7C20452013&entity_type=
+            - cell "0" [ref=e240]
+            - cell "0" [ref=e241]
+            - cell "0" [ref=e242]
+            - cell "0" [ref=e243]
+            - cell "1d" [ref=e244]
+            - cell "1d" [ref=e245]
+            - cell "查看明细" [ref=e246]:
+              - link "查看明细" [ref=e247] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/report/reports/member_job_report_detail?spent_begin=2026-03-23&spent_end=2026-03-28&owner=v_jjiayuliu&select_workspace=20398362%7C20452013&entity_type=
+  - generic [ref=e248]:
+    - generic [ref=e249]:
+      - link " " [ref=e250] [cursor=pointer]:
+        - /url: https://wedev.woa.com
+        - generic [ref=e251]: 
+        - generic [ref=e252]: 
+      - link [ref=e253] [cursor=pointer]:
+        - /url: https://tapd.woa.com/my_dashboard
+        - img [ref=e254]
+      - generic [ref=e255] [cursor=pointer]: 
+    - generic [ref=e256]:
+      - generic [ref=e257]:
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - textbox [ref=e260]
+            - generic [ref=e261]: 
+          - generic:  
+        - generic [ref=e262]:
+          - link " 主页" [ref=e263] [cursor=pointer]:
+            - /url: https://tapd.woa.com/my_dashboard
+            - generic [ref=e264]:
+              - generic [ref=e265]: 
+              - text: 主页
+          - link " 我的工作" [ref=e266] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/my/work
+            - generic [ref=e267]:
+              - generic [ref=e268]: 
+              - text: 我的工作
+              - generic: 
+          - link " 我的文档" [ref=e269] [cursor=pointer]:
+            - /url: https://tapd.woa.com/personal_documents/my_create_personal/?from=left_tree_v2
+            - generic [ref=e270]:
+              - generic [ref=e271]: 
+              - text: 我的文档
+          - text: 
+          - link " 查询过滤" [ref=e272] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/worktable/search
+            - generic [ref=e273]:
+              - generic [ref=e274]: 
+              - text: 查询过滤
+      - text:       
+      - generic [ref=e275]:
+        - generic [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]: 
+          - text: 协作空间
+        - generic [ref=e279]:
+          - generic [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282] [cursor=pointer]:
+                - generic [ref=e283]: 
+                - text: 项目协作
+              - generic [ref=e287] [cursor=pointer]: 
+            - list [ref=e288]:
+              - listitem [ref=e289]:
+                - link "运营商合作部_技术研发中心" [ref=e290] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/20398362/report/reports/index
+                  - generic [ref=e293]: 运营商合作部_技术研发中心
+                - text: 
+              - listitem [ref=e294]:
+                - link "TPD-产品一组" [ref=e295] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201315/story/list
+                  - generic [ref=e298]: TPD-产品一组
+                - text: 
+              - listitem [ref=e299]:
+                - link "TPD-产品二组（组内协同）" [ref=e300] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201309/story/list
+                  - generic [ref=e303]: TPD-产品二组（组内协同）
+                - text: 
+              - listitem [ref=e304]:
+                - link "结算" [ref=e305] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/10090321/story/list
+                  - generic [ref=e308]: 结算
+                - text: 
+          - generic [ref=e313]:
+            - generic [ref=e314]:
+              - generic [ref=e315] [cursor=pointer]:
+                - generic [ref=e316]: 
+                - generic [ref=e317]: 轻协作
+              - generic [ref=e318]:
+                - text: 
+                - generic [ref=e320] [cursor=pointer]: 
+            - list [ref=e321]:
+              - listitem [ref=e322]:
+                - link "示例空间" [ref=e323] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/t/index/70043141
+                  - generic [ref=e326]: 示例空间
+                - text: 
+    - generic [ref=e328]:
+      - generic "fangtan" [ref=e330] [cursor=pointer]:
+        - img [ref=e331]
+      - generic [ref=e332]:
+        - link "" [ref=e334] [cursor=pointer]:
+          - /url: https://o.tapd.woa.com/
+          - generic [ref=e335]: 
+        - generic [ref=e340] [cursor=pointer]: 
+    - text:    
+  - generic:
+    - generic [ref=e341]:
+      - generic "运营商合作部_技术研发中心 点击查看项目(ID:20398362)信息" [ref=e344]:
+        - link "运 运营商合作部_技术研发中心" [ref=e345] [cursor=pointer]:
+          - /url: https://tapd.woa.com/20398362/workspaces/workspace_information
+          - generic [ref=e346]:
+            - generic [ref=e347]: 运
+            - generic [ref=e348]: 运营商合作部_技术研发中心
+      - generic:
+        - button "" [ref=e352] [cursor=pointer]:
+          - generic [ref=e353]: 
+        - button "" [ref=e355] [cursor=pointer]:
+          - generic [ref=e356]: 
+        - generic [ref=e358]:
+          - generic:
+            - textbox "搜索标题或ID"
+            - text:  
+          - generic [ref=e360] [cursor=pointer]: 
+      - generic [ref=e361]:
+        - button "" [ref=e366] [cursor=pointer]:
+          - generic [ref=e367]: 
+        - list [ref=e368]:
+          - listitem [ref=e369]:
+            - link "概览" [ref=e370] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/dashboard/workspace/view
+          - listitem [ref=e371]:
+            - link "需求" [ref=e372] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/story/list
+          - listitem [ref=e373]:
+            - link "缺陷" [ref=e374] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/bug/list
+          - listitem [ref=e375]:
+            - link "甘特图" [ref=e376] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/gantt
+          - listitem [ref=e377]:
+            - link "团队日历" [ref=e378] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/calendar
+          - listitem [ref=e379]:
+            - link "迭代" [ref=e380] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/prong/iterations
+          - listitem [ref=e381]:
+            - link "报表" [ref=e382] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/report/reports/index
+        - link "更多 " [ref=e386] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e387]: 更多
+          - generic [ref=e388]: 
+    - text: 
+  - generic [ref=e392] [cursor=pointer]:
+    - img

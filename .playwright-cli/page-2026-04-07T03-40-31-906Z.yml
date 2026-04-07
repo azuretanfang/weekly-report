@@ -1,0 +1,122 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: Weekly Report
+    - heading "运营商行业周报 04.01 - 04.06" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 中国移动官宣4月30日关停5项老旧业务 | 2026中关村论坛聚焦6G与具身智能 | 2026年被定义为"智能体爆发年" | 双重政策压顶运营商加速转型
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "📊 市场数据" [level=2] [ref=e8]:
+        - generic [ref=e9]: 📊
+        - text: 市场数据
+      - generic [ref=e10]: 年报尘埃落定·关注Q1数据窗口
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: 电信业务收入(1-2月)
+        - generic [ref=e14]: 2904亿
+        - generic [ref=e15]: 同比-1.7%⚠️
+      - generic [ref=e16]:
+        - generic [ref=e17]: 5G用户总数
+        - generic [ref=e18]: 12.35亿
+        - generic [ref=e19]: 占比67.6%
+      - generic [ref=e20]:
+        - generic [ref=e21]: 5G基站总数
+        - generic [ref=e22]: 490.9万
+        - generic [ref=e23]: 持续扩容
+      - generic [ref=e24]:
+        - generic [ref=e25]: 2026算力投资合计
+        - generic [ref=e26]: 600亿+
+        - generic [ref=e27]: 占比均超35%
+    - generic [ref=e28]:
+      - heading "📈 行业\"量增价降\"趋势延续，传统业务承压明显" [level=3] [ref=e29]:
+        - generic [ref=e30]: 📈
+        - text: 行业"量增价降"趋势延续，传统业务承压明显
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: ⚠️ 警示
+          - generic [ref=e34]: 2026年1-2月电信业务收入同比下降1.7%，为近年来罕见的负增长信号。 移动数据流量业务收入下降3.1%，但业务总量同比增长8.4%，"量增价降"趋势加剧。 移动互联网流量666.7亿GB（+20.4%），千兆宽带用户2.45亿户（占比35.3%）。
+        - generic [ref=e35]:
+          - generic [ref=e36]: 💡 转型
+          - generic [ref=e37]: 传统收入承压倒逼运营商全面转向AI+算力赛道。 三大运营商2025年报显示：中国移动算力服务收入898亿（+11.1%），智算增速279%； 中国电信天翼云收入1207亿，AIDC收入345亿；中国联通AI收入增长超140%。 算力与AI已成为运营商唯一高速增长引擎。
+  - generic [ref=e38]:
+    - generic [ref=e39]:
+      - heading "👔 人事变动" [level=2] [ref=e40]:
+        - generic [ref=e41]: 👔
+        - text: 人事变动
+      - generic [ref=e42]: 中国移动总经理悬空中
+    - generic [ref=e44]:
+      - generic [ref=e45]:
+        - generic [ref=e46]: 🔥
+        - generic [ref=e47]:
+          - generic [ref=e48]: 中国移动总经理何飚已于2月离任，继任者待定
+          - generic [ref=e49]: 2月10日，中国移动官网撤下何飚的职务信息，随后确认其出任国家广播电视总局副局长。 何飚于2024年3月从中国联通调任中国移动总经理，在任仅23个月。 截至目前，中国移动总经理一职仍处于悬空状态，市场高度关注继任人选。 现任领导班子：董事长陈忠岳（2025年12月接任杨杰），执行董事王利民、财务总监李荣华。
+      - generic [ref=e50]:
+        - generic [ref=e51]: 📌
+        - generic [ref=e52]:
+          - generic [ref=e53]: 三大运营商最新领导班子一览
+          - generic [ref=e54]: 中国移动：董事长陈忠岳，总经理待定 ｜ 中国电信：董事长柯瑞文，总经理刘桂清 ｜ 中国联通：董事长待定（陈忠岳调任移动后），总经理简勤。 运营商领导班子正处于新一轮调整期，"十五五"开局之年战略方向将由新团队定调。
+  - generic [ref=e55]:
+    - generic [ref=e56]:
+      - heading "🚀 行业动态" [level=2] [ref=e57]:
+        - generic [ref=e58]: 🚀
+        - text: 行业动态
+      - generic [ref=e59]: 6G加速·老业务退场·Agent爆发
+    - generic [ref=e60]:
+      - generic [ref=e61]:
+        - generic [ref=e62]:
+          - generic [ref=e63]: 🔥 焦点
+          - generic [ref=e64]: 中国移动官宣4月30日全国关停5项老旧增值业务
+        - generic [ref=e65]: 3月22日，中国移动通过官网、APP、10086短信等四大渠道发布全国统一公告： 自4月30日24时起，全国31省同步关停5项增值业务，包括"和生活"、"农信通"、"MM应用商城"等服务超10年的老旧产品。 系统将自动退订，不额外扣费，但用户需关注积分、优惠券等权益迁移。 此举标志着运营商正式告别"传统增值服务时代"，进一步聚焦AI+算力新业务体系。
+      - generic [ref=e66]:
+        - generic [ref=e67]:
+          - generic [ref=e68]: 📡 6G
+          - generic [ref=e69]: 2026中关村论坛：6G四项创新成果发布，具身智能成杀手级应用
+        - generic [ref=e70]: 3月27日，2026中关村论坛年会6G技术与产业创新论坛在京举办，四项重磅成果集中发布： 赋能具身智能的6G可重构开放式创新网络平台、6G空天地智简语义立体通信网络试验平台等。 中国移动研究院院长黄宇红透露，我国已牵头完成3GPP首个6G需求标准研究项目，定义6G六大核心场景。 中国信科集团陈山枝提出"星地融合"和"智能体通信"是6G两大标志性特征，全球统一标准预计三年后形成。
+      - generic [ref=e71]:
+        - generic [ref=e72]:
+          - generic [ref=e73]: 🤖 AI
+          - generic [ref=e74]: 2026年被定义为"智能体爆发年"，运营商算力底座价值凸显
+        - generic [ref=e75]: 新华社《环球》杂志4月2日刊发专题报道，将2026年定义为"智能体爆发年"。 核心逻辑：大模型推理能力成熟 + AI Agent从实验室走向产业落地 + 算力基础设施就绪。 三大运营商作为算力底座提供方，"Agent使用Token、Token拉动算力"的商业链路正在跑通。 日均Token调用量已从2024年初的1000亿跃升至2025年底的100万亿，增长1000倍。 运营商正从"卖连接"转向"卖推理结果"，Token经营成为核心战略。
+      - generic [ref=e76]:
+        - generic [ref=e77]:
+          - generic [ref=e78]: 🦾 具身
+          - generic [ref=e79]: 运营商集体布局具身智能，机器人赛道竞争白热化
+        - generic [ref=e80]: 三大运营商均将具身智能视为"第二增长曲线"的关键赛道： 中国移动已于2025年4月成立具身智能产业创新中心，斥资1.2亿元采购宇树、智元机器人，并通过6G网络提供超低时延通信支撑。 中国电信依托天翼云+AIDC算力底座，打造机器人训练推理平台。 宇树科技被视为"具身智能第一股"最有力竞争者，2026年被定义为具身智能机器人量产元年。
+  - generic [ref=e81]:
+    - generic [ref=e82]:
+      - heading "📋 政策动向" [level=2] [ref=e83]:
+        - generic [ref=e84]: 📋
+        - text: 政策动向
+      - generic [ref=e85]: 双重政策压顶·价值战全面替代价格战
+    - generic [ref=e86]:
+      - generic [ref=e87]:
+        - generic [ref=e88]:
+          - generic [ref=e89]: ⚠️ 重点
+          - generic [ref=e90]: "\"双重政策压顶\"：央企利润上缴比例提升 + 内卷整治双管齐下"
+        - generic [ref=e91]: 2026年3月中央财政预算披露关键调整：央企利润上缴比例将提升，直接影响运营商利润留存和再投资能力。 叠加工信部2026年深入整治"内卷式"竞争的监管要求，运营商面临"少留利润+不许低价"的双重夹击。 行业分析认为，这将倒逼运营商必须从"价格战"彻底转向"价值战"，加速AI+算力的商业化变现。
+      - generic [ref=e92]:
+        - generic [ref=e93]:
+          - generic [ref=e94]: 📱 管控
+          - generic [ref=e95]: 流量卡管控全面升级，"史上最严"新规持续发力
+        - generic [ref=e96]: 2026年元旦起落地的"明白办、放心用"专项行动新规持续执行： 禁止跨省售卡激活、叫停直播渠道售卡、电商平台大流量卡集中清理。 四大运营商同步执行史上最严流量卡管控，从办卡渠道到资费套餐、从实名审核到售后保障全链条规范。 旨在终结低价大流量卡乱象，推动行业回归理性竞争。
+      - generic [ref=e97]:
+        - generic [ref=e98]:
+          - generic [ref=e99]: 🏛️ 规划
+          - generic [ref=e100]: "\"十五五\"规划落地，具身智能和6G列入未来产业培育体系"
+        - generic [ref=e101]: "\"十五五\"规划纲要明确：构建未来产业全链条培育体系，推动量子科技、生物制造、 具身智能、第六代移动通信（6G）等前沿技术发展。 3月29日央视《焦点访谈》专题聚焦2026中关村论坛年会的6G、具身智能、太空算力等成果。 运营商作为6G和算力基础设施的主力军，将在\"十五五\"期间获得更大政策支持空间。"
+  - generic [ref=e102]:
+    - generic [ref=e103]:
+      - generic [ref=e105]: 👀
+      - heading "下周关注" [level=2] [ref=e106]
+    - generic [ref=e107]:
+      - generic [ref=e108]:
+        - generic [ref=e109]: 📊 Q1运营数据
+        - generic [ref=e110]: 关注三大运营商2026年3月及一季度运营数据公告，传统业务下滑趋势是否延续，AI/算力增速能否对冲
+      - generic [ref=e111]:
+        - generic [ref=e112]: 👔 移动总经理
+        - generic [ref=e113]: 中国移动总经理何飚离任已近两月，继任人选是否将于近期公布，对公司战略方向影响深远
+      - generic [ref=e114]:
+        - generic [ref=e115]: 🤖 智能体落地
+        - generic [ref=e116]: "\"智能体爆发年\"运营商Token经营具体产品和定价方案，以及Agent+算力生态的合作动态"
+  - generic [ref=e117]:
+    - paragraph [ref=e118]: 数据来源：三大运营商公告、工信部、国资委、新华网、央视网、C114通信网、澎湃新闻
+    - paragraph [ref=e119]: 制作日期：2026年4月7日

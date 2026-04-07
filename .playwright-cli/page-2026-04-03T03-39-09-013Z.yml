@@ -1,0 +1,150 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "📊 3月研发工时月报 — 商务中心视角" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 运营商合作部 · 技术研发中心 | 2026年3月（3/2-3/31，22个工作日）
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "一、商务中心研发资源投入概览" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 📈 商务中心研发投入
+          - generic [ref=e12]: 49.0 人天
+          - generic [ref=e13]: 占研发总产能的 16.5%（约定10%）
+        - generic [ref=e14]:
+          - generic [ref=e15]: 📋 3月提交需求
+          - generic [ref=e16]: 39 个
+          - generic [ref=e17]: 定向流量、王卡权益、物联网、95语音等
+        - generic [ref=e18]:
+          - generic [ref=e19]: 📦 已交付需求
+          - generic [ref=e20]: 22 个
+          - generic [ref=e21]: 完成率 56%，多个需求跨月进行中
+        - generic [ref=e22]:
+          - generic [ref=e23]: 📊 资源偏差
+          - generic [ref=e24]: +6.5% 偏差
+          - generic [ref=e25]: 高于约定比例，多线需求并行所致
+      - generic [ref=e26]:
+        - strong [ref=e27]: ✅ 好消息：
+        - text: 商务中心3月研发投入超出约定比例6.5%，说明研发团队在3月优先支持了商务侧的紧急需求（物联网卡结算、定向流量王卡功能、翼支付适配），交付效率良好。
+    - generic [ref=e28]:
+      - heading "二、核心业务线进展" [level=2] [ref=e29]
+      - heading "2.1 定向流量 & 游戏王卡" [level=3] [ref=e30]
+      - table [ref=e31]:
+        - rowgroup [ref=e32]:
+          - row "需求 投入 状态 说明" [ref=e33]:
+            - columnheader "需求" [ref=e34]
+            - columnheader "投入" [ref=e35]
+            - columnheader "状态" [ref=e36]
+            - columnheader "说明" [ref=e37]
+        - rowgroup [ref=e38]:
+          - row "端外投放接入外部统一接入服务 6.7天 已完成 benzphuang负责，含资源准备+发布+测试" [ref=e39]:
+            - cell "端外投放接入外部统一接入服务" [ref=e40]
+            - cell "6.7天" [ref=e41]
+            - cell "已完成" [ref=e42]:
+              - generic [ref=e43]: 已完成
+            - cell "benzphuang负责，含资源准备+发布+测试" [ref=e44]
+          - row "不支持订购用户引导开通王卡功能 ~8天 测试中 guoleluo开发+amarishuang/cp_kuangqiangjian测试" [ref=e45]:
+            - cell "不支持订购用户引导开通王卡功能" [ref=e46]
+            - cell "~8天" [ref=e47]
+            - cell "测试中" [ref=e48]:
+              - generic [ref=e49]: 测试中
+            - cell "guoleluo开发+amarishuang/cp_kuangqiangjian测试" [ref=e50]
+          - row "电信翼支付全国计费点合规改造适配 ~4天 开发中 juibyyang负责，High优先级" [ref=e51]:
+            - cell "电信翼支付全国计费点合规改造适配" [ref=e52]
+            - cell "~4天" [ref=e53]
+            - cell "开发中" [ref=e54]:
+              - generic [ref=e55]: 开发中
+            - cell "juibyyang负责，High优先级" [ref=e56]
+          - row "端外投放接入货架配置 ~2天 开发中 benzphuang，3/26-3/31" [ref=e57]:
+            - cell "端外投放接入货架配置" [ref=e58]
+            - cell "~2天" [ref=e59]
+            - cell "开发中" [ref=e60]:
+              - generic [ref=e61]: 开发中
+            - cell "benzphuang，3/26-3/31" [ref=e62]
+          - row "PC端活动页适配改造 ~3天 开发中 kangkangran，含定向+王卡两个版本" [ref=e63]:
+            - cell "PC端活动页适配改造" [ref=e64]
+            - cell "~3天" [ref=e65]
+            - cell "开发中" [ref=e66]:
+              - generic [ref=e67]: 开发中
+            - cell "kangkangran，含定向+王卡两个版本" [ref=e68]
+      - heading "2.2 物联网卡结算（深圳移动）" [level=3] [ref=e69]
+      - table [ref=e70]:
+        - rowgroup [ref=e71]:
+          - row "阶段 投入 状态" [ref=e72]:
+            - columnheader "阶段" [ref=e73]
+            - columnheader "投入" [ref=e74]
+            - columnheader "状态" [ref=e75]
+        - rowgroup [ref=e76]:
+          - row "一期-交付 ~2天 已完成" [ref=e77]:
+            - cell "一期-交付" [ref=e78]
+            - cell "~2天" [ref=e79]
+            - cell "已完成" [ref=e80]:
+              - generic [ref=e81]: 已完成
+          - row "二期-开发+清洗+自测+验收 ~8天 已完成" [ref=e82]:
+            - cell "二期-开发+清洗+自测+验收" [ref=e83]
+            - cell "~8天" [ref=e84]
+            - cell "已完成" [ref=e85]:
+              - generic [ref=e86]: 已完成
+          - row "三期-开发+测试+机器人 ~5天 进行中 预计4/3完成" [ref=e87]:
+            - cell "三期-开发+测试+机器人" [ref=e88]
+            - cell "~5天" [ref=e89]
+            - cell "进行中 预计4/3完成" [ref=e90]:
+              - generic [ref=e91]: 进行中
+              - text: 预计4/3完成
+          - row "合计 ~15天 sigmoidguo+jiushugao 协作" [ref=e92]:
+            - cell "合计" [ref=e93]
+            - cell "~15天" [ref=e94]
+            - cell "sigmoidguo+jiushugao 协作" [ref=e95]
+      - heading "2.3 其他商务需求" [level=3] [ref=e96]
+      - table [ref=e97]:
+        - rowgroup [ref=e98]:
+          - row "需求 状态" [ref=e99]:
+            - columnheader "需求" [ref=e100]
+            - columnheader "状态" [ref=e101]
+        - rowgroup [ref=e102]:
+          - row "95语音-账单转换处理需求for电信 已完成 v_jjiayuliu 3/9-3/18" [ref=e103]:
+            - cell "95语音-账单转换处理需求for电信" [ref=e104]
+            - cell "已完成 v_jjiayuliu 3/9-3/18" [ref=e105]:
+              - generic [ref=e106]: 已完成
+              - text: v_jjiayuliu 3/9-3/18
+          - row "刷脸设备数据提取 已完成" [ref=e107]:
+            - cell "刷脸设备数据提取" [ref=e108]
+            - cell "已完成" [ref=e109]:
+              - generic [ref=e110]: 已完成
+          - row "代收收入确认-梦网掌中星明细提取 已完成" [ref=e111]:
+            - cell "代收收入确认-梦网掌中星明细提取" [ref=e112]
+            - cell "已完成" [ref=e113]:
+              - generic [ref=e114]: 已完成
+          - row "外部供应商上传报价锁价期限制 待排期" [ref=e115]:
+            - cell "外部供应商上传报价锁价期限制" [ref=e116]
+            - cell "待排期" [ref=e117]:
+              - generic [ref=e118]: 待排期
+          - row "oms系统提供API/MCP支持商务侧查询 4月启动" [ref=e119]:
+            - cell "oms系统提供API/MCP支持商务侧查询" [ref=e120]
+            - cell "4月启动" [ref=e121]:
+              - generic [ref=e122]: 4月启动
+    - generic [ref=e123]:
+      - heading "三、4月重点关注" [level=2] [ref=e124]
+      - generic [ref=e125]:
+        - strong [ref=e126]: 💡 4月商务中心关键事项：
+        - list [ref=e127]:
+          - listitem [ref=e128]:
+            - strong [ref=e129]: 王卡开卡功能完成测试+上线
+            - text: ：High优先级，影响用户开卡体验
+          - listitem [ref=e130]:
+            - strong [ref=e131]: 翼支付合规改造完成测试+上线
+            - text: ：High优先级，当前测试中，合规性要求必须按时交付
+          - listitem [ref=e132]:
+            - strong [ref=e133]: 物联网卡三期收尾
+            - text: ：4/3完成，机器人功能上线
+          - listitem [ref=e134]:
+            - strong [ref=e135]: oms系统MCP能力建设
+            - text: ：conniesun已启动调研，4月正式开发，支持商务侧自助查询报价和定制分析
+          - listitem [ref=e136]:
+            - strong [ref=e137]: PC端活动页适配改造
+            - text: ：定向流量+王卡两个版本都在开发中
+      - generic [ref=e138]:
+        - strong [ref=e139]: 📌 资源提醒：
+        - text: 4月商务中心资源占比预计回落至10-12%（IC智能投放将大幅提升产品中心占比）。如有新增紧急需求，建议提前1周与研发排期沟通，避免影响已排需求进度。
+  - generic [ref=e140]:
+    - paragraph [ref=e141]: 📊 商务中心 · 3月研发资源投入与项目进展月报
+    - paragraph [ref=e142]: 数据来源：TAPD工时系统+排期系统 | 生成时间：2026年4月2日

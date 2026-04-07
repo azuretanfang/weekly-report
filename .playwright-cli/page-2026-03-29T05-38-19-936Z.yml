@@ -1,0 +1,199 @@
+- generic [ref=e1]:
+  - generic [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - text: 所属项目
+          - generic [ref=e102]:
+            - textbox "运营商合作部_技术研发中心的所有项目" [ref=e103]
+            - generic [ref=e104]: (选中 2 项目)
+        - text: 时间范围
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - textbox "" [ref=e107]: 2026-03-22
+            - generic [ref=e108]: 
+          - text: "-"
+          - generic [ref=e109]:
+            - textbox "" [ref=e110]: 2026-03-28
+            - generic [ref=e111]: 
+        - text: 开发人员
+        - textbox [ref=e113]
+        - generic "添加用户组成员" [ref=e114]: 
+        - generic [ref=e115]:
+          - checkbox [ref=e116] [cursor=pointer]
+          - text: 显示离职人员
+        - generic [ref=e117]: 对象类型
+        - generic [ref=e122] [cursor=pointer]: 
+        - generic [ref=e126] [cursor=pointer]: 生成报告
+      - generic [ref=e127]:
+        - generic "没有导出数据" [ref=e128]:
+          - generic [ref=e129]: 导出明细报告
+        - generic "没有导出数据" [ref=e130]:
+          - generic [ref=e131]: 导出工时记录
+    - generic [ref=e133]:
+      - img [ref=e134]
+      - generic [ref=e135]: 暂无生成报表
+  - dialog "信息安全声明" [ref=e137]:
+    - generic [ref=e138]: 信息安全声明 
+    - generic [ref=e139]:
+      - generic [ref=e142]:
+        - generic [ref=e143]: 1、 TAPD平台的所有内容（包含但不限于：需求、缺陷、任务、文档等信息）均属于公司资产，仅用于内部协作。
+        - generic [ref=e144]:
+          - text: 2、未经授权私自对外传播（包含但不限于：复制、拍照、截图、上传页面、导出文件等操作）属于违规行为。 无论当事人是否在职，公司将按照
+          - link "《防止办公网内高危行为管理办法》" [ref=e145] [cursor=pointer]:
+            - /url: http://policy.woa.com/document/preview?documentId=B93922B4-E7A4-4DA7-B6D0-485BE66EAEB9
+          - text: 和
+          - link "《阳光行为准则》" [ref=e146] [cursor=pointer]:
+            - /url: http://policy.woa.com/document/preview?documentId=806b79e6005141888699183344b4d136
+          - text: 对违规行为进行处理，并对情节恶劣者保留追究法律责任的权利。
+      - generic [ref=e147]:
+        - generic [ref=e148] [cursor=pointer]:
+          - checkbox [checked] [active] [ref=e150]: 
+          - generic [ref=e151]: 我已阅读并承诺遵守以上规定
+        - generic [ref=e154] [cursor=pointer]: 确定
+  - generic [ref=e158] [cursor=pointer]:
+    - img
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - link " " [ref=e161] [cursor=pointer]:
+        - /url: https://wedev.woa.com
+        - generic [ref=e162]: 
+        - generic [ref=e163]: 
+      - link [ref=e164] [cursor=pointer]:
+        - /url: https://tapd.woa.com/my_dashboard
+        - img [ref=e165]
+      - generic [ref=e166] [cursor=pointer]: 
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - textbox [ref=e171]
+            - generic [ref=e172]: 
+          - generic:  
+        - generic [ref=e173]:
+          - link " 主页" [ref=e174] [cursor=pointer]:
+            - /url: https://tapd.woa.com/my_dashboard
+            - generic [ref=e175]:
+              - generic [ref=e176]: 
+              - text: 主页
+          - link " 我的工作" [ref=e177] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/my/work
+            - generic [ref=e178]:
+              - generic [ref=e179]: 
+              - text: 我的工作
+              - generic: 
+          - link " 我的文档" [ref=e180] [cursor=pointer]:
+            - /url: https://tapd.woa.com/personal_documents/my_create_personal/?from=left_tree_v2
+            - generic [ref=e181]:
+              - generic [ref=e182]: 
+              - text: 我的文档
+          - text: 
+          - link " 查询过滤" [ref=e183] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/worktable/search
+            - generic [ref=e184]:
+              - generic [ref=e185]: 
+              - text: 查询过滤
+      - text:       
+      - generic [ref=e186]:
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e189]: 
+          - text: 协作空间
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e193] [cursor=pointer]:
+                - generic [ref=e194]: 
+                - text: 项目协作
+              - generic [ref=e198] [cursor=pointer]: 
+            - list [ref=e199]:
+              - listitem [ref=e200]:
+                - link "运营商合作部_技术研发中心" [ref=e201] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/20398362/report/reports/index
+                  - generic [ref=e204]: 运营商合作部_技术研发中心
+                - text: 
+              - listitem [ref=e205]:
+                - link "TPD-产品一组" [ref=e206] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201315/story/list
+                  - generic [ref=e209]: TPD-产品一组
+                - text: 
+              - listitem [ref=e210]:
+                - link "TPD-产品二组（组内协同）" [ref=e211] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201309/story/list
+                  - generic [ref=e214]: TPD-产品二组（组内协同）
+                - text: 
+              - listitem [ref=e215]:
+                - link "结算" [ref=e216] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/10090321/story/list
+                  - generic [ref=e219]: 结算
+                - text: 
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - generic [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: 
+                - generic [ref=e228]: 轻协作
+              - generic [ref=e229]:
+                - text: 
+                - generic [ref=e231] [cursor=pointer]: 
+            - list [ref=e232]:
+              - listitem [ref=e233]:
+                - link "示例空间" [ref=e234] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/t/index/70043141
+                  - generic [ref=e237]: 示例空间
+                - text: 
+    - generic [ref=e239]:
+      - generic "fangtan" [ref=e241] [cursor=pointer]:
+        - img [ref=e242]
+      - generic [ref=e243]:
+        - link "" [ref=e245] [cursor=pointer]:
+          - /url: https://o.tapd.woa.com/
+          - generic [ref=e246]: 
+        - generic [ref=e251] [cursor=pointer]: 
+    - text:    
+  - generic:
+    - generic [ref=e252]:
+      - generic "运营商合作部_技术研发中心 点击查看项目(ID:20398362)信息" [ref=e255]:
+        - link "运 运营商合作部_技术研发中心" [ref=e256] [cursor=pointer]:
+          - /url: https://tapd.woa.com/20398362/workspaces/workspace_information
+          - generic [ref=e257]:
+            - generic [ref=e258]: 运
+            - generic [ref=e259]: 运营商合作部_技术研发中心
+      - generic:
+        - button "" [ref=e263] [cursor=pointer]:
+          - generic [ref=e264]: 
+        - button "" [ref=e266] [cursor=pointer]:
+          - generic [ref=e267]: 
+        - generic [ref=e269]:
+          - generic:
+            - textbox "搜索标题或ID"
+            - text:  
+          - generic [ref=e271] [cursor=pointer]: 
+      - generic [ref=e272]:
+        - button "" [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]: 
+        - list [ref=e279]:
+          - listitem [ref=e280]:
+            - link "概览" [ref=e281] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/dashboard/workspace/view
+          - listitem [ref=e282]:
+            - link "需求" [ref=e283] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/story/list
+          - listitem [ref=e284]:
+            - link "缺陷" [ref=e285] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/bug/list
+          - listitem [ref=e286]:
+            - link "甘特图" [ref=e287] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/gantt
+          - listitem [ref=e288]:
+            - link "团队日历" [ref=e289] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/calendar
+          - listitem [ref=e290]:
+            - link "迭代" [ref=e291] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/prong/iterations
+          - listitem [ref=e292]:
+            - link "报表" [ref=e293] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/report/reports/index
+        - link "更多 " [ref=e297] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e298]: 更多
+          - generic [ref=e299]: 
+    - text: 

@@ -1,0 +1,239 @@
+- generic [ref=e1]:
+  - generic [ref=e96]:
+    - generic [ref=e97]:
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - text: 所属项目
+          - generic [ref=e102]:
+            - textbox "运营商合作部_技术研发中心的所有项目" [ref=e103]
+            - generic [ref=e104]: (选中 2 项目)
+        - text: 时间范围
+        - generic [ref=e105]:
+          - generic [ref=e106]:
+            - textbox "" [ref=e107]: 2026-03-23
+            - text: 
+            - generic [ref=e108]: 
+          - text: "-"
+          - generic [ref=e109]:
+            - textbox "" [ref=e110]: 2026-03-28
+            - generic [ref=e111]: 
+        - text: 开发人员
+        - textbox [ref=e113]
+        - generic "添加用户组成员" [ref=e114]: 
+        - generic [ref=e115]:
+          - checkbox [ref=e116] [cursor=pointer]
+          - text: 显示离职人员
+        - generic [ref=e117]: 对象类型
+        - generic [ref=e122] [cursor=pointer]: 
+        - generic [ref=e126] [cursor=pointer]: 生成报告
+      - generic [ref=e127]:
+        - generic "没有导出数据" [ref=e128]:
+          - generic [ref=e129]: 导出明细报告
+        - generic "没有导出数据" [ref=e130]:
+          - generic [ref=e131]: 导出工时记录
+    - generic [ref=e133]:
+      - img [ref=e134]
+      - generic [ref=e135]: 暂无生成报表
+  - text: 
+  - generic [ref=e158] [cursor=pointer]:
+    - img
+  - generic [ref=e159]:
+    - generic [ref=e160]:
+      - link " " [ref=e161] [cursor=pointer]:
+        - /url: https://wedev.woa.com
+        - generic [ref=e162]: 
+        - generic [ref=e163]: 
+      - link [ref=e164] [cursor=pointer]:
+        - /url: https://tapd.woa.com/my_dashboard
+        - img [ref=e165]
+      - generic [ref=e166] [cursor=pointer]: 
+    - generic [ref=e167]:
+      - generic [ref=e168]:
+        - generic [ref=e169]:
+          - generic [ref=e170]:
+            - textbox [ref=e171]
+            - generic [ref=e172]: 
+          - generic:  
+        - generic [ref=e173]:
+          - link " 主页" [ref=e174] [cursor=pointer]:
+            - /url: https://tapd.woa.com/my_dashboard
+            - generic [ref=e175]:
+              - generic [ref=e176]: 
+              - text: 主页
+          - link " 我的工作" [ref=e177] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/my/work
+            - generic [ref=e178]:
+              - generic [ref=e179]: 
+              - text: 我的工作
+              - generic: 
+          - link " 我的文档" [ref=e180] [cursor=pointer]:
+            - /url: https://tapd.woa.com/personal_documents/my_create_personal/?from=left_tree_v2
+            - generic [ref=e181]:
+              - generic [ref=e182]: 
+              - text: 我的文档
+          - text: 
+          - link " 查询过滤" [ref=e183] [cursor=pointer]:
+            - /url: https://tapd.woa.com/tapd_fe/worktable/search
+            - generic [ref=e184]:
+              - generic [ref=e185]: 
+              - text: 查询过滤
+      - text:       
+      - generic [ref=e186]:
+        - generic [ref=e188] [cursor=pointer]:
+          - generic [ref=e189]: 
+          - text: 协作空间
+        - generic [ref=e190]:
+          - generic [ref=e191]:
+            - generic [ref=e192]:
+              - generic [ref=e193] [cursor=pointer]:
+                - generic [ref=e194]: 
+                - text: 项目协作
+              - generic [ref=e198] [cursor=pointer]: 
+            - list [ref=e199]:
+              - listitem [ref=e200]:
+                - link "运营商合作部_技术研发中心" [ref=e201] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/20398362/report/reports/index
+                  - generic [ref=e204]: 运营商合作部_技术研发中心
+                - text: 
+              - listitem [ref=e205]:
+                - link "TPD-产品一组" [ref=e206] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201315/story/list
+                  - generic [ref=e209]: TPD-产品一组
+                - text: 
+              - listitem [ref=e210]:
+                - link "TPD-产品二组（组内协同）" [ref=e211] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/70201309/story/list
+                  - generic [ref=e214]: TPD-产品二组（组内协同）
+                - text: 
+              - listitem [ref=e215]:
+                - link "结算" [ref=e216] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/10090321/story/list
+                  - generic [ref=e219]: 结算
+                - text: 
+          - generic [ref=e224]:
+            - generic [ref=e225]:
+              - generic [ref=e226] [cursor=pointer]:
+                - generic [ref=e227]: 
+                - generic [ref=e228]: 轻协作
+              - generic [ref=e229]:
+                - text: 
+                - generic [ref=e231] [cursor=pointer]: 
+            - list [ref=e232]:
+              - listitem [ref=e233]:
+                - link "示例空间" [ref=e234] [cursor=pointer]:
+                  - /url: https://tapd.woa.com/tapd_fe/t/index/70043141
+                  - generic [ref=e237]: 示例空间
+                - text: 
+    - generic [ref=e239]:
+      - generic "fangtan" [ref=e241] [cursor=pointer]:
+        - img [ref=e242]
+      - generic [ref=e243]:
+        - link "" [ref=e245] [cursor=pointer]:
+          - /url: https://o.tapd.woa.com/
+          - generic [ref=e246]: 
+        - generic [ref=e251] [cursor=pointer]: 
+    - text:    
+  - generic:
+    - generic [ref=e252]:
+      - generic "运营商合作部_技术研发中心 点击查看项目(ID:20398362)信息" [ref=e255]:
+        - link "运 运营商合作部_技术研发中心" [ref=e256] [cursor=pointer]:
+          - /url: https://tapd.woa.com/20398362/workspaces/workspace_information
+          - generic [ref=e257]:
+            - generic [ref=e258]: 运
+            - generic [ref=e259]: 运营商合作部_技术研发中心
+      - generic:
+        - button "" [ref=e263] [cursor=pointer]:
+          - generic [ref=e264]: 
+        - button "" [ref=e266] [cursor=pointer]:
+          - generic [ref=e267]: 
+        - generic [ref=e269]:
+          - generic:
+            - textbox "搜索标题或ID"
+            - text:  
+          - generic [ref=e271] [cursor=pointer]: 
+      - generic [ref=e272]:
+        - button "" [ref=e277] [cursor=pointer]:
+          - generic [ref=e278]: 
+        - list [ref=e279]:
+          - listitem [ref=e280]:
+            - link "概览" [ref=e281] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/dashboard/workspace/view
+          - listitem [ref=e282]:
+            - link "需求" [ref=e283] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/story/list
+          - listitem [ref=e284]:
+            - link "缺陷" [ref=e285] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/bug/list
+          - listitem [ref=e286]:
+            - link "甘特图" [ref=e287] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/gantt
+          - listitem [ref=e288]:
+            - link "团队日历" [ref=e289] [cursor=pointer]:
+              - /url: https://tapd.woa.com/tapd_fe/20398362/calendar
+          - listitem [ref=e290]:
+            - link "迭代" [ref=e291] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/prong/iterations
+          - listitem [ref=e292]:
+            - link "报表" [ref=e293] [cursor=pointer]:
+              - /url: https://tapd.woa.com/ccd_yfzc/report/reports/index
+        - link "更多 " [ref=e297] [cursor=pointer]:
+          - /url: javascript:void(0)
+          - generic [ref=e298]: 更多
+          - generic [ref=e299]: 
+    - text: 
+  - text:    
+  - dialog "选择用户组" [ref=e403]:
+    - generic [ref=e404]:
+      - text: 选择用户组
+      - link "" [ref=e405] [cursor=pointer]:
+        - /url: "#"
+    - generic [ref=e406]:
+      - generic [ref=e407]:
+        - checkbox "全选" [ref=e408] [cursor=pointer]
+        - text: 全选
+      - list [ref=e409]:
+        - listitem [ref=e410]:
+          - checkbox "管理员" [ref=e411] [cursor=pointer]
+          - text: 管理员
+        - listitem [ref=e412]:
+          - checkbox "开发人员" [checked] [active] [ref=e413] [cursor=pointer]: 
+          - text: 开发人员
+        - listitem [ref=e414]:
+          - checkbox "测试人员" [ref=e415] [cursor=pointer]
+          - text: 测试人员
+        - listitem [ref=e416]:
+          - checkbox "产品人员" [ref=e417] [cursor=pointer]
+          - text: 产品人员
+        - listitem [ref=e418]:
+          - checkbox "项目经理" [ref=e419] [cursor=pointer]
+          - text: 项目经理
+        - listitem [ref=e420]:
+          - checkbox "质量管理者" [ref=e421] [cursor=pointer]
+          - text: 质量管理者
+        - listitem [ref=e422]:
+          - checkbox "UI人员" [ref=e423] [cursor=pointer]
+          - text: UI人员
+        - listitem [ref=e424]:
+          - checkbox "关注人" [ref=e425] [cursor=pointer]
+          - text: 关注人
+        - listitem [ref=e426]:
+          - checkbox "高层管理者" [ref=e427] [cursor=pointer]
+          - text: 高层管理者
+        - listitem [ref=e428]:
+          - checkbox "运维人员" [ref=e429] [cursor=pointer]
+          - text: 运维人员
+        - listitem [ref=e430]:
+          - checkbox "其他" [ref=e431] [cursor=pointer]
+          - text: 其他
+        - listitem [ref=e432]:
+          - checkbox "产品负责人" [ref=e433] [cursor=pointer]
+          - text: 产品负责人
+        - listitem [ref=e434]:
+          - checkbox "商务" [ref=e435] [cursor=pointer]
+          - text: 商务
+        - listitem [ref=e436]:
+          - checkbox "外部测试人员" [ref=e437] [cursor=pointer]
+          - text: 外部测试人员
+    - generic [ref=e439]:
+      - generic [ref=e441] [cursor=pointer]: 确定
+      - generic [ref=e443] [cursor=pointer]: 取消

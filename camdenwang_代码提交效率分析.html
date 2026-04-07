@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>camdenwang 代码提交效率分析报告</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #f0f2f5; color: #333; line-height: 1.6;
+        }
+        .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white; padding: 40px; border-radius: 16px; margin-bottom: 24px;
+            box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+        }
+        .header h1 { font-size: 28px; margin-bottom: 8px; }
+        .header .subtitle { opacity: 0.85; font-size: 14px; }
+        .header .meta { 
+            display: flex; gap: 24px; margin-top: 16px; flex-wrap: wrap;
+        }
+        .header .meta-item {
+            background: rgba(255,255,255,0.15); padding: 8px 16px; border-radius: 8px;
+            font-size: 13px;
+        }
+
+        .summary-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px; margin-bottom: 24px;
+        }
+        .summary-card {
+            background: white; border-radius: 12px; padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            text-align: center;
+        }
+        .summary-card .number { font-size: 36px; font-weight: 700; color: #667eea; }
+        .summary-card .label { font-size: 13px; color: #888; margin-top: 4px; }
+
+        .section {
+            background: white; border-radius: 12px; padding: 24px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06); margin-bottom: 24px;
+        }
+        .section h2 { 
+            font-size: 18px; margin-bottom: 16px; padding-bottom: 12px;
+            border-bottom: 2px solid #f0f2f5; color: #333;
+        }
+        .section h2 .icon { margin-right: 8px; }
+
+        .verdict-box {
+            padding: 20px; border-radius: 12px; margin-bottom: 24px;
+            font-size: 16px; line-height: 1.8;
+        }
+        .verdict-positive {
+            background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+            border-left: 4px solid #4caf50;
+        }
+        .verdict-mixed {
+            background: linear-gradient(135deg, #fff8e1, #fff3e0);
+            border-left: 4px solid #ff9800;
+        }
+
+        table { width: 100%; border-collapse: collapse; }
+        th { 
+            background: #f8f9fa; padding: 12px 16px; text-align: left;
+            font-size: 13px; color: #666; font-weight: 600;
+        }
+        td { padding: 12px 16px; border-bottom: 1px solid #f0f2f5; font-size: 13px; }
+        tr:hover td { background: #fafbfc; }
+
+        .badge {
+            display: inline-block; padding: 3px 10px; border-radius: 12px;
+            font-size: 11px; font-weight: 600;
+        }
+        .badge-merged { background: #e8f5e9; color: #2e7d32; }
+        .badge-opened { background: #e3f2fd; color: #1565c0; }
+        .badge-closed { background: #fce4ec; color: #c62828; }
+        .badge-feat { background: #ede7f6; color: #4527a0; }
+        .badge-fix { background: #fff3e0; color: #e65100; }
+        .badge-refactor { background: #e0f2f1; color: #00695c; }
+        .badge-chore { background: #f3e5f5; color: #6a1b9a; }
+        .badge-docs { background: #e8eaf6; color: #283593; }
+
+        .chart-bar {
+            display: flex; align-items: center; margin: 8px 0;
+        }
+        .chart-bar .label { width: 100px; font-size: 13px; color: #666; }
+        .chart-bar .bar-container { flex: 1; height: 28px; background: #f0f2f5; border-radius: 14px; overflow: hidden; }
+        .chart-bar .bar { height: 100%; border-radius: 14px; display: flex; align-items: center; justify-content: flex-end; padding-right: 12px; font-size: 12px; color: white; font-weight: 600; min-width: 40px; transition: width 0.5s; }
+
+        .timeline-item {
+            position: relative; padding-left: 28px; margin-bottom: 12px;
+        }
+        .timeline-item::before {
+            content: ''; position: absolute; left: 8px; top: 8px;
+            width: 10px; height: 10px; border-radius: 50%; background: #667eea;
+        }
+        .timeline-item::after {
+            content: ''; position: absolute; left: 12px; top: 20px;
+            width: 2px; height: calc(100% + 4px); background: #e0e0e0;
+        }
+        .timeline-item:last-child::after { display: none; }
+        .timeline-date { font-size: 12px; color: #999; }
+        .timeline-title { font-size: 14px; font-weight: 500; }
+        .timeline-project { font-size: 12px; color: #667eea; }
+
+        .project-tag {
+            display: inline-block; padding: 2px 8px; border-radius: 4px;
+            font-size: 11px; background: #f0f2f5; color: #666; margin-right: 4px;
+        }
+
+        .highlight { color: #667eea; font-weight: 600; }
+        .trend-up { color: #4caf50; }
+        .trend-down { color: #f44336; }
+        .trend-flat { color: #ff9800; }
+
+        .insight-list { list-style: none; }
+        .insight-list li { 
+            padding: 12px 16px; margin-bottom: 8px;
+            border-radius: 8px; background: #fafbfc;
+            border-left: 3px solid #667eea;
+        }
+        .insight-list li.positive { border-left-color: #4caf50; }
+        .insight-list li.negative { border-left-color: #f44336; }
+        .insight-list li.neutral { border-left-color: #ff9800; }
+
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+        @media (max-width: 768px) { .two-col { grid-template-columns: 1fr; } }
+        
+        .footer { text-align: center; padding: 20px; color: #999; font-size: 12px; }
+    </style>
+</head>
+<body>
+<div class="container">
+
+    <!-- Header -->
+    <div class="header">
+        <h1>📊 camdenwang 代码提交效率分析报告</h1>
+        <div class="subtitle">基于工蜂（git.woa.com）obd 项目组的 MR + 分支提交完整数据分析</div>
+        <div class="meta">
+            <div class="meta-item">📅 报告日期：2026-03-10</div>
+            <div class="meta-item">📂 分析范围：obd 项目组全部仓库</div>
+            <div class="meta-item">📋 数据维度：Merged + Opened + Closed MR</div>
+            <div class="meta-item">🔍 分析时间跨度：2025-08 ~ 2026-03</div>
+        </div>
+    </div>
+
+    <!-- Executive Summary -->
+    <div class="verdict-box verdict-positive">
+        <strong>📌 核心结论：camdenwang 的代码提交效率在 2026 年有明显提升。</strong><br>
+        2026年1-3月，除了持续维护老项目外，他在 <strong>obd/currency</strong> 项目上发起了一个复杂的技术优化 MR（Redis Lua 脚本预扣优化），并且 MR 的描述质量大幅提升（结构化描述、变更内容说明、影响分析），
+        同时在 <strong>obd/go-mod-public</strong> 上主动完善项目文档。最新的 obd/currency 项目 MR（2026-03-06）展示了对监控体系建设和 Bug 修复的重视，含 16 个新增单元测试。
+        <strong>这表明他的工作不仅在"量"上保持稳定，在"质"上也有显著进步。</strong>
+    </div>
+
+    <!-- Summary Cards -->
+    <div class="summary-grid">
+        <div class="summary-card">
+            <div class="number">14</div>
+            <div class="label">涉及仓库数</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">48</div>
+            <div class="label">已合并 MR 总数</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">3</div>
+            <div class="label">当前打开的 MR</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">15</div>
+            <div class="label">已关闭（未合并）MR</div>
+        </div>
+        <div class="summary-card">
+            <div class="number">66</div>
+            <div class="label">MR 总计</div>
+        </div>
+    </div>
+
+    <!-- Monthly MR Trends -->
+    <div class="section">
+        <h2><span class="icon">📈</span>按月 Merged MR 活跃度趋势（近6个月）</h2>
+        <p style="font-size:13px; color:#888; margin-bottom:16px;">仅统计已成功合并的 MR，代表真正进入代码库的有效产出</p>
+        
+        <div class="chart-bar">
+            <div class="label">2025-09</div>
+            <div class="bar-container"><div class="bar" style="width:70%; background:linear-gradient(90deg,#667eea,#764ba2);">10</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2025-10</div>
+            <div class="bar-container"><div class="bar" style="width:63%; background:linear-gradient(90deg,#667eea,#764ba2);">9</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2025-11</div>
+            <div class="bar-container"><div class="bar" style="width:28%; background:linear-gradient(90deg,#667eea,#764ba2);">4</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2025-12</div>
+            <div class="bar-container"><div class="bar" style="width:70%; background:linear-gradient(90deg,#667eea,#764ba2);">10</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2026-01</div>
+            <div class="bar-container"><div class="bar" style="width:56%; background:linear-gradient(90deg,#4caf50,#66bb6a);">8</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2026-02</div>
+            <div class="bar-container"><div class="bar" style="width:0%; background:linear-gradient(90deg,#ff9800,#ffa726);">0</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">2026-03</div>
+            <div class="bar-container"><div class="bar" style="width:21%; background:linear-gradient(90deg,#4caf50,#66bb6a);">3</div></div>
+        </div>
+
+        <div style="margin-top:16px; padding:12px; background:#f8f9fa; border-radius:8px; font-size:13px;">
+            <strong>趋势解读：</strong>2025年9-10月是高峰期（SMS短信活动页三期需求密集交付），11月稍降，12月回升（频控模块+IC限制等新功能）。
+            2026年1月继续保持，2月数据为0（推测为春节假期），3月已有3个MR（月初），且有1个重要的开放MR在持续开发中（Redis Lua 脚本优化）。
+        </div>
+    </div>
+
+    <!-- Project Distribution -->
+    <div class="section">
+        <h2><span class="icon">🏗️</span>各项目 MR 分布（仅 Merged）</h2>
+        
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/sms-trpc</div>
+            <div class="bar-container"><div class="bar" style="width:80%; background:#42a5f5;">16</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/currency</div>
+            <div class="bar-container"><div class="bar" style="width:35%; background:#66bb6a;">7</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/benefitCenter</div>
+            <div class="bar-container"><div class="bar" style="width:20%; background:#ab47bc;">4</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/benefit</div>
+            <div class="bar-container"><div class="bar" style="width:25%; background:#ef5350;">5</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/prizeService</div>
+            <div class="bar-container"><div class="bar" style="width:20%; background:#ffa726;">4</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/biz-public</div>
+            <div class="bar-container"><div class="bar" style="width:15%; background:#26a69a;">3</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/flowPack</div>
+            <div class="bar-container"><div class="bar" style="width:10%; background:#78909c;">2</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/go-mod-public</div>
+            <div class="bar-container"><div class="bar" style="width:10%; background:#8d6e63;">2</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">obd/sessionCenter</div>
+            <div class="bar-container"><div class="bar" style="width:10%; background:#7e57c2;">2</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label" style="width:160px;">其他(4个项目)</div>
+            <div class="bar-container"><div class="bar" style="width:15%; background:#90a4ae;">3</div></div>
+        </div>
+
+        <div style="margin-top:16px; padding:12px; background:#f8f9fa; border-radius:8px; font-size:13px;">
+            <strong>项目分布解读：</strong>camdenwang 的工作集中在 <strong>obd/sms-trpc</strong>（企业短信服务，16个MR，占比33%）和 <strong>obd/currency</strong>（货币/福利鹅服务，7个MR），
+            同时横跨权益中心、奖品服务、网关、登录中心等多个核心业务模块，说明他是一个<strong>全栈型后端开发</strong>，负责面广。
+        </div>
+    </div>
+
+    <!-- Recent MR Details (2026) -->
+    <div class="section">
+        <h2><span class="icon">🕐</span>2026年 MR 活动详情（重点关注期）</h2>
+        
+        <table>
+            <thead>
+                <tr>
+                    <th>日期</th>
+                    <th>项目</th>
+                    <th>MR 标题</th>
+                    <th>状态</th>
+                    <th>类型</th>
+                    <th>feature分支名</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>03-06</strong></td>
+                    <td><span class="project-tag">currency</span></td>
+                    <td>混合支付预扣新增可用余额监控项</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/add-pre-pay-report</td>
+                </tr>
+                <tr>
+                    <td><strong>03-05</strong></td>
+                    <td><span class="project-tag">currency</span></td>
+                    <td>Redis Lua 脚本预扣优化</td>
+                    <td><span class="badge badge-opened">🔵 Opened</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feat/redis_lua_pre</td>
+                </tr>
+                <tr>
+                    <td><strong>03-05</strong></td>
+                    <td><span class="project-tag">go-mod-public</span></td>
+                    <td>新增项目说明文档 README.md</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-docs">docs</span></td>
+                    <td>docs/add_readme</td>
+                </tr>
+                <tr>
+                    <td><strong>01-26</strong></td>
+                    <td><span class="project-tag">approval</span></td>
+                    <td>移除审批列表分页字段并完善文档与架构设计</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/approval_updates</td>
+                </tr>
+                <tr>
+                    <td><strong>01-26</strong></td>
+                    <td><span class="project-tag">gatewaymobilego</span></td>
+                    <td>绑定成功事件发布逻辑</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/bind_mobile</td>
+                </tr>
+                <tr>
+                    <td><strong>01-23</strong></td>
+                    <td><span class="project-tag">sms-trpc</span></td>
+                    <td>绑定成功事件处理逻辑与手机号加密</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/bind-success</td>
+                </tr>
+                <tr>
+                    <td><strong>01-13</strong></td>
+                    <td><span class="project-tag">flowPack</span></td>
+                    <td>优化订单状态查询接口并新增EasyPay流程测试</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>bugfix/fix_fake_supplier</td>
+                </tr>
+                <tr>
+                    <td><strong>01-06</strong></td>
+                    <td><span class="project-tag">sms-trpc</span></td>
+                    <td>支持查询CBN站号</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/support_query_cbn_stationNum</td>
+                </tr>
+                <tr>
+                    <td><strong>01-05</strong></td>
+                    <td><span class="project-tag">sms-trpc</span></td>
+                    <td>替换腾讯云COS SDK为内部SDK</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>bugfix/revert_cos</td>
+                </tr>
+                <tr>
+                    <td><strong>01-04</strong></td>
+                    <td><span class="project-tag">sms-trpc</span></td>
+                    <td>短信频控逻辑优化</td>
+                    <td><span class="badge badge-merged">✅ Merged</span></td>
+                    <td><span class="badge badge-feat">feat</span></td>
+                    <td>feature/add_ic_limit</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Quality Analysis -->
+    <div class="two-col">
+        <div class="section">
+            <h2><span class="icon">✨</span>效率提升亮点</h2>
+            <ul class="insight-list">
+                <li class="positive">
+                    <strong>MR 描述质量大幅提升</strong><br>
+                    2026-03 的 MR 开始包含结构化描述：背景说明、变更内容、Bug Fix、测试情况、涉及文件清单。相比早期简单的一行描述，专业性显著提高。
+                </li>
+                <li class="positive">
+                    <strong>单元测试意识增强</strong><br>
+                    最新 MR（混合支付预扣监控）明确提到"新增单元测试 16 个"和"新增接口测试 2 个"，说明测试覆盖已成为开发习惯。
+                </li>
+                <li class="positive">
+                    <strong>文档意识提升</strong><br>
+                    主动为 go-mod-public 和 approval 项目新增 README.md，为 gateway 的 RewriteRequest 插件补充使用文档。
+                </li>
+                <li class="positive">
+                    <strong>技术深度提升</strong><br>
+                    Redis Lua 脚本预扣优化（currency 项目）涉及分布式系统核心逻辑重构，属于高复杂度的技术优化工作。
+                </li>
+            </ul>
+        </div>
+        <div class="section">
+            <h2><span class="icon">📌</span>值得关注的点</h2>
+            <ul class="insight-list">
+                <li class="neutral">
+                    <strong>2月活动空白期</strong><br>
+                    2026年2月没有MR记录（推测为春节假期），但3月初即恢复产出，节奏良好。
+                </li>
+                <li class="neutral">
+                    <strong>部分 MR 跨度较长</strong><br>
+                    obd/currency 的 Redis Lua 优化 MR（03-05创建）至今仍 opened，可能是大型重构需要较长开发周期。
+                </li>
+                <li class="positive">
+                    <strong>分支命名规范</strong><br>
+                    统一使用 feature/xxx、bugfix/xxx、docs/xxx 等规范的分支命名，体现良好的工程习惯。
+                </li>
+                <li class="positive">
+                    <strong>同时推进多项目</strong><br>
+                    2026年1月同时在 sms-trpc、gatewaymobilego、flowPack、approval 四个项目交付代码，体现跨项目协作能力。
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- Commit Type Distribution -->
+    <div class="section">
+        <h2><span class="icon">🔖</span>MR 类型分布（Merged MR，按 commit message 前缀分类）</h2>
+        <div class="chart-bar">
+            <div class="label">feat (新功能)</div>
+            <div class="bar-container"><div class="bar" style="width:62%; background:#42a5f5;">30</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">fix/bugfix</div>
+            <div class="bar-container"><div class="bar" style="width:18%; background:#ef5350;">9</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">refactor</div>
+            <div class="bar-container"><div class="bar" style="width:8%; background:#26a69a;">4</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">chore/build</div>
+            <div class="bar-container"><div class="bar" style="width:6%; background:#ffa726;">3</div></div>
+        </div>
+        <div class="chart-bar">
+            <div class="label">docs</div>
+            <div class="bar-container"><div class="bar" style="width:4%; background:#78909c;">2</div></div>
+        </div>
+        <div style="margin-top:12px; font-size:13px; color:#888;">
+            功能开发占62%，Bug修复18%，重构8% — 产出以新功能交付为主，修复和优化比例合理。
+        </div>
+    </div>
+
+    <!-- Full Project Involvement List -->
+    <div class="section">
+        <h2><span class="icon">📦</span>涉及的全部项目清单</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>项目</th>
+                    <th>描述</th>
+                    <th>Merged MR</th>
+                    <th>Open MR</th>
+                    <th>最近活跃</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>obd/sms-trpc</strong></td><td>企业短信相关 trpc-go 服务</td><td>16</td><td>0</td><td>2026-01-23</td></tr>
+                <tr><td><strong>obd/currency</strong></td><td>福利鹅、定向货币服务</td><td>7</td><td>1</td><td>2026-03-10</td></tr>
+                <tr><td><strong>obd/benefit</strong></td><td>运营商权益合作项目（游戏王卡等）</td><td>5</td><td>0</td><td>2025-10-14</td></tr>
+                <tr><td><strong>obd/benefitCenter</strong></td><td>权益中心</td><td>4</td><td>0</td><td>2025-09-29</td></tr>
+                <tr><td><strong>obd/prizeService</strong></td><td>奖品相关服务</td><td>4</td><td>0</td><td>2025-09-29</td></tr>
+                <tr><td><strong>obd/biz-public</strong></td><td>公共库组件</td><td>3</td><td>0</td><td>2025-11-19</td></tr>
+                <tr><td><strong>obd/go-mod-public</strong></td><td>Go mod 公共库</td><td>2</td><td>1</td><td>2026-03-05</td></tr>
+                <tr><td><strong>obd/flowPack</strong></td><td>定向流量项目</td><td>2</td><td>0</td><td>2026-01-13</td></tr>
+                <tr><td><strong>obd/sessionCenter</strong></td><td>统一登录服务</td><td>2</td><td>0</td><td>2025-09-28</td></tr>
+                <tr><td><strong>obd/gatewaymobilego</strong></td><td>Gateway Mobile Go API</td><td>1</td><td>0</td><td>2026-01-26</td></tr>
+                <tr><td><strong>obd/gateway</strong></td><td>OBD 业务网关</td><td>1</td><td>0</td><td>2025-09-28</td></tr>
+                <tr><td><strong>obd/sms-tafgo</strong></td><td>SMS TAF Go 服务</td><td>1</td><td>0</td><td>2025-10-15</td></tr>
+                <tr><td><strong>obd/approval</strong></td><td>审批服务（自建）</td><td>1</td><td>0</td><td>2026-01-26</td></tr>
+                <tr><td><strong>obd/comm-service</strong></td><td>公共服务</td><td>0</td><td>1</td><td>2023-08</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Overall Assessment -->
+    <div class="section">
+        <h2><span class="icon">📊</span>综合效率评估</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>评估维度</th>
+                    <th>评级</th>
+                    <th>说明</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>提交频率</strong></td>
+                    <td><span class="trend-up">⬆️ 稳定偏上</span></td>
+                    <td>月均 6-10 个 Merged MR，假期后快速恢复节奏</td>
+                </tr>
+                <tr>
+                    <td><strong>代码质量</strong></td>
+                    <td><span class="trend-up">⬆️ 明显提升</span></td>
+                    <td>MR 描述结构化、主动添加单元测试（16个新增）、补充文档</td>
+                </tr>
+                <tr>
+                    <td><strong>技术深度</strong></td>
+                    <td><span class="trend-up">⬆️ 持续提升</span></td>
+                    <td>从简单 CRUD 到 Redis Lua 脚本优化、分布式频控模块、事件驱动架构</td>
+                </tr>
+                <tr>
+                    <td><strong>项目广度</strong></td>
+                    <td><span class="highlight">🌐 全栈覆盖</span></td>
+                    <td>横跨 14 个仓库，覆盖短信、货币、权益、网关、登录等核心业务</td>
+                </tr>
+                <tr>
+                    <td><strong>工程规范</strong></td>
+                    <td><span class="trend-up">⬆️ 良好</span></td>
+                    <td>分支命名规范、commit message 遵循 Conventional Commits 风格</td>
+                </tr>
+                <tr>
+                    <td><strong>主动性</strong></td>
+                    <td><span class="trend-up">⬆️ 积极</span></td>
+                    <td>主动补充项目文档（README）、主动修复存量 Bug（事务原子性风险）</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Conclusion -->
+    <div class="verdict-box verdict-positive">
+        <strong>🎯 最终结论</strong><br><br>
+        <strong>camdenwang 的代码提交效率整体呈上升趋势</strong>，具体表现在：<br>
+        1️⃣ <strong>量的维度：</strong>月均 Merged MR 稳定在 6-10 个，2026年3月虽然只过了10天但已有3个MR+1个大型开放MR；<br>
+        2️⃣ <strong>质的维度：</strong>MR 描述从简单一行提升到含背景说明+变更内容+测试验证的结构化描述，单元测试从无到有且一次新增16个；<br>
+        3️⃣ <strong>深度维度：</strong>从普通业务开发进阶到分布式系统优化（Redis Lua脚本）、监控体系建设、事件驱动架构设计；<br>
+        4️⃣ <strong>工程素养：</strong>主动完善文档、修复存量Bug、规范化分支命名和commit message。<br><br>
+        <span style="color:#2e7d32;">✅ 建议：继续鼓励他在技术深度和工程规范上的投入，同时关注 Redis Lua 预扣优化 MR 的推进进度。</span>
+    </div>
+
+    <div class="footer">
+        报告自动生成于 2026-03-10 | 数据来源：git.woa.com/obd（工蜂 MR API）| 分析工具：CodeBuddy AI
+    </div>
+
+</div>
+</body>
+</html>

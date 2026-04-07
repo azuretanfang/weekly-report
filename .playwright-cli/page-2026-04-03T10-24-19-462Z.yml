@@ -1,0 +1,492 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "📊 3月研发工时月报 — 产品中心视角" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 运营商合作部 · 技术研发中心 | 2026年3月（3/2-3/31，22个工作日）
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "一、产品中心研发资源投入概览" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 📈 产品中心研发投入
+          - generic [ref=e12]: 100.0 人天
+          - generic [ref=e13]: 占研发总产能的 33.7%（约定45%）
+        - generic [ref=e14]:
+          - generic [ref=e15]: 📋 3月提交需求
+          - generic [ref=e16]: 113 个
+          - generic [ref=e17]: 含IC平台、运营AI、定向流量、数据处理等
+        - generic [ref=e18]:
+          - generic [ref=e19]: 🤖 AI专项投入
+          - generic [ref=e20]: 38.5 人天
+          - generic [ref=e21]: 智能投放15天+活动配置10天+数据分析
+        - generic [ref=e22]:
+          - generic [ref=e23]: ⚠️ 资源缺口
+          - generic [ref=e24]: "-11.3% 偏差"
+          - generic [ref=e25]: 低于约定比例，4月需重点提升
+      - generic [ref=e26]:
+        - strong [ref=e27]: ⚠️ 资源分配提醒：
+        - text: 产品中心3月实际占比33.7%，低于约定的45%，偏差-11.3%。主因IC智能投放3月处于方案→概设→启动开发的过渡期，正式编码集中在最后1.5周。
+        - strong [ref=e28]: 预计4月进入全力开发+联调后，占比将回升至40%+。
+    - generic [ref=e29]:
+      - heading "二、核心项目进展" [level=2] [ref=e30]
+      - heading "2.1 IC平台 V5.0 AI智能投放（本月最大投入项目）" [level=3] [ref=e31]
+      - table [ref=e32]:
+        - rowgroup [ref=e33]:
+          - row "阶段 负责人 3月投入 进度 说明" [ref=e34]:
+            - columnheader "阶段" [ref=e35]
+            - columnheader "负责人" [ref=e36]
+            - columnheader "3月投入" [ref=e37]
+            - columnheader "进度" [ref=e38]
+            - columnheader "说明" [ref=e39]
+        - rowgroup [ref=e40]:
+          - row "概要设计 camdenwang 4.1天 已完成 算法策略讨论+方案评审完成" [ref=e41]:
+            - cell "概要设计" [ref=e42]
+            - cell "camdenwang" [ref=e43]
+            - cell "4.1天" [ref=e44]
+            - cell "已完成" [ref=e45]:
+              - generic [ref=e46]: 已完成
+            - cell "算法策略讨论+方案评审完成" [ref=e47]
+          - row "后台开发 camdenwang+allanwei 4.9天 进行中 3/24启动，预计4/3完成" [ref=e48]:
+            - cell "后台开发" [ref=e49]
+            - cell "camdenwang+allanwei" [ref=e50]
+            - cell "4.9天" [ref=e51]
+            - cell "进行中" [ref=e52]:
+              - generic [ref=e53]: 进行中
+            - cell "3/24启动，预计4/3完成" [ref=e54]
+          - row "前端开发 lintonliu 3.0天 进行中 3/27启动，预计4/3完成" [ref=e55]:
+            - cell "前端开发" [ref=e56]
+            - cell "lintonliu" [ref=e57]
+            - cell "3.0天" [ref=e58]
+            - cell "进行中" [ref=e59]:
+              - generic [ref=e60]: 进行中
+            - cell "3/27启动，预计4/3完成" [ref=e61]
+          - row "数据开发 sigmoidguo 2.0天 进行中 3/30启动，实时数据+汤普森采样" [ref=e62]:
+            - cell "数据开发" [ref=e63]
+            - cell "sigmoidguo" [ref=e64]
+            - cell "2.0天" [ref=e65]
+            - cell "进行中" [ref=e66]:
+              - generic [ref=e67]: 进行中
+            - cell "3/30启动，实时数据+汤普森采样" [ref=e68]
+          - row "算法实现 benzphuang 1.2天 进行中 流量分配算法开发中" [ref=e69]:
+            - cell "算法实现" [ref=e70]
+            - cell "benzphuang" [ref=e71]
+            - cell "1.2天" [ref=e72]
+            - cell "进行中" [ref=e73]:
+              - generic [ref=e74]: 进行中
+            - cell "流量分配算法开发中" [ref=e75]
+          - row "测试 amarishuang - 待启动 预计4月上旬转测" [ref=e76]:
+            - cell "测试" [ref=e77]
+            - cell "amarishuang" [ref=e78]
+            - cell "-" [ref=e79]
+            - cell "待启动" [ref=e80]:
+              - generic [ref=e81]: 待启动
+            - cell "预计4月上旬转测" [ref=e82]
+          - row "合计 5人协作 ~15.2天 4月中旬完成联调+转测" [ref=e83]:
+            - cell "合计" [ref=e84]
+            - cell "5人协作" [ref=e85]
+            - cell "~15.2天" [ref=e86]
+            - cell "4月中旬完成联调+转测" [ref=e87]
+      - heading "2.2 运营AI活动配置" [level=3] [ref=e88]
+      - table [ref=e89]:
+        - rowgroup [ref=e90]:
+          - row "子项 负责人 投入 进度" [ref=e91]:
+            - columnheader "子项" [ref=e92]
+            - columnheader "负责人" [ref=e93]
+            - columnheader "投入" [ref=e94]
+            - columnheader "进度" [ref=e95]
+        - rowgroup [ref=e96]:
+          - row "一期-AI活动配置开发 guoleluo 5.5天 已发布" [ref=e97]:
+            - cell "一期-AI活动配置开发" [ref=e98]
+            - cell "guoleluo" [ref=e99]
+            - cell "5.5天" [ref=e100]
+            - cell "已发布" [ref=e101]:
+              - generic [ref=e102]: 已发布
+          - row "一期-培训+王卡配置讨论 guoleluo+jiushugao 1.2天 已完成" [ref=e103]:
+            - cell "一期-培训+王卡配置讨论" [ref=e104]
+            - cell "guoleluo+jiushugao" [ref=e105]
+            - cell "1.2天" [ref=e106]
+            - cell "已完成" [ref=e107]:
+              - generic [ref=e108]: 已完成
+          - row "二期-开发（定向+王卡规则） guoleluo+jiushugao 4.3天 进行中" [ref=e109]:
+            - cell "二期-开发（定向+王卡规则）" [ref=e110]
+            - cell "guoleluo+jiushugao" [ref=e111]
+            - cell "4.3天" [ref=e112]
+            - cell "进行中" [ref=e113]:
+              - generic [ref=e114]: 进行中
+          - row "合计 - ~11.0天 二期预计5月完成" [ref=e115]:
+            - cell "合计" [ref=e116]
+            - cell "-" [ref=e117]
+            - cell "~11.0天" [ref=e118]
+            - cell "二期预计5月完成" [ref=e119]
+      - heading "2.3 IC平台其他重要需求" [level=3] [ref=e120]
+      - table [ref=e121]:
+        - rowgroup [ref=e122]:
+          - row "需求 投入 状态 说明" [ref=e123]:
+            - columnheader "需求" [ref=e124]
+            - columnheader "投入" [ref=e125]
+            - columnheader "状态" [ref=e126]
+            - columnheader "说明" [ref=e127]
+        - rowgroup [ref=e128]:
+          - row "V4.6空白对照组 ~8天 已发布 含联调+测试+灰度发布，发布后有线上bug已修复" [ref=e129]:
+            - cell "V4.6空白对照组" [ref=e130]
+            - cell "~8天" [ref=e131]
+            - cell "已发布" [ref=e132]:
+              - generic [ref=e133]: 已发布
+            - cell "含联调+测试+灰度发布，发布后有线上bug已修复" [ref=e134]
+          - row "批量录入+审批+通知 ~10.4天 灰度中 开发5.3天+测试5.1天，3人参与" [ref=e135]:
+            - cell "批量录入+审批+通知" [ref=e136]
+            - cell "~10.4天" [ref=e137]
+            - cell "灰度中" [ref=e138]:
+              - generic [ref=e139]: 灰度中
+            - cell "开发5.3天+测试5.1天，3人参与" [ref=e140]
+          - row "营销接口扣费+拦截 ~4.7天 产品验收中 含开发、测试、发布" [ref=e141]:
+            - cell "营销接口扣费+拦截" [ref=e142]
+            - cell "~4.7天" [ref=e143]
+            - cell "产品验收中" [ref=e144]:
+              - generic [ref=e145]: 产品验收中
+            - cell "含开发、测试、发布" [ref=e146]
+          - row "5g阅信接口改造+计费 ~3天 开发中 接口改造+报表数据开发" [ref=e147]:
+            - cell "5g阅信接口改造+计费" [ref=e148]
+            - cell "~3天" [ref=e149]
+            - cell "开发中" [ref=e150]:
+              - generic [ref=e151]: 开发中
+            - cell "接口改造+报表数据开发" [ref=e152]
+          - row "营销任务灰度 ~1.5天 测试中 allanwei开发" [ref=e153]:
+            - cell "营销任务灰度" [ref=e154]
+            - cell "~1.5天" [ref=e155]
+            - cell "测试中" [ref=e156]:
+              - generic [ref=e157]: 测试中
+            - cell "allanwei开发" [ref=e158]
+    - generic [ref=e159]:
+      - heading "三、数据处理需求消化情况" [level=2] [ref=e160]
+      - table [ref=e161]:
+        - rowgroup [ref=e162]:
+          - row "需求 负责人 状态" [ref=e163]:
+            - columnheader "需求" [ref=e164]
+            - columnheader "负责人" [ref=e165]
+            - columnheader "状态" [ref=e166]
+        - rowgroup [ref=e167]:
+          - row "无畏契约语音外呼明文手机号转openid v_jjiayuliu 已完成" [ref=e168]:
+            - cell "无畏契约语音外呼明文手机号转openid" [ref=e169]
+            - cell "v_jjiayuliu" [ref=e170]
+            - cell "已完成" [ref=e171]:
+              - generic [ref=e172]: 已完成
+          - row "DNF端游33数据 / DNF手游手机号转化 v_jjiayuliu 已完成" [ref=e173]:
+            - cell "DNF端游33数据 / DNF手游手机号转化" [ref=e174]
+            - cell "v_jjiayuliu" [ref=e175]
+            - cell "已完成" [ref=e176]:
+              - generic [ref=e177]: 已完成
+          - row "洛克王国专项支持gopenid导出 sigmoidguo 已完成" [ref=e178]:
+            - cell "洛克王国专项支持gopenid导出" [ref=e179]
+            - cell "sigmoidguo" [ref=e180]
+            - cell "已完成" [ref=e181]:
+              - generic [ref=e182]: 已完成
+          - row "通讯业务数据标签库 sigmoidguo+v_jjiayuliu 开发中 4/3-4/7" [ref=e183]:
+            - cell "通讯业务数据标签库" [ref=e184]
+            - cell "sigmoidguo+v_jjiayuliu" [ref=e185]
+            - cell "开发中 4/3-4/7" [ref=e186]:
+              - generic [ref=e187]: 开发中
+              - text: 4/3-4/7
+          - row "账户充值消耗表二期 sigmoidguo 规划中 4/15-4/17" [ref=e188]:
+            - cell "账户充值消耗表二期" [ref=e189]
+            - cell "sigmoidguo" [ref=e190]
+            - cell "规划中 4/15-4/17" [ref=e191]:
+              - generic [ref=e192]: 规划中
+              - text: 4/15-4/17
+          - row "下发明细表增加项目维度 v_jjiayuliu 规划中" [ref=e193]:
+            - cell "下发明细表增加项目维度" [ref=e194]
+            - cell "v_jjiayuliu" [ref=e195]
+            - cell "规划中" [ref=e196]:
+              - generic [ref=e197]: 规划中
+    - generic [ref=e198]:
+      - heading "四、4月待排期需求（需与产品Leader对齐确认）" [level=2] [ref=e199]
+      - generic [ref=e200]:
+        - strong [ref=e201]: 📌 说明：
+        - text: 以下需求来源于排期系统需求池，当前状态均为
+        - strong [ref=e202]: 「待评审」
+        - text: ，共
+        - strong [ref=e203]: 11个
+        - text: 。请产品Leader确认是否有调整（优先级/期望时间/需求变更/取消），对齐后统一安排排期。
+      - heading "4.1 P0 高优先级（4个）" [level=3] [ref=e204]
+      - table [ref=e205]:
+        - rowgroup [ref=e206]:
+          - row "需求 TAPD ID 期望时间 提交人 备注" [ref=e207]:
+            - columnheader "需求" [ref=e208]
+            - columnheader "TAPD ID" [ref=e209]
+            - columnheader "期望时间" [ref=e210]
+            - columnheader "提交人" [ref=e211]
+            - columnheader "备注" [ref=e212]
+        - rowgroup [ref=e213]:
+          - row "🔴 联通AI合作 未建单 5月交付 cmlliazhang 🚨 交付风险 线下同步需求，尚未提交需求评审，TAPD未建单，需产品Leader重点关注" [ref=e214]:
+            - cell "🔴 联通AI合作" [ref=e215]
+            - cell "未建单" [ref=e216]:
+              - generic [ref=e217]: 未建单
+            - cell "5月交付" [ref=e218]
+            - cell "cmlliazhang" [ref=e219]
+            - cell "🚨 交付风险 线下同步需求，尚未提交需求评审，TAPD未建单，需产品Leader重点关注" [ref=e220]:
+              - generic [ref=e221]: 🚨 交付风险
+              - text: 线下同步需求，尚未提交需求评审，TAPD未建单，
+              - strong [ref=e222]: 需产品Leader重点关注
+          - row "【数据处理需求】账户充值消耗表 二期 132975779 4月W1 aaliyahchen 一期已完成，二期扩展更多维度" [ref=e223]:
+            - cell "【数据处理需求】账户充值消耗表 二期" [ref=e224]
+            - cell "132975779" [ref=e225]:
+              - link "132975779" [ref=e226] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362132975779
+            - cell "4月W1" [ref=e227]
+            - cell "aaliyahchen" [ref=e228]
+            - cell "一期已完成，二期扩展更多维度" [ref=e229]
+          - row "【IC平台】权益录入灰度测试数据打标签 133208120 4月W2 hongleili 灰度测试需要数据标记支持" [ref=e230]:
+            - cell "【IC平台】权益录入灰度测试数据打标签" [ref=e231]
+            - cell "133208120" [ref=e232]:
+              - link "133208120" [ref=e233] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133208120
+            - cell "4月W2" [ref=e234]
+            - cell "hongleili" [ref=e235]
+            - cell "灰度测试需要数据标记支持" [ref=e236]
+          - row "【数据处理需求】后台回填数据上报补充和扣量数据报表化 133217448 4月W2 aaliyahchen 数据准确性和可追溯性需求" [ref=e237]:
+            - cell "【数据处理需求】后台回填数据上报补充和扣量数据报表化" [ref=e238]
+            - cell "133217448" [ref=e239]:
+              - link "133217448" [ref=e240] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133217448
+            - cell "4月W2" [ref=e241]
+            - cell "aaliyahchen" [ref=e242]
+            - cell "数据准确性和可追溯性需求" [ref=e243]
+      - heading "4.2 P1 重要需求（5个）" [level=3] [ref=e244]
+      - table [ref=e245]:
+        - rowgroup [ref=e246]:
+          - row "需求 TAPD ID 期望时间 提交人 备注" [ref=e247]:
+            - columnheader "需求" [ref=e248]
+            - columnheader "TAPD ID" [ref=e249]
+            - columnheader "期望时间" [ref=e250]
+            - columnheader "提交人" [ref=e251]
+            - columnheader "备注" [ref=e252]
+        - rowgroup [ref=e253]:
+          - row "【IC平台】刊例价调整需求 133178772 4月W1 hongleili ⚠️ 内容待确定 4月需完成" [ref=e254]:
+            - cell "【IC平台】刊例价调整需求" [ref=e255]
+            - cell "133178772" [ref=e256]:
+              - link "133178772" [ref=e257] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133178772
+            - cell "4月W1" [ref=e258]
+            - cell "hongleili" [ref=e259]
+            - cell "⚠️ 内容待确定 4月需完成" [ref=e260]:
+              - generic [ref=e261]: ⚠️ 内容待确定
+              - text: 4月需完成
+          - row "【IC平台】语音外呼创建任务下发 133178822 4月W1 hongleili ⚠️ 内容待确定 4月需完成" [ref=e262]:
+            - cell "【IC平台】语音外呼创建任务下发" [ref=e263]
+            - cell "133178822" [ref=e264]:
+              - link "133178822" [ref=e265] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133178822
+            - cell "4月W1" [ref=e266]
+            - cell "hongleili" [ref=e267]
+            - cell "⚠️ 内容待确定 4月需完成" [ref=e268]:
+              - generic [ref=e269]: ⚠️ 内容待确定
+              - text: 4月需完成
+          - row "【数据处理需求】权益和通讯业务底层数据亲和性建设 133039900 4月W3 aaliyahchen 底层数据能力建设，影响后续精细化运营" [ref=e270]:
+            - cell "【数据处理需求】权益和通讯业务底层数据亲和性建设" [ref=e271]
+            - cell "133039900" [ref=e272]:
+              - link "133039900" [ref=e273] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133039900
+            - cell "4月W3" [ref=e274]
+            - cell "aaliyahchen" [ref=e275]
+            - cell "底层数据能力建设，影响后续精细化运营" [ref=e276]
+          - row "【IC平台】短信skill 133176386 4月W3 jesydong 短信能力平台化" [ref=e277]:
+            - cell "【IC平台】短信skill" [ref=e278]
+            - cell "133176386" [ref=e279]:
+              - link "133176386" [ref=e280] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133176386
+            - cell "4月W3" [ref=e281]
+            - cell "jesydong" [ref=e282]
+            - cell "短信能力平台化" [ref=e283]
+          - row "【定向流量】王者短信中间页活动新增开通流量包任务 133173085 4月W4 jijiang 定向流量业务扩展" [ref=e284]:
+            - cell "【定向流量】王者短信中间页活动新增开通流量包任务" [ref=e285]
+            - cell "133173085" [ref=e286]:
+              - link "133173085" [ref=e287] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133173085
+            - cell "4月W4" [ref=e288]
+            - cell "jijiang" [ref=e289]
+            - cell "定向流量业务扩展" [ref=e290]
+      - heading "4.3 P2 一般需求（2个）" [level=3] [ref=e291]
+      - table [ref=e292]:
+        - rowgroup [ref=e293]:
+          - row "需求 TAPD ID 期望时间 提交人 备注" [ref=e294]:
+            - columnheader "需求" [ref=e295]
+            - columnheader "TAPD ID" [ref=e296]
+            - columnheader "期望时间" [ref=e297]
+            - columnheader "提交人" [ref=e298]
+            - columnheader "备注" [ref=e299]
+        - rowgroup [ref=e300]:
+          - row "【IC平台】风控手机号查询 133176070 4月W4 jesydong 风控能力补充" [ref=e301]:
+            - cell "【IC平台】风控手机号查询" [ref=e302]
+            - cell "133176070" [ref=e303]:
+              - link "133176070" [ref=e304] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133176070
+            - cell "4月W4" [ref=e305]
+            - cell "jesydong" [ref=e306]
+            - cell "风控能力补充" [ref=e307]
+          - row "【数据处理需求】产品刊例价调价后报表梳理及时间记录优化 133063500 4月W5 aaliyahchen 报表优化，优先级可后排" [ref=e308]:
+            - cell "【数据处理需求】产品刊例价调价后报表梳理及时间记录优化" [ref=e309]
+            - cell "133063500" [ref=e310]:
+              - link "133063500" [ref=e311] [cursor=pointer]:
+                - /url: https://tapd.woa.com/ccd_yfzc/prong/stories/view/1020398362133063500
+            - cell "4月W5" [ref=e312]
+            - cell "aaliyahchen" [ref=e313]
+            - cell "报表优化，优先级可后排" [ref=e314]
+      - generic [ref=e315]:
+        - strong [ref=e316]: 💡 汇总分析：
+        - list [ref=e317]:
+          - listitem [ref=e318]:
+            - strong [ref=e319]: 数量分布：
+            - text: P0 4个、P1 5个、P2 2个，共11个待排期需求
+          - listitem [ref=e320]:
+            - strong [ref=e321]: 时间分布：
+            - text: 5月交付1个、W1有3个（含2个内容待确定）、W2有2个、W3有2个、W4有2个、W5有1个
+          - listitem [ref=e322]:
+            - strong [ref=e323]: 提交人分布：
+            - text: aaliyahchen 4个、hongleili 3个、jesydong 2个、cmlliazhang 1个、jijiang 1个
+    - generic [ref=e324]:
+      - heading "五、4月关键里程碑与风险全景" [level=2] [ref=e325]
+      - heading "5.1 4月项目里程碑总览" [level=3] [ref=e326]
+      - table [ref=e327]:
+        - rowgroup [ref=e328]:
+          - row "类型 项目/需求 4月关键里程碑 风险等级" [ref=e329]:
+            - columnheader "类型" [ref=e330]
+            - columnheader "项目/需求" [ref=e331]
+            - columnheader "4月关键里程碑" [ref=e332]
+            - columnheader "风险等级" [ref=e333]
+        - rowgroup [ref=e334]:
+          - row "P0 新需求 🔴 联通AI合作 TAPD未建单，需尽快完成需求评审+技术评审 → 5月交付 🚨 极高" [ref=e335]:
+            - cell "P0 新需求" [ref=e336]:
+              - generic [ref=e337]: P0 新需求
+            - cell "🔴 联通AI合作" [ref=e338]
+            - cell "TAPD未建单，需尽快完成需求评审+技术评审 → 5月交付" [ref=e339]
+            - cell "🚨 极高" [ref=e340]:
+              - generic [ref=e341]: 🚨 极高
+          - row "在研 IC V5.0 AI智能投放 4月中旬完成联调+转测，4人协作 高" [ref=e342]:
+            - cell "在研" [ref=e343]:
+              - generic [ref=e344]: 在研
+            - cell "IC V5.0 AI智能投放" [ref=e345]
+            - cell "4月中旬完成联调+转测，4人协作" [ref=e346]
+            - cell "高" [ref=e347]:
+              - generic [ref=e348]: 高
+          - row "在研 5G阅信改造 接口+计费+报表，预计4月底完成 中" [ref=e349]:
+            - cell "在研" [ref=e350]:
+              - generic [ref=e351]: 在研
+            - cell "5G阅信改造" [ref=e352]
+            - cell "接口+计费+报表，预计4月底完成" [ref=e353]
+            - cell "中" [ref=e354]:
+              - generic [ref=e355]: 中
+          - row "在研 运营AI活动配置二期 定向流量+王卡全活动类型开发，5月完成 中" [ref=e356]:
+            - cell "在研" [ref=e357]:
+              - generic [ref=e358]: 在研
+            - cell "运营AI活动配置二期" [ref=e359]
+            - cell "定向流量+王卡全活动类型开发，5月完成" [ref=e360]
+            - cell "中" [ref=e361]:
+              - generic [ref=e362]: 中
+          - row "P0 新需求 账户充值消耗表 二期 4/15-4/17 开发（已排期） 低" [ref=e363]:
+            - cell "P0 新需求" [ref=e364]:
+              - generic [ref=e365]: P0 新需求
+            - cell "账户充值消耗表 二期" [ref=e366]
+            - cell "4/15-4/17 开发（已排期）" [ref=e367]
+            - cell "低" [ref=e368]:
+              - generic [ref=e369]: 低
+          - row "在研 IC营销接口扣费 产品验收通过后全量发布 低" [ref=e370]:
+            - cell "在研" [ref=e371]:
+              - generic [ref=e372]: 在研
+            - cell "IC营销接口扣费" [ref=e373]
+            - cell "产品验收通过后全量发布" [ref=e374]
+            - cell "低" [ref=e375]:
+              - generic [ref=e376]: 低
+          - row "在研 数据标签库 4/3-4/7开发，为后续精细化运营提供数据基础 低" [ref=e377]:
+            - cell "在研" [ref=e378]:
+              - generic [ref=e379]: 在研
+            - cell "数据标签库" [ref=e380]
+            - cell "4/3-4/7开发，为后续精细化运营提供数据基础" [ref=e381]
+            - cell "低" [ref=e382]:
+              - generic [ref=e383]: 低
+          - row "P0 新需求 权益录入灰度测试数据打标签 期望4月W2，待评审后确认 待定" [ref=e384]:
+            - cell "P0 新需求" [ref=e385]:
+              - generic [ref=e386]: P0 新需求
+            - cell "权益录入灰度测试数据打标签" [ref=e387]
+            - cell "期望4月W2，待评审后确认" [ref=e388]
+            - cell "待定" [ref=e389]:
+              - generic [ref=e390]: 待定
+          - row "P0 新需求 后台回填数据报表化 期望4月W2，待评审后确认 待定" [ref=e391]:
+            - cell "P0 新需求" [ref=e392]:
+              - generic [ref=e393]: P0 新需求
+            - cell "后台回填数据报表化" [ref=e394]
+            - cell "期望4月W2，待评审后确认" [ref=e395]
+            - cell "待定" [ref=e396]:
+              - generic [ref=e397]: 待定
+          - row "P1 新需求 刊例价调整需求 需求内容待确定，期望4月W1启动 ⚠️ 待定" [ref=e398]:
+            - cell "P1 新需求" [ref=e399]:
+              - generic [ref=e400]: P1 新需求
+            - cell "刊例价调整需求" [ref=e401]
+            - cell "需求内容待确定，期望4月W1启动" [ref=e402]
+            - cell "⚠️ 待定" [ref=e403]:
+              - generic [ref=e404]: ⚠️ 待定
+          - row "P1 新需求 语音外呼创建任务下发 需求内容待确定，期望4月W1启动 ⚠️ 待定" [ref=e405]:
+            - cell "P1 新需求" [ref=e406]:
+              - generic [ref=e407]: P1 新需求
+            - cell "语音外呼创建任务下发" [ref=e408]
+            - cell "需求内容待确定，期望4月W1启动" [ref=e409]
+            - cell "⚠️ 待定" [ref=e410]:
+              - generic [ref=e411]: ⚠️ 待定
+          - row "P1 新需求 权益和通讯业务底层数据亲和性建设 期望4月W3，待评审后确认 待定" [ref=e412]:
+            - cell "P1 新需求" [ref=e413]:
+              - generic [ref=e414]: P1 新需求
+            - cell "权益和通讯业务底层数据亲和性建设" [ref=e415]
+            - cell "期望4月W3，待评审后确认" [ref=e416]
+            - cell "待定" [ref=e417]:
+              - generic [ref=e418]: 待定
+          - row "P1 新需求 短信skill 期望4月W3，待评审后确认 待定" [ref=e419]:
+            - cell "P1 新需求" [ref=e420]:
+              - generic [ref=e421]: P1 新需求
+            - cell "短信skill" [ref=e422]
+            - cell "期望4月W3，待评审后确认" [ref=e423]
+            - cell "待定" [ref=e424]:
+              - generic [ref=e425]: 待定
+          - row "P1 新需求 王者短信中间页活动新增开通流量包任务 期望4月W4，待评审后确认 待定" [ref=e426]:
+            - cell "P1 新需求" [ref=e427]:
+              - generic [ref=e428]: P1 新需求
+            - cell "王者短信中间页活动新增开通流量包任务" [ref=e429]
+            - cell "期望4月W4，待评审后确认" [ref=e430]
+            - cell "待定" [ref=e431]:
+              - generic [ref=e432]: 待定
+      - generic [ref=e433]:
+        - strong [ref=e434]: 📌 说明：
+        - text: 除「账户充值消耗表二期」已排期外，其余4月新需求的
+        - strong [ref=e435]: 具体开发排期和里程碑将在下周评审完成后统一提供
+        - text: 。
+      - heading "5.2 风险预警" [level=3] [ref=e436]
+      - generic [ref=e437]:
+        - strong [ref=e438]: 🚨 联通AI合作（P0·最高风险）：
+        - list [ref=e439]:
+          - listitem [ref=e440]:
+            - text: cmlliazhang 线下同步该需求，
+            - strong [ref=e441]: 5月要交付
+            - text: ，但目前 TAPD未建单、未提交需求评审
+          - listitem [ref=e442]: 按正常流程（需求评审→技术评审→排期→开发→测试→上线），即使4月W2启动评审，留给开发+测试的时间也极为紧张
+          - listitem [ref=e443]:
+            - strong [ref=e444]: 建议：
+            - text: 尽快推动 cmlliazhang 完成需求文档 + TAPD建单 + 提交评审，争取4月W2进入技术评审和排期
+      - generic [ref=e445]:
+        - strong [ref=e446]: ⚠️ 其他风险：
+        - list [ref=e447]:
+          - listitem [ref=e448]:
+            - text: 🔴
+            - strong [ref=e449]: IC智能投放
+            - text: ：四线并行开发，联调集成是最大风险点，需提前预留联调buffer
+          - listitem [ref=e450]:
+            - text: 🟡
+            - strong [ref=e451]: 刊例价调整 + 语音外呼
+            - text: ：2个P1需求内容未确定但期望W1启动，需尽快明确需求范围
+          - listitem [ref=e452]:
+            - text: 🟡
+            - strong [ref=e453]: 3月线上问题
+            - text: ：消耗约8天（空白对照组bug、洛克王国下发失败等），建议加强转测质量
+          - listitem [ref=e454]:
+            - text: 🟡
+            - strong [ref=e455]: 资源占比
+            - text: ：产品中心3月占比33.7%低于约定45%，4月需与研发协商提升至40%+
+  - generic [ref=e456]:
+    - paragraph [ref=e457]: 📊 产品中心 · 3月研发资源投入与项目进展月报
+    - paragraph [ref=e458]: 数据来源：TAPD工时系统+排期系统 | 生成时间：2026年4月2日

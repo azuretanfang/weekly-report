@@ -1,0 +1,569 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "📊 2026年3月 研发工时月报" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 运营商合作部 · 技术研发中心 | 2026年3月2日 - 3月31日（22个工作日）
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "一、核心指标摘要" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 📈 月度总投入
+          - generic [ref=e12]: 296.9 人天
+          - generic [ref=e13]:
+            - text: 参与 17 人（含开发14人+测试3人）
+            - text: 工作日22天 · 人均 21.2 天
+        - generic [ref=e14]:
+          - generic [ref=e15]: 📋 涉及任务数
+          - generic [ref=e16]: 240+ 个
+          - generic [ref=e17]:
+            - text: 工时记录 520+ 条
+            - text: 日均处理 10.9 个任务
+        - generic [ref=e18]:
+          - generic [ref=e19]: 🤖 AI相关投入
+          - generic [ref=e20]: 64.3 人天
+          - generic [ref=e21]:
+            - text: 占比 23.7%
+            - text: 覆盖：智能投放、活动配置、自动测试等
+        - generic [ref=e22]:
+          - generic [ref=e23]: 📅 周均投入
+          - generic [ref=e24]: 67.7 人天/周
+          - generic [ref=e25]:
+            - text: 波动范围 65.0~69.0
+            - text: 产能稳定，波动率 < 6%
+      - generic [ref=e26]:
+        - strong [ref=e27]: 🔍 月度核心洞察：
+        - list [ref=e28]:
+          - listitem [ref=e29]:
+            - strong [ref=e30]: AI投入占比近1/4
+            - text: ：3月AI相关工作投入64.3人天（23.7%），主要集中在IC智能投放全栈开发、运营AI活动配置、AI自动测试Agent建设三大方向
+          - listitem [ref=e31]:
+            - strong [ref=e32]: 产品中心投入偏低
+            - text: ：实际33.7%（约定45%），偏差-11.3%，主因IC智能投放3月下旬才进入正式开发阶段，预计4月投入将大幅提升
+          - listitem [ref=e33]:
+            - strong [ref=e34]: 商务中心投入偏高
+            - text: ：实际16.5%（约定10%），偏差+6.5%，物联网卡结算三期+定向流量王卡功能+翼支付适配三线并行
+          - listitem [ref=e35]:
+            - strong [ref=e36]: 团队产能稳定
+            - text: ：4周投入分别为69/69/68/65人天，波动极小，说明团队工作节奏健康、排期合理
+    - generic [ref=e37]:
+      - heading "1.1 周度投入趋势" [level=2] [ref=e38]
+      - generic [ref=e39]:
+        - generic [ref=e40]:
+          - generic [ref=e42]: "69.0"
+          - generic [ref=e43]:
+            - text: W1
+            - text: 3/2-3/6
+        - generic [ref=e44]:
+          - generic [ref=e46]: "69.0"
+          - generic [ref=e47]:
+            - text: W2
+            - text: 3/9-3/13
+        - generic [ref=e48]:
+          - generic [ref=e50]: "68.0"
+          - generic [ref=e51]:
+            - text: W3
+            - text: 3/16-3/20
+        - generic [ref=e52]:
+          - generic [ref=e54]: "65.0"
+          - generic [ref=e55]:
+            - text: W4
+            - text: 3/23-3/27
+        - generic [ref=e56]:
+          - generic [ref=e58]: "25.9"
+          - generic [ref=e59]:
+            - text: W5
+            - text: 3/30-3/31
+      - generic [ref=e60]:
+        - strong [ref=e61]: 📌 说明：
+        - text: W5仅含3/30-3/31两个工作日，折算为5天周产能约64.8天，与前四周基本一致。
+    - generic [ref=e62]:
+      - heading "二、研发人力投入分析" [level=2] [ref=e63]
+      - heading "2.1 按需求来源分布（月度累计）" [level=3] [ref=e64]
+      - generic [ref=e65]:
+        - generic "产品中心 33.7%" [ref=e66]: 产品 33.7%
+        - generic "综合中心 16.9%" [ref=e67]: 综合 16.9%
+        - generic "商务中心 16.5%" [ref=e68]: 商务 16.5%
+        - generic "公共 32.9%" [ref=e69]
+      - table [ref=e70]:
+        - rowgroup [ref=e71]:
+          - row "来源 月度投入 实际占比 约定比例 偏差 偏差评级 主要投入方向 Top3" [ref=e72]:
+            - columnheader "来源" [ref=e73]
+            - columnheader "月度投入" [ref=e74]
+            - columnheader "实际占比" [ref=e75]
+            - columnheader "约定比例" [ref=e76]
+            - columnheader "偏差" [ref=e77]
+            - columnheader "偏差评级" [ref=e78]
+            - columnheader "主要投入方向 Top3" [ref=e79]
+        - rowgroup [ref=e80]:
+          - row "产品中心 100.0天 33.7% 45% -11.3% 中风险 1. IC平台V5.0智能投放全栈开发 2. IC平台V4.6空白对照组 3. 运营AI活动配置一期+二期" [ref=e81]:
+            - cell "产品中心" [ref=e82]:
+              - strong [ref=e83]: 产品中心
+            - cell "100.0天" [ref=e84]
+            - cell "33.7%" [ref=e85]
+            - cell "45%" [ref=e86]
+            - cell "-11.3%" [ref=e87]
+            - cell "中风险" [ref=e88]:
+              - generic [ref=e89]: 中风险
+            - cell "1. IC平台V5.0智能投放全栈开发 2. IC平台V4.6空白对照组 3. 运营AI活动配置一期+二期" [ref=e90]:
+              - generic [ref=e91]:
+                - text: 1. IC平台V5.0智能投放全栈开发
+                - text: 2. IC平台V4.6空白对照组
+                - text: 3. 运营AI活动配置一期+二期
+          - row "综合中心 50.2天 16.9% 25% -8.1% 正常 1. 供应商短信错误码管理平台 2. 企业短信物流商帐户余额告警 3. taf老服务迁移StationDataSvr" [ref=e92]:
+            - cell "综合中心" [ref=e93]:
+              - strong [ref=e94]: 综合中心
+            - cell "50.2天" [ref=e95]
+            - cell "16.9%" [ref=e96]
+            - cell "25%" [ref=e97]
+            - cell "-8.1%" [ref=e98]
+            - cell "正常" [ref=e99]:
+              - generic [ref=e100]: 正常
+            - cell "1. 供应商短信错误码管理平台 2. 企业短信物流商帐户余额告警 3. taf老服务迁移StationDataSvr" [ref=e101]:
+              - generic [ref=e102]:
+                - text: 1. 供应商短信错误码管理平台
+                - text: 2. 企业短信物流商帐户余额告警
+                - text: 3. taf老服务迁移StationDataSvr
+          - row "商务中心 49.0天 16.5% 10% +6.5% 正常 1. 定向流量端外投放+翼支付适配 2. 权益-王卡限时任务+开卡功能 3. 物联网卡结算需求for深圳移动" [ref=e103]:
+            - cell "商务中心" [ref=e104]:
+              - strong [ref=e105]: 商务中心
+            - cell "49.0天" [ref=e106]
+            - cell "16.5%" [ref=e107]
+            - cell "10%" [ref=e108]
+            - cell "+6.5%" [ref=e109]
+            - cell "正常" [ref=e110]:
+              - generic [ref=e111]: 正常
+            - cell "1. 定向流量端外投放+翼支付适配 2. 权益-王卡限时任务+开卡功能 3. 物联网卡结算需求for深圳移动" [ref=e112]:
+              - generic [ref=e113]:
+                - text: 1. 定向流量端外投放+翼支付适配
+                - text: 2. 权益-王卡限时任务+开卡功能
+                - text: 3. 物联网卡结算需求for深圳移动
+          - row "公共 97.7天 32.9% 20% +12.9% 中风险 1. AI自动测试Agent建设 12.0天 2. 技术基建（安全加固/灰度发布） 3. AI UI自动化+知识库搭建" [ref=e114]:
+            - cell "公共" [ref=e115]:
+              - strong [ref=e116]: 公共
+            - cell "97.7天" [ref=e117]
+            - cell "32.9%" [ref=e118]
+            - cell "20%" [ref=e119]
+            - cell "+12.9%" [ref=e120]
+            - cell "中风险" [ref=e121]:
+              - generic [ref=e122]: 中风险
+            - cell "1. AI自动测试Agent建设 12.0天 2. 技术基建（安全加固/灰度发布） 3. AI UI自动化+知识库搭建" [ref=e123]:
+              - generic [ref=e124]:
+                - text: 1. AI自动测试Agent建设 12.0天
+                - text: 2. 技术基建（安全加固/灰度发布）
+                - text: 3. AI UI自动化+知识库搭建
+          - row "合计 296.9天 100% 100% — —" [ref=e125]:
+            - cell "合计" [ref=e126]
+            - cell "296.9天" [ref=e127]
+            - cell "100%" [ref=e128]
+            - cell "100%" [ref=e129]
+            - cell "—" [ref=e130]
+            - cell "—" [ref=e131]
+            - cell [ref=e132]
+      - generic [ref=e133]:
+        - strong [ref=e134]: ⚠️ 来源比例偏差分析：
+        - list [ref=e135]:
+          - listitem [ref=e136]:
+            - text: 🟡
+            - strong [ref=e137]: 产品中心偏低11.3%
+            - text: ：IC智能投放3月处于方案设计→概要设计→启动开发的过渡期，实际编码开发集中在最后两周。4月进入全力开发+联调阶段后，产品中心占比预计回升至40%+
+          - listitem [ref=e138]:
+            - text: 🟡
+            - strong [ref=e139]: 公共偏高12.9%
+            - text: ：AI自动测试Agent（12天）、知识库搭建、AI UI自动化等技术基建投入较大。这是团队AI能力建设的战略性投入，虽占比偏高但ROI可期
+          - listitem [ref=e140]:
+            - text: 🟢
+            - strong [ref=e141]: 商务中心偏高6.5%
+            - text: ：在可接受范围内，物联网卡三期+定向流量多线需求在3月集中交付
+      - heading "2.2 周度来源分布变化趋势" [level=3] [ref=e142]
+      - table [ref=e143]:
+        - rowgroup [ref=e144]:
+          - row "来源 W1 (3/2-6) W2 (3/9-13) W3 (3/16-20) W4 (3/23-27) 趋势" [ref=e145]:
+            - columnheader "来源" [ref=e146]
+            - columnheader "W1 (3/2-6)" [ref=e147]
+            - columnheader "W2 (3/9-13)" [ref=e148]
+            - columnheader "W3 (3/16-20)" [ref=e149]
+            - columnheader "W4 (3/23-27)" [ref=e150]
+            - columnheader "趋势" [ref=e151]
+        - rowgroup [ref=e152]:
+          - row "产品中心 25.3天 (36.7%) 22.6天 (32.8%) 20.3天 (29.9%) 23.1天 (35.5%) 📈 W4回升，智能投放启动" [ref=e153]:
+            - cell "产品中心" [ref=e154]:
+              - strong [ref=e155]: 产品中心
+            - cell "25.3天 (36.7%)" [ref=e156]
+            - cell "22.6天 (32.8%)" [ref=e157]
+            - cell "20.3天 (29.9%)" [ref=e158]
+            - cell "23.1天 (35.5%)" [ref=e159]
+            - cell "📈 W4回升，智能投放启动" [ref=e160]
+          - row "综合中心 10.7天 (15.5%) 13.2天 (19.1%) 11.0天 (16.2%) 14.8天 (22.8%) 📈 持续上升，错误码平台推进" [ref=e161]:
+            - cell "综合中心" [ref=e162]:
+              - strong [ref=e163]: 综合中心
+            - cell "10.7天 (15.5%)" [ref=e164]
+            - cell "13.2天 (19.1%)" [ref=e165]
+            - cell "11.0天 (16.2%)" [ref=e166]
+            - cell "14.8天 (22.8%)" [ref=e167]
+            - cell "📈 持续上升，错误码平台推进" [ref=e168]
+          - row "商务中心 10.3天 (14.9%) 12.2天 (17.7%) 8.7天 (12.8%) 13.0天 (20.0%) 📊 波动较大，与需求排期相关" [ref=e169]:
+            - cell "商务中心" [ref=e170]:
+              - strong [ref=e171]: 商务中心
+            - cell "10.3天 (14.9%)" [ref=e172]
+            - cell "12.2天 (17.7%)" [ref=e173]
+            - cell "8.7天 (12.8%)" [ref=e174]
+            - cell "13.0天 (20.0%)" [ref=e175]
+            - cell "📊 波动较大，与需求排期相关" [ref=e176]
+          - row "公共 22.7天 (32.9%) 21.0天 (30.4%) 28.0天 (41.2%) 14.1天 (21.7%) 📉 W3高峰后回落（AI建设完成）" [ref=e177]:
+            - cell "公共" [ref=e178]:
+              - strong [ref=e179]: 公共
+            - cell "22.7天 (32.9%)" [ref=e180]
+            - cell "21.0天 (30.4%)" [ref=e181]
+            - cell "28.0天 (41.2%)" [ref=e182]
+            - cell "14.1天 (21.7%)" [ref=e183]
+            - cell "📉 W3高峰后回落（AI建设完成）" [ref=e184]
+      - heading "2.3 人员月度投入总览" [level=3] [ref=e185]
+      - generic [ref=e186]:
+        - generic [ref=e187]:
+          - generic [ref=e188]: camdenwang
+          - generic [ref=e189]: "22.0"
+          - generic [ref=e190]: 后台开发
+        - generic [ref=e191]:
+          - generic [ref=e192]: allanwei
+          - generic [ref=e193]: "22.0"
+          - generic [ref=e194]: 后台开发
+        - generic [ref=e195]:
+          - generic [ref=e196]: sigmoidguo
+          - generic [ref=e197]: "22.0"
+          - generic [ref=e198]: 数据开发
+        - generic [ref=e199]:
+          - generic [ref=e200]: juibyyang
+          - generic [ref=e201]: "22.0"
+          - generic [ref=e202]: 前端开发
+        - generic [ref=e203]:
+          - generic [ref=e204]: jiushugao
+          - generic [ref=e205]: "22.0"
+          - generic [ref=e206]: 前端开发
+        - generic [ref=e207]:
+          - generic [ref=e208]: junyuzheng
+          - generic [ref=e209]: "22.0"
+          - generic [ref=e210]: 后台开发
+        - generic [ref=e211]:
+          - generic [ref=e212]: guoleluo
+          - generic [ref=e213]: "22.0"
+          - generic [ref=e214]: 前端开发
+        - generic [ref=e215]:
+          - generic [ref=e216]: benzphuang
+          - generic [ref=e217]: "22.0"
+          - generic [ref=e218]: 后台开发
+        - generic [ref=e219]:
+          - generic [ref=e220]: tealyao
+          - generic [ref=e221]: "21.5"
+          - generic [ref=e222]: 前端开发
+        - generic [ref=e223]:
+          - generic [ref=e224]: conniesun
+          - generic [ref=e225]: "21.5"
+          - generic [ref=e226]: 后台开发
+        - generic [ref=e227]:
+          - generic [ref=e228]: kangkangran
+          - generic [ref=e229]: "21.0"
+          - generic [ref=e230]: 前端开发
+        - generic [ref=e231]:
+          - generic [ref=e232]: lintonliu
+          - generic [ref=e233]: "21.0"
+          - generic [ref=e234]: 前端开发
+        - generic [ref=e235]:
+          - generic [ref=e236]: shuqigao
+          - generic [ref=e237]: "20.0"
+          - generic [ref=e238]: 后台开发
+        - generic [ref=e239]:
+          - generic [ref=e240]: v_jjiayuliu
+          - generic [ref=e241]: "18.0"
+          - generic [ref=e242]: 数据开发
+    - generic [ref=e243]:
+      - heading "三、AI可优化工作识别" [level=2] [ref=e244]
+      - table [ref=e245]:
+        - rowgroup [ref=e246]:
+          - row "分类 月度投入 占总工时比 典型任务示例 AI提效方案" [ref=e247]:
+            - columnheader "分类" [ref=e248]
+            - columnheader "月度投入" [ref=e249]
+            - columnheader "占总工时比" [ref=e250]
+            - columnheader "典型任务示例" [ref=e251]
+            - columnheader "AI提效方案" [ref=e252]
+        - rowgroup [ref=e253]:
+          - row "测试联调类 89.4天 30.1% IC空白对照组联调自测、供应商错误码管理平台测试、批量录入+审批测试、权益王卡开卡转测 AI UI自动化测试（已启动）、AI接口测试工具（allanwei在建）、智能用例生成" [ref=e254]:
+            - cell "测试联调类" [ref=e255]
+            - cell "89.4天" [ref=e256]
+            - cell "30.1%" [ref=e257]
+            - cell "IC空白对照组联调自测、供应商错误码管理平台测试、批量录入+审批测试、权益王卡开卡转测" [ref=e258]
+            - cell "AI UI自动化测试（已启动）、AI接口测试工具（allanwei在建）、智能用例生成" [ref=e259]
+          - row "数据处理类 41.4天 13.9% 物联网卡结算数据处理、错误码数据清洗、刷脸设备数据提取、DNF/CFM数据导出 AI数据清洗管道、dola智能取数、自动化ETL" [ref=e260]:
+            - cell "数据处理类" [ref=e261]
+            - cell "41.4天" [ref=e262]
+            - cell "13.9%" [ref=e263]
+            - cell "物联网卡结算数据处理、错误码数据清洗、刷脸设备数据提取、DNF/CFM数据导出" [ref=e264]
+            - cell "AI数据清洗管道、dola智能取数、自动化ETL" [ref=e265]
+          - row "日常运维类 33.9天 11.4% https协议发布、taf服务迁移、生产环境部署、告警排查、端口迁移 AI巡检分析平台（benzphuang在建）、自动化发布流水线、智能告警处理" [ref=e266]:
+            - cell "日常运维类" [ref=e267]
+            - cell "33.9天" [ref=e268]
+            - cell "11.4%" [ref=e269]
+            - cell "https协议发布、taf服务迁移、生产环境部署、告警排查、端口迁移" [ref=e270]
+            - cell "AI巡检分析平台（benzphuang在建）、自动化发布流水线、智能告警处理" [ref=e271]
+          - row "文档/设计/调研类 25.2天 8.5% IC智能投放概要设计、工程实践材料、AI活动配置方案、技术方案编写 AI辅助方案生成、知识库沉淀自动化、CodeBuddy文档skill" [ref=e272]:
+            - cell "文档/设计/调研类" [ref=e273]
+            - cell "25.2天" [ref=e274]
+            - cell "8.5%" [ref=e275]
+            - cell "IC智能投放概要设计、工程实践材料、AI活动配置方案、技术方案编写" [ref=e276]
+            - cell "AI辅助方案生成、知识库沉淀自动化、CodeBuddy文档skill" [ref=e277]
+          - row "会议沟通类 5.2天 1.8% 研发周会(4周约3.2天)、需求评审讨论、TC会议 AI会议纪要自动生成（已上线）、智能待办提取" [ref=e278]:
+            - cell "会议沟通类" [ref=e279]
+            - cell "5.2天" [ref=e280]
+            - cell "1.8%" [ref=e281]
+            - cell "研发周会(4周约3.2天)、需求评审讨论、TC会议" [ref=e282]
+            - cell "AI会议纪要自动生成（已上线）、智能待办提取" [ref=e283]
+          - row "非核心编码总计 195.1天 65.7% 核心编码投入约101.8天（34.3%）。非核心编码占比高的原因：3月多个项目处于转测/发布阶段，测试联调占比较高" [ref=e284]:
+            - cell "非核心编码总计" [ref=e285]
+            - cell "195.1天" [ref=e286]
+            - cell "65.7%" [ref=e287]
+            - cell "核心编码投入约101.8天（34.3%）。非核心编码占比高的原因：3月多个项目处于转测/发布阶段，测试联调占比较高" [ref=e288]
+      - generic [ref=e289]:
+        - strong [ref=e290]: ✨ 3月AI提效亮点：
+        - list [ref=e291]:
+          - listitem [ref=e292]:
+            - text: 🤖
+            - strong [ref=e293]: IC V5.0 AI智能投放全面启动
+            - text: ：3月完成方案设计→概要设计→启动开发全流程，后台(camdenwang)、前端(lintonliu)、算法(benzphuang)、数据(sigmoidguo)四线并行，已成为团队最大投入项目
+          - listitem [ref=e294]:
+            - text: 🤖
+            - strong [ref=e295]: 运营AI活动配置一二期推进
+            - text: ：guoleluo+jiushugao合力开发活动配置AI能力，一期完成发布+培训，二期进入开发阶段（覆盖定向/王卡活动）
+          - listitem [ref=e296]:
+            - text: 🤖
+            - strong [ref=e297]: AI自动测试Agent建设
+            - text: ：junyuzheng累计投入12天构建AI自动测试Agent，结合知识库实现智能化测试用例生成和执行
+          - listitem [ref=e298]:
+            - text: 🤖
+            - strong [ref=e299]: AI工具矩阵成型
+            - text: ：AI巡检平台(benzphuang)、AI接口测试工具(allanwei)、MCP能力接入(conniesun)、IC知识系统(guoleluo)等多工具并行推进
+          - listitem [ref=e300]:
+            - text: 🤖
+            - strong [ref=e301]: AI辅助用例生成已落地
+            - text: ：amarishuang在多个需求测试中使用AI生成用例（定向流量PC适配、AI智投用例编写等），实际提效中
+    - generic [ref=e302]:
+      - heading "四、重要紧急矩阵分析（月度视角）" [level=2] [ref=e303]
+      - generic [ref=e304]:
+        - generic [ref=e305]:
+          - heading "🔴 重要且紧急（线上问题 + 紧急交付）" [level=4] [ref=e306]
+          - list [ref=e307]:
+            - listitem [ref=e308]:
+              - text: IC空白对照组实验数量问题排查修复
+              - generic [ref=e309]: 产品
+            - listitem [ref=e310]:
+              - text: 洛克王国首发短信下发失败+复盘
+              - generic [ref=e311]: 公共
+            - listitem [ref=e312]:
+              - text: 发奖服务DB异常+全量解绑状态异常
+              - generic [ref=e313]: 产品
+            - listitem [ref=e314]:
+              - text: 货币服务v2版本接口bug修改
+              - generic [ref=e315]: 产品
+            - listitem [ref=e316]:
+              - text: IEG通讯下发速度优化
+              - generic [ref=e317]: 公共
+            - listitem [ref=e318]:
+              - text: 权益王卡限时任务开卡转测+发布 (6.8天)
+              - generic [ref=e319]: 商务
+            - listitem [ref=e320]:
+              - text: NRC预注册小程序扩容保障
+              - generic [ref=e321]: 产品
+        - generic [ref=e322]:
+          - heading "🟢 重要不紧急（战略性投入）" [level=4] [ref=e323]
+          - list [ref=e324]:
+            - listitem [ref=e325]:
+              - text: IC V5.0 AI智能投放全栈开发 (~15天)
+              - generic [ref=e326]: 产品
+            - listitem [ref=e327]:
+              - text: 运营AI活动配置一期+二期 (~10天)
+              - generic [ref=e328]: 产品
+            - listitem [ref=e329]:
+              - text: AI自动测试Agent建设 (12天)
+              - generic [ref=e330]: 公共
+            - listitem [ref=e331]:
+              - text: AI巡检分析平台核心能力
+              - generic [ref=e332]: 公共
+            - listitem [ref=e333]:
+              - text: AI UI自动化测试合入大仓
+              - generic [ref=e334]: 公共
+            - listitem [ref=e335]:
+              - text: 供应商HTTPS协议后台开发+发布
+              - generic [ref=e336]: 产品
+            - listitem [ref=e337]:
+              - text: IC营销接口扣费+拦截开发
+              - generic [ref=e338]: 产品
+        - generic [ref=e339]:
+          - heading "🟠 紧急不重要（日常运维+支持）" [level=4] [ref=e340]
+          - list [ref=e341]:
+            - listitem [ref=e342]:
+              - text: https协议后台服务发布流程
+              - generic [ref=e343]: 综合
+            - listitem [ref=e344]:
+              - text: taf老服务迁移StationDataSvr (5.5天)
+              - generic [ref=e345]: 公共
+            - listitem [ref=e346]:
+              - text: 定向流量端外投放资源准备+发布
+              - generic [ref=e347]: 商务
+            - listitem [ref=e348]:
+              - text: 物联网卡结算数据处理+重跑
+              - generic [ref=e349]: 商务
+            - listitem [ref=e350]:
+              - text: 各类数据导出/提取需求
+              - generic [ref=e351]: 产品
+            - listitem [ref=e352]:
+              - text: 生产环境DB数据处理
+              - generic [ref=e353]: 综合
+        - generic [ref=e354]:
+          - heading "⚪ 不紧急不重要" [level=4] [ref=e355]
+          - list [ref=e356]:
+            - listitem [ref=e357]:
+              - text: 研发周会（月累计约3.2天）
+              - generic [ref=e358]: 公共
+            - listitem [ref=e359]:
+              - text: 测试招聘面试（月累计约1天）
+              - generic [ref=e360]: 公共
+            - listitem [ref=e361]:
+              - text: 工程实践材料整理&答辩
+              - generic [ref=e362]: 公共
+      - generic [ref=e363]:
+        - strong [ref=e364]: ⚠️ 月度风险预警：
+        - list [ref=e365]:
+          - listitem [ref=e366]:
+            - text: 🔴
+            - strong [ref=e367]: IC智能投放进度风险
+            - text: ：涉及后台/前端/算法/数据四线并行开发，3月已完成方案+概设+启动编码，4月需密切关注联调进度和集成风险
+          - listitem [ref=e368]:
+            - text: 🔴
+            - strong [ref=e369]: 线上稳定性需关注
+            - text: ：3月发生多起线上问题（空白对照组bug、洛克王国下发失败、发奖DB异常、货币服务v2接口bug），累计消耗约8天排查修复，需加强上线前测试覆盖
+          - listitem [ref=e370]:
+            - text: 🟡
+            - strong [ref=e371]: 公共投入偏高需控制
+            - text: ：AI工具建设虽有战略价值，但32.9%的占比会挤压业务需求交付，4月建议控制在25%以内
+          - listitem [ref=e372]:
+            - text: 🟡
+            - strong [ref=e373]: v_jjiayuliu投入偏低
+            - text: ：3月仅18天（其余同学20-22天），若非休假需关注数据需求的交付饱和度
+    - generic [ref=e374]:
+      - heading "五、月度高工时任务 TOP10" [level=2] [ref=e375]
+      - table [ref=e376]:
+        - rowgroup [ref=e377]:
+          - row "排名 任务标题 来源 月度工时 参与人数" [ref=e378]:
+            - columnheader "排名" [ref=e379]
+            - columnheader "任务标题" [ref=e380]
+            - columnheader "来源" [ref=e381]
+            - columnheader "月度工时" [ref=e382]
+            - columnheader "参与人数" [ref=e383]
+        - rowgroup [ref=e384]:
+          - row "1 【技术需求】AI自动测试Agent 公共 12.0天 1人" [ref=e385]:
+            - cell "1" [ref=e386]
+            - cell "【技术需求】AI自动测试Agent" [ref=e387]:
+              - link "【技术需求】AI自动测试Agent" [ref=e388] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/131519595
+            - cell "公共" [ref=e389]:
+              - generic [ref=e390]: 公共
+            - cell "12.0天" [ref=e391]:
+              - strong [ref=e392]: 12.0天
+            - cell "1人" [ref=e393]
+          - row "2 【企业短信】供应商短信错误码管理平台前端-前端开发 产品 7.0天 1人" [ref=e394]:
+            - cell "2" [ref=e395]
+            - cell "【企业短信】供应商短信错误码管理平台前端-前端开发" [ref=e396]:
+              - link "【企业短信】供应商短信错误码管理平台前端-前端开发" [ref=e397] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/130345764
+            - cell "产品" [ref=e398]:
+              - generic [ref=e399]: 产品
+            - cell "7.0天" [ref=e400]:
+              - strong [ref=e401]: 7.0天
+            - cell "1人" [ref=e402]
+          - row "3 【定向流量】端外投放接入外部统一接入服务 商务 6.7天 1人" [ref=e403]:
+            - cell "3" [ref=e404]
+            - cell "【定向流量】端外投放接入外部统一接入服务" [ref=e405]:
+              - link "【定向流量】端外投放接入外部统一接入服务" [ref=e406] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/131610315
+            - cell "商务" [ref=e407]:
+              - generic [ref=e408]: 商务
+            - cell "6.7天" [ref=e409]:
+              - strong [ref=e410]: 6.7天
+            - cell "1人" [ref=e411]
+          - row "4 【运营AI需求专项】活动配置一期-AI活动配置开发 产品 5.5天 1人" [ref=e412]:
+            - cell "4" [ref=e413]
+            - cell "【运营AI需求专项】活动配置一期-AI活动配置开发" [ref=e414]:
+              - link "【运营AI需求专项】活动配置一期-AI活动配置开发" [ref=e415] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/131827162
+            - cell "产品" [ref=e416]:
+              - generic [ref=e417]: 产品
+            - cell "5.5天" [ref=e418]:
+              - strong [ref=e419]: 5.5天
+            - cell "1人" [ref=e420]
+          - row "5 【技术需求】taf老服务迁移--StationDataSvr迁移 公共 5.5天 1人" [ref=e421]:
+            - cell "5" [ref=e422]
+            - cell "【技术需求】taf老服务迁移--StationDataSvr迁移" [ref=e423]:
+              - link "【技术需求】taf老服务迁移--StationDataSvr迁移" [ref=e424] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/132329672
+            - cell "公共" [ref=e425]:
+              - generic [ref=e426]: 公共
+            - cell "5.5天" [ref=e427]:
+              - strong [ref=e428]: 5.5天
+            - cell "1人" [ref=e429]
+          - row "6 【IC平台】批量录入+审批+通知 - 测试支持 产品 5.3天 3人" [ref=e430]:
+            - cell "6" [ref=e431]
+            - cell "【IC平台】批量录入+审批+通知 - 测试支持" [ref=e432]:
+              - link "【IC平台】批量录入+审批+通知 - 测试支持" [ref=e433] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/132866750
+            - cell "产品" [ref=e434]:
+              - generic [ref=e435]: 产品
+            - cell "5.3天" [ref=e436]:
+              - strong [ref=e437]: 5.3天
+            - cell "3人" [ref=e438]
+          - row "7 【企业短信】供应商短信错误码管理平台 综合 4.6天 2人" [ref=e439]:
+            - cell "7" [ref=e440]
+            - cell "【企业短信】供应商短信错误码管理平台" [ref=e441]:
+              - link "【企业短信】供应商短信错误码管理平台" [ref=e442] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/132134567
+            - cell "综合" [ref=e443]:
+              - generic [ref=e444]: 综合
+            - cell "4.6天" [ref=e445]:
+              - strong [ref=e446]: 4.6天
+            - cell "2人" [ref=e447]
+          - row "8 IC 智能投放 - 后台开发 产品 4.9天 2人" [ref=e448]:
+            - cell "8" [ref=e449]
+            - cell "IC 智能投放 - 后台开发" [ref=e450]:
+              - link "IC 智能投放 - 后台开发" [ref=e451] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/133138932
+            - cell "产品" [ref=e452]:
+              - generic [ref=e453]: 产品
+            - cell "4.9天" [ref=e454]:
+              - strong [ref=e455]: 4.9天
+            - cell "2人" [ref=e456]
+          - row "9 IC 智能投放概要设计 产品 4.1天 1人" [ref=e457]:
+            - cell "9" [ref=e458]
+            - cell "IC 智能投放概要设计" [ref=e459]:
+              - link "IC 智能投放概要设计" [ref=e460] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/132866757
+            - cell "产品" [ref=e461]:
+              - generic [ref=e462]: 产品
+            - cell "4.1天" [ref=e463]:
+              - strong [ref=e464]: 4.1天
+            - cell "1人" [ref=e465]
+          - row "10 【IC平台】营销接口扣费+拦截 产品 4.7天 3人" [ref=e466]:
+            - cell "10" [ref=e467]
+            - cell "【IC平台】营销接口扣费+拦截" [ref=e468]:
+              - link "【IC平台】营销接口扣费+拦截" [ref=e469] [cursor=pointer]:
+                - /url: https://tapd.woa.com/20398362/prong/stories/view/132549870
+            - cell "产品" [ref=e470]:
+              - generic [ref=e471]: 产品
+            - cell "4.7天" [ref=e472]:
+              - strong [ref=e473]: 4.7天
+            - cell "3人" [ref=e474]
+      - generic [ref=e475]:
+        - strong [ref=e476]: 💡 TOP10任务分析：
+        - list [ref=e477]:
+          - listitem [ref=e478]: TOP10任务合计约60天，占月度总投入的20%，说明工作分散度合理，没有单一任务过度集中
+          - listitem [ref=e479]: 产品中心占TOP10中的6席（含IC智能投放相关3席），IC平台是本月绝对主力项目
+          - listitem [ref=e480]: AI相关任务占TOP10中的4席（AI测试Agent、AI活动配置、AI智能投放设计+开发），AI已成为团队核心工作方向
+  - generic [ref=e481]:
+    - paragraph [ref=e482]: 📊 运营商合作部 · 技术研发中心 · 2026年3月研发工时月报
+    - paragraph [ref=e483]: 数据统计：2026.03.02 - 2026.03.31 | 数据来源：TAPD工时系统 | 生成时间：2026年4月2日

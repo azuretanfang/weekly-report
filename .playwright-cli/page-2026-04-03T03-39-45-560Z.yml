@@ -1,0 +1,214 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - heading "📊 3月研发工时月报 — 研发公共中心视角" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 运营商合作部 · 技术研发中心 | 2026年3月（3/2-3/31，22个工作日）
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "一、研发公共中心资源投入概览" [level=2] [ref=e8]
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - generic [ref=e11]: 📈 公共中心研发投入
+          - generic [ref=e12]: 97.7 人天
+          - generic [ref=e13]: 占研发总产能的 32.9%（约定20%）
+        - generic [ref=e14]:
+          - generic [ref=e15]: 🤖 AI工具建设投入
+          - generic [ref=e16]: 45+ 人天
+          - generic [ref=e17]: AI测试Agent+UI自动化+知识系统+巡检平台
+        - generic [ref=e18]:
+          - generic [ref=e19]: 🔧 技术基建投入
+          - generic [ref=e20]: 35+ 人天
+          - generic [ref=e21]: taf迁移+灰度发布+发奖优化+频控升级
+        - generic [ref=e22]:
+          - generic [ref=e23]: 🚨 线上问题处理
+          - generic [ref=e24]: ~8 人天
+          - generic [ref=e25]: 洛克王国下发失败+解绑异常+openid匹配
+      - generic [ref=e26]:
+        - strong [ref=e27]: ⚠️ 占比偏高提醒：
+        - text: 公共中心3月占比32.9%，超出约定20%达12.9%。主因AI工具建设集中投入（AI测试Agent 12天、UI自动化4天、知识系统5天）+ 技术基建需求密集（taf迁移5.5天、灰度发布3天）。
+        - strong [ref=e28]: 4月建议控制在25%以内。
+    - generic [ref=e29]:
+      - heading "二、AI能力建设进展（团队核心竞争力）" [level=2] [ref=e30]
+      - table [ref=e31]:
+        - rowgroup [ref=e32]:
+          - row "AI工具/能力 负责人 3月投入 进度 预期ROI" [ref=e33]:
+            - columnheader "AI工具/能力" [ref=e34]
+            - columnheader "负责人" [ref=e35]
+            - columnheader "3月投入" [ref=e36]
+            - columnheader "进度" [ref=e37]
+            - columnheader "预期ROI" [ref=e38]
+        - rowgroup [ref=e39]:
+          - row "AI自动测试Agent junyuzheng 12.0天 持续建设中 预计节省测试工时30%+" [ref=e40]:
+            - cell "AI自动测试Agent" [ref=e41]
+            - cell "junyuzheng" [ref=e42]
+            - cell "12.0天" [ref=e43]
+            - cell "持续建设中" [ref=e44]:
+              - generic [ref=e45]: 持续建设中
+            - cell "预计节省测试工时30%+" [ref=e46]
+          - row "AI UI自动化测试合入大仓 guoleluo ~4天 进行中 IC平台UI回归自动化" [ref=e47]:
+            - cell "AI UI自动化测试合入大仓" [ref=e48]
+            - cell "guoleluo" [ref=e49]
+            - cell "~4天" [ref=e50]
+            - cell "进行中" [ref=e51]:
+              - generic [ref=e52]: 进行中
+            - cell "IC平台UI回归自动化" [ref=e53]
+          - row "IC知识系统优化 lintonliu ~5天 多个子项已完成 代码辅助效率提升" [ref=e54]:
+            - cell "IC知识系统优化" [ref=e55]
+            - cell "lintonliu" [ref=e56]
+            - cell "~5天" [ref=e57]
+            - cell "多个子项已完成" [ref=e58]:
+              - generic [ref=e59]: 多个子项已完成
+            - cell "代码辅助效率提升" [ref=e60]
+          - row "AI巡检分析平台 benzphuang ~1.5天 方案阶段 告警处理效率提升" [ref=e61]:
+            - cell "AI巡检分析平台" [ref=e62]
+            - cell "benzphuang" [ref=e63]
+            - cell "~1.5天" [ref=e64]
+            - cell "方案阶段" [ref=e65]:
+              - generic [ref=e66]: 方案阶段
+            - cell "告警处理效率提升" [ref=e67]
+          - row "AI接口测试工具-可视化服务地图 allanwei ~1.5天 开发中 接口测试可视化" [ref=e68]:
+            - cell "AI接口测试工具-可视化服务地图" [ref=e69]
+            - cell "allanwei" [ref=e70]
+            - cell "~1.5天" [ref=e71]
+            - cell "开发中" [ref=e72]:
+              - generic [ref=e73]: 开发中
+            - cell "接口测试可视化" [ref=e74]
+          - row "研发流程全自动探索 camdenwang ~1.5天 探索中 Claude-Code+CI/CD" [ref=e75]:
+            - cell "研发流程全自动探索" [ref=e76]
+            - cell "camdenwang" [ref=e77]
+            - cell "~1.5天" [ref=e78]
+            - cell "探索中" [ref=e79]:
+              - generic [ref=e80]: 探索中
+            - cell "Claude-Code+CI/CD" [ref=e81]
+          - row "通管knot自主规划式智能体 juibyyang ~1天 调研中 智能运维" [ref=e82]:
+            - cell "通管knot自主规划式智能体" [ref=e83]
+            - cell "juibyyang" [ref=e84]
+            - cell "~1天" [ref=e85]
+            - cell "调研中" [ref=e86]:
+              - generic [ref=e87]: 调研中
+            - cell "智能运维" [ref=e88]
+          - row "合计 7人参与 ~26.5天 AI工具矩阵初步成型" [ref=e89]:
+            - cell "合计" [ref=e90]
+            - cell "7人参与" [ref=e91]
+            - cell "~26.5天" [ref=e92]
+            - cell "AI工具矩阵初步成型" [ref=e93]
+      - generic [ref=e94]:
+        - strong [ref=e95]: ✨ AI建设亮点：
+        - list [ref=e96]:
+          - listitem [ref=e97]:
+            - text: 🤖 3月AI工具建设已形成
+            - strong [ref=e98]: 7工具矩阵
+            - text: ：覆盖自动测试、UI自动化、知识系统、巡检分析、接口测试、流程自动化、智能体等7个方向
+          - listitem [ref=e99]: 🤖 AI已渗透到日常工作：amarishuang在多个需求测试中使用AI生成用例，juibyyang用AI对错误码数据打标签，jiushugao用AI建设物联网机器人
+          - listitem [ref=e100]:
+            - text: 🤖
+            - strong [ref=e101]: 团队AI投入占比23.7%
+            - text: ，在部门内属于领先水平
+    - generic [ref=e102]:
+      - heading "三、技术基建进展" [level=2] [ref=e103]
+      - table [ref=e104]:
+        - rowgroup [ref=e105]:
+          - row "技术需求 负责人 投入 状态" [ref=e106]:
+            - columnheader "技术需求" [ref=e107]
+            - columnheader "负责人" [ref=e108]
+            - columnheader "投入" [ref=e109]
+            - columnheader "状态" [ref=e110]
+        - rowgroup [ref=e111]:
+          - row "taf老服务迁移-StationDataSvr conniesun 5.5天 联调中" [ref=e112]:
+            - cell "taf老服务迁移-StationDataSvr" [ref=e113]
+            - cell "conniesun" [ref=e114]
+            - cell "5.5天" [ref=e115]
+            - cell "联调中" [ref=e116]:
+              - generic [ref=e117]: 联调中
+          - row "通信管理平台灰度发布 tealyao ~3天 已完成" [ref=e118]:
+            - cell "通信管理平台灰度发布" [ref=e119]
+            - cell "tealyao" [ref=e120]
+            - cell "~3天" [ref=e121]
+            - cell "已完成" [ref=e122]:
+              - generic [ref=e123]: 已完成
+          - row "发奖服务优化（gorm改公共库） conniesun ~3天 已完成" [ref=e124]:
+            - cell "发奖服务优化（gorm改公共库）" [ref=e125]
+            - cell "conniesun" [ref=e126]
+            - cell "~3天" [ref=e127]
+            - cell "已完成" [ref=e128]:
+              - generic [ref=e129]: 已完成
+          - row "vision鉴权升级 kangkangran ~2.5天 已完成" [ref=e130]:
+            - cell "vision鉴权升级" [ref=e131]
+            - cell "kangkangran" [ref=e132]
+            - cell "~2.5天" [ref=e133]
+            - cell "已完成" [ref=e134]:
+              - generic [ref=e135]: 已完成
+          - row "业务网关频控优化 conniesun ~1.5天 已完成" [ref=e136]:
+            - cell "业务网关频控优化" [ref=e137]
+            - cell "conniesun" [ref=e138]
+            - cell "~1.5天" [ref=e139]
+            - cell "已完成" [ref=e140]:
+              - generic [ref=e141]: 已完成
+          - row "pulsar虚拟集群升级 conniesun+camdenwang ~1天 方案验证中" [ref=e142]:
+            - cell "pulsar虚拟集群升级" [ref=e143]
+            - cell "conniesun+camdenwang" [ref=e144]
+            - cell "~1天" [ref=e145]
+            - cell "方案验证中" [ref=e146]:
+              - generic [ref=e147]: 方案验证中
+          - row "ecovision平台优化（多版本素材库） jiushugao ~1天 开发中" [ref=e148]:
+            - cell "ecovision平台优化（多版本素材库）" [ref=e149]
+            - cell "jiushugao" [ref=e150]
+            - cell "~1天" [ref=e151]
+            - cell "开发中" [ref=e152]:
+              - generic [ref=e153]: 开发中
+          - row "ecovision开放接口 juibyyang ~1.5天 规划中" [ref=e154]:
+            - cell "ecovision开放接口" [ref=e155]
+            - cell "juibyyang" [ref=e156]
+            - cell "~1.5天" [ref=e157]
+            - cell "规划中" [ref=e158]:
+              - generic [ref=e159]: 规划中
+    - generic [ref=e160]:
+      - heading "四、线上稳定性报告" [level=2] [ref=e161]
+      - generic [ref=e162]:
+        - strong [ref=e163]: ⚠️ 3月线上问题回顾：
+        - list [ref=e164]:
+          - listitem [ref=e165]:
+            - text: 🔴
+            - strong [ref=e166]: 洛克王国首发短信下发失败
+            - text: ：已完成复盘，消耗约2天（allanwei+shuqigao排查+复盘），根因已定位并修复
+          - listitem [ref=e167]:
+            - text: 🔴
+            - strong [ref=e168]: IEG通讯-全量解绑导致用户绑定状态异常
+            - text: ：junyuzheng处理，消耗约1天
+          - listitem [ref=e169]:
+            - text: 🟡
+            - strong [ref=e170]: openid上传号码包匹配数量变多
+            - text: ：allanwei紧急处理+排查，消耗约1.5天
+          - listitem [ref=e171]:
+            - text: 🟡
+            - strong [ref=e172]: 权益-发奖服务DB异常
+            - text: ：conniesun排查修复，消耗约1天
+          - listitem [ref=e173]:
+            - text: 🟡
+            - strong [ref=e174]: IEG通讯下发速度优化
+            - text: ：allanwei开发优化方案+转测+发布，消耗约2天
+        - paragraph [ref=e175]:
+          - strong [ref=e176]: 建议措施：
+          - text: ①加强上线前灰度验证覆盖率；②IC平台关键路径增加自动化回归（AI测试Agent已在建设中）；③建立线上问题快速响应SOP。
+    - generic [ref=e177]:
+      - heading "五、4月重点规划" [level=2] [ref=e178]
+      - generic [ref=e179]:
+        - strong [ref=e180]: 💡 4月研发公共中心关键方向：
+        - list [ref=e181]:
+          - listitem [ref=e182]:
+            - strong [ref=e183]: 控制公共占比至25%以内
+            - text: ：AI工具建设进入常态化维护阶段，减少集中投入
+          - listitem [ref=e184]:
+            - strong [ref=e185]: taf服务迁移持续推进
+            - text: ：StationDataSvr联调完成后，推进StationV2Server等后续服务迁移
+          - listitem [ref=e186]:
+            - strong [ref=e187]: AI能力产出量化
+            - text: ：开始收集AI工具的实际使用数据，量化提效ROI，为团队AI能力向部门推广提供数据支撑
+          - listitem [ref=e188]:
+            - strong [ref=e189]: 告警处理机制优化
+            - text: ：AI巡检平台核心能力建设，结合告警分级机制（已有V1.0文档），降低线上问题响应时间
+          - listitem [ref=e190]:
+            - strong [ref=e191]: 技术债清理
+            - text: ：pulsar集群升级、taf编译机下线等基础设施优化
+  - generic [ref=e192]:
+    - paragraph [ref=e193]: 📊 研发公共中心 · 3月研发资源投入与技术建设月报
+    - paragraph [ref=e194]: 数据来源：TAPD工时系统+排期系统 | 生成时间：2026年4月2日

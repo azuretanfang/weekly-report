@@ -1,0 +1,125 @@
+- generic [ref=e2]:
+  - generic [ref=e3]:
+    - text: Weekly Report
+    - heading "运营商行业周报 03.23 - 03.29" [level=1] [ref=e4]
+    - paragraph [ref=e5]: 三大运营商2025年报全部出齐 | 合计派息超1300亿 | 集体宣布转向"Token经营" | 工信部发布前2月通信业数据
+  - generic [ref=e6]:
+    - generic [ref=e7]:
+      - heading "📊 市场数据" [level=2] [ref=e8]:
+        - generic [ref=e9]: 📊
+        - text: 市场数据
+      - generic [ref=e10]: 年报季·三大运营商成绩单出齐
+    - generic [ref=e11]:
+      - generic [ref=e12]:
+        - generic [ref=e13]: 移动营收（万亿级）
+        - generic [ref=e14]: 10502亿
+        - generic [ref=e15]: 同比+0.9%
+      - generic [ref=e16]:
+        - generic [ref=e17]: 合计派息
+        - generic [ref=e18]: 1300亿+
+        - generic [ref=e19]: 分红比例创新高
+      - generic [ref=e20]:
+        - generic [ref=e21]: 移动智算增速
+        - generic [ref=e22]: +279%
+        - generic [ref=e23]: 智算服务爆发
+      - generic [ref=e24]:
+        - generic [ref=e25]: 5G用户数
+        - generic [ref=e26]: 12.35亿
+        - generic [ref=e27]: 占比67.6%
+    - generic [ref=e28]:
+      - heading "📈 三大运营商2025年报核心数据对比" [level=3] [ref=e29]:
+        - generic [ref=e30]: 📈
+        - text: 三大运营商2025年报核心数据对比
+      - generic [ref=e31]:
+        - generic [ref=e32]:
+          - generic [ref=e33]: 中国移动
+          - generic [ref=e34]: 营收10502亿（+0.9%），首破万亿大关；净利润1371亿（-0.9%）； 算力服务收入898亿（+11.1%），智算增速279%； 智算规模达92.5 EFLOPS；全年派息超千亿，每股5.27港元（+3.5%）
+        - generic [ref=e35]:
+          - generic [ref=e36]: 中国电信
+          - generic [ref=e37]: 营收5239亿（+0.1%），增速为近6年最低；净利润332亿（+0.5%）； 天翼云收入1207亿，AIDC收入345亿； 智能收入123亿；智算规模91 EFLOPS；分红比例75%，派息约249亿元
+        - generic [ref=e38]:
+          - generic [ref=e39]: 中国联通
+          - generic [ref=e40]: 营收3922亿（+0.7%）；净利润91.3亿（+1.1%）； AI收入同比增长超140%； 算力业务收入占比超15%（+1.1pp）；建成7个百兆瓦级AIDC园区；战略性新兴产业收入占比超86%
+  - generic [ref=e41]:
+    - generic [ref=e42]:
+      - heading "👔 人事变动" [level=2] [ref=e43]:
+        - generic [ref=e44]: 👔
+        - text: 人事变动
+      - generic [ref=e45]: 本周暂无重大调整
+    - generic [ref=e47]:
+      - generic [ref=e48]:
+        - generic [ref=e49]: 📌
+        - generic [ref=e50]:
+          - generic [ref=e51]: 三大运营商领导班子保持稳定
+          - generic [ref=e52]: 本周三大运营商聚焦于年报披露和业绩说明会，未有重大集团层面人事变动。现任领导班子： 中国移动董事长杨杰、中国电信董事长柯瑞文（总经理刘桂清）、中国联通董事长陈忠岳（总经理简勤）。
+      - generic [ref=e53]:
+        - generic [ref=e54]: 💡
+        - generic [ref=e55]:
+          - generic [ref=e56]: 年报发布会管理层表态
+          - generic [ref=e57]: 中国移动业绩说明会上，管理层将算力服务定位为未来发展"增长极"，力争"十五五"期间智算总规模跃居全球前列。 中国电信明确提出"Token经营"升至企业核心经营战略层面，由CEO亲自推动。
+  - generic [ref=e58]:
+    - generic [ref=e59]:
+      - heading "🚀 行业动态" [level=2] [ref=e60]:
+        - generic [ref=e61]: 🚀
+        - text: 行业动态
+      - generic [ref=e62]: 年报季核心信号：从流量到Token
+    - generic [ref=e63]:
+      - generic [ref=e64]:
+        - generic [ref=e65]:
+          - generic [ref=e66]: 🔥 焦点
+          - generic [ref=e67]: 三大运营商集体转向"Token经营"新模式
+        - generic [ref=e68]: 本周年报季最核心信号：运营商正从"卖连接、卖带宽"转向"卖算力、卖Token、卖推理结果"。 我国日均Token调用量已从2024年初的1000亿跃升至2025年底的100万亿。 中国移动提出"Agent使用Token、Token拉动算力"的服务链路，将通信、算力与智能三大服务统一经营。 中国电信率先将AI Token提升至企业核心经营战略，按通用、专业和定制Token提供差异化服务。 中国联通则推动"Agent+Token+AI云"新范式落地。
+      - generic [ref=e69]:
+        - generic [ref=e70]:
+          - generic [ref=e71]: 📡 技术
+          - generic [ref=e72]: 中国电信"智聚大上行"方案赋能Mobile AI
+        - generic [ref=e73]: 中国电信与华为联合推出"智聚大上行"解决方案，实测达到1Gbps上行峰值速率，现网时延降低30%以上。 已在国内六省启动试点，部署逾13万座5G-A基站，覆盖300+重点城市。 打造了上海宝钢智慧专网、合肥骆岗中央公园首个"5G-A×AI大上行端到端示范区"等标杆案例， 上海浦江5G-A×AI立体网络项目获MWC 2026 GSMA Foundry卓越奖。
+      - generic [ref=e74]:
+        - generic [ref=e75]:
+          - generic [ref=e76]: 💰 投资
+          - generic [ref=e77]: 2026年资本开支"减总量、调结构"，算力投资占比超35%
+        - generic [ref=e78]: 三大运营商2026年总资本开支均下降，但算力成为绝对主攻方向： 中国移动1366亿元（-9.5%），算力网络投资增长62.4%，智能网络投资增长19.8%，合计占比超37%； 中国电信730亿元（-9.2%），算力基础设施255亿元（+26%），AIDC投资增长28%，占比35%； 中国联通约500亿元，算力投资占比超35%。
+      - generic [ref=e79]:
+        - generic [ref=e80]:
+          - generic [ref=e81]: ☁️ 云计算
+          - generic [ref=e82]: 天翼云突破1200亿，运营商云格局初定
+        - generic [ref=e83]: 中国电信天翼云2025年收入达1207亿元，稳居公有云IaaS国内第二、IaaS+PaaS合并口径前三。 中国移动移动云同样保持高速增长，对外服务IDC标准机架超150万架，建成两大超万卡智算集群。 中国联通数据中心收入达281亿元（+8.5%），已建成7个百兆瓦级AIDC园区。 运营商正在从"底层连接"向"云+AI一体化"全栈服务演进。
+  - generic [ref=e84]:
+    - generic [ref=e85]:
+      - heading "📋 政策动向" [level=2] [ref=e86]:
+        - generic [ref=e87]: 📋
+        - text: 政策动向
+      - generic [ref=e88]: 工信部发布最新通信业数据
+    - generic [ref=e89]:
+      - generic [ref=e90]:
+        - generic [ref=e91]:
+          - generic [ref=e92]: 📊 数据
+          - generic [ref=e93]: 工信部发布2026年前2月通信业经济运行数据
+        - generic [ref=e94]: 3月25日，工信部发布2026年前两个月通信业经济运行情况： 电信业务收入2904亿元，同比下降1.7%（值得关注的信号）； 但电信业务总量同比增长8.4%，"量增价降"趋势延续。 移动互联网累计流量666.7亿GB（+20.4%），5G用户12.35亿户（占比67.6%）， 5G基站总数达490.9万个，千兆宽带用户2.45亿户（占比35.3%）。
+      - generic [ref=e95]:
+        - generic [ref=e96]:
+          - generic [ref=e97]: 🏛️ 监管
+          - generic [ref=e98]: 工信部2026年持续推进整治"内卷式"竞争
+        - generic [ref=e99]: 根据2025年底全国工业和信息化工作会议部署，2026年工信部将深入整治通信行业"内卷式"竞争， 要求电信央企必须执行。核心目标：规范市场秩序，减少低价恶性竞争，引导运营商从"价格战"转向"价值战"。 这与三大运营商年报中集体转向"Token经营"、追求高质量增长的战略方向形成政策共振。
+      - generic [ref=e100]:
+        - generic [ref=e101]:
+          - generic [ref=e102]: 🧮 算力
+          - generic [ref=e103]: 智算规模爆发式增长，政策持续加码
+        - generic [ref=e104]: 2026年我国智算规模进入爆发期，中国移动智算规模达92.5 EFLOPS，中国电信达91 EFLOPS，中国联通达45 EFLOPS。 工信部此前部署的十大重点工作中，明确提出加快算力基础设施建设、推动"AI+"赋能千行百业。 三大运营商2026年算力投资合计将超过600亿元，占总资本开支比重均升至35%以上。
+  - generic [ref=e105]:
+    - generic [ref=e106]:
+      - generic [ref=e108]: 👀
+      - heading "下周关注" [level=2] [ref=e109]
+    - generic [ref=e110]:
+      - generic [ref=e111]:
+        - generic [ref=e112]: 📊 运营商月度数据
+        - generic [ref=e113]: 关注三大运营商2026年3月运营数据公告，AI业务增速是否延续强劲态势
+      - generic [ref=e114]:
+        - generic [ref=e115]: 🤖 Token经营落地
+        - generic [ref=e116]: 关注运营商"Token经营"策略的具体产品和定价方案，以及与AI大模型厂商的合作动态
+      - generic [ref=e117]:
+        - generic [ref=e118]: 📡 5G-A商用进展
+        - generic [ref=e119]: 中国电信"智聚大上行"六省试点推广情况，低空经济和具身智能应用场景落地
+  - generic [ref=e120]:
+    - paragraph [ref=e121]: 数据来源：三大运营商公告、工信部、国资委、新华网、央视网、C114通信网
+    - paragraph [ref=e122]: 制作日期：2026年3月30日
