@@ -43,6 +43,11 @@ RECIPIENTS = [
     "eonefeng@tencent.com",
 ]
 
+# 抄送列表（CC）
+CC_RECIPIENTS = [
+    "jamesjgbai@tencent.com",
+]
+
 GITHUB_PAGES_BASE = "https://azuretanfang.github.io/weekly-report/运营商行业周报"
 
 # ==================== 配置区域结束 ====================
@@ -211,6 +216,8 @@ def send_weekly_report(file_prefix=None):
     message = MIMEMultipart('related')
     message['From'] = SENDER_EMAIL
     message['To'] = ", ".join(RECIPIENTS)
+    if CC_RECIPIENTS:
+        message['Cc'] = ", ".join(CC_RECIPIENTS)
     message['Subject'] = Header(report_title, 'utf-8')
 
     # HTML 正文部分
@@ -232,11 +239,14 @@ def send_weekly_report(file_prefix=None):
         server = smtplib.SMTP_SSL(SMTP_SERVER, SMTP_PORT)
         server.login(SENDER_EMAIL, SENDER_PASSWORD)
 
+        all_recipients = RECIPIENTS + CC_RECIPIENTS
         print(f"正在发送邮件到: {', '.join(RECIPIENTS)}")
-        server.sendmail(SENDER_EMAIL, RECIPIENTS, message.as_string())
+        if CC_RECIPIENTS:
+            print(f"抄送: {', '.join(CC_RECIPIENTS)}")
+        server.sendmail(SENDER_EMAIL, all_recipients, message.as_string())
         server.quit()
 
-        print(f"✅ 邮件发送成功！共 {len(RECIPIENTS)} 位收件人")
+        print(f"✅ 邮件发送成功！共 {len(RECIPIENTS)} 位收件人，{len(CC_RECIPIENTS)} 位抄送")
         return True
 
     except Exception as e:
@@ -254,5 +264,7 @@ if __name__ == "__main__":
     print(f"主题: {report_title}")
     print(f"周期: {report_period}")
     print(f"收件人: {len(RECIPIENTS)} 人")
+    if CC_RECIPIENTS:
+        print(f"抄送: {len(CC_RECIPIENTS)} 人")
     print("=" * 50)
     send_weekly_report(file_prefix)
