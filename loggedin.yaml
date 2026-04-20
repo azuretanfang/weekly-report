@@ -1,0 +1,121 @@
+- generic [ref=e1]:
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - generic [ref=e96]:
+          - generic [ref=e100]: 💻 开发
+          - generic [ref=e101]: camdenwang
+          - button "退出" [ref=e102] [cursor=pointer]
+        - textbox [active] [ref=e17] [cursor=pointer]
+    - navigation [ref=e20]:
+      - button "📦 需求池" [ref=e21] [cursor=pointer]
+      - button "📅 排期表" [ref=e22] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e23] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e24] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e25] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e26] [cursor=pointer]
+      - button "📅 月度记录" [ref=e27] [cursor=pointer]
+  - generic [ref=e29]:
+    - generic [ref=e30]:
+      - button "🆕 提交需求" [ref=e31] [cursor=pointer]
+      - button "📋 需求看板" [ref=e32] [cursor=pointer]
+      - button "📊 需求列表" [ref=e33] [cursor=pointer]
+      - button "📈 统计分析" [ref=e34] [cursor=pointer]
+    - generic [ref=e36]:
+      - generic [ref=e37]:
+        - generic [ref=e38]:
+          - generic [ref=e39]: 📝
+          - text: 提交新需求
+        - button "🗑️ 清空" [ref=e40] [cursor=pointer]
+      - generic [ref=e41]:
+        - generic [ref=e42]:
+          - generic [ref=e43]: TAPD ID *
+          - textbox "TAPD需求单号" [ref=e44]
+        - generic [ref=e45]:
+          - generic [ref=e46]: 期望交付周期 *
+          - generic [ref=e47]:
+            - textbox [ref=e48]: 2026-04
+            - combobox [ref=e49]:
+              - option "第1周（4/1-4/5）" [selected]
+              - option "第2周（4/6-4/12）"
+              - option "第3周（4/13-4/19）"
+              - option "第4周（4/20-4/26）"
+              - option "第5周（4/27-4/30）"
+        - generic [ref=e50]:
+          - generic [ref=e51]: 需求标题 （输入TAPD ID后自动获取，支持编辑）
+          - textbox "TAPD需求标题" [ref=e52]
+        - generic [ref=e53]:
+          - generic [ref=e54]: 需求来源 （输入TAPD ID后自动获取，支持编辑）
+          - textbox "需求来源" [ref=e55]
+        - generic [ref=e56]:
+          - generic [ref=e57]: 提交人
+          - textbox [ref=e58]: camdenwang
+      - generic [ref=e59]:
+        - generic [ref=e61]: ⭐ 优先级评估
+        - generic [ref=e63]:
+          - generic [ref=e64]:
+            - generic [ref=e65]: 💰 收入影响
+            - generic [ref=e66]:
+              - generic [ref=e67] [cursor=pointer]:
+                - radio "高 直接影响收入" [ref=e68]
+                - generic [ref=e69]: 高
+                - generic [ref=e70]: 直接影响收入
+              - generic [ref=e71] [cursor=pointer]:
+                - radio "中 间接收入影响" [checked] [ref=e72]
+                - generic [ref=e73]: 中
+                - generic [ref=e74]: 间接收入影响
+              - generic [ref=e75] [cursor=pointer]:
+                - radio "低 无明显影响" [ref=e76]
+                - generic [ref=e77]: 低
+                - generic [ref=e78]: 无明显影响
+          - generic [ref=e79]:
+            - generic [ref=e80]: 🔒 安全合规 （是否为安全性合规性需求）
+            - generic [ref=e81]:
+              - generic [ref=e82] [cursor=pointer]:
+                - radio "是" [ref=e83]
+                - generic [ref=e84]: 是
+              - generic [ref=e85] [cursor=pointer]:
+                - radio "否" [checked] [ref=e86]
+                - generic [ref=e87]: 否
+          - generic [ref=e88]:
+            - generic [ref=e89]: 🚨 紧急程度 （由期望交付周期自动计算）
+            - generic:
+              - generic:
+                - radio "高 已超期" [checked] [disabled]
+                - generic: 高
+                - generic: 已超期
+              - generic:
+                - radio "中 本月需完成" [disabled]
+                - generic: 中
+                - generic: 本月需完成
+              - generic:
+                - radio "低 可以等" [disabled]
+                - generic: 低
+                - generic: 可以等
+        - generic [ref=e90]:
+          - generic [ref=e91]: 综合优先级：
+          - generic [ref=e92]: P1
+          - generic [ref=e93]: 重要需求，优先排期
+      - button "📦 提交到需求池" [ref=e95] [cursor=pointer]
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

@@ -1,0 +1,2801 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [active] [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e2134]:
+    - generic [ref=e2135]:
+      - generic [ref=e2136]:
+        - generic [ref=e2137]: 📋
+        - generic [ref=e2138]: "115"
+        - generic [ref=e2139]: 需求总数
+      - generic [ref=e2140]:
+        - generic [ref=e2141]: 📝
+        - generic [ref=e2142]: "6"
+        - generic [ref=e2143]: 待开发
+      - generic [ref=e2144]:
+        - generic [ref=e2145]: 🔧
+        - generic [ref=e2146]: "6"
+        - generic [ref=e2147]: 开发中
+      - generic [ref=e2148]:
+        - generic [ref=e2149]: 🧪
+        - generic [ref=e2150]: "7"
+        - generic [ref=e2151]: 测试/验收
+      - generic [ref=e2152]:
+        - generic [ref=e2153]: ✅
+        - generic [ref=e2154]: "78"
+        - generic [ref=e2155]: 已完成
+    - generic [ref=e2156]:
+      - generic [ref=e2157]:
+        - generic [ref=e2158]:
+          - generic [ref=e2159]: 📅
+          - text: 需求排期表
+        - generic [ref=e2160]:
+          - button "🔄 刷新TAPD" [ref=e2161] [cursor=pointer]
+          - button "📥 导入排期" [ref=e2162] [cursor=pointer]
+          - button "📤 导出" [ref=e2163] [cursor=pointer]
+      - generic [ref=e2165]:
+        - textbox "🔍 搜索需求名称/TAPD ID/开发人员..." [ref=e2166]
+        - generic [ref=e2168] [cursor=pointer]:
+          - generic [ref=e2169]: 全部来源
+          - generic: ▾
+        - generic [ref=e2171] [cursor=pointer]:
+          - generic [ref=e2172]: 全部状态
+          - generic: ▾
+        - generic [ref=e2174] [cursor=pointer]:
+          - generic [ref=e2175]: 全部开发人员
+          - generic: ▾
+        - generic [ref=e2177] [cursor=pointer]:
+          - generic [ref=e2178]: 全部交付状态
+          - generic: ▾
+      - generic [ref=e2179]:
+        - generic [ref=e2180]:
+          - 'generic "测试中: 11条 (29.7%)" [ref=e2181]'
+          - 'generic "开发中: 6条 (16.2%)" [ref=e2182]'
+          - 'generic "待开发: 9条 (24.3%)" [ref=e2183]'
+          - 'generic "规划中: 8条 (21.6%)" [ref=e2184]'
+        - generic [ref=e2185]:
+          - generic [ref=e2186]: 测试中 11
+          - generic [ref=e2188]: 开发中 6
+          - generic [ref=e2190]: 待开发 9
+          - generic [ref=e2192]: 规划中 8
+      - table [ref=e2195]:
+        - rowgroup [ref=e2196]:
+          - row "# TAPD ID ↕ 需求名称 ↕ 状态 ↕ 需求来源 ↕ 后台开发 前端开发 数据开发 测试人员 预计转测 ↕ 预计开始测试 ↕ 预计测试完成 ↕ 预计发布 ↕ 风险/备注 交付状态 ↕ 预计排期 ↕ 操作" [ref=e2197]:
+            - columnheader "#" [ref=e2198]
+            - columnheader "TAPD ID ↕" [ref=e2199] [cursor=pointer]
+            - columnheader "需求名称 ↕" [ref=e2200] [cursor=pointer]
+            - columnheader "状态 ↕" [ref=e2201] [cursor=pointer]
+            - columnheader "需求来源 ↕" [ref=e2202] [cursor=pointer]
+            - columnheader "后台开发" [ref=e2203]
+            - columnheader "前端开发" [ref=e2204]
+            - columnheader "数据开发" [ref=e2205]
+            - columnheader "测试人员" [ref=e2206]
+            - columnheader "预计转测 ↕" [ref=e2207] [cursor=pointer]
+            - columnheader "预计开始测试 ↕" [ref=e2208] [cursor=pointer]
+            - columnheader "预计测试完成 ↕" [ref=e2209] [cursor=pointer]
+            - columnheader "预计发布 ↕" [ref=e2210] [cursor=pointer]
+            - columnheader "风险/备注" [ref=e2211]
+            - columnheader "交付状态 ↕" [ref=e2212] [cursor=pointer]
+            - columnheader "预计排期 ↕" [ref=e2213] [cursor=pointer]
+            - columnheader "操作" [ref=e2214]
+        - rowgroup [ref=e2215]:
+          - row "1 131912881 【IC平台】营销接口扣费+拦截 🌗 灰度发布 产品中心 allanwei × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ ⚠️ 03-25 ⚠️ 03-25 ⚠️ 03-27 ⚠️ 03-30 等发布3天 同 功能业务代码扣费需求一起测试和发布；3.30 功能业务代码由于需求变更没有转测； 3.30 需求文档中有部分需求未实现 3.31 信息反馈 IC 的聚合展示没做 🔴 已延期 2026年3月 第2周（3/2-3/8） 🔄 ✕" [ref=e2216]:
+            - cell "1" [ref=e2217]
+            - cell "131912881" [ref=e2218]:
+              - link "131912881" [ref=e2219] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362131912881
+            - cell "【IC平台】营销接口扣费+拦截" [ref=e2220]
+            - cell "🌗 灰度发布" [ref=e2221]:
+              - generic [ref=e2222]: 🌗 灰度发布
+            - cell "产品中心" [ref=e2223]:
+              - combobox [ref=e2224] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "allanwei × ▾" [ref=e2225]:
+              - generic [ref=e2227] [cursor=pointer]:
+                - generic [ref=e2228]:
+                  - text: allanwei
+                  - generic [ref=e2229]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2230]:
+              - generic [ref=e2232] [cursor=pointer]:
+                - generic [ref=e2233]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2234]:
+              - generic [ref=e2236] [cursor=pointer]:
+                - generic [ref=e2237]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2238]:
+              - generic [ref=e2240] [cursor=pointer]:
+                - generic [ref=e2241]: 选择开发...
+                - generic: ▾
+            - cell "⚠️ 03-25" [ref=e2242]:
+              - generic "2026-03-25（已逾期）" [ref=e2243] [cursor=pointer]: ⚠️ 03-25
+            - cell "⚠️ 03-25" [ref=e2244]:
+              - generic "2026-03-25（已逾期）" [ref=e2245] [cursor=pointer]: ⚠️ 03-25
+            - cell "⚠️ 03-27" [ref=e2246]:
+              - generic "2026-03-27（已逾期）" [ref=e2247] [cursor=pointer]: ⚠️ 03-27
+            - cell "⚠️ 03-30 等发布3天" [ref=e2248]:
+              - generic [ref=e2249]:
+                - generic "2026-03-30（已逾期）" [ref=e2250] [cursor=pointer]: ⚠️ 03-30
+                - generic "等发布3天" [ref=e2251]
+            - cell "同 功能业务代码扣费需求一起测试和发布；3.30 功能业务代码由于需求变更没有转测； 3.30 需求文档中有部分需求未实现 3.31 信息反馈 IC 的聚合展示没做" [ref=e2252]:
+              - textbox "输入备注..." [ref=e2253]: 同 功能业务代码扣费需求一起测试和发布；3.30 功能业务代码由于需求变更没有转测； 3.30 需求文档中有部分需求未实现 3.31 信息反馈 IC 的聚合展示没做
+            - cell "🔴 已延期" [ref=e2254]:
+              - generic "🔴 已延期 原因：同 功能业务代码扣费需求一起测试和发布；3.30 功能业务代码由于需求变更没有转测； 3.30 需求文档中有部分需求未实现 3.31 信息反馈 IC 的聚合展示没做" [ref=e2255] [cursor=pointer]: 🔴 已延期
+            - cell "2026年3月 第2周（3/2-3/8）" [ref=e2256]:
+              - generic [ref=e2257]:
+                - combobox [ref=e2258] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2259] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）" [selected]
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2260]:
+              - generic [ref=e2261]:
+                - button "🔄" [ref=e2262] [cursor=pointer]
+                - button "✕" [ref=e2263] [cursor=pointer]
+          - row "2 132329672 【技术需求】taf老服务迁移--StationDataSvr迁移 🌗 灰度发布 公共 conniesun × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 ⚠️ 03-30 预计 3.24 自测完，延期一天，原因处理福利鹅领奖问题； 3.25 确认已自测完成，待 shuqigaoCR 后预计 3.30 发布 🔴 已延期 2026年3月 第3周（3/9-3/15） 🔄 ✕" [ref=e2264]:
+            - cell "2" [ref=e2265]
+            - cell "132329672" [ref=e2266]:
+              - link "132329672" [ref=e2267] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132329672
+            - cell "【技术需求】taf老服务迁移--StationDataSvr迁移" [ref=e2268]
+            - cell "🌗 灰度发布" [ref=e2269]:
+              - generic [ref=e2270]: 🌗 灰度发布
+            - cell "公共" [ref=e2271]:
+              - combobox [ref=e2272] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "conniesun × ▾" [ref=e2273]:
+              - generic [ref=e2275] [cursor=pointer]:
+                - generic [ref=e2276]:
+                  - text: conniesun
+                  - generic [ref=e2277]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2278]:
+              - generic [ref=e2280] [cursor=pointer]:
+                - generic [ref=e2281]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2282]:
+              - generic [ref=e2284] [cursor=pointer]:
+                - generic [ref=e2285]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2286]:
+              - generic [ref=e2288] [cursor=pointer]:
+                - generic [ref=e2289]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2290]:
+              - generic "点击设置日期" [ref=e2291] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2292]:
+              - generic "点击设置日期" [ref=e2293] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2294]:
+              - generic "点击设置日期" [ref=e2295] [cursor=pointer]: 📅 设置
+            - cell "⚠️ 03-30" [ref=e2296]:
+              - generic "2026-03-30（已逾期）" [ref=e2297] [cursor=pointer]: ⚠️ 03-30
+            - cell "预计 3.24 自测完，延期一天，原因处理福利鹅领奖问题； 3.25 确认已自测完成，待 shuqigaoCR 后预计 3.30 发布" [ref=e2298]:
+              - textbox "输入备注..." [ref=e2299]: 预计 3.24 自测完，延期一天，原因处理福利鹅领奖问题； 3.25 确认已自测完成，待 shuqigaoCR 后预计 3.30 发布
+            - cell "🔴 已延期" [ref=e2300]:
+              - generic "🔴 已延期 原因：预计 3.24 自测完，延期一天，原因处理福利鹅领奖问题；" [ref=e2301] [cursor=pointer]: 🔴 已延期
+            - cell "2026年3月 第3周（3/9-3/15）" [ref=e2302]:
+              - generic [ref=e2303]:
+                - combobox [ref=e2304] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2305] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）" [selected]
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2306]:
+              - generic [ref=e2307]:
+                - button "🔄" [ref=e2308] [cursor=pointer]
+                - button "✕" [ref=e2309] [cursor=pointer]
+          - row "3 132835157 【运营AI需求专项】活动配置-二期 👁️ 产品体验 产品中心 选择开发... ▾ jiushugao × guoleluo × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 ⚠️ 04-02 4.2 开发已提交给产品体验，二期定向部分还没验收，运营反馈节后验收 — 2026年3月 第4周（3/16-3/22） 🔄 ✕" [ref=e2310]:
+            - cell "3" [ref=e2311]
+            - cell "132835157" [ref=e2312]:
+              - link "132835157" [ref=e2313] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132835157
+            - cell "【运营AI需求专项】活动配置-二期" [ref=e2314]
+            - cell "👁️ 产品体验" [ref=e2315]:
+              - generic [ref=e2316]: 👁️ 产品体验
+            - cell "产品中心" [ref=e2317]:
+              - combobox [ref=e2318] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2319]:
+              - generic [ref=e2321] [cursor=pointer]:
+                - generic [ref=e2322]: 选择开发...
+                - generic: ▾
+            - cell "jiushugao × guoleluo × ▾" [ref=e2323]:
+              - generic [ref=e2325] [cursor=pointer]:
+                - generic [ref=e2326]:
+                  - text: jiushugao
+                  - generic [ref=e2327]: ×
+                - generic [ref=e2328]:
+                  - text: guoleluo
+                  - generic [ref=e2329]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2330]:
+              - generic [ref=e2332] [cursor=pointer]:
+                - generic [ref=e2333]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2334]:
+              - generic [ref=e2336] [cursor=pointer]:
+                - generic [ref=e2337]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2338]:
+              - generic "点击设置日期" [ref=e2339] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2340]:
+              - generic "点击设置日期" [ref=e2341] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2342]:
+              - generic "点击设置日期" [ref=e2343] [cursor=pointer]: 📅 设置
+            - cell "⚠️ 04-02" [ref=e2344]:
+              - generic "2026-04-02（已逾期）" [ref=e2345] [cursor=pointer]: ⚠️ 04-02
+            - cell "4.2 开发已提交给产品体验，二期定向部分还没验收，运营反馈节后验收" [ref=e2346]:
+              - textbox "输入备注..." [ref=e2347]: 4.2 开发已提交给产品体验，二期定向部分还没验收，运营反馈节后验收
+            - cell "—" [ref=e2348]:
+              - generic "点击标记交付状态" [ref=e2349] [cursor=pointer]: —
+            - cell "2026年3月 第4周（3/16-3/22）" [ref=e2350]:
+              - generic [ref=e2351]:
+                - combobox [ref=e2352] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2353] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）" [selected]
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2354]:
+              - generic [ref=e2355]:
+                - button "🔄" [ref=e2356] [cursor=pointer]
+                - button "✕" [ref=e2357] [cursor=pointer]
+          - row "4 131950328 【数据处理需求】通讯业务数据标签库 👁️ 产品体验 产品中心 选择开发... ▾ lintonliu × ▾ sigmoidguo × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 ⚠️ 04-07 3.23 前端下午已发布；数据 4 月 7 号交付 4.8 昨天未交付-开发休假半天，调整至 4.10 上午交付 4.14 产品体验bug 反馈待开发处理，预计今天完成 🔴 已延期 2026年3月 第3周（3/9-3/15） 🔄 ✕" [ref=e2358]:
+            - cell "4" [ref=e2359]
+            - cell "131950328" [ref=e2360]:
+              - link "131950328" [ref=e2361] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362131950328
+            - cell "【数据处理需求】通讯业务数据标签库" [ref=e2362]
+            - cell "👁️ 产品体验" [ref=e2363]:
+              - generic [ref=e2364]: 👁️ 产品体验
+            - cell "产品中心" [ref=e2365]:
+              - combobox [ref=e2366] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2367]:
+              - generic [ref=e2369] [cursor=pointer]:
+                - generic [ref=e2370]: 选择开发...
+                - generic: ▾
+            - cell "lintonliu × ▾" [ref=e2371]:
+              - generic [ref=e2373] [cursor=pointer]:
+                - generic [ref=e2374]:
+                  - text: lintonliu
+                  - generic [ref=e2375]: ×
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2376]:
+              - generic [ref=e2378] [cursor=pointer]:
+                - generic [ref=e2379]:
+                  - text: sigmoidguo
+                  - generic [ref=e2380]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2381]:
+              - generic [ref=e2383] [cursor=pointer]:
+                - generic [ref=e2384]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2385]:
+              - generic "点击设置日期" [ref=e2386] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2387]:
+              - generic "点击设置日期" [ref=e2388] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2389]:
+              - generic "点击设置日期" [ref=e2390] [cursor=pointer]: 📅 设置
+            - cell "⚠️ 04-07" [ref=e2391]:
+              - generic "2026-04-07（已逾期）" [ref=e2392] [cursor=pointer]: ⚠️ 04-07
+            - cell "3.23 前端下午已发布；数据 4 月 7 号交付 4.8 昨天未交付-开发休假半天，调整至 4.10 上午交付 4.14 产品体验bug 反馈待开发处理，预计今天完成" [ref=e2393]:
+              - textbox "输入备注..." [ref=e2394]: 3.23 前端下午已发布；数据 4 月 7 号交付 4.8 昨天未交付-开发休假半天，调整至 4.10 上午交付 4.14 产品体验bug 反馈待开发处理，预计今天完成
+            - cell "🔴 已延期" [ref=e2395]:
+              - generic "🔴 已延期 原因：产品体验阶段有 bug 要调整，4.14 重新提交体验，4.15 发布" [ref=e2396] [cursor=pointer]: 🔴 已延期
+            - cell "2026年3月 第3周（3/9-3/15）" [ref=e2397]:
+              - generic [ref=e2398]:
+                - combobox [ref=e2399] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2400] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）" [selected]
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2401]:
+              - generic [ref=e2402]:
+                - button "🔄" [ref=e2403] [cursor=pointer]
+                - button "✕" [ref=e2404] [cursor=pointer]
+          - row "5 132838754 【定向流量】PC端活动页适配改造 🧪 测试中 产品中心 选择开发... ▾ kangkangran × ▾ 选择开发... ▾ 选择开发... ▾ ⚠️ 04-01 ⚠️ 04-01 ⚠️ 04-08 ⚠️ 04-09 等发布1天 4.1 开发如期已转测，但是产品提供测试链接在测试下班才提供； 4.2 开始测试 ，预计完成时间调整 4.8 — 2026年3月 第4周（3/16-3/22） 🔄 ✕" [ref=e2405]:
+            - cell "5" [ref=e2406]
+            - cell "132838754" [ref=e2407]:
+              - link "132838754" [ref=e2408] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132838754
+            - cell "【定向流量】PC端活动页适配改造" [ref=e2409]
+            - cell "🧪 测试中" [ref=e2410]:
+              - generic [ref=e2411]: 🧪 测试中
+            - cell "产品中心" [ref=e2412]:
+              - combobox [ref=e2413] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2414]:
+              - generic [ref=e2416] [cursor=pointer]:
+                - generic [ref=e2417]: 选择开发...
+                - generic: ▾
+            - cell "kangkangran × ▾" [ref=e2418]:
+              - generic [ref=e2420] [cursor=pointer]:
+                - generic [ref=e2421]:
+                  - text: kangkangran
+                  - generic [ref=e2422]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2423]:
+              - generic [ref=e2425] [cursor=pointer]:
+                - generic [ref=e2426]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2427]:
+              - generic [ref=e2429] [cursor=pointer]:
+                - generic [ref=e2430]: 选择开发...
+                - generic: ▾
+            - cell "⚠️ 04-01" [ref=e2431]:
+              - generic "2026-04-01（已逾期）" [ref=e2432] [cursor=pointer]: ⚠️ 04-01
+            - cell "⚠️ 04-01" [ref=e2433]:
+              - generic "2026-04-01（已逾期）" [ref=e2434] [cursor=pointer]: ⚠️ 04-01
+            - cell "⚠️ 04-08" [ref=e2435]:
+              - generic "2026-04-08（已逾期）" [ref=e2436] [cursor=pointer]: ⚠️ 04-08
+            - cell "⚠️ 04-09 等发布1天" [ref=e2437]:
+              - generic [ref=e2438]:
+                - generic "2026-04-09（已逾期）" [ref=e2439] [cursor=pointer]: ⚠️ 04-09
+                - generic "等发布1天" [ref=e2440]
+            - cell "4.1 开发如期已转测，但是产品提供测试链接在测试下班才提供； 4.2 开始测试 ，预计完成时间调整 4.8" [ref=e2441]:
+              - textbox "输入备注..." [ref=e2442]: 4.1 开发如期已转测，但是产品提供测试链接在测试下班才提供； 4.2 开始测试 ，预计完成时间调整 4.8
+            - cell "—" [ref=e2443]:
+              - generic "点击标记交付状态" [ref=e2444] [cursor=pointer]: —
+            - cell "2026年3月 第4周（3/16-3/22）" [ref=e2445]:
+              - generic [ref=e2446]:
+                - combobox [ref=e2447] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2448] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）" [selected]
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2449]:
+              - generic [ref=e2450]:
+                - button "🔄" [ref=e2451] [cursor=pointer]
+                - button "✕" [ref=e2452] [cursor=pointer]
+          - row "6 133136713 【数据处理需求】转化追踪报表公平传输字段新增空白组数据 👁️ 产品体验 产品中心 选择开发... ▾ 选择开发... ▾ sigmoidguo × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 ⚠️ 04-14 4.14 已交付公平侧验收，等待反馈 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e2453]:
+            - cell "6" [ref=e2454]
+            - cell "133136713" [ref=e2455]:
+              - link "133136713" [ref=e2456] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133136713
+            - cell "【数据处理需求】转化追踪报表公平传输字段新增空白组数据" [ref=e2457]
+            - cell "👁️ 产品体验" [ref=e2458]:
+              - generic [ref=e2459]: 👁️ 产品体验
+            - cell "产品中心" [ref=e2460]:
+              - combobox [ref=e2461] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2462]:
+              - generic [ref=e2464] [cursor=pointer]:
+                - generic [ref=e2465]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2466]:
+              - generic [ref=e2468] [cursor=pointer]:
+                - generic [ref=e2469]: 选择开发...
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2470]:
+              - generic [ref=e2472] [cursor=pointer]:
+                - generic [ref=e2473]:
+                  - text: sigmoidguo
+                  - generic [ref=e2474]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2475]:
+              - generic [ref=e2477] [cursor=pointer]:
+                - generic [ref=e2478]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2479]:
+              - generic "点击设置日期" [ref=e2480] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2481]:
+              - generic "点击设置日期" [ref=e2482] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2483]:
+              - generic "点击设置日期" [ref=e2484] [cursor=pointer]: 📅 设置
+            - cell "⚠️ 04-14" [ref=e2485]:
+              - generic "2026-04-14（已逾期）" [ref=e2486] [cursor=pointer]: ⚠️ 04-14
+            - cell "4.14 已交付公平侧验收，等待反馈" [ref=e2487]:
+              - textbox "输入备注..." [ref=e2488]: 4.14 已交付公平侧验收，等待反馈
+            - cell "—" [ref=e2489]:
+              - generic "点击标记交付状态" [ref=e2490] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e2491]:
+              - generic [ref=e2492]:
+                - combobox [ref=e2493] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2494] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2495]:
+              - generic [ref=e2496]:
+                - button "🔄" [ref=e2497] [cursor=pointer]
+                - button "✕" [ref=e2498] [cursor=pointer]
+          - row "7 133404101 IC 任务下发短信时 text 服务跳过冗余授权校验 🧪 测试中 公共 allanwei × ▾ 选择开发... ▾ 选择开发... ▾ v_peixiang × ▾ ⚠️ 04-13 ⚠️ 04-13 ⚠️ 04-14 ⚠️ 04-14 临时高优先级需求，4.14已完成发布 ✅ 按时交付 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e2499]:
+            - cell "7" [ref=e2500]
+            - cell "133404101" [ref=e2501]:
+              - link "133404101" [ref=e2502] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133404101
+            - cell "IC 任务下发短信时 text 服务跳过冗余授权校验" [ref=e2503]
+            - cell "🧪 测试中" [ref=e2504]:
+              - generic [ref=e2505]: 🧪 测试中
+            - cell "公共" [ref=e2506]:
+              - combobox [ref=e2507] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "allanwei × ▾" [ref=e2508]:
+              - generic [ref=e2510] [cursor=pointer]:
+                - generic [ref=e2511]:
+                  - text: allanwei
+                  - generic [ref=e2512]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2513]:
+              - generic [ref=e2515] [cursor=pointer]:
+                - generic [ref=e2516]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2517]:
+              - generic [ref=e2519] [cursor=pointer]:
+                - generic [ref=e2520]: 选择开发...
+                - generic: ▾
+            - cell "v_peixiang × ▾" [ref=e2521]:
+              - generic [ref=e2523] [cursor=pointer]:
+                - generic [ref=e2524]:
+                  - text: v_peixiang
+                  - generic [ref=e2525]: ×
+                - generic: ▾
+            - cell "⚠️ 04-13" [ref=e2526]:
+              - generic "2026-04-13（已逾期）" [ref=e2527] [cursor=pointer]: ⚠️ 04-13
+            - cell "⚠️ 04-13" [ref=e2528]:
+              - generic "2026-04-13（已逾期）" [ref=e2529] [cursor=pointer]: ⚠️ 04-13
+            - cell "⚠️ 04-14" [ref=e2530]:
+              - generic "2026-04-14（已逾期）" [ref=e2531] [cursor=pointer]: ⚠️ 04-14
+            - cell "⚠️ 04-14" [ref=e2532]:
+              - generic "2026-04-14（已逾期）" [ref=e2533] [cursor=pointer]: ⚠️ 04-14
+            - cell "临时高优先级需求，4.14已完成发布" [ref=e2534]:
+              - textbox "输入备注..." [ref=e2535]: 临时高优先级需求，4.14已完成发布
+            - cell "✅ 按时交付" [ref=e2536]:
+              - generic "✅ 按时交付" [ref=e2537] [cursor=pointer]
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e2538]:
+              - generic [ref=e2539]:
+                - combobox [ref=e2540] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2541] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2542]:
+              - generic [ref=e2543]:
+                - button "🔄" [ref=e2544] [cursor=pointer]
+                - button "✕" [ref=e2545] [cursor=pointer]
+          - row "8 133038993 【数据处理需求】短信灯塔报表增加错误码维度 📝 待开发 综合中心 选择开发... ▾ 选择开发... ▾ v_jjiayuliu × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 ⏰ 04-17 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e2546]:
+            - cell "8" [ref=e2547]
+            - cell "133038993" [ref=e2548]:
+              - link "133038993" [ref=e2549] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133038993
+            - cell "【数据处理需求】短信灯塔报表增加错误码维度" [ref=e2550]
+            - cell "📝 待开发" [ref=e2551]:
+              - generic [ref=e2552]: 📝 待开发
+            - cell "综合中心" [ref=e2553]:
+              - combobox [ref=e2554] [cursor=pointer]:
+                - option "-"
+                - option "综合中心" [selected]
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2555]:
+              - generic [ref=e2557] [cursor=pointer]:
+                - generic [ref=e2558]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2559]:
+              - generic [ref=e2561] [cursor=pointer]:
+                - generic [ref=e2562]: 选择开发...
+                - generic: ▾
+            - cell "v_jjiayuliu × ▾" [ref=e2563]:
+              - generic [ref=e2565] [cursor=pointer]:
+                - generic [ref=e2566]:
+                  - text: v_jjiayuliu
+                  - generic [ref=e2567]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2568]:
+              - generic [ref=e2570] [cursor=pointer]:
+                - generic [ref=e2571]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2572]:
+              - generic "点击设置日期" [ref=e2573] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2574]:
+              - generic "点击设置日期" [ref=e2575] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2576]:
+              - generic "点击设置日期" [ref=e2577] [cursor=pointer]: 📅 设置
+            - cell "⏰ 04-17" [ref=e2578]:
+              - generic "2026-04-17（即将到期）" [ref=e2579] [cursor=pointer]: ⏰ 04-17
+            - cell [ref=e2580]:
+              - textbox "输入备注..." [ref=e2581]
+            - cell "—" [ref=e2582]:
+              - generic "点击标记交付状态" [ref=e2583] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e2584]:
+              - generic [ref=e2585]:
+                - combobox [ref=e2586] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2587] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2588]:
+              - generic [ref=e2589]:
+                - button "🔄" [ref=e2590] [cursor=pointer]
+                - button "✕" [ref=e2591] [cursor=pointer]
+          - row "9 133146267 【数据处理需求】下发明细表增加项目维度 📐 规划中 产品中心 选择开发... ▾ 选择开发... ▾ v_jjiayuliu × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 04-20 — 2026年4月 第4周（4/20-4/26） 🔄 ✕" [ref=e2592]:
+            - cell "9" [ref=e2593]
+            - cell "133146267" [ref=e2594]:
+              - link "133146267" [ref=e2595] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133146267
+            - cell "【数据处理需求】下发明细表增加项目维度" [ref=e2596]
+            - cell "📐 规划中" [ref=e2597]:
+              - generic [ref=e2598]: 📐 规划中
+            - cell "产品中心" [ref=e2599]:
+              - combobox [ref=e2600] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2601]:
+              - generic [ref=e2603] [cursor=pointer]:
+                - generic [ref=e2604]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2605]:
+              - generic [ref=e2607] [cursor=pointer]:
+                - generic [ref=e2608]: 选择开发...
+                - generic: ▾
+            - cell "v_jjiayuliu × ▾" [ref=e2609]:
+              - generic [ref=e2611] [cursor=pointer]:
+                - generic [ref=e2612]:
+                  - text: v_jjiayuliu
+                  - generic [ref=e2613]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2614]:
+              - generic [ref=e2616] [cursor=pointer]:
+                - generic [ref=e2617]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2618]:
+              - generic "点击设置日期" [ref=e2619] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2620]:
+              - generic "点击设置日期" [ref=e2621] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2622]:
+              - generic "点击设置日期" [ref=e2623] [cursor=pointer]: 📅 设置
+            - cell "04-20" [ref=e2624]:
+              - generic "2026-04-20" [ref=e2625] [cursor=pointer]: 04-20
+            - cell [ref=e2626]:
+              - textbox "输入备注..." [ref=e2627]
+            - cell "—" [ref=e2628]:
+              - generic "点击标记交付状态" [ref=e2629] [cursor=pointer]: —
+            - cell "2026年4月 第4周（4/20-4/26）" [ref=e2630]:
+              - generic [ref=e2631]:
+                - combobox [ref=e2632] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2633] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）" [selected]
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2634]:
+              - generic [ref=e2635]:
+                - button "🔄" [ref=e2636] [cursor=pointer]
+                - button "✕" [ref=e2637] [cursor=pointer]
+          - row "10 131258962 【IC平台】V5.0ai智能投放 🧪 测试中 产品中心 camdenwang × benzphuang × allanwei × ▾ lintonliu × ▾ sigmoidguo × ▾ 选择开发... ▾ ⚠️ 04-10 ⚠️ 04-10 04-20 04-21 等发布1天 1、预计 3.27 做测试用例评审，取决于批量录入需求的灰度测试是否顺利；2、前端上周处理重要材料，评估需要多 1 天转测； 3.30 算法部分原计划后台实现，改为数据开发实现，预计 4.7 下午转测 4.2 站立会同步由于 2 个后台均处理王者保障方案和压测，未与前端联调，整体转测调整 4.9 日 4.8 前端休假 1 天，看联调效果，再确定转测时间 4.10 周五下午转测 4.14 单文案目前测了一半，今天暂停了，要优先测v5.5的需求，预计周三再继续这边的测试 — 2026年3月 第3周（3/9-3/15） 🔄 ✕" [ref=e2638]:
+            - cell "10" [ref=e2639]
+            - cell "131258962" [ref=e2640]:
+              - link "131258962" [ref=e2641] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362131258962
+            - cell "【IC平台】V5.0ai智能投放" [ref=e2642]
+            - cell "🧪 测试中" [ref=e2643]:
+              - generic [ref=e2644]: 🧪 测试中
+            - cell "产品中心" [ref=e2645]:
+              - combobox [ref=e2646] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "camdenwang × benzphuang × allanwei × ▾" [ref=e2647]:
+              - generic [ref=e2649] [cursor=pointer]:
+                - generic [ref=e2650]:
+                  - text: camdenwang
+                  - generic [ref=e2651]: ×
+                - generic [ref=e2652]:
+                  - text: benzphuang
+                  - generic [ref=e2653]: ×
+                - generic [ref=e2654]:
+                  - text: allanwei
+                  - generic [ref=e2655]: ×
+                - generic: ▾
+            - cell "lintonliu × ▾" [ref=e2656]:
+              - generic [ref=e2658] [cursor=pointer]:
+                - generic [ref=e2659]:
+                  - text: lintonliu
+                  - generic [ref=e2660]: ×
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2661]:
+              - generic [ref=e2663] [cursor=pointer]:
+                - generic [ref=e2664]:
+                  - text: sigmoidguo
+                  - generic [ref=e2665]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2666]:
+              - generic [ref=e2668] [cursor=pointer]:
+                - generic [ref=e2669]: 选择开发...
+                - generic: ▾
+            - cell "⚠️ 04-10" [ref=e2670]:
+              - generic "2026-04-10（已逾期）" [ref=e2671] [cursor=pointer]: ⚠️ 04-10
+            - cell "⚠️ 04-10" [ref=e2672]:
+              - generic "2026-04-10（已逾期）" [ref=e2673] [cursor=pointer]: ⚠️ 04-10
+            - cell "04-20" [ref=e2674]:
+              - generic "2026-04-20" [ref=e2675] [cursor=pointer]: 04-20
+            - cell "04-21 等发布1天" [ref=e2676]:
+              - generic [ref=e2677]:
+                - generic "2026-04-21" [ref=e2678] [cursor=pointer]: 04-21
+                - generic "等发布1天" [ref=e2679]
+            - cell "1、预计 3.27 做测试用例评审，取决于批量录入需求的灰度测试是否顺利；2、前端上周处理重要材料，评估需要多 1 天转测； 3.30 算法部分原计划后台实现，改为数据开发实现，预计 4.7 下午转测 4.2 站立会同步由于 2 个后台均处理王者保障方案和压测，未与前端联调，整体转测调整 4.9 日 4.8 前端休假 1 天，看联调效果，再确定转测时间 4.10 周五下午转测 4.14 单文案目前测了一半，今天暂停了，要优先测v5.5的需求，预计周三再继续这边的测试" [ref=e2680]:
+              - textbox "输入备注..." [ref=e2681]: 1、预计 3.27 做测试用例评审，取决于批量录入需求的灰度测试是否顺利；2、前端上周处理重要材料，评估需要多 1 天转测； 3.30 算法部分原计划后台实现，改为数据开发实现，预计 4.7 下午转测 4.2 站立会同步由于 2 个后台均处理王者保障方案和压测，未与前端联调，整体转测调整 4.9 日 4.8 前端休假 1 天，看联调效果，再确定转测时间 4.10 周五下午转测 4.14 单文案目前测了一半，今天暂停了，要优先测v5.5的需求，预计周三再继续这边的测试
+            - cell "—" [ref=e2682]:
+              - generic "点击标记交付状态" [ref=e2683] [cursor=pointer]: —
+            - cell "2026年3月 第3周（3/9-3/15）" [ref=e2684]:
+              - generic [ref=e2685]:
+                - combobox [ref=e2686] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2687] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）" [selected]
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2688]:
+              - generic [ref=e2689]:
+                - button "🔄" [ref=e2690] [cursor=pointer]
+                - button "✕" [ref=e2691] [cursor=pointer]
+          - row "11 133233136 物联网卡结算需求for深圳移动-四期 📝 待评审 商务中心 选择开发... ▾ jiushugao × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 04-21 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e2692]:
+            - cell "11" [ref=e2693]
+            - cell "133233136" [ref=e2694]:
+              - link "133233136" [ref=e2695] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133233136
+            - cell "物联网卡结算需求for深圳移动-四期" [ref=e2696]
+            - cell "📝 待评审" [ref=e2697]:
+              - generic [ref=e2698]: 📝 待评审
+            - cell "商务中心" [ref=e2699]:
+              - combobox [ref=e2700] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心" [selected]
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2701]:
+              - generic [ref=e2703] [cursor=pointer]:
+                - generic [ref=e2704]: 选择开发...
+                - generic: ▾
+            - cell "jiushugao × ▾" [ref=e2705]:
+              - generic [ref=e2707] [cursor=pointer]:
+                - generic [ref=e2708]:
+                  - text: jiushugao
+                  - generic [ref=e2709]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2710]:
+              - generic [ref=e2712] [cursor=pointer]:
+                - generic [ref=e2713]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2714]:
+              - generic [ref=e2716] [cursor=pointer]:
+                - generic [ref=e2717]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2718]:
+              - generic "点击设置日期" [ref=e2719] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2720]:
+              - generic "点击设置日期" [ref=e2721] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2722]:
+              - generic "点击设置日期" [ref=e2723] [cursor=pointer]: 📅 设置
+            - cell "04-21" [ref=e2724]:
+              - generic "2026-04-21" [ref=e2725] [cursor=pointer]: 04-21
+            - cell [ref=e2726]:
+              - textbox "输入备注..." [ref=e2727]
+            - cell "—" [ref=e2728]:
+              - generic "点击标记交付状态" [ref=e2729] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e2730]:
+              - generic [ref=e2731]:
+                - combobox [ref=e2732] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2733] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2734]:
+              - generic [ref=e2735]:
+                - button "🔄" [ref=e2736] [cursor=pointer]
+                - button "✕" [ref=e2737] [cursor=pointer]
+          - row "12 132947082 【运营AI需求专项】AI 数据分析-报表自动化 ⬜ 未开始 产品中心 选择开发... ▾ 选择开发... ▾ sigmoidguo × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 04-24 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e2738]:
+            - cell "12" [ref=e2739]
+            - cell "132947082" [ref=e2740]:
+              - link "132947082" [ref=e2741] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132947082
+            - cell "【运营AI需求专项】AI 数据分析-报表自动化" [ref=e2742]
+            - cell "⬜ 未开始" [ref=e2743]:
+              - generic [ref=e2744]: ⬜ 未开始
+            - cell "产品中心" [ref=e2745]:
+              - combobox [ref=e2746] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2747]:
+              - generic [ref=e2749] [cursor=pointer]:
+                - generic [ref=e2750]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2751]:
+              - generic [ref=e2753] [cursor=pointer]:
+                - generic [ref=e2754]: 选择开发...
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2755]:
+              - generic [ref=e2757] [cursor=pointer]:
+                - generic [ref=e2758]:
+                  - text: sigmoidguo
+                  - generic [ref=e2759]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2760]:
+              - generic [ref=e2762] [cursor=pointer]:
+                - generic [ref=e2763]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2764]:
+              - generic "点击设置日期" [ref=e2765] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2766]:
+              - generic "点击设置日期" [ref=e2767] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2768]:
+              - generic "点击设置日期" [ref=e2769] [cursor=pointer]: 📅 设置
+            - cell "04-24" [ref=e2770]:
+              - generic "2026-04-24" [ref=e2771] [cursor=pointer]: 04-24
+            - cell [ref=e2772]:
+              - textbox "输入备注..." [ref=e2773]
+            - cell "—" [ref=e2774]:
+              - generic "点击标记交付状态" [ref=e2775] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e2776]:
+              - generic [ref=e2777]:
+                - combobox [ref=e2778] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2779] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2780]:
+              - generic [ref=e2781]:
+                - button "🔄" [ref=e2782] [cursor=pointer]
+                - button "✕" [ref=e2783] [cursor=pointer]
+          - row "13 133039900 【数据处理需求】权益和通讯业务底层数据亲和性建设 ⬜ 未开始 产品中心 选择开发... ▾ 选择开发... ▾ sigmoidguo × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 04-24 4.15 开发启动 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e2784]:
+            - cell "13" [ref=e2785]
+            - cell "133039900" [ref=e2786]:
+              - link "133039900" [ref=e2787] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133039900
+            - cell "【数据处理需求】权益和通讯业务底层数据亲和性建设" [ref=e2788]
+            - cell "⬜ 未开始" [ref=e2789]:
+              - generic [ref=e2790]: ⬜ 未开始
+            - cell "产品中心" [ref=e2791]:
+              - combobox [ref=e2792] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2793]:
+              - generic [ref=e2795] [cursor=pointer]:
+                - generic [ref=e2796]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2797]:
+              - generic [ref=e2799] [cursor=pointer]:
+                - generic [ref=e2800]: 选择开发...
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2801]:
+              - generic [ref=e2803] [cursor=pointer]:
+                - generic [ref=e2804]:
+                  - text: sigmoidguo
+                  - generic [ref=e2805]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2806]:
+              - generic [ref=e2808] [cursor=pointer]:
+                - generic [ref=e2809]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2810]:
+              - generic "点击设置日期" [ref=e2811] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2812]:
+              - generic "点击设置日期" [ref=e2813] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2814]:
+              - generic "点击设置日期" [ref=e2815] [cursor=pointer]: 📅 设置
+            - cell "04-24" [ref=e2816]:
+              - generic "2026-04-24" [ref=e2817] [cursor=pointer]: 04-24
+            - cell "4.15 开发启动" [ref=e2818]:
+              - textbox "输入备注..." [ref=e2819]: 4.15 开发启动
+            - cell "—" [ref=e2820]:
+              - generic "点击标记交付状态" [ref=e2821] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e2822]:
+              - generic [ref=e2823]:
+                - combobox [ref=e2824] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2825] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e2826]:
+              - generic [ref=e2827]:
+                - button "🔄" [ref=e2828] [cursor=pointer]
+                - button "✕" [ref=e2829] [cursor=pointer]
+          - row "14 132975779 【数据处理需求】账户充值消耗表 二期 📐 规划中 产品中心 选择开发... ▾ 选择开发... ▾ sigmoidguo × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 04-28 — 2026年4月 第5周（4/27-4/30） 🔄 ✕" [ref=e2830]:
+            - cell "14" [ref=e2831]
+            - cell "132975779" [ref=e2832]:
+              - link "132975779" [ref=e2833] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132975779
+            - cell "【数据处理需求】账户充值消耗表 二期" [ref=e2834]
+            - cell "📐 规划中" [ref=e2835]:
+              - generic [ref=e2836]: 📐 规划中
+            - cell "产品中心" [ref=e2837]:
+              - combobox [ref=e2838] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2839]:
+              - generic [ref=e2841] [cursor=pointer]:
+                - generic [ref=e2842]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2843]:
+              - generic [ref=e2845] [cursor=pointer]:
+                - generic [ref=e2846]: 选择开发...
+                - generic: ▾
+            - cell "sigmoidguo × ▾" [ref=e2847]:
+              - generic [ref=e2849] [cursor=pointer]:
+                - generic [ref=e2850]:
+                  - text: sigmoidguo
+                  - generic [ref=e2851]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2852]:
+              - generic [ref=e2854] [cursor=pointer]:
+                - generic [ref=e2855]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2856]:
+              - generic "点击设置日期" [ref=e2857] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2858]:
+              - generic "点击设置日期" [ref=e2859] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2860]:
+              - generic "点击设置日期" [ref=e2861] [cursor=pointer]: 📅 设置
+            - cell "04-28" [ref=e2862]:
+              - generic "2026-04-28" [ref=e2863] [cursor=pointer]: 04-28
+            - cell [ref=e2864]:
+              - textbox "输入备注..." [ref=e2865]
+            - cell "—" [ref=e2866]:
+              - generic "点击标记交付状态" [ref=e2867] [cursor=pointer]: —
+            - cell "2026年4月 第5周（4/27-4/30）" [ref=e2868]:
+              - generic [ref=e2869]:
+                - combobox [ref=e2870] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2871] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）" [selected]
+            - cell "🔄 ✕" [ref=e2872]:
+              - generic [ref=e2873]:
+                - button "🔄" [ref=e2874] [cursor=pointer]
+                - button "✕" [ref=e2875] [cursor=pointer]
+          - row "15 131958276 【企业短信】外部供应商上传报价，锁价期内价格的限制 📝 待评审 综合中心 选择开发... ▾ tealyao × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 月份 周数 🔄 ✕" [ref=e2876]:
+            - cell "15" [ref=e2877]
+            - cell "131958276" [ref=e2878]:
+              - link "131958276" [ref=e2879] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362131958276
+            - cell "【企业短信】外部供应商上传报价，锁价期内价格的限制" [ref=e2880]
+            - cell "📝 待评审" [ref=e2881]:
+              - generic [ref=e2882]: 📝 待评审
+            - cell "综合中心" [ref=e2883]:
+              - combobox [ref=e2884] [cursor=pointer]:
+                - option "-"
+                - option "综合中心" [selected]
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e2885]:
+              - generic [ref=e2887] [cursor=pointer]:
+                - generic [ref=e2888]: 选择开发...
+                - generic: ▾
+            - cell "tealyao × ▾" [ref=e2889]:
+              - generic [ref=e2891] [cursor=pointer]:
+                - generic [ref=e2892]:
+                  - text: tealyao
+                  - generic [ref=e2893]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2894]:
+              - generic [ref=e2896] [cursor=pointer]:
+                - generic [ref=e2897]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2898]:
+              - generic [ref=e2900] [cursor=pointer]:
+                - generic [ref=e2901]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2902]:
+              - generic "点击设置日期" [ref=e2903] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2904]:
+              - generic "点击设置日期" [ref=e2905] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2906]:
+              - generic "点击设置日期" [ref=e2907] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2908]:
+              - generic "点击设置日期" [ref=e2909] [cursor=pointer]: 📅 设置
+            - cell [ref=e2910]:
+              - textbox "输入备注..." [ref=e2911]
+            - cell "—" [ref=e2912]:
+              - generic "点击标记交付状态" [ref=e2913] [cursor=pointer]: —
+            - cell "月份 周数" [ref=e2914]:
+              - generic [ref=e2915]:
+                - combobox [ref=e2916] [cursor=pointer]:
+                  - option "月份" [selected]
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2917] [cursor=pointer]:
+                  - option "周数" [selected]
+                  - option "第1周"
+                  - option "第2周"
+                  - option "第3周"
+                  - option "第4周"
+                  - option "第5周"
+            - cell "🔄 ✕" [ref=e2918]:
+              - generic [ref=e2919]:
+                - button "🔄" [ref=e2920] [cursor=pointer]
+                - button "✕" [ref=e2921] [cursor=pointer]
+          - row "16 132203883 【技术】研发流程全自动-探索 ❓ 进行中 公共 camdenwang × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年3月 第1周（3/1-3/1） 🔄 ✕" [ref=e2922]:
+            - cell "16" [ref=e2923]
+            - cell "132203883" [ref=e2924]:
+              - link "132203883" [ref=e2925] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132203883
+            - cell "【技术】研发流程全自动-探索" [ref=e2926]
+            - cell "❓ 进行中" [ref=e2927]:
+              - generic [ref=e2928]: ❓ 进行中
+            - cell "公共" [ref=e2929]:
+              - combobox [ref=e2930] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "camdenwang × ▾" [ref=e2931]:
+              - generic [ref=e2933] [cursor=pointer]:
+                - generic [ref=e2934]:
+                  - text: camdenwang
+                  - generic [ref=e2935]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2936]:
+              - generic [ref=e2938] [cursor=pointer]:
+                - generic [ref=e2939]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2940]:
+              - generic [ref=e2942] [cursor=pointer]:
+                - generic [ref=e2943]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2944]:
+              - generic [ref=e2946] [cursor=pointer]:
+                - generic [ref=e2947]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2948]:
+              - generic "点击设置日期" [ref=e2949] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2950]:
+              - generic "点击设置日期" [ref=e2951] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2952]:
+              - generic "点击设置日期" [ref=e2953] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2954]:
+              - generic "点击设置日期" [ref=e2955] [cursor=pointer]: 📅 设置
+            - cell [ref=e2956]:
+              - textbox "输入备注..." [ref=e2957]
+            - cell "—" [ref=e2958]:
+              - generic "点击标记交付状态" [ref=e2959] [cursor=pointer]: —
+            - cell "2026年3月 第1周（3/1-3/1）" [ref=e2960]:
+              - generic [ref=e2961]:
+                - combobox [ref=e2962] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e2963] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）" [selected]
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e2964]:
+              - generic [ref=e2965]:
+                - button "🔄" [ref=e2966] [cursor=pointer]
+                - button "✕" [ref=e2967] [cursor=pointer]
+          - row "17 131519595 【技术需求】AI自动测试Agent 💻 开发中 公共 junyuzheng × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年3月 第1周（3/1-3/1） 🔄 ✕" [ref=e2968]:
+            - cell "17" [ref=e2969]
+            - cell "131519595" [ref=e2970]:
+              - link "131519595" [ref=e2971] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362131519595
+            - cell "【技术需求】AI自动测试Agent" [ref=e2972]
+            - cell "💻 开发中" [ref=e2973]:
+              - generic [ref=e2974]: 💻 开发中
+            - cell "公共" [ref=e2975]:
+              - combobox [ref=e2976] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "junyuzheng × ▾" [ref=e2977]:
+              - generic [ref=e2979] [cursor=pointer]:
+                - generic [ref=e2980]:
+                  - text: junyuzheng
+                  - generic [ref=e2981]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2982]:
+              - generic [ref=e2984] [cursor=pointer]:
+                - generic [ref=e2985]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2986]:
+              - generic [ref=e2988] [cursor=pointer]:
+                - generic [ref=e2989]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e2990]:
+              - generic [ref=e2992] [cursor=pointer]:
+                - generic [ref=e2993]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e2994]:
+              - generic "点击设置日期" [ref=e2995] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2996]:
+              - generic "点击设置日期" [ref=e2997] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e2998]:
+              - generic "点击设置日期" [ref=e2999] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3000]:
+              - generic "点击设置日期" [ref=e3001] [cursor=pointer]: 📅 设置
+            - cell [ref=e3002]:
+              - textbox "输入备注..." [ref=e3003]
+            - cell "—" [ref=e3004]:
+              - generic "点击标记交付状态" [ref=e3005] [cursor=pointer]: —
+            - cell "2026年3月 第1周（3/1-3/1）" [ref=e3006]:
+              - generic [ref=e3007]:
+                - combobox [ref=e3008] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3009] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）" [selected]
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e3010]:
+              - generic [ref=e3011]:
+                - button "🔄" [ref=e3012] [cursor=pointer]
+                - button "✕" [ref=e3013] [cursor=pointer]
+          - row "18 132835464 【技术需求】通管knot自主规划式智能体 ❓ 进行中 公共 选择开发... ▾ juibyyang × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年3月 第3周（3/9-3/15） 🔄 ✕" [ref=e3014]:
+            - cell "18" [ref=e3015]
+            - cell "132835464" [ref=e3016]:
+              - link "132835464" [ref=e3017] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132835464
+            - cell "【技术需求】通管knot自主规划式智能体" [ref=e3018]
+            - cell "❓ 进行中" [ref=e3019]:
+              - generic [ref=e3020]: ❓ 进行中
+            - cell "公共" [ref=e3021]:
+              - combobox [ref=e3022] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "选择开发... ▾" [ref=e3023]:
+              - generic [ref=e3025] [cursor=pointer]:
+                - generic [ref=e3026]: 选择开发...
+                - generic: ▾
+            - cell "juibyyang × ▾" [ref=e3027]:
+              - generic [ref=e3029] [cursor=pointer]:
+                - generic [ref=e3030]:
+                  - text: juibyyang
+                  - generic [ref=e3031]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3032]:
+              - generic [ref=e3034] [cursor=pointer]:
+                - generic [ref=e3035]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3036]:
+              - generic [ref=e3038] [cursor=pointer]:
+                - generic [ref=e3039]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3040]:
+              - generic "点击设置日期" [ref=e3041] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3042]:
+              - generic "点击设置日期" [ref=e3043] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3044]:
+              - generic "点击设置日期" [ref=e3045] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3046]:
+              - generic "点击设置日期" [ref=e3047] [cursor=pointer]: 📅 设置
+            - cell [ref=e3048]:
+              - textbox "输入备注..." [ref=e3049]
+            - cell "—" [ref=e3050]:
+              - generic "点击标记交付状态" [ref=e3051] [cursor=pointer]: —
+            - cell "2026年3月 第3周（3/9-3/15）" [ref=e3052]:
+              - generic [ref=e3053]:
+                - combobox [ref=e3054] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3055] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）" [selected]
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e3056]:
+              - generic [ref=e3057]:
+                - button "🔄" [ref=e3058] [cursor=pointer]
+                - button "✕" [ref=e3059] [cursor=pointer]
+          - row "19 132838349 【技术需求】AI 巡检分析平台核心能力建设 📝 方案设计中 公共 benzphuang × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 4.7 需要重新出一个方案； — 2026年3月 周数 🔄 ✕" [ref=e3060]:
+            - cell "19" [ref=e3061]
+            - cell "132838349" [ref=e3062]:
+              - link "132838349" [ref=e3063] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132838349
+            - cell "【技术需求】AI 巡检分析平台核心能力建设" [ref=e3064]
+            - cell "📝 方案设计中" [ref=e3065]:
+              - generic [ref=e3066]: 📝 方案设计中
+            - cell "公共" [ref=e3067]:
+              - combobox [ref=e3068] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "benzphuang × ▾" [ref=e3069]:
+              - generic [ref=e3071] [cursor=pointer]:
+                - generic [ref=e3072]:
+                  - text: benzphuang
+                  - generic [ref=e3073]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3074]:
+              - generic [ref=e3076] [cursor=pointer]:
+                - generic [ref=e3077]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3078]:
+              - generic [ref=e3080] [cursor=pointer]:
+                - generic [ref=e3081]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3082]:
+              - generic [ref=e3084] [cursor=pointer]:
+                - generic [ref=e3085]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3086]:
+              - generic "点击设置日期" [ref=e3087] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3088]:
+              - generic "点击设置日期" [ref=e3089] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3090]:
+              - generic "点击设置日期" [ref=e3091] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3092]:
+              - generic "点击设置日期" [ref=e3093] [cursor=pointer]: 📅 设置
+            - cell "4.7 需要重新出一个方案；" [ref=e3094]:
+              - textbox "输入备注..." [ref=e3095]: 4.7 需要重新出一个方案；
+            - cell "—" [ref=e3096]:
+              - generic "点击标记交付状态" [ref=e3097] [cursor=pointer]: —
+            - cell "2026年3月 周数" [ref=e3098]:
+              - generic [ref=e3099]:
+                - combobox [ref=e3100] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月" [selected]
+                  - option "2026年4月"
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3101] [cursor=pointer]:
+                  - option "周数" [selected]
+                  - option "第1周（3/1-3/1）"
+                  - option "第2周（3/2-3/8）"
+                  - option "第3周（3/9-3/15）"
+                  - option "第4周（3/16-3/22）"
+                  - option "第5周（3/23-3/29）"
+                  - option "第6周（3/30-3/31）"
+            - cell "🔄 ✕" [ref=e3102]:
+              - generic [ref=e3103]:
+                - button "🔄" [ref=e3104] [cursor=pointer]
+                - button "✕" [ref=e3105] [cursor=pointer]
+          - row "20 132847681 【数据处理需求】梦网彩信升阅信端口彩信下发成功量数据回溯 📝 待开发 产品中心 选择开发... ▾ 选择开发... ▾ v_jjiayuliu × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第1周（4/1-4/5） 🔄 ✕" [ref=e3106]:
+            - cell "20" [ref=e3107]
+            - cell "132847681" [ref=e3108]:
+              - link "132847681" [ref=e3109] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362132847681
+            - cell "【数据处理需求】梦网彩信升阅信端口彩信下发成功量数据回溯" [ref=e3110]
+            - cell "📝 待开发" [ref=e3111]:
+              - generic [ref=e3112]: 📝 待开发
+            - cell "产品中心" [ref=e3113]:
+              - combobox [ref=e3114] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3115]:
+              - generic [ref=e3117] [cursor=pointer]:
+                - generic [ref=e3118]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3119]:
+              - generic [ref=e3121] [cursor=pointer]:
+                - generic [ref=e3122]: 选择开发...
+                - generic: ▾
+            - cell "v_jjiayuliu × ▾" [ref=e3123]:
+              - generic [ref=e3125] [cursor=pointer]:
+                - generic [ref=e3126]:
+                  - text: v_jjiayuliu
+                  - generic [ref=e3127]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3128]:
+              - generic [ref=e3130] [cursor=pointer]:
+                - generic [ref=e3131]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3132]:
+              - generic "点击设置日期" [ref=e3133] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3134]:
+              - generic "点击设置日期" [ref=e3135] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3136]:
+              - generic "点击设置日期" [ref=e3137] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3138]:
+              - generic "点击设置日期" [ref=e3139] [cursor=pointer]: 📅 设置
+            - cell [ref=e3140]:
+              - textbox "输入备注..." [ref=e3141]
+            - cell "—" [ref=e3142]:
+              - generic "点击标记交付状态" [ref=e3143] [cursor=pointer]: —
+            - cell "2026年4月 第1周（4/1-4/5）" [ref=e3144]:
+              - generic [ref=e3145]:
+                - combobox [ref=e3146] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3147] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）" [selected]
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3148]:
+              - generic [ref=e3149]:
+                - button "🔄" [ref=e3150] [cursor=pointer]
+                - button "✕" [ref=e3151] [cursor=pointer]
+          - row "21 133089734 【技术需求】ecovision平台优化升级-多版本素材库发布&页面发布 🌗 灰度发布 公共 选择开发... ▾ jiushugao × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第1周（4/1-4/5） 🔄 ✕" [ref=e3152]:
+            - cell "21" [ref=e3153]
+            - cell "133089734" [ref=e3154]:
+              - link "133089734" [ref=e3155] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133089734
+            - cell "【技术需求】ecovision平台优化升级-多版本素材库发布&页面发布" [ref=e3156]
+            - cell "🌗 灰度发布" [ref=e3157]:
+              - generic [ref=e3158]: 🌗 灰度发布
+            - cell "公共" [ref=e3159]:
+              - combobox [ref=e3160] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "选择开发... ▾" [ref=e3161]:
+              - generic [ref=e3163] [cursor=pointer]:
+                - generic [ref=e3164]: 选择开发...
+                - generic: ▾
+            - cell "jiushugao × ▾" [ref=e3165]:
+              - generic [ref=e3167] [cursor=pointer]:
+                - generic [ref=e3168]:
+                  - text: jiushugao
+                  - generic [ref=e3169]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3170]:
+              - generic [ref=e3172] [cursor=pointer]:
+                - generic [ref=e3173]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3174]:
+              - generic [ref=e3176] [cursor=pointer]:
+                - generic [ref=e3177]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3178]:
+              - generic "点击设置日期" [ref=e3179] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3180]:
+              - generic "点击设置日期" [ref=e3181] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3182]:
+              - generic "点击设置日期" [ref=e3183] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3184]:
+              - generic "点击设置日期" [ref=e3185] [cursor=pointer]: 📅 设置
+            - cell [ref=e3186]:
+              - textbox "输入备注..." [ref=e3187]
+            - cell "—" [ref=e3188]:
+              - generic "点击标记交付状态" [ref=e3189] [cursor=pointer]: —
+            - cell "2026年4月 第1周（4/1-4/5）" [ref=e3190]:
+              - generic [ref=e3191]:
+                - combobox [ref=e3192] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3193] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）" [selected]
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3194]:
+              - generic [ref=e3195]:
+                - button "🔄" [ref=e3196] [cursor=pointer]
+                - button "✕" [ref=e3197] [cursor=pointer]
+          - row "22 133106171 【IC平台】接口下发（营销+功能）业务代码扣费-未完成部分 ⬜ 未开始 产品中心 allanwei × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 3.31：IC 接口部分已经做了，但是不符合产品期望， 1、按照类型去扣费--余额那没有实现，要加新接口--allan 2、功能短信要支持负数--老王 需要调整优先级 4.7-需求评审等通知 4.14 临时已评审 — 2026年4月 第1周（4/1-4/5） 🔄 ✕" [ref=e3198]:
+            - cell "22" [ref=e3199]
+            - cell "133106171" [ref=e3200]:
+              - link "133106171" [ref=e3201] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133106171
+            - cell "【IC平台】接口下发（营销+功能）业务代码扣费-未完成部分" [ref=e3202]
+            - cell "⬜ 未开始" [ref=e3203]:
+              - generic [ref=e3204]: ⬜ 未开始
+            - cell "产品中心" [ref=e3205]:
+              - combobox [ref=e3206] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "allanwei × ▾" [ref=e3207]:
+              - generic [ref=e3209] [cursor=pointer]:
+                - generic [ref=e3210]:
+                  - text: allanwei
+                  - generic [ref=e3211]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3212]:
+              - generic [ref=e3214] [cursor=pointer]:
+                - generic [ref=e3215]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3216]:
+              - generic [ref=e3218] [cursor=pointer]:
+                - generic [ref=e3219]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3220]:
+              - generic [ref=e3222] [cursor=pointer]:
+                - generic [ref=e3223]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3224]:
+              - generic "点击设置日期" [ref=e3225] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3226]:
+              - generic "点击设置日期" [ref=e3227] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3228]:
+              - generic "点击设置日期" [ref=e3229] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3230]:
+              - generic "点击设置日期" [ref=e3231] [cursor=pointer]: 📅 设置
+            - cell "3.31：IC 接口部分已经做了，但是不符合产品期望， 1、按照类型去扣费--余额那没有实现，要加新接口--allan 2、功能短信要支持负数--老王 需要调整优先级 4.7-需求评审等通知 4.14 临时已评审" [ref=e3232]:
+              - textbox "输入备注..." [ref=e3233]: 3.31：IC 接口部分已经做了，但是不符合产品期望， 1、按照类型去扣费--余额那没有实现，要加新接口--allan 2、功能短信要支持负数--老王 需要调整优先级 4.7-需求评审等通知 4.14 临时已评审
+            - cell "—" [ref=e3234]:
+              - generic "点击标记交付状态" [ref=e3235] [cursor=pointer]: —
+            - cell "2026年4月 第1周（4/1-4/5）" [ref=e3236]:
+              - generic [ref=e3237]:
+                - combobox [ref=e3238] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3239] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）" [selected]
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3240]:
+              - generic [ref=e3241]:
+                - button "🔄" [ref=e3242] [cursor=pointer]
+                - button "✕" [ref=e3243] [cursor=pointer]
+          - row "23 133097634 【IC平台】接口下发（营销+功能）按天聚合展示在IC ⬜ 未开始 产品中心 allanwei × ▾ kangkangran × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 4.14 临时已评审数据排期紧张，后台实现报表部分-产品要调整一版方案 — 2026年4月 第1周（4/1-4/5） 🔄 ✕" [ref=e3244]:
+            - cell "23" [ref=e3245]
+            - cell "133097634" [ref=e3246]:
+              - link "133097634" [ref=e3247] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133097634
+            - cell "【IC平台】接口下发（营销+功能）按天聚合展示在IC" [ref=e3248]
+            - cell "⬜ 未开始" [ref=e3249]:
+              - generic [ref=e3250]: ⬜ 未开始
+            - cell "产品中心" [ref=e3251]:
+              - combobox [ref=e3252] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "allanwei × ▾" [ref=e3253]:
+              - generic [ref=e3255] [cursor=pointer]:
+                - generic [ref=e3256]:
+                  - text: allanwei
+                  - generic [ref=e3257]: ×
+                - generic: ▾
+            - cell "kangkangran × ▾" [ref=e3258]:
+              - generic [ref=e3260] [cursor=pointer]:
+                - generic [ref=e3261]:
+                  - text: kangkangran
+                  - generic [ref=e3262]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3263]:
+              - generic [ref=e3265] [cursor=pointer]:
+                - generic [ref=e3266]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3267]:
+              - generic [ref=e3269] [cursor=pointer]:
+                - generic [ref=e3270]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3271]:
+              - generic "点击设置日期" [ref=e3272] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3273]:
+              - generic "点击设置日期" [ref=e3274] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3275]:
+              - generic "点击设置日期" [ref=e3276] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3277]:
+              - generic "点击设置日期" [ref=e3278] [cursor=pointer]: 📅 设置
+            - cell "4.14 临时已评审数据排期紧张，后台实现报表部分-产品要调整一版方案" [ref=e3279]:
+              - textbox "输入备注..." [ref=e3280]: 4.14 临时已评审数据排期紧张，后台实现报表部分-产品要调整一版方案
+            - cell "—" [ref=e3281]:
+              - generic "点击标记交付状态" [ref=e3282] [cursor=pointer]: —
+            - cell "2026年4月 第1周（4/1-4/5）" [ref=e3283]:
+              - generic [ref=e3284]:
+                - combobox [ref=e3285] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3286] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）" [selected]
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3287]:
+              - generic [ref=e3288]:
+                - button "🔄" [ref=e3289] [cursor=pointer]
+                - button "✕" [ref=e3290] [cursor=pointer]
+          - row "24 133081362 【IC平台】5g阅信在IC的扣费 ⬜ 未开始 产品中心 camdenwang × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 4.7 评审等待开发通知发起， 4.14 暂未评审 — 2026年4月 第1周（4/1-4/5） 🔄 ✕" [ref=e3291]:
+            - cell "24" [ref=e3292]
+            - cell "133081362" [ref=e3293]:
+              - link "133081362" [ref=e3294] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133081362
+            - cell "【IC平台】5g阅信在IC的扣费" [ref=e3295]
+            - cell "⬜ 未开始" [ref=e3296]:
+              - generic [ref=e3297]: ⬜ 未开始
+            - cell "产品中心" [ref=e3298]:
+              - combobox [ref=e3299] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "camdenwang × ▾" [ref=e3300]:
+              - generic [ref=e3302] [cursor=pointer]:
+                - generic [ref=e3303]:
+                  - text: camdenwang
+                  - generic [ref=e3304]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3305]:
+              - generic [ref=e3307] [cursor=pointer]:
+                - generic [ref=e3308]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3309]:
+              - generic [ref=e3311] [cursor=pointer]:
+                - generic [ref=e3312]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3313]:
+              - generic [ref=e3315] [cursor=pointer]:
+                - generic [ref=e3316]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3317]:
+              - generic "点击设置日期" [ref=e3318] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3319]:
+              - generic "点击设置日期" [ref=e3320] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3321]:
+              - generic "点击设置日期" [ref=e3322] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3323]:
+              - generic "点击设置日期" [ref=e3324] [cursor=pointer]: 📅 设置
+            - cell "4.7 评审等待开发通知发起， 4.14 暂未评审" [ref=e3325]:
+              - textbox "输入备注..." [ref=e3326]: 4.7 评审等待开发通知发起， 4.14 暂未评审
+            - cell "—" [ref=e3327]:
+              - generic "点击标记交付状态" [ref=e3328] [cursor=pointer]: —
+            - cell "2026年4月 第1周（4/1-4/5）" [ref=e3329]:
+              - generic [ref=e3330]:
+                - combobox [ref=e3331] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3332] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）" [selected]
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3333]:
+              - generic [ref=e3334]:
+                - button "🔄" [ref=e3335] [cursor=pointer]
+                - button "✕" [ref=e3336] [cursor=pointer]
+          - row "25 133218492 【权益库】联通在线权益调用接口地址兼容 📝 方案设计中 商务中心 benzphuang × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e3337]:
+            - cell "25" [ref=e3338]
+            - cell "133218492" [ref=e3339]:
+              - link "133218492" [ref=e3340] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133218492
+            - cell "【权益库】联通在线权益调用接口地址兼容" [ref=e3341]
+            - cell "📝 方案设计中" [ref=e3342]:
+              - generic [ref=e3343]: 📝 方案设计中
+            - cell "商务中心" [ref=e3344]:
+              - combobox [ref=e3345] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心" [selected]
+                - option "产品中心"
+                - option "公共"
+            - cell "benzphuang × ▾" [ref=e3346]:
+              - generic [ref=e3348] [cursor=pointer]:
+                - generic [ref=e3349]:
+                  - text: benzphuang
+                  - generic [ref=e3350]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3351]:
+              - generic [ref=e3353] [cursor=pointer]:
+                - generic [ref=e3354]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3355]:
+              - generic [ref=e3357] [cursor=pointer]:
+                - generic [ref=e3358]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3359]:
+              - generic [ref=e3361] [cursor=pointer]:
+                - generic [ref=e3362]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3363]:
+              - generic "点击设置日期" [ref=e3364] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3365]:
+              - generic "点击设置日期" [ref=e3366] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3367]:
+              - generic "点击设置日期" [ref=e3368] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3369]:
+              - generic "点击设置日期" [ref=e3370] [cursor=pointer]: 📅 设置
+            - cell [ref=e3371]:
+              - textbox "输入备注..." [ref=e3372]
+            - cell "—" [ref=e3373]:
+              - generic "点击标记交付状态" [ref=e3374] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e3375]:
+              - generic [ref=e3376]:
+                - combobox [ref=e3377] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3378] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3379]:
+              - generic [ref=e3380]:
+                - button "🔄" [ref=e3381] [cursor=pointer]
+                - button "✕" [ref=e3382] [cursor=pointer]
+          - row "26 133058997 【游戏王卡】PC端活动页适配改造 🧪 测试中 产品中心 选择开发... ▾ kangkangran × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 已转测 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3383]:
+            - cell "26" [ref=e3384]
+            - cell "133058997" [ref=e3385]:
+              - link "133058997" [ref=e3386] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133058997
+            - cell "【游戏王卡】PC端活动页适配改造" [ref=e3387]
+            - cell "🧪 测试中" [ref=e3388]:
+              - generic [ref=e3389]: 🧪 测试中
+            - cell "产品中心" [ref=e3390]:
+              - combobox [ref=e3391] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3392]:
+              - generic [ref=e3394] [cursor=pointer]:
+                - generic [ref=e3395]: 选择开发...
+                - generic: ▾
+            - cell "kangkangran × ▾" [ref=e3396]:
+              - generic [ref=e3398] [cursor=pointer]:
+                - generic [ref=e3399]:
+                  - text: kangkangran
+                  - generic [ref=e3400]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3401]:
+              - generic [ref=e3403] [cursor=pointer]:
+                - generic [ref=e3404]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3405]:
+              - generic [ref=e3407] [cursor=pointer]:
+                - generic [ref=e3408]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3409]:
+              - generic "点击设置日期" [ref=e3410] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3411]:
+              - generic "点击设置日期" [ref=e3412] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3413]:
+              - generic "点击设置日期" [ref=e3414] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3415]:
+              - generic "点击设置日期" [ref=e3416] [cursor=pointer]: 📅 设置
+            - cell "已转测" [ref=e3417]:
+              - textbox "输入备注..." [ref=e3418]: 已转测
+            - cell "—" [ref=e3419]:
+              - generic "点击标记交付状态" [ref=e3420] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3421]:
+              - generic [ref=e3422]:
+                - combobox [ref=e3423] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3424] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3425]:
+              - generic [ref=e3426]:
+                - button "🔄" [ref=e3427] [cursor=pointer]
+                - button "✕" [ref=e3428] [cursor=pointer]
+          - row "27 133173085 【定向流量】王者短信中间页活动新增开通流量包任务 📝 方案设计中 产品中心 benzphuang × ▾ juibyyang × ▾ 选择开发... ▾ 忆享人员 × ▾ ⏰ 04-17 📅 设置 📅 设置 📅 设置 4.8 评审，预计 4.13 下午方案评审 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3429]:
+            - cell "27" [ref=e3430]
+            - cell "133173085" [ref=e3431]:
+              - link "133173085" [ref=e3432] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133173085
+            - cell "【定向流量】王者短信中间页活动新增开通流量包任务" [ref=e3433]
+            - cell "📝 方案设计中" [ref=e3434]:
+              - generic [ref=e3435]: 📝 方案设计中
+            - cell "产品中心" [ref=e3436]:
+              - combobox [ref=e3437] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "benzphuang × ▾" [ref=e3438]:
+              - generic [ref=e3440] [cursor=pointer]:
+                - generic [ref=e3441]:
+                  - text: benzphuang
+                  - generic [ref=e3442]: ×
+                - generic: ▾
+            - cell "juibyyang × ▾" [ref=e3443]:
+              - generic [ref=e3445] [cursor=pointer]:
+                - generic [ref=e3446]:
+                  - text: juibyyang
+                  - generic [ref=e3447]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3448]:
+              - generic [ref=e3450] [cursor=pointer]:
+                - generic [ref=e3451]: 选择开发...
+                - generic: ▾
+            - cell "忆享人员 × ▾" [ref=e3452]:
+              - generic [ref=e3454] [cursor=pointer]:
+                - generic [ref=e3455]:
+                  - text: 忆享人员
+                  - generic [ref=e3456]: ×
+                - generic: ▾
+            - cell "⏰ 04-17" [ref=e3457]:
+              - generic "2026-04-17（即将到期）" [ref=e3458] [cursor=pointer]: ⏰ 04-17
+            - cell "📅 设置" [ref=e3459]:
+              - generic "点击设置日期" [ref=e3460] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3461]:
+              - generic "点击设置日期" [ref=e3462] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3463]:
+              - generic "点击设置日期" [ref=e3464] [cursor=pointer]: 📅 设置
+            - cell "4.8 评审，预计 4.13 下午方案评审" [ref=e3465]:
+              - textbox "输入备注..." [ref=e3466]: 4.8 评审，预计 4.13 下午方案评审
+            - cell "—" [ref=e3467]:
+              - generic "点击标记交付状态" [ref=e3468] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3469]:
+              - generic [ref=e3470]:
+                - combobox [ref=e3471] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3472] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3473]:
+              - generic [ref=e3474]:
+                - button "🔄" [ref=e3475] [cursor=pointer]
+                - button "✕" [ref=e3476] [cursor=pointer]
+          - row "28 130425984 【企业短信】重构通信管理平台 业务代码 状态前端展示 💻 开发中 综合中心 选择开发... ▾ tealyao × ▾ 选择开发... ▾ v_peixiang × ▾ ⏰ 04-16 📅 设置 📅 设置 📅 设置 4.9 评审完成，前端 4.10 预计开始开发 4.14 技术需求，涉及到产品层面的改动。 产品已同意改动。 多花0.5D，转产品体验时间预计 4.16 周四 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e3477]:
+            - cell "28" [ref=e3478]
+            - cell "130425984" [ref=e3479]:
+              - link "130425984" [ref=e3480] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362130425984
+            - cell "【企业短信】重构通信管理平台 业务代码 状态前端展示" [ref=e3481]
+            - cell "💻 开发中" [ref=e3482]:
+              - generic [ref=e3483]: 💻 开发中
+            - cell "综合中心" [ref=e3484]:
+              - combobox [ref=e3485] [cursor=pointer]:
+                - option "-"
+                - option "综合中心" [selected]
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3486]:
+              - generic [ref=e3488] [cursor=pointer]:
+                - generic [ref=e3489]: 选择开发...
+                - generic: ▾
+            - cell "tealyao × ▾" [ref=e3490]:
+              - generic [ref=e3492] [cursor=pointer]:
+                - generic [ref=e3493]:
+                  - text: tealyao
+                  - generic [ref=e3494]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3495]:
+              - generic [ref=e3497] [cursor=pointer]:
+                - generic [ref=e3498]: 选择开发...
+                - generic: ▾
+            - cell "v_peixiang × ▾" [ref=e3499]:
+              - generic [ref=e3501] [cursor=pointer]:
+                - generic [ref=e3502]:
+                  - text: v_peixiang
+                  - generic [ref=e3503]: ×
+                - generic: ▾
+            - cell "⏰ 04-16" [ref=e3504]:
+              - generic "2026-04-16（即将到期）" [ref=e3505] [cursor=pointer]: ⏰ 04-16
+            - cell "📅 设置" [ref=e3506]:
+              - generic "点击设置日期" [ref=e3507] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3508]:
+              - generic "点击设置日期" [ref=e3509] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3510]:
+              - generic "点击设置日期" [ref=e3511] [cursor=pointer]: 📅 设置
+            - cell "4.9 评审完成，前端 4.10 预计开始开发 4.14 技术需求，涉及到产品层面的改动。 产品已同意改动。 多花0.5D，转产品体验时间预计 4.16 周四" [ref=e3512]:
+              - textbox "输入备注..." [ref=e3513]: 4.9 评审完成，前端 4.10 预计开始开发 4.14 技术需求，涉及到产品层面的改动。 产品已同意改动。 多花0.5D，转产品体验时间预计 4.16 周四
+            - cell "—" [ref=e3514]:
+              - generic "点击标记交付状态" [ref=e3515] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e3516]:
+              - generic [ref=e3517]:
+                - combobox [ref=e3518] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3519] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3520]:
+              - generic [ref=e3521]:
+                - button "🔄" [ref=e3522] [cursor=pointer]
+                - button "✕" [ref=e3523] [cursor=pointer]
+          - row "29 133395098 【数据处理需求】后台回填数据上报补充和扣量-数据报表部分 ⬜ 未开始 产品中心 选择开发... ▾ 选择开发... ▾ v_jjiayuliu × ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e3524]:
+            - cell "29" [ref=e3525]
+            - cell "133395098" [ref=e3526]:
+              - link "133395098" [ref=e3527] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133395098
+            - cell "【数据处理需求】后台回填数据上报补充和扣量-数据报表部分" [ref=e3528]
+            - cell "⬜ 未开始" [ref=e3529]:
+              - generic [ref=e3530]: ⬜ 未开始
+            - cell "产品中心" [ref=e3531]:
+              - combobox [ref=e3532] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3533]:
+              - generic [ref=e3535] [cursor=pointer]:
+                - generic [ref=e3536]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3537]:
+              - generic [ref=e3539] [cursor=pointer]:
+                - generic [ref=e3540]: 选择开发...
+                - generic: ▾
+            - cell "v_jjiayuliu × ▾" [ref=e3541]:
+              - generic [ref=e3543] [cursor=pointer]:
+                - generic [ref=e3544]:
+                  - text: v_jjiayuliu
+                  - generic [ref=e3545]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3546]:
+              - generic [ref=e3548] [cursor=pointer]:
+                - generic [ref=e3549]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3550]:
+              - generic "点击设置日期" [ref=e3551] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3552]:
+              - generic "点击设置日期" [ref=e3553] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3554]:
+              - generic "点击设置日期" [ref=e3555] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3556]:
+              - generic "点击设置日期" [ref=e3557] [cursor=pointer]: 📅 设置
+            - cell [ref=e3558]:
+              - textbox "输入备注..." [ref=e3559]
+            - cell "—" [ref=e3560]:
+              - generic "点击标记交付状态" [ref=e3561] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e3562]:
+              - generic [ref=e3563]:
+                - combobox [ref=e3564] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3565] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3566]:
+              - generic [ref=e3567]:
+                - button "🔄" [ref=e3568] [cursor=pointer]
+                - button "✕" [ref=e3569] [cursor=pointer]
+          - row "30 133217448 【数据处理需求】后台回填数据上报补充和扣量数据报表化 🌗 灰度发布 产品中心 junyuzheng × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3570]:
+            - cell "30" [ref=e3571]
+            - cell "133217448" [ref=e3572]:
+              - link "133217448" [ref=e3573] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133217448
+            - cell "【数据处理需求】后台回填数据上报补充和扣量数据报表化" [ref=e3574]
+            - cell "🌗 灰度发布" [ref=e3575]:
+              - generic [ref=e3576]: 🌗 灰度发布
+            - cell "产品中心" [ref=e3577]:
+              - combobox [ref=e3578] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "junyuzheng × ▾" [ref=e3579]:
+              - generic [ref=e3581] [cursor=pointer]:
+                - generic [ref=e3582]:
+                  - text: junyuzheng
+                  - generic [ref=e3583]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3584]:
+              - generic [ref=e3586] [cursor=pointer]:
+                - generic [ref=e3587]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3588]:
+              - generic [ref=e3590] [cursor=pointer]:
+                - generic [ref=e3591]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3592]:
+              - generic [ref=e3594] [cursor=pointer]:
+                - generic [ref=e3595]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3596]:
+              - generic "点击设置日期" [ref=e3597] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3598]:
+              - generic "点击设置日期" [ref=e3599] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3600]:
+              - generic "点击设置日期" [ref=e3601] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3602]:
+              - generic "点击设置日期" [ref=e3603] [cursor=pointer]: 📅 设置
+            - cell [ref=e3604]:
+              - textbox "输入备注..." [ref=e3605]
+            - cell "—" [ref=e3606]:
+              - generic "点击标记交付状态" [ref=e3607] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3608]:
+              - generic [ref=e3609]:
+                - combobox [ref=e3610] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3611] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3612]:
+              - generic [ref=e3613]:
+                - button "🔄" [ref=e3614] [cursor=pointer]
+                - button "✕" [ref=e3615] [cursor=pointer]
+          - row "31 133439262 【技术需求】marketing text 频控与 SendSms 下发链路优化（Redis 短超时、错误语义、超时跳过回滚） 💻 开发中 公共 camdenwang × ▾ 选择开发... ▾ 选择开发... ▾ v_peixiang × ▾ ⚠️ 04-13 ⚠️ 04-13 📅 设置 📅 设置 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3616]:
+            - cell "31" [ref=e3617]
+            - cell "133439262" [ref=e3618]:
+              - link "133439262" [ref=e3619] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133439262
+            - cell "【技术需求】marketing text 频控与 SendSms 下发链路优化（Redis 短超时、错误语义、超时跳过回滚）" [ref=e3620]
+            - cell "💻 开发中" [ref=e3621]:
+              - generic [ref=e3622]: 💻 开发中
+            - cell "公共" [ref=e3623]:
+              - combobox [ref=e3624] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "camdenwang × ▾" [ref=e3625]:
+              - generic [ref=e3627] [cursor=pointer]:
+                - generic [ref=e3628]:
+                  - text: camdenwang
+                  - generic [ref=e3629]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3630]:
+              - generic [ref=e3632] [cursor=pointer]:
+                - generic [ref=e3633]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3634]:
+              - generic [ref=e3636] [cursor=pointer]:
+                - generic [ref=e3637]: 选择开发...
+                - generic: ▾
+            - cell "v_peixiang × ▾" [ref=e3638]:
+              - generic [ref=e3640] [cursor=pointer]:
+                - generic [ref=e3641]:
+                  - text: v_peixiang
+                  - generic [ref=e3642]: ×
+                - generic: ▾
+            - cell "⚠️ 04-13" [ref=e3643]:
+              - generic "2026-04-13（已逾期）" [ref=e3644] [cursor=pointer]: ⚠️ 04-13
+            - cell "⚠️ 04-13" [ref=e3645]:
+              - generic "2026-04-13（已逾期）" [ref=e3646] [cursor=pointer]: ⚠️ 04-13
+            - cell "📅 设置" [ref=e3647]:
+              - generic "点击设置日期" [ref=e3648] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3649]:
+              - generic "点击设置日期" [ref=e3650] [cursor=pointer]: 📅 设置
+            - cell [ref=e3651]:
+              - textbox "输入备注..." [ref=e3652]
+            - cell "—" [ref=e3653]:
+              - generic "点击标记交付状态" [ref=e3654] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3655]:
+              - generic [ref=e3656]:
+                - combobox [ref=e3657] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3658] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3659]:
+              - generic [ref=e3660]:
+                - button "🔄" [ref=e3661] [cursor=pointer]
+                - button "✕" [ref=e3662] [cursor=pointer]
+          - row "32 126894137 【企业短信】2025年新规 短信签名资料，面向本部门、业务、供应侧管理页面 📝 待开发 商务中心 选择开发... ▾ juibyyang × kangkangran × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e3663]:
+            - cell "32" [ref=e3664]
+            - cell "126894137" [ref=e3665]:
+              - link "126894137" [ref=e3666] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362126894137
+            - cell "【企业短信】2025年新规 短信签名资料，面向本部门、业务、供应侧管理页面" [ref=e3667]
+            - cell "📝 待开发" [ref=e3668]:
+              - generic [ref=e3669]: 📝 待开发
+            - cell "商务中心" [ref=e3670]:
+              - combobox [ref=e3671] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心" [selected]
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3672]:
+              - generic [ref=e3674] [cursor=pointer]:
+                - generic [ref=e3675]: 选择开发...
+                - generic: ▾
+            - cell "juibyyang × kangkangran × ▾" [ref=e3676]:
+              - generic [ref=e3678] [cursor=pointer]:
+                - generic [ref=e3679]:
+                  - text: juibyyang
+                  - generic [ref=e3680]: ×
+                - generic [ref=e3681]:
+                  - text: kangkangran
+                  - generic [ref=e3682]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3683]:
+              - generic [ref=e3685] [cursor=pointer]:
+                - generic [ref=e3686]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3687]:
+              - generic [ref=e3689] [cursor=pointer]:
+                - generic [ref=e3690]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3691]:
+              - generic "点击设置日期" [ref=e3692] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3693]:
+              - generic "点击设置日期" [ref=e3694] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3695]:
+              - generic "点击设置日期" [ref=e3696] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3697]:
+              - generic "点击设置日期" [ref=e3698] [cursor=pointer]: 📅 设置
+            - cell [ref=e3699]:
+              - textbox "输入备注..." [ref=e3700]
+            - cell "—" [ref=e3701]:
+              - generic "点击标记交付状态" [ref=e3702] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e3703]:
+              - generic [ref=e3704]:
+                - combobox [ref=e3705] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3706] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3707]:
+              - generic [ref=e3708]:
+                - button "🔄" [ref=e3709] [cursor=pointer]
+                - button "✕" [ref=e3710] [cursor=pointer]
+          - row "33 130534086 关于添加计费模块的需求 ❓ 进行中 公共 shuqigao × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3711]:
+            - cell "33" [ref=e3712]
+            - cell "130534086" [ref=e3713]:
+              - link "130534086" [ref=e3714] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362130534086
+            - cell "关于添加计费模块的需求" [ref=e3715]
+            - cell "❓ 进行中" [ref=e3716]:
+              - generic [ref=e3717]: ❓ 进行中
+            - cell "公共" [ref=e3718]:
+              - combobox [ref=e3719] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共" [selected]
+            - cell "shuqigao × ▾" [ref=e3720]:
+              - generic [ref=e3722] [cursor=pointer]:
+                - generic [ref=e3723]:
+                  - text: shuqigao
+                  - generic [ref=e3724]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3725]:
+              - generic [ref=e3727] [cursor=pointer]:
+                - generic [ref=e3728]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3729]:
+              - generic [ref=e3731] [cursor=pointer]:
+                - generic [ref=e3732]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3733]:
+              - generic [ref=e3735] [cursor=pointer]:
+                - generic [ref=e3736]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3737]:
+              - generic "点击设置日期" [ref=e3738] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3739]:
+              - generic "点击设置日期" [ref=e3740] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3741]:
+              - generic "点击设置日期" [ref=e3742] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3743]:
+              - generic "点击设置日期" [ref=e3744] [cursor=pointer]: 📅 设置
+            - cell [ref=e3745]:
+              - textbox "输入备注..." [ref=e3746]
+            - cell "—" [ref=e3747]:
+              - generic "点击标记交付状态" [ref=e3748] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3749]:
+              - generic [ref=e3750]:
+                - combobox [ref=e3751] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3752] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3753]:
+              - generic [ref=e3754]:
+                - button "🔄" [ref=e3755] [cursor=pointer]
+                - button "✕" [ref=e3756] [cursor=pointer]
+          - row "34 133178772 【IC平台】刊例价调整需求 📝 待评审 产品中心 shuqigao × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 4.14 临时评审未通过，需要重新对需求 — 2026年4月 第2周（4/6-4/12） 🔄 ✕" [ref=e3757]:
+            - cell "34" [ref=e3758]
+            - cell "133178772" [ref=e3759]:
+              - link "133178772" [ref=e3760] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133178772
+            - cell "【IC平台】刊例价调整需求" [ref=e3761]
+            - cell "📝 待评审" [ref=e3762]:
+              - generic [ref=e3763]: 📝 待评审
+            - cell "产品中心" [ref=e3764]:
+              - combobox [ref=e3765] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心"
+                - option "产品中心" [selected]
+                - option "公共"
+            - cell "shuqigao × ▾" [ref=e3766]:
+              - generic [ref=e3768] [cursor=pointer]:
+                - generic [ref=e3769]:
+                  - text: shuqigao
+                  - generic [ref=e3770]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3771]:
+              - generic [ref=e3773] [cursor=pointer]:
+                - generic [ref=e3774]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3775]:
+              - generic [ref=e3777] [cursor=pointer]:
+                - generic [ref=e3778]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3779]:
+              - generic [ref=e3781] [cursor=pointer]:
+                - generic [ref=e3782]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3783]:
+              - generic "点击设置日期" [ref=e3784] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3785]:
+              - generic "点击设置日期" [ref=e3786] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3787]:
+              - generic "点击设置日期" [ref=e3788] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3789]:
+              - generic "点击设置日期" [ref=e3790] [cursor=pointer]: 📅 设置
+            - cell "4.14 临时评审未通过，需要重新对需求" [ref=e3791]:
+              - textbox "输入备注..." [ref=e3792]: 4.14 临时评审未通过，需要重新对需求
+            - cell "—" [ref=e3793]:
+              - generic "点击标记交付状态" [ref=e3794] [cursor=pointer]: —
+            - cell "2026年4月 第2周（4/6-4/12）" [ref=e3795]:
+              - generic [ref=e3796]:
+                - combobox [ref=e3797] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3798] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）" [selected]
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3799]:
+              - generic [ref=e3800]:
+                - button "🔄" [ref=e3801] [cursor=pointer]
+                - button "✕" [ref=e3802] [cursor=pointer]
+          - row "35 133387473 【定向&王卡】退订引导页 📝 待开发 商务中心 选择开发... ▾ guoleluo × ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第3周（4/13-4/19） 🔄 ✕" [ref=e3803]:
+            - cell "35" [ref=e3804]
+            - cell "133387473" [ref=e3805]:
+              - link "133387473" [ref=e3806] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133387473
+            - cell "【定向&王卡】退订引导页" [ref=e3807]
+            - cell "📝 待开发" [ref=e3808]:
+              - generic [ref=e3809]: 📝 待开发
+            - cell "商务中心" [ref=e3810]:
+              - combobox [ref=e3811] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心" [selected]
+                - option "产品中心"
+                - option "公共"
+            - cell "选择开发... ▾" [ref=e3812]:
+              - generic [ref=e3814] [cursor=pointer]:
+                - generic [ref=e3815]: 选择开发...
+                - generic: ▾
+            - cell "guoleluo × ▾" [ref=e3816]:
+              - generic [ref=e3818] [cursor=pointer]:
+                - generic [ref=e3819]:
+                  - text: guoleluo
+                  - generic [ref=e3820]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3821]:
+              - generic [ref=e3823] [cursor=pointer]:
+                - generic [ref=e3824]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3825]:
+              - generic [ref=e3827] [cursor=pointer]:
+                - generic [ref=e3828]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3829]:
+              - generic "点击设置日期" [ref=e3830] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3831]:
+              - generic "点击设置日期" [ref=e3832] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3833]:
+              - generic "点击设置日期" [ref=e3834] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3835]:
+              - generic "点击设置日期" [ref=e3836] [cursor=pointer]: 📅 设置
+            - cell [ref=e3837]:
+              - textbox "输入备注..." [ref=e3838]
+            - cell "—" [ref=e3839]:
+              - generic "点击标记交付状态" [ref=e3840] [cursor=pointer]: —
+            - cell "2026年4月 第3周（4/13-4/19）" [ref=e3841]:
+              - generic [ref=e3842]:
+                - combobox [ref=e3843] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3844] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）" [selected]
+                  - option "第4周（4/20-4/26）"
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3845]:
+              - generic [ref=e3846]:
+                - button "🔄" [ref=e3847] [cursor=pointer]
+                - button "✕" [ref=e3848] [cursor=pointer]
+          - row "36 133496654 【游戏王卡】订单表中端外订单的省份录入 📝 待开发 商务中心 benzphuang × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 — 2026年4月 第4周（4/20-4/26） 🔄 ✕" [ref=e3849]:
+            - cell "36" [ref=e3850]
+            - cell "133496654" [ref=e3851]:
+              - link "133496654" [ref=e3852] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133496654
+            - cell "【游戏王卡】订单表中端外订单的省份录入" [ref=e3853]
+            - cell "📝 待开发" [ref=e3854]:
+              - generic [ref=e3855]: 📝 待开发
+            - cell "商务中心" [ref=e3856]:
+              - combobox [ref=e3857] [cursor=pointer]:
+                - option "-"
+                - option "综合中心"
+                - option "商务中心" [selected]
+                - option "产品中心"
+                - option "公共"
+            - cell "benzphuang × ▾" [ref=e3858]:
+              - generic [ref=e3860] [cursor=pointer]:
+                - generic [ref=e3861]:
+                  - text: benzphuang
+                  - generic [ref=e3862]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3863]:
+              - generic [ref=e3865] [cursor=pointer]:
+                - generic [ref=e3866]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3867]:
+              - generic [ref=e3869] [cursor=pointer]:
+                - generic [ref=e3870]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3871]:
+              - generic [ref=e3873] [cursor=pointer]:
+                - generic [ref=e3874]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3875]:
+              - generic "点击设置日期" [ref=e3876] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3877]:
+              - generic "点击设置日期" [ref=e3878] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3879]:
+              - generic "点击设置日期" [ref=e3880] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3881]:
+              - generic "点击设置日期" [ref=e3882] [cursor=pointer]: 📅 设置
+            - cell [ref=e3883]:
+              - textbox "输入备注..." [ref=e3884]
+            - cell "—" [ref=e3885]:
+              - generic "点击标记交付状态" [ref=e3886] [cursor=pointer]: —
+            - cell "2026年4月 第4周（4/20-4/26）" [ref=e3887]:
+              - generic [ref=e3888]:
+                - combobox [ref=e3889] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3890] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）" [selected]
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3891]:
+              - generic [ref=e3892]:
+                - button "🔄" [ref=e3893] [cursor=pointer]
+                - button "✕" [ref=e3894] [cursor=pointer]
+          - row "37 133127082 【企业短信】告警自动化 📝 待开发 综合中心 junyuzheng × ▾ 选择开发... ▾ 选择开发... ▾ 选择开发... ▾ 📅 设置 📅 设置 📅 设置 📅 设置 4.15 需求已评审 — 2026年4月 第4周（4/20-4/26） 🔄 ✕" [ref=e3895]:
+            - cell "37" [ref=e3896]
+            - cell "133127082" [ref=e3897]:
+              - link "133127082" [ref=e3898] [cursor=pointer]:
+                - /url: https://tapd.woa.com/tapd_fe/20398362/story/detail/1020398362133127082
+            - cell "【企业短信】告警自动化" [ref=e3899]
+            - cell "📝 待开发" [ref=e3900]:
+              - generic [ref=e3901]: 📝 待开发
+            - cell "综合中心" [ref=e3902]:
+              - combobox [ref=e3903] [cursor=pointer]:
+                - option "-"
+                - option "综合中心" [selected]
+                - option "商务中心"
+                - option "产品中心"
+                - option "公共"
+            - cell "junyuzheng × ▾" [ref=e3904]:
+              - generic [ref=e3906] [cursor=pointer]:
+                - generic [ref=e3907]:
+                  - text: junyuzheng
+                  - generic [ref=e3908]: ×
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3909]:
+              - generic [ref=e3911] [cursor=pointer]:
+                - generic [ref=e3912]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3913]:
+              - generic [ref=e3915] [cursor=pointer]:
+                - generic [ref=e3916]: 选择开发...
+                - generic: ▾
+            - cell "选择开发... ▾" [ref=e3917]:
+              - generic [ref=e3919] [cursor=pointer]:
+                - generic [ref=e3920]: 选择开发...
+                - generic: ▾
+            - cell "📅 设置" [ref=e3921]:
+              - generic "点击设置日期" [ref=e3922] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3923]:
+              - generic "点击设置日期" [ref=e3924] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3925]:
+              - generic "点击设置日期" [ref=e3926] [cursor=pointer]: 📅 设置
+            - cell "📅 设置" [ref=e3927]:
+              - generic "点击设置日期" [ref=e3928] [cursor=pointer]: 📅 设置
+            - cell "4.15 需求已评审" [ref=e3929]:
+              - textbox "输入备注..." [ref=e3930]: 4.15 需求已评审
+            - cell "—" [ref=e3931]:
+              - generic "点击标记交付状态" [ref=e3932] [cursor=pointer]: —
+            - cell "2026年4月 第4周（4/20-4/26）" [ref=e3933]:
+              - generic [ref=e3934]:
+                - combobox [ref=e3935] [cursor=pointer]:
+                  - option "月份"
+                  - option "2026年2月"
+                  - option "2026年3月"
+                  - option "2026年4月" [selected]
+                  - option "2026年5月"
+                  - option "2026年6月"
+                  - option "2026年7月"
+                  - option "2026年8月"
+                  - option "2026年9月"
+                  - option "2026年10月"
+                - combobox [ref=e3936] [cursor=pointer]:
+                  - option "周数"
+                  - option "第1周（4/1-4/5）"
+                  - option "第2周（4/6-4/12）"
+                  - option "第3周（4/13-4/19）"
+                  - option "第4周（4/20-4/26）" [selected]
+                  - option "第5周（4/27-4/30）"
+            - cell "🔄 ✕" [ref=e3937]:
+              - generic [ref=e3938]:
+                - button "🔄" [ref=e3939] [cursor=pointer]
+                - button "✕" [ref=e3940] [cursor=pointer]
+      - generic [ref=e3941]: 显示 37 / 115 条需求
+    - generic [ref=e3942]:
+      - generic [ref=e3943]:
+        - generic [ref=e3945]:
+          - generic [ref=e3946]: 📊
+          - text: 按来源分布
+        - generic [ref=e3947]:
+          - generic [ref=e3948]:
+            - generic [ref=e3949]: 产品中心
+            - generic [ref=e3951]: "42"
+            - generic [ref=e3952]: "42"
+          - generic [ref=e3953]:
+            - generic [ref=e3954]: 公共
+            - generic [ref=e3956]: "31"
+            - generic [ref=e3957]: "31"
+          - generic [ref=e3958]:
+            - generic [ref=e3959]: 综合中心
+            - generic [ref=e3961]: "23"
+            - generic [ref=e3962]: "23"
+          - generic [ref=e3963]:
+            - generic [ref=e3964]: 商务中心
+            - generic [ref=e3966]: "19"
+            - generic [ref=e3967]: "19"
+      - generic [ref=e3968]:
+        - generic [ref=e3970]:
+          - generic [ref=e3971]: 👤
+          - text: 按开发人员分布
+        - generic [ref=e3972]:
+          - generic [ref=e3973]:
+            - generic [ref=e3974]: sigmoidguo
+            - generic [ref=e3976]: "15"
+            - generic [ref=e3977]: "15"
+          - generic [ref=e3978]:
+            - generic [ref=e3979]: v_jjiayuliu
+            - generic [ref=e3981]: "13"
+            - generic [ref=e3982]: "13"
+          - generic [ref=e3983]:
+            - generic [ref=e3984]: benzphuang
+            - generic [ref=e3986]: "13"
+            - generic [ref=e3987]: "13"
+          - generic [ref=e3988]:
+            - generic [ref=e3989]: allanwei
+            - generic [ref=e3991]: "12"
+            - generic [ref=e3992]: "12"
+          - generic [ref=e3993]:
+            - generic [ref=e3994]: tealyao
+            - generic [ref=e3996]: "11"
+            - generic [ref=e3997]: "11"
+          - generic [ref=e3998]:
+            - generic [ref=e3999]: kangkangran
+            - generic [ref=e4001]: "10"
+            - generic [ref=e4002]: "10"
+          - generic [ref=e4003]:
+            - generic [ref=e4004]: juibyyang
+            - generic [ref=e4006]: "10"
+            - generic [ref=e4007]: "10"
+          - generic [ref=e4008]:
+            - generic [ref=e4009]: conniesun
+            - generic [ref=e4011]: "9"
+            - generic [ref=e4012]: "9"
+          - generic [ref=e4013]:
+            - generic [ref=e4014]: shuqigao
+            - generic [ref=e4016]: "9"
+            - generic [ref=e4017]: "9"
+          - generic [ref=e4018]:
+            - generic [ref=e4019]: junyuzheng
+            - generic [ref=e4021]: "9"
+            - generic [ref=e4022]: "9"
+          - generic [ref=e4023]:
+            - generic [ref=e4024]: camdenwang
+            - generic [ref=e4026]: "8"
+            - generic [ref=e4027]: "8"
+          - generic [ref=e4028]:
+            - generic [ref=e4029]: guoleluo
+            - generic [ref=e4031]: "8"
+            - generic [ref=e4032]: "8"
+          - generic [ref=e4033]:
+            - generic [ref=e4034]: jiushugao
+            - generic [ref=e4036]: "7"
+            - generic [ref=e4037]: "7"
+          - generic [ref=e4038]:
+            - generic [ref=e4039]: lintonliu
+            - generic [ref=e4041]: "5"
+            - generic [ref=e4042]: "5"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

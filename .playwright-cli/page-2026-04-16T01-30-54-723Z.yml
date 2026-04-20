@@ -1,0 +1,155 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e35]:
+    - generic [ref=e36]:
+      - button "🆕 提交需求" [ref=e37] [cursor=pointer]
+      - button "📋 需求看板" [ref=e38] [cursor=pointer]
+      - button "📊 需求列表" [ref=e39] [cursor=pointer]
+      - button "📈 统计分析" [active] [ref=e40] [cursor=pointer]
+    - generic [ref=e5736]:
+      - generic [ref=e5737]:
+        - generic [ref=e5738]:
+          - generic [ref=e5739]: 📦
+          - generic [ref=e5740]: "65"
+          - generic [ref=e5741]: 需求总数
+        - generic [ref=e5742]:
+          - generic [ref=e5743]: ⏱️
+          - generic [ref=e5744]: "12"
+          - generic [ref=e5745]: 平均等待工作日
+        - generic [ref=e5746]:
+          - generic [ref=e5747]: 📊
+          - generic [ref=e5748]: 22%
+          - generic [ref=e5749]: 排期通过率
+        - generic [ref=e5750]:
+          - generic [ref=e5751]: 🔥
+          - generic [ref=e5752]: "10"
+          - generic [ref=e5753]: P0需求数
+      - generic [ref=e5754]:
+        - generic [ref=e5755]:
+          - generic [ref=e5757]:
+            - generic [ref=e5758]: 🏢
+            - text: 各中心提需分布
+          - generic [ref=e5759]:
+            - generic [ref=e5760]:
+              - generic [ref=e5761]: 产品中心
+              - generic [ref=e5763]: "28"
+              - generic [ref=e5764]: "28"
+            - generic [ref=e5765]:
+              - generic [ref=e5766]: 公共
+              - generic [ref=e5768]: "14"
+              - generic [ref=e5769]: "14"
+            - generic [ref=e5770]:
+              - generic [ref=e5771]: 商务中心
+              - generic [ref=e5773]: "12"
+              - generic [ref=e5774]: "12"
+            - generic [ref=e5775]:
+              - generic [ref=e5776]: 综合中心
+              - generic [ref=e5778]: "11"
+              - generic [ref=e5779]: "11"
+        - generic [ref=e5780]:
+          - generic [ref=e5782]:
+            - generic [ref=e5783]: ⭐
+            - text: 优先级分布
+          - generic [ref=e5784]:
+            - generic [ref=e5785]:
+              - generic [ref=e5786]: P0
+              - generic [ref=e5788]: "10"
+              - generic [ref=e5789]: "10"
+            - generic [ref=e5790]:
+              - generic [ref=e5791]: P1
+              - generic [ref=e5793]: "44"
+              - generic [ref=e5794]: "44"
+            - generic [ref=e5795]:
+              - generic [ref=e5796]: P2
+              - generic [ref=e5798]: "11"
+              - generic [ref=e5799]: "11"
+            - generic [ref=e5800]:
+              - generic [ref=e5801]: P3
+              - generic [ref=e5804]: "0"
+        - generic [ref=e5805]:
+          - generic [ref=e5807]:
+            - generic [ref=e5808]: 📊
+            - text: 状态分布
+          - generic [ref=e5809]:
+            - generic [ref=e5810]:
+              - generic [ref=e5811]: 待评审
+              - generic [ref=e5813]: "12"
+              - generic [ref=e5814]: "12"
+            - generic [ref=e5815]:
+              - generic [ref=e5816]: 待排期
+              - generic [ref=e5819]: "0"
+            - generic [ref=e5820]:
+              - generic [ref=e5821]: 已排期
+              - generic [ref=e5823]: "14"
+              - generic [ref=e5824]: "14"
+            - generic [ref=e5825]:
+              - generic [ref=e5826]: 开发中
+              - generic [ref=e5828]: "5"
+              - generic [ref=e5829]: "5"
+            - generic [ref=e5830]:
+              - generic [ref=e5831]: 测试中
+              - generic [ref=e5833]: "7"
+              - generic [ref=e5834]: "7"
+            - generic [ref=e5835]:
+              - generic [ref=e5836]: 已完成
+              - generic [ref=e5838]: "26"
+              - generic [ref=e5839]: "26"
+            - generic [ref=e5840]:
+              - generic [ref=e5841]: 已拒绝
+              - generic [ref=e5844]: "0"
+            - generic [ref=e5845]:
+              - generic [ref=e5846]: 挂起
+              - generic [ref=e5848]: "1"
+              - generic [ref=e5849]: "1"
+        - generic [ref=e5850]:
+          - generic [ref=e5852]:
+            - generic [ref=e5853]: 📅
+            - text: 月度趋势
+          - generic [ref=e5854]:
+            - generic [ref=e5855]:
+              - generic [ref=e5856]: 2026-03
+              - generic [ref=e5858]: "28"
+              - generic [ref=e5859]: "28"
+            - generic [ref=e5860]:
+              - generic [ref=e5861]: 2026-04
+              - generic [ref=e5863]: "37"
+              - generic [ref=e5864]: "37"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

@@ -46,6 +46,9 @@ RECIPIENTS = [
 # 抄送列表（CC）
 CC_RECIPIENTS = [
     "jamesjgbai@tencent.com",
+    "anankeli@tencent.com",
+    "coolkang@tencent.com",
+    "ottozhou@tencent.com",
 ]
 
 GITHUB_PAGES_BASE = "https://azuretanfang.github.io/weekly-report/运营商行业周报"

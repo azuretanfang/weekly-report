@@ -1,0 +1,112 @@
+- generic [ref=e1]:
+  - banner [ref=e12]:
+    - generic [ref=e13]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e14]
+      - generic [ref=e15]:
+        - generic [ref=e96]:
+          - generic [ref=e100]: 💻 开发
+          - generic [ref=e101]: camdenwang
+          - button "退出" [ref=e102] [cursor=pointer]
+        - textbox [ref=e17] [cursor=pointer]
+    - navigation [ref=e20]:
+      - button "📦 需求池" [ref=e21] [cursor=pointer]
+      - button "📅 排期表" [active] [ref=e22] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e23] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e24] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e25] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e26] [cursor=pointer]
+      - button "📅 月度记录" [ref=e27] [cursor=pointer]
+  - generic [ref=e103]:
+    - generic [ref=e104]:
+      - generic [ref=e105]:
+        - generic [ref=e106]: 📋
+        - generic [ref=e107]: "0"
+        - generic [ref=e108]: 需求总数
+      - generic [ref=e109]:
+        - generic [ref=e110]: 📝
+        - generic [ref=e111]: "0"
+        - generic [ref=e112]: 待开发
+      - generic [ref=e113]:
+        - generic [ref=e114]: 🔧
+        - generic [ref=e115]: "0"
+        - generic [ref=e116]: 开发中
+      - generic [ref=e117]:
+        - generic [ref=e118]: 🧪
+        - generic [ref=e119]: "0"
+        - generic [ref=e120]: 测试/验收
+      - generic [ref=e121]:
+        - generic [ref=e122]: ✅
+        - generic [ref=e123]: "0"
+        - generic [ref=e124]: 已完成
+    - generic [ref=e125]:
+      - generic [ref=e127]:
+        - generic [ref=e128]: 📅
+        - text: 需求排期表
+      - generic [ref=e130]:
+        - generic [ref=e131]:
+          - generic [ref=e133] [cursor=pointer]: 👤 只看我的
+          - generic [ref=e136]: 0 / 0
+        - textbox "🔍 搜索需求名称/TAPD ID/开发人员..." [ref=e137]
+        - generic [ref=e139] [cursor=pointer]:
+          - generic [ref=e140]: 全部来源
+          - generic: ▾
+        - generic [ref=e142] [cursor=pointer]:
+          - generic [ref=e143]: 全部状态
+          - generic: ▾
+        - generic [ref=e145] [cursor=pointer]:
+          - generic [ref=e146]: 全部开发人员
+          - generic: ▾
+        - generic [ref=e148] [cursor=pointer]:
+          - generic [ref=e149]: 全部交付状态
+          - generic: ▾
+      - table [ref=e151]:
+        - rowgroup [ref=e152]:
+          - row "# TAPD ID ↕ 需求名称 ↕ 状态 ↕ 需求来源 ↕ 后台开发 前端开发 数据开发 测试人员 预计转测 ↕ 预计开始测试 ↕ 预计测试完成 ↕ 预计发布 ↕ 风险/备注 交付状态 ↕ 预计排期 ↕ 操作" [ref=e153]:
+            - columnheader "#" [ref=e154]
+            - columnheader "TAPD ID ↕" [ref=e155] [cursor=pointer]
+            - columnheader "需求名称 ↕" [ref=e156] [cursor=pointer]
+            - columnheader "状态 ↕" [ref=e157] [cursor=pointer]
+            - columnheader "需求来源 ↕" [ref=e158] [cursor=pointer]
+            - columnheader "后台开发" [ref=e159]
+            - columnheader "前端开发" [ref=e160]
+            - columnheader "数据开发" [ref=e161]
+            - columnheader "测试人员" [ref=e162]
+            - columnheader "预计转测 ↕" [ref=e163] [cursor=pointer]
+            - columnheader "预计开始测试 ↕" [ref=e164] [cursor=pointer]
+            - columnheader "预计测试完成 ↕" [ref=e165] [cursor=pointer]
+            - columnheader "预计发布 ↕" [ref=e166] [cursor=pointer]
+            - columnheader "风险/备注" [ref=e167]
+            - columnheader "交付状态 ↕" [ref=e168] [cursor=pointer]
+            - columnheader "预计排期 ↕" [ref=e169] [cursor=pointer]
+            - columnheader "操作" [ref=e170]
+        - rowgroup [ref=e171]:
+          - row "没有匹配的需求" [ref=e172]:
+            - cell "没有匹配的需求" [ref=e173]
+    - generic [ref=e175]:
+      - generic [ref=e178]:
+        - generic [ref=e179]: 📊
+        - text: 按来源分布
+      - generic [ref=e182]:
+        - generic [ref=e183]: 👤
+        - text: 按开发人员分布
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

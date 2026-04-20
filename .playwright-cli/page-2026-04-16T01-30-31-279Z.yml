@@ -1,0 +1,221 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [active] [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e4043]:
+    - generic [ref=e4044]:
+      - generic [ref=e4046]:
+        - generic [ref=e4047]: 📝
+        - text: 选择会议类型
+      - generic [ref=e4048]:
+        - button "🏢 研发周例会（周一）" [ref=e4049] [cursor=pointer]
+        - button "💎 权益业务站立会（周二/四）" [ref=e4050] [cursor=pointer]
+        - button "📡 通讯业务站立会（周三/五）" [ref=e4051] [cursor=pointer]
+    - generic [ref=e4052]:
+      - generic [ref=e4054]:
+        - generic [ref=e4055]: 📋
+        - text: 基本信息
+      - generic [ref=e4056]:
+        - generic [ref=e4057]:
+          - generic [ref=e4058]: 会议日期
+          - textbox [ref=e4059]: 2026-04-16
+        - generic [ref=e4060]:
+          - generic [ref=e4061]: 记录人
+          - textbox "填写记录人姓名" [ref=e4062]
+        - generic [ref=e4063]:
+          - generic [ref=e4064]: 参会人员
+          - textbox "多人用逗号分隔" [ref=e4065]
+        - generic [ref=e4066]:
+          - generic [ref=e4067]: 缺席人员
+          - textbox "多人用逗号分隔，无缺席留空" [ref=e4068]
+    - generic [ref=e4069]:
+      - generic [ref=e4070]:
+        - generic [ref=e4071]:
+          - generic [ref=e4072]: 🔄
+          - text: 上次Action回顾
+        - button "📋 载入上次Action" [ref=e4073] [cursor=pointer]
+      - table [ref=e4075]:
+        - rowgroup [ref=e4076]:
+          - row "Action内容 责任人 截止日期 完成状态 备注" [ref=e4077]:
+            - columnheader "Action内容" [ref=e4078]
+            - columnheader "责任人" [ref=e4079]
+            - columnheader "截止日期" [ref=e4080]
+            - columnheader "完成状态" [ref=e4081]
+            - columnheader "备注" [ref=e4082]
+            - columnheader [ref=e4083]
+        - rowgroup
+      - button "➕ 添加一行" [ref=e4084] [cursor=pointer]
+    - generic [ref=e4085]:
+      - generic [ref=e4086]:
+        - generic [ref=e4087]:
+          - generic [ref=e4088]: 💎
+          - text: 权益业务进度同步
+        - button "📊 从排期表载入" [ref=e4089] [cursor=pointer]
+      - table [ref=e4091]:
+        - rowgroup [ref=e4092]:
+          - row "TAPD ID 需求名称 负责人 计划节点 当前状态 进度% 风险等级 阻塞点/备注" [ref=e4093]:
+            - columnheader "TAPD ID" [ref=e4094]
+            - columnheader "需求名称" [ref=e4095]
+            - columnheader "负责人" [ref=e4096]
+            - columnheader "计划节点" [ref=e4097]
+            - columnheader "当前状态" [ref=e4098]
+            - columnheader "进度%" [ref=e4099]
+            - columnheader "风险等级" [ref=e4100]
+            - columnheader "阻塞点/备注" [ref=e4101]
+            - columnheader [ref=e4102]
+        - rowgroup
+      - button "➕ 添加需求" [ref=e4103] [cursor=pointer]
+    - generic [ref=e4104]:
+      - generic [ref=e4105]:
+        - generic [ref=e4106]:
+          - generic [ref=e4107]: 📡
+          - text: 通讯业务进度同步
+        - button "📊 从排期表载入" [ref=e4108] [cursor=pointer]
+      - table [ref=e4110]:
+        - rowgroup [ref=e4111]:
+          - row "TAPD ID 需求名称 负责人 计划节点 当前状态 进度% 风险等级 阻塞点/备注" [ref=e4112]:
+            - columnheader "TAPD ID" [ref=e4113]
+            - columnheader "需求名称" [ref=e4114]
+            - columnheader "负责人" [ref=e4115]
+            - columnheader "计划节点" [ref=e4116]
+            - columnheader "当前状态" [ref=e4117]
+            - columnheader "进度%" [ref=e4118]
+            - columnheader "风险等级" [ref=e4119]
+            - columnheader "阻塞点/备注" [ref=e4120]
+            - columnheader [ref=e4121]
+        - rowgroup
+      - button "➕ 添加需求" [ref=e4122] [cursor=pointer]
+    - generic [ref=e4123]:
+      - generic [ref=e4124]:
+        - generic [ref=e4125]:
+          - generic [ref=e4126]: 🔧
+          - text: 公共技术进度同步
+        - button "📊 从排期表载入" [ref=e4127] [cursor=pointer]
+      - table [ref=e4129]:
+        - rowgroup [ref=e4130]:
+          - row "TAPD ID 技术需求名称 负责人 计划节点 当前状态 进度% 风险等级 阻塞点/备注" [ref=e4131]:
+            - columnheader "TAPD ID" [ref=e4132]
+            - columnheader "技术需求名称" [ref=e4133]
+            - columnheader "负责人" [ref=e4134]
+            - columnheader "计划节点" [ref=e4135]
+            - columnheader "当前状态" [ref=e4136]
+            - columnheader "进度%" [ref=e4137]
+            - columnheader "风险等级" [ref=e4138]
+            - columnheader "阻塞点/备注" [ref=e4139]
+            - columnheader [ref=e4140]
+        - rowgroup
+      - button "➕ 添加技术需求" [ref=e4141] [cursor=pointer]
+    - generic [ref=e4142]:
+      - generic [ref=e4144]:
+        - generic [ref=e4145]: ⚠️
+        - text: 风险与阻塞项
+      - table [ref=e4147]:
+        - rowgroup [ref=e4148]:
+          - row "风险描述 影响需求(TAPD) 风险等级 发现日期 责任人 预计解决时间 应对方案" [ref=e4149]:
+            - columnheader "风险描述" [ref=e4150]
+            - columnheader "影响需求(TAPD)" [ref=e4151]
+            - columnheader "风险等级" [ref=e4152]
+            - columnheader "发现日期" [ref=e4153]
+            - columnheader "责任人" [ref=e4154]
+            - columnheader "预计解决时间" [ref=e4155]
+            - columnheader "应对方案" [ref=e4156]
+            - columnheader [ref=e4157]
+        - rowgroup
+      - button "➕ 添加风险项" [ref=e4158] [cursor=pointer]
+    - generic [ref=e4159]:
+      - generic [ref=e4161]:
+        - generic [ref=e4162]: 📅
+        - text: 排期变更决策
+      - table [ref=e4164]:
+        - rowgroup [ref=e4165]:
+          - row "需求(TAPD) 变更类型 原计划时间 新计划时间 变更原因 决策人 受影响需求 影响说明" [ref=e4166]:
+            - columnheader "需求(TAPD)" [ref=e4167]
+            - columnheader "变更类型" [ref=e4168]
+            - columnheader "原计划时间" [ref=e4169]
+            - columnheader "新计划时间" [ref=e4170]
+            - columnheader "变更原因" [ref=e4171]
+            - columnheader "决策人" [ref=e4172]
+            - columnheader "受影响需求" [ref=e4173]
+            - columnheader "影响说明" [ref=e4174]
+            - columnheader [ref=e4175]
+        - rowgroup
+      - button "➕ 添加排期变更" [ref=e4176] [cursor=pointer]
+    - generic [ref=e4177]:
+      - generic [ref=e4179]:
+        - generic [ref=e4180]: 🆕
+        - text: 需求插队记录
+      - table [ref=e4182]:
+        - rowgroup [ref=e4183]:
+          - row "插队需求(TAPD) 需求名称 来源/发起人 优先级依据 审批人 被挤占需求 被挤占方知情 备注" [ref=e4184]:
+            - columnheader "插队需求(TAPD)" [ref=e4185]
+            - columnheader "需求名称" [ref=e4186]
+            - columnheader "来源/发起人" [ref=e4187]
+            - columnheader "优先级依据" [ref=e4188]
+            - columnheader "审批人" [ref=e4189]
+            - columnheader "被挤占需求" [ref=e4190]
+            - columnheader "被挤占方知情" [ref=e4191]
+            - columnheader "备注" [ref=e4192]
+            - columnheader [ref=e4193]
+        - rowgroup
+      - button "➕ 添加插队记录" [ref=e4194] [cursor=pointer]
+    - generic [ref=e4195]:
+      - generic [ref=e4197]:
+        - generic [ref=e4198]: ✅
+        - text: 本次Action Items
+      - table [ref=e4200]:
+        - rowgroup [ref=e4201]:
+          - row "Action内容 责任人 截止日期 优先级 关联TAPD 升级到周例会" [ref=e4202]:
+            - columnheader "Action内容" [ref=e4203]
+            - columnheader "责任人" [ref=e4204]
+            - columnheader "截止日期" [ref=e4205]
+            - columnheader "优先级" [ref=e4206]
+            - columnheader "关联TAPD" [ref=e4207]
+            - columnheader "升级到周例会" [ref=e4208]
+            - columnheader [ref=e4209]
+        - rowgroup
+      - button "➕ 添加Action" [ref=e4210] [cursor=pointer]
+    - generic [ref=e4211]:
+      - generic [ref=e4213]:
+        - generic [ref=e4214]: 💡
+        - text: 其他事项
+      - textbox "补充说明、讨论要点、后续规划等..." [ref=e4216]
+    - generic [ref=e4217]:
+      - button "💾 保存会议记录" [ref=e4218] [cursor=pointer]
+      - button "🗑️ 清空表单" [ref=e4219] [cursor=pointer]
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

@@ -1,0 +1,845 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e35]:
+    - generic [ref=e36]:
+      - button "🆕 提交需求" [ref=e37] [cursor=pointer]
+      - button "📋 需求看板" [active] [ref=e38] [cursor=pointer]
+      - button "📊 需求列表" [ref=e39] [cursor=pointer]
+      - button "📈 统计分析" [ref=e40] [cursor=pointer]
+    - generic [ref=e106]:
+      - generic [ref=e107]:
+        - generic [ref=e108]:
+          - generic [ref=e109]: 📋
+          - generic [ref=e110]: "65"
+          - generic [ref=e111]: 需求总数
+        - generic [ref=e112]:
+          - generic [ref=e113]: ⏳
+          - generic [ref=e114]: "12"
+          - generic [ref=e115]: 待评审
+        - generic [ref=e116]:
+          - generic [ref=e117]: 📅
+          - generic [ref=e118]: "0"
+          - generic [ref=e119]: 待排期
+        - generic [ref=e120]:
+          - generic [ref=e121]: 💻
+          - generic [ref=e122]: "26"
+          - generic [ref=e123]: 进行中
+        - generic [ref=e124]:
+          - generic [ref=e125]: 🎉
+          - generic [ref=e126]: "26"
+          - generic [ref=e127]: 已完成
+      - generic [ref=e130] [cursor=pointer]:
+        - generic [ref=e131]: 全部迭代
+        - generic: ▾
+      - generic [ref=e132]:
+        - generic [ref=e133]:
+          - generic [ref=e134]:
+            - generic [ref=e135]: ⏳ 待评审
+            - generic [ref=e136]: "12"
+          - generic [ref=e137]:
+            - generic [ref=e138] [cursor=pointer]:
+              - generic [ref=e139]:
+                - generic [ref=e140]: P1
+                - generic [ref=e141]: 产品中心
+              - generic [ref=e142]: 【IC平台】短信skill
+              - generic [ref=e143]:
+                - generic [ref=e144]: 👤 jesydong
+                - generic [ref=e145]: 🔗 133176386
+                - generic [ref=e146]: ⏱️ 11天
+                - generic [ref=e147]: 📅 2026-04 第3周
+            - generic [ref=e148] [cursor=pointer]:
+              - generic [ref=e149]:
+                - generic [ref=e150]: P1
+                - generic [ref=e151]: 产品中心
+              - generic [ref=e152]: 【IC平台】刊例价调整需求
+              - generic [ref=e153]:
+                - generic [ref=e154]: 👤 hongleili
+                - generic [ref=e155]: 🔗 133178772
+                - generic [ref=e156]: ⏱️ 11天
+                - generic [ref=e157]: 📅 2026-04 第5周
+            - generic [ref=e158] [cursor=pointer]:
+              - generic [ref=e159]:
+                - generic [ref=e160]: P1
+                - generic [ref=e161]: 产品中心
+              - generic [ref=e162]: 【IC平台】语音外呼创建任务下发
+              - generic [ref=e163]:
+                - generic [ref=e164]: 👤 hongleili
+                - generic [ref=e165]: 🔗 133178822
+                - generic [ref=e166]: ⏱️ 11天
+                - generic [ref=e167]: 📅 2026-04 第5周
+            - generic [ref=e168] [cursor=pointer]:
+              - generic [ref=e169]:
+                - generic [ref=e170]: P1
+                - generic [ref=e171]: 综合中心
+              - generic [ref=e172]: 【企业短信】联调自动化需求-第一期
+              - generic [ref=e173]:
+                - generic [ref=e174]: 👤 christiexu
+                - generic [ref=e175]: 🔗 126203132
+                - generic [ref=e176]: ⏱️ 11天
+                - generic [ref=e177]: 📅 2026-04 第5周
+            - generic [ref=e178] [cursor=pointer]:
+              - generic [ref=e179]:
+                - generic [ref=e180]: P1
+                - generic [ref=e181]: 综合中心
+              - generic [ref=e182]: 【企业短信】供应商IP白名单管理—仅适用于https协议端口
+              - generic [ref=e183]:
+                - generic [ref=e184]: 👤 christiexu
+                - generic [ref=e185]: 🔗 133132008
+                - generic [ref=e186]: ⏱️ 11天
+                - generic [ref=e187]: 📅 2026-04 第5周
+            - generic [ref=e188] [cursor=pointer]:
+              - generic [ref=e189]:
+                - generic [ref=e190]: P2
+                - generic [ref=e191]: 综合中心
+              - generic [ref=e192]: 【企业短信】短信单一手机号下发限额需求-颗粒度增加
+              - generic [ref=e193]:
+                - generic [ref=e194]: 👤 christiexu
+                - generic [ref=e195]: 🔗 133053648
+                - generic [ref=e196]: ⏱️ 14天
+                - generic [ref=e197]: 📅 2026-04 第5周
+            - generic [ref=e198] [cursor=pointer]:
+              - generic [ref=e199]:
+                - generic [ref=e200]: P2
+                - generic [ref=e201]: 综合中心
+              - generic [ref=e202]: 【企业短信】国际短信号段库更新
+              - generic [ref=e203]:
+                - generic [ref=e204]: 👤 christiexu
+                - generic [ref=e205]: 🔗 131065351
+                - generic [ref=e206]: ⏱️ 14天
+                - generic [ref=e207]: 📅 2026-04 第5周
+            - generic [ref=e208] [cursor=pointer]:
+              - generic [ref=e209]:
+                - generic [ref=e210]: P2
+                - generic [ref=e211]: 产品中心
+              - generic [ref=e212]: 【数据处理需求】产品刊例价调价后报表梳理及时间记录优化
+              - generic [ref=e213]:
+                - generic [ref=e214]: 👤 aaliyahchen
+                - generic [ref=e215]: 🔗 133063500
+                - generic [ref=e216]: ⏱️ 12天
+                - generic [ref=e217]: 📅 2026-04 第5周
+            - generic [ref=e218] [cursor=pointer]:
+              - generic [ref=e219]:
+                - generic [ref=e220]: P2
+                - generic [ref=e221]: 产品中心
+              - generic [ref=e222]: 【IC平台】企业短信开放平台后续下线，需要迁移IC平台，并且做权限、功能的部分隔离
+              - generic [ref=e223]:
+                - generic [ref=e224]: 👤 jesydong
+                - generic [ref=e225]: 🔗 133175810
+                - generic [ref=e226]: ⏱️ 11天
+                - generic [ref=e227]: 📅 2026-05 第2周
+            - generic [ref=e228] [cursor=pointer]:
+              - generic [ref=e229]:
+                - generic [ref=e230]: P2
+                - generic [ref=e231]: 产品中心
+              - generic [ref=e232]: 【IC平台】风控手机号查询
+              - generic [ref=e233]:
+                - generic [ref=e234]: 👤 jesydong
+                - generic [ref=e235]: 🔗 133176070
+                - generic [ref=e236]: ⏱️ 11天
+                - generic [ref=e237]: 📅 2026-04 第4周
+            - generic [ref=e238] [cursor=pointer]:
+              - generic [ref=e239]:
+                - generic [ref=e240]: P0
+                - generic [ref=e241]: 产品中心
+              - generic [ref=e242]: 【IC平台】权益录入灰度测试数据打标签
+              - generic [ref=e243]:
+                - generic [ref=e244]: 👤 hongleili
+                - generic [ref=e245]: 🔗 133208120
+                - generic [ref=e246]: ⏱️ 10天
+                - generic [ref=e247]: 📅 2026-04 第5周
+            - generic [ref=e248] [cursor=pointer]:
+              - generic [ref=e249]:
+                - generic [ref=e250]: P0
+                - generic [ref=e251]: 公共
+              - generic [ref=e252]: 【Redis清理】清理 obd_gatewaymobile_userauthdata 实例历史冗余数据
+              - generic [ref=e253]:
+                - generic [ref=e254]: 👤 allanwei
+                - generic [ref=e255]: 🔗 133505577
+                - generic [ref=e256]: ⏱️ 1天
+                - generic [ref=e257]: 📅 2026-04 第1周
+        - generic [ref=e258]:
+          - generic [ref=e259]:
+            - generic [ref=e260]: ✅ 已评审待排期
+            - generic [ref=e261]: "0"
+          - generic [ref=e263]: 暂无需求
+        - generic [ref=e264]:
+          - generic [ref=e265]:
+            - generic [ref=e266]: 💻 进行中
+            - generic [ref=e267]: "26"
+          - generic [ref=e268]:
+            - generic [ref=e269] [cursor=pointer]:
+              - generic [ref=e270]:
+                - generic [ref=e271]: P1
+                - generic [ref=e272]: 产品中心
+              - generic [ref=e273]: 【IC平台】V5.0ai智能投放
+              - generic [ref=e274]:
+                - generic [ref=e275]: 👤
+                - generic [ref=e276]: 🔗 131258962
+                - generic [ref=e277]: ⏱️ 22天
+                - generic [ref=e278]: 📅 2026-03 第5周
+              - generic [ref=e279]: 🧪 测试中
+            - generic [ref=e280] [cursor=pointer]:
+              - generic [ref=e281]:
+                - generic [ref=e282]: P1
+                - generic [ref=e283]: 产品中心
+              - generic [ref=e284]: 【定向流量】PC端活动页适配改造
+              - generic [ref=e285]:
+                - generic [ref=e286]: 👤
+                - generic [ref=e287]: 🔗 132838754
+                - generic [ref=e288]: ⏱️ 20天
+                - generic [ref=e289]: 📅 2026-03 第5周
+              - generic [ref=e291]: kangkangran
+              - generic [ref=e292]: 🧪 测试中
+            - generic [ref=e293] [cursor=pointer]:
+              - generic [ref=e294]:
+                - generic [ref=e295]: P1
+                - generic [ref=e296]: 产品中心
+              - generic [ref=e297]: 【数据处理需求】梦网彩信升阅信端口彩信下发成功量数据回溯
+              - generic [ref=e298]:
+                - generic [ref=e299]: 👤 aaliyahchen
+                - generic [ref=e300]: 🔗 132847681
+                - generic [ref=e301]: ⏱️ 16天
+                - generic [ref=e302]: 📅 2026-04 第1周
+              - generic [ref=e304]: v_jjiayuliu
+            - generic [ref=e305] [cursor=pointer]:
+              - generic [ref=e306]:
+                - generic [ref=e307]: P1
+                - generic [ref=e308]: 产品中心
+              - generic [ref=e309]: 【IC平台】接口下发（营销+功能）业务代码扣费-未完成部分
+              - generic [ref=e310]:
+                - generic [ref=e311]: 👤 hongleili
+                - generic [ref=e312]: 🔗 133106171
+                - generic [ref=e313]: ⏱️ 13天
+                - generic [ref=e314]: 📅 2026-04 第1周
+              - generic [ref=e315]:
+                - generic [ref=e316]: camdenwang, allanwei
+                - generic [ref=e317]: kangkangran
+            - generic [ref=e318] [cursor=pointer]:
+              - generic [ref=e319]:
+                - generic [ref=e320]: P1
+                - generic [ref=e321]: 产品中心
+              - generic [ref=e322]: 【IC平台】接口下发（营销+功能）按天聚合展示在IC
+              - generic [ref=e323]:
+                - generic [ref=e324]: 👤 hongleili
+                - generic [ref=e325]: 🔗 133097634
+                - generic [ref=e326]: ⏱️ 13天
+                - generic [ref=e327]: 📅 2026-04 第1周
+              - generic [ref=e328]:
+                - generic [ref=e329]: kangkangran
+                - generic [ref=e330]: sigmoidguo
+            - generic [ref=e331] [cursor=pointer]:
+              - generic [ref=e332]:
+                - generic [ref=e333]: P1
+                - generic [ref=e334]: 产品中心
+              - generic [ref=e335]: 【IC平台】5g阅信在IC的扣费
+              - generic [ref=e336]:
+                - generic [ref=e337]: 👤 hongleili
+                - generic [ref=e338]: 🔗 133081362
+                - generic [ref=e339]: ⏱️ 13天
+                - generic [ref=e340]: 📅 2026-05 第3周
+              - generic [ref=e342]: camdenwang
+            - generic [ref=e343] [cursor=pointer]:
+              - generic [ref=e344]:
+                - generic [ref=e345]: P1
+                - generic [ref=e346]: 产品中心
+              - generic [ref=e347]: 【数据处理需求】权益和通讯业务底层数据亲和性建设
+              - generic [ref=e348]:
+                - generic [ref=e349]: 👤 aaliyahchen
+                - generic [ref=e350]: 🔗 133039900
+                - generic [ref=e351]: ⏱️ 12天
+                - generic [ref=e352]: 📅 2026-04 第3周
+              - generic [ref=e354]: sigmoidguo
+            - generic [ref=e355] [cursor=pointer]:
+              - generic [ref=e356]:
+                - generic [ref=e357]: P1
+                - generic [ref=e358]: 产品中心
+              - generic [ref=e359]: 【数据处理需求】下发明细表增加项目维度
+              - generic [ref=e360]:
+                - generic [ref=e361]: 👤 aaliyahchen
+                - generic [ref=e362]: 🔗 133146267
+                - generic [ref=e363]: ⏱️ 12天
+                - generic [ref=e364]: 📅 2026-04 第4周
+              - generic [ref=e366]: v_jjiayuliu
+            - generic [ref=e367] [cursor=pointer]:
+              - generic [ref=e368]:
+                - generic [ref=e369]: P1
+                - generic [ref=e370]: 公共
+              - generic [ref=e371]: 关于添加计费模块的需求
+              - generic [ref=e372]:
+                - generic [ref=e373]: 👤 christiexu
+                - generic [ref=e374]: 🔗 130534086
+                - generic [ref=e375]: ⏱️ 11天
+                - generic [ref=e376]: 📅 2026-04 第1周
+              - generic [ref=e378]: shuqigao
+              - generic [ref=e379]: 💻 进行中
+            - generic [ref=e380] [cursor=pointer]:
+              - generic [ref=e381]:
+                - generic [ref=e382]: P1
+                - generic [ref=e383]: 综合中心
+              - generic [ref=e384]: 【企业短信】重构通信管理平台 业务代码 状态前端展示
+              - generic [ref=e385]:
+                - generic [ref=e386]: 👤 christiexu
+                - generic [ref=e387]: 🔗 130425984
+                - generic [ref=e388]: ⏱️ 11天
+                - generic [ref=e389]: 📅 2026-04 第1周
+              - generic [ref=e391]: tealyao
+              - generic [ref=e392]: 💻 开发中
+            - generic [ref=e393] [cursor=pointer]:
+              - generic [ref=e394]:
+                - generic [ref=e395]: P1
+                - generic [ref=e396]: 综合中心
+              - generic [ref=e397]: 【数据处理需求】短信灯塔报表增加错误码维度
+              - generic [ref=e398]:
+                - generic [ref=e399]: 👤 christiexu
+                - generic [ref=e400]: 🔗 133038993
+                - generic [ref=e401]: ⏱️ 11天
+                - generic [ref=e402]: 📅 2026-04 第2周
+              - generic [ref=e404]: v_jjiayuliu
+            - generic [ref=e405] [cursor=pointer]:
+              - generic [ref=e406]:
+                - generic [ref=e407]: P1
+                - generic [ref=e408]: 综合中心
+              - generic [ref=e409]: 【企业短信】告警自动化
+              - generic [ref=e410]:
+                - generic [ref=e411]: 👤 christiexu
+                - generic [ref=e412]: 🔗 133127082
+                - generic [ref=e413]: ⏱️ 11天
+                - generic [ref=e414]: 📅 2026-04 第4周
+              - generic [ref=e416]: junyuzheng
+            - generic [ref=e417] [cursor=pointer]:
+              - generic [ref=e418]:
+                - generic [ref=e419]: P1
+                - generic [ref=e420]: 产品中心
+              - generic [ref=e421]: 【定向流量】王者短信中间页活动新增开通流量包任务
+              - generic [ref=e422]:
+                - generic [ref=e423]: 👤 jijiang
+                - generic [ref=e424]: 🔗 133173085
+                - generic [ref=e425]: ⏱️ 11天
+                - generic [ref=e426]: 📅 2026-04 第4周
+              - generic [ref=e427]:
+                - generic [ref=e428]: benzphuang
+                - generic [ref=e429]: juibyyang
+              - generic [ref=e430]: 💻 方案设计中
+            - generic [ref=e431] [cursor=pointer]:
+              - generic [ref=e432]:
+                - generic [ref=e433]: P1
+                - generic [ref=e434]: 商务中心
+              - generic [ref=e435]: 【定向&王卡】退订引导页
+              - generic [ref=e436]:
+                - generic [ref=e437]: 👤 jijiang
+                - generic [ref=e438]: 🔗 133387473
+                - generic [ref=e439]: ⏱️ 5天
+                - generic [ref=e440]: 📅 2026-04 第4周
+              - generic [ref=e442]: guoleluo
+            - generic [ref=e443] [cursor=pointer]:
+              - generic [ref=e444]:
+                - generic [ref=e445]: P1
+                - generic [ref=e446]: 商务中心
+              - generic [ref=e447]: 物联网卡结算需求for深圳移动-四期
+              - generic [ref=e448]:
+                - generic [ref=e449]: 👤 fangtan
+                - generic [ref=e450]: 🔗 133233136
+                - generic [ref=e451]: ⏱️ 4天
+                - generic [ref=e452]: 📅 2026-04 第3周
+              - generic [ref=e454]: jiushugao
+            - generic [ref=e455] [cursor=pointer]:
+              - generic [ref=e456]:
+                - generic [ref=e457]: P1
+                - generic [ref=e458]: 公共
+              - generic [ref=e459]: 【技术需求】marketing text 频控与 SendSms 下发链路优化（Redis 短超时、错误语义、超时跳过回滚）
+              - generic [ref=e460]:
+                - generic [ref=e461]: 👤 fangtan
+                - generic [ref=e462]: 🔗 133439262
+                - generic [ref=e463]: ⏱️ 3天
+                - generic [ref=e464]: 📅 2026-04 第3周
+              - generic [ref=e466]: camdenwang
+              - generic [ref=e467]: 💻 开发中
+            - generic [ref=e468] [cursor=pointer]:
+              - generic [ref=e469]:
+                - generic [ref=e470]: P1
+                - generic [ref=e471]: 公共
+              - generic [ref=e472]: IC 任务下发短信时 text 服务跳过冗余授权校验
+              - generic [ref=e473]:
+                - generic [ref=e474]: 👤 allanwei
+                - generic [ref=e475]: 🔗 133404101
+                - generic [ref=e476]: ⏱️ 3天
+                - generic [ref=e477]: 📅 2026-04 第1周
+              - generic [ref=e479]: allan
+              - generic [ref=e480]: 🧪 测试中
+            - generic [ref=e481] [cursor=pointer]:
+              - generic [ref=e482]:
+                - generic [ref=e483]: P1
+                - generic [ref=e484]: 商务中心
+              - generic [ref=e485]: 【游戏王卡】订单表中端外订单的省份录入
+              - generic [ref=e486]:
+                - generic [ref=e487]: 👤 jijiang
+                - generic [ref=e488]: 🔗 133496654
+                - generic [ref=e489]: ⏱️ 2天
+                - generic [ref=e490]: 📅 2026-04 第5周
+              - generic [ref=e492]: conniesun
+            - generic [ref=e493] [cursor=pointer]:
+              - generic [ref=e494]:
+                - generic [ref=e495]: P2
+                - generic [ref=e496]: 公共
+              - generic [ref=e497]: 【技术需求】ecovision平台优化升级-多版本素材库发布&页面发布
+              - generic [ref=e498]:
+                - generic [ref=e499]: 👤 fangtan
+                - generic [ref=e500]: 🔗 133089734
+                - generic [ref=e501]: ⏱️ 12天
+                - generic [ref=e502]: 📅 2026-04 第2周
+              - generic [ref=e504]: jiushugao
+              - generic [ref=e505]: 🧪 灰度发布
+            - generic [ref=e506] [cursor=pointer]:
+              - generic [ref=e507]:
+                - generic [ref=e508]: P2
+                - generic [ref=e509]: 商务中心
+              - generic [ref=e510]: 【企业短信】2025年新规 短信签名资料，面向本部门、业务、供应侧管理页面
+              - generic [ref=e511]:
+                - generic [ref=e512]: 👤 fangtan
+                - generic [ref=e513]: 🔗 126894137
+                - generic [ref=e514]: ⏱️ 4天
+                - generic [ref=e515]: 📅 2026-04 第5周
+              - generic [ref=e517]: juibyyang,kangkangran
+            - generic [ref=e518] [cursor=pointer]:
+              - generic [ref=e519]:
+                - generic [ref=e520]: P0
+                - generic [ref=e521]: 产品中心
+              - generic [ref=e522]: 【数据处理需求】账户充值消耗表 二期
+              - generic [ref=e523]:
+                - generic [ref=e524]: 👤 aaliyahchen
+                - generic [ref=e525]: 🔗 132975779
+                - generic [ref=e526]: ⏱️ 16天
+                - generic [ref=e527]: 📅 2026-04 第1周
+              - generic [ref=e529]: sigmoidguo
+            - generic [ref=e530] [cursor=pointer]:
+              - generic [ref=e531]:
+                - generic [ref=e532]: P0
+                - generic [ref=e533]: 产品中心
+              - generic [ref=e534]: 【数据处理需求】转化追踪报表公平传输字段新增空白组数据
+              - generic [ref=e535]:
+                - generic [ref=e536]: 👤 aaliyahchen
+                - generic [ref=e537]: 🔗 133136713
+                - generic [ref=e538]: ⏱️ 12天
+                - generic [ref=e539]: 📅 2026-04 第1周
+              - generic [ref=e541]: v_jjiayuliu
+              - generic [ref=e542]: 🧪 产品体验
+            - generic [ref=e543] [cursor=pointer]:
+              - generic [ref=e544]:
+                - generic [ref=e545]: P0
+                - generic [ref=e546]: 商务中心
+              - generic [ref=e547]: 【权益库】联通在线权益调用接口地址兼容
+              - generic [ref=e548]:
+                - generic [ref=e549]: 👤 jijiang
+                - generic [ref=e550]: 🔗 133218492
+                - generic [ref=e551]: ⏱️ 10天
+                - generic [ref=e552]: 📅 2026-04 第2周
+              - generic [ref=e554]: benzphuang
+              - generic [ref=e555]: 💻 方案设计中
+            - generic [ref=e556] [cursor=pointer]:
+              - generic [ref=e557]:
+                - generic [ref=e558]: P0
+                - generic [ref=e559]: 产品中心
+              - generic [ref=e560]: 【数据处理需求】后台回填数据上报补充和扣量数据报表化
+              - generic [ref=e561]:
+                - generic [ref=e562]: 👤 aaliyahchen
+                - generic [ref=e563]: 🔗 133217448
+                - generic [ref=e564]: ⏱️ 9天
+                - generic [ref=e565]: 📅 2026-04 第2周
+              - generic [ref=e567]: junyuzheng
+              - generic [ref=e568]: 🧪 灰度发布
+            - generic [ref=e569] [cursor=pointer]:
+              - generic [ref=e570]:
+                - generic [ref=e571]: P0
+                - generic [ref=e572]: 产品中心
+              - generic [ref=e573]: 【游戏王卡】PC端活动页适配改造
+              - generic [ref=e574]:
+                - generic [ref=e575]: 👤 jijiang
+                - generic [ref=e576]: 🔗 133058997
+                - generic [ref=e577]: ⏱️ 6天
+                - generic [ref=e578]: 📅 2026-04 第3周
+              - generic [ref=e580]: kangkangran
+              - generic [ref=e581]: 🧪 测试中
+            - generic [ref=e582] [cursor=pointer]:
+              - generic [ref=e583]:
+                - generic [ref=e584]: P0
+                - generic [ref=e585]: 产品中心
+              - generic [ref=e586]: 【数据处理需求】后台回填数据上报补充和扣量-数据报表部分
+              - generic [ref=e587]:
+                - generic [ref=e588]: 👤 aaliyahchen
+                - generic [ref=e589]: 🔗 133395098
+                - generic [ref=e590]: ⏱️ 4天
+                - generic [ref=e591]: 📅 2026-04 第3周
+              - generic [ref=e593]: v_jjiayuliu
+        - generic [ref=e594]:
+          - generic [ref=e595]:
+            - generic [ref=e596]: 🎉 已完成
+            - generic [ref=e597]: "26"
+          - generic [ref=e598]:
+            - generic [ref=e599] [cursor=pointer]:
+              - generic [ref=e600]:
+                - generic [ref=e601]: P1
+                - generic [ref=e602]: 商务中心
+              - generic [ref=e603]: 【定向流量】不支持订购的用户引导开通王卡功能
+              - generic [ref=e604]:
+                - generic [ref=e605]: 👤
+                - generic [ref=e606]: 🔗 132764218
+                - generic [ref=e607]: ⏱️ 22天
+                - generic [ref=e608]: 📅 2026-03 第5周
+              - generic [ref=e610]: guoleluo
+              - generic [ref=e611]: 🎉 已关闭
+            - generic [ref=e612] [cursor=pointer]:
+              - generic [ref=e613]:
+                - generic [ref=e614]: P1
+                - generic [ref=e615]: 产品中心
+              - generic [ref=e616]: 【定向流量&游戏王卡】端外订购手机号绑定占比分析
+              - generic [ref=e617]:
+                - generic [ref=e618]: 👤
+                - generic [ref=e619]: 🔗 132777229
+                - generic [ref=e620]: ⏱️ 22天
+                - generic [ref=e621]: 📅 2026-03 第4周
+              - generic [ref=e623]: sigmoidguo
+              - generic [ref=e624]: 🎉 已完成
+            - generic [ref=e625] [cursor=pointer]:
+              - generic [ref=e626]:
+                - generic [ref=e627]: P1
+                - generic [ref=e628]: 商务中心
+              - generic [ref=e629]: 【定向流量】电信翼支付全国计费点合规改造适配
+              - generic [ref=e630]:
+                - generic [ref=e631]: 👤 jijiang
+                - generic [ref=e632]: 🔗 132853552
+                - generic [ref=e633]: ⏱️ 18天
+                - generic [ref=e634]: 📅 2026-04 第2周
+              - generic [ref=e636]: juibyyang
+              - generic [ref=e637]: 🎉 已完成
+            - generic [ref=e638] [cursor=pointer]:
+              - generic [ref=e639]:
+                - generic [ref=e640]: P1
+                - generic [ref=e641]: 产品中心
+              - generic [ref=e642]: 【【游戏王卡】端外投放接入货架配置】
+              - generic [ref=e643]:
+                - generic [ref=e644]: 👤 jijiang
+                - generic [ref=e645]: 🔗 132922707
+                - generic [ref=e646]: ⏱️ 18天
+                - generic [ref=e647]: 📅 2026-03 第5周
+              - generic [ref=e649]: benzphuang
+              - generic [ref=e650]: 🎉 已完成
+            - generic [ref=e651] [cursor=pointer]:
+              - generic [ref=e652]:
+                - generic [ref=e653]: P1
+                - generic [ref=e654]: 产品中心
+              - generic [ref=e655]: 【统一发奖服务】发奖查询报表
+              - generic [ref=e656]:
+                - generic [ref=e657]: 👤 jijiang
+                - generic [ref=e658]: 🔗 131610706
+                - generic [ref=e659]: ⏱️ 17天
+                - generic [ref=e660]: 📅 2026-03 第5周
+              - generic [ref=e662]: v_jjiayuliu
+              - generic [ref=e663]: 🎉 已完成
+            - generic [ref=e664] [cursor=pointer]:
+              - generic [ref=e665]:
+                - generic [ref=e666]: P1
+                - generic [ref=e667]: 产品中心
+              - generic [ref=e668]: 【数据处理需求】刷脸设备数据提取
+              - generic [ref=e669]:
+                - generic [ref=e670]: 👤 ckzheng
+                - generic [ref=e671]: 🔗 132974377
+                - generic [ref=e672]: ⏱️ 16天
+                - generic [ref=e673]: 📅 2026-03 第4周
+              - generic [ref=e675]: junyuzheng
+              - generic [ref=e676]: 🎉 已完成
+            - generic [ref=e677] [cursor=pointer]:
+              - generic [ref=e678]:
+                - generic [ref=e679]: P1
+                - generic [ref=e680]: 公共
+              - generic [ref=e681]: 【IEG 通讯】全量解绑会导致用户绑定状态异常
+              - generic [ref=e682]:
+                - generic [ref=e683]: 👤 fangtan
+                - generic [ref=e684]: 🔗 133010946
+                - generic [ref=e685]: ⏱️ 15天
+                - generic [ref=e686]: 📅 2026-03 第4周
+              - generic [ref=e688]: junyuzheng
+              - generic [ref=e689]: 🎉 已完成
+            - generic [ref=e690] [cursor=pointer]:
+              - generic [ref=e691]:
+                - generic [ref=e692]: P1
+                - generic [ref=e693]: 公共
+              - generic [ref=e694]: 【技术需求】业务网关频控优化
+              - generic [ref=e695]:
+                - generic [ref=e696]: 👤 fangtan
+                - generic [ref=e697]: 🔗 133014805
+                - generic [ref=e698]: ⏱️ 15天
+                - generic [ref=e699]: 📅 2026-03 第5周
+              - generic [ref=e701]: conniesun
+              - generic [ref=e702]: 🎉 已关闭
+            - generic [ref=e703] [cursor=pointer]:
+              - generic [ref=e704]:
+                - generic [ref=e705]: P1
+                - generic [ref=e706]: 公共
+              - generic [ref=e707]: 【线上问题】 通过openid上传的号码包，多场景id匹配号码变多
+              - generic [ref=e708]:
+                - generic [ref=e709]: 👤 fangtan
+                - generic [ref=e710]: 🔗 133060915
+                - generic [ref=e711]: ⏱️ 14天
+                - generic [ref=e712]: 📅 2026-03 第5周
+              - generic [ref=e714]: allanwei
+              - generic [ref=e715]: 🎉 已实现
+            - generic [ref=e716] [cursor=pointer]:
+              - generic [ref=e717]:
+                - generic [ref=e718]: P1
+                - generic [ref=e719]: 公共
+              - generic [ref=e720]: 【IC平台】营销任务灰度
+              - generic [ref=e721]:
+                - generic [ref=e722]: 👤 fangtan
+                - generic [ref=e723]: 🔗 133065132
+                - generic [ref=e724]: ⏱️ 13天
+                - generic [ref=e725]: 📅 2026-04 第1周
+              - generic [ref=e727]: allanwei
+              - generic [ref=e728]: 🎉 全量发布
+            - generic [ref=e729] [cursor=pointer]:
+              - generic [ref=e730]:
+                - generic [ref=e731]: P1
+                - generic [ref=e732]: 综合中心
+              - generic [ref=e733]: 【线上问题】国际短信报价系统缺陷
+              - generic [ref=e734]:
+                - generic [ref=e735]: 👤 fangtan
+                - generic [ref=e736]: 🔗 133148563
+                - generic [ref=e737]: ⏱️ 11天
+                - generic [ref=e738]: 📅 2026-04 第1周
+              - generic [ref=e740]: tealyao
+              - generic [ref=e741]: 🎉 已实现
+            - generic [ref=e742] [cursor=pointer]:
+              - generic [ref=e743]:
+                - generic [ref=e744]: P1
+                - generic [ref=e745]: 商务中心
+              - generic [ref=e746]: 【技术需求】物联网卡开通其他错误：当前群组为非TOP群组，不允许添加TOP标识单卡用户。
+              - generic [ref=e747]:
+                - generic [ref=e748]: 👤 fangtan
+                - generic [ref=e749]: 🔗 133161328
+                - generic [ref=e750]: ⏱️ 11天
+                - generic [ref=e751]: 📅 2026-04 第1周
+              - generic [ref=e753]: junyuzheng
+              - generic [ref=e754]: 🎉 已完成
+            - generic [ref=e755] [cursor=pointer]:
+              - generic [ref=e756]:
+                - generic [ref=e757]: P1
+                - generic [ref=e758]: 综合中心
+              - generic [ref=e759]: 【企业短信】oms省网端口配置筛选项数据来源修改
+              - generic [ref=e760]:
+                - generic [ref=e761]: 👤 fangtan
+                - generic [ref=e762]: 🔗 133181275
+                - generic [ref=e763]: ⏱️ 11天
+                - generic [ref=e764]: 📅 2026-04 第1周
+              - generic [ref=e766]: tealyao
+              - generic [ref=e767]: 🎉 已关闭
+            - generic [ref=e768] [cursor=pointer]:
+              - generic [ref=e769]:
+                - generic [ref=e770]: P1
+                - generic [ref=e771]: 公共
+              - generic [ref=e772]: 【营销短信】非 ABTest 模板场景 DataLoading 阶段预生成短链
+              - generic [ref=e773]:
+                - generic [ref=e774]: 👤 fangtan
+                - generic [ref=e775]: 🔗 133208541
+                - generic [ref=e776]: ⏱️ 10天
+                - generic [ref=e777]: 📅 2026-04 第2周
+              - generic [ref=e779]: camdenwang
+              - generic [ref=e780]: 🎉 已完成
+            - generic [ref=e781] [cursor=pointer]:
+              - generic [ref=e782]:
+                - generic [ref=e783]: P1
+                - generic [ref=e784]: 公共
+              - generic [ref=e785]: 【物联网卡】移动侧接口接入 poros_proxy 代理
+              - generic [ref=e786]:
+                - generic [ref=e787]: 👤 fangtan
+                - generic [ref=e788]: 🔗 133307480
+                - generic [ref=e789]: ⏱️ 7天
+                - generic [ref=e790]: 📅 2026-04 第2周
+              - generic [ref=e792]: benzphuang
+              - generic [ref=e793]: 🎉 已完成
+            - generic [ref=e794] [cursor=pointer]:
+              - generic [ref=e795]:
+                - generic [ref=e796]: P1
+                - generic [ref=e797]: 商务中心
+              - generic [ref=e798]: 【游戏王卡】手机号输入弹窗合规改造
+              - generic [ref=e799]:
+                - generic [ref=e800]: 👤 jijiang
+                - generic [ref=e801]: 🔗 133324246
+                - generic [ref=e802]: ⏱️ 6天
+                - generic [ref=e803]: 📅 2026-04 第4周
+              - generic [ref=e805]: juibyyang
+              - generic [ref=e806]: 🎉 已完成
+            - generic [ref=e807] [cursor=pointer]:
+              - generic [ref=e808]:
+                - generic [ref=e809]: P1
+                - generic [ref=e810]: 商务中心
+              - generic [ref=e811]: oms 系统提供 API 或者 MCP 支持商务侧查询报价、定制分析功能
+              - generic [ref=e812]:
+                - generic [ref=e813]: 👤 fangtan
+                - generic [ref=e814]: 🔗 133044860
+                - generic [ref=e815]: ⏱️ 5天
+                - generic [ref=e816]: 📅 2026-04 第1周
+              - generic [ref=e818]: conniesun
+              - generic [ref=e819]: 🎉 已完成
+            - generic [ref=e820] [cursor=pointer]:
+              - generic [ref=e821]:
+                - generic [ref=e822]: P1
+                - generic [ref=e823]: 公共
+              - generic [ref=e824]: 【前端技术需求】eco-vision CLI debug 模式体验优化
+              - generic [ref=e825]:
+                - generic [ref=e826]: 👤 kangkangran
+                - generic [ref=e827]: 🔗 133332727
+                - generic [ref=e828]: ⏱️ 5天
+                - generic [ref=e829]: 📅 2026-04 第2周
+              - generic [ref=e831]: kangkangran
+              - generic [ref=e832]: 🎉 已关闭
+            - generic [ref=e833] [cursor=pointer]:
+              - generic [ref=e834]:
+                - generic [ref=e835]: P1
+                - generic [ref=e836]: 公共
+              - generic [ref=e837]: 集运定向资格超时回调修复
+              - generic [ref=e838]:
+                - generic [ref=e839]: 👤 fangtan
+                - generic [ref=e840]: 🔗 133363434
+                - generic [ref=e841]: ⏱️ 4天
+                - generic [ref=e842]: 📅 2026-04 第2周
+              - generic [ref=e844]: conniesun
+              - generic [ref=e845]: 🎉 已实现
+            - generic [ref=e846] [cursor=pointer]:
+              - generic [ref=e847]:
+                - generic [ref=e848]: P1
+                - generic [ref=e849]: 公共
+              - generic [ref=e850]: 号段数据处理服务-容器调度时离线任务中断处理
+              - generic [ref=e851]:
+                - generic [ref=e852]: 👤 fangtan
+                - generic [ref=e853]: 🔗 133363746
+                - generic [ref=e854]: ⏱️ 4天
+                - generic [ref=e855]: 📅 2026-04 第3周
+              - generic [ref=e857]: conniesun
+              - generic [ref=e858]: 🎉 全量发布
+            - generic [ref=e859] [cursor=pointer]:
+              - generic [ref=e860]:
+                - generic [ref=e861]: P2
+                - generic [ref=e862]: 产品中心
+              - generic [ref=e863]: 【运营管理平台】活动ID新增上下线标签、开关
+              - generic [ref=e864]:
+                - generic [ref=e865]: 👤
+                - generic [ref=e866]: 🔗 132764413
+                - generic [ref=e867]: ⏱️ 22天
+                - generic [ref=e868]: 📅 2026-04 第2周
+              - generic [ref=e870]: guoleluo
+              - generic [ref=e871]: 🎉 已完成
+            - generic [ref=e872] [cursor=pointer]:
+              - generic [ref=e873]:
+                - generic [ref=e874]: P2
+                - generic [ref=e875]: 综合中心
+              - generic [ref=e876]: 【企业短信】通信管理平台 模版二期 异常报备体数据清理
+              - generic [ref=e877]:
+                - generic [ref=e878]: 👤
+                - generic [ref=e879]: 🔗 132744796
+                - generic [ref=e880]: ⏱️ 22天
+                - generic [ref=e881]: 📅 2026-04 第2周
+              - generic [ref=e883]: junyuzheng
+              - generic [ref=e884]: 🎉 已完成
+            - generic [ref=e885] [cursor=pointer]:
+              - generic [ref=e886]:
+                - generic [ref=e887]: P2
+                - generic [ref=e888]: 商务中心
+              - generic [ref=e889]: 物联网卡结算需求for深圳移动-三期
+              - generic [ref=e890]:
+                - generic [ref=e891]: 👤 fangtan
+                - generic [ref=e892]: 🔗 132865871
+                - generic [ref=e893]: ⏱️ 15天
+                - generic [ref=e894]: 📅 2026-04 第2周
+              - generic [ref=e896]: jiushugao
+              - generic [ref=e897]: 🎉 已关闭
+            - generic [ref=e898] [cursor=pointer]:
+              - generic [ref=e899]:
+                - generic [ref=e900]: P2
+                - generic [ref=e901]: 综合中心
+              - generic [ref=e902]: 子需求3-上下行记录页面需要查询新增字段：实际下发端口回传、支持错误码、错误码解释、错误处理建议回
+              - generic [ref=e903]:
+                - generic [ref=e904]: 👤 fangtan
+                - generic [ref=e905]: 🔗 130017189
+                - generic [ref=e906]: ⏱️ 10天
+                - generic [ref=e907]: 📅 2026-04 第3周
+              - generic [ref=e909]: shuqigao
+              - generic [ref=e910]: 🎉 已完成
+            - generic [ref=e911] [cursor=pointer]:
+              - generic [ref=e912]:
+                - generic [ref=e913]: P0
+                - generic [ref=e914]: 产品中心
+              - generic [ref=e915]: 【数据处理需求】扣量分析数据取数需求和数据排查
+              - generic [ref=e916]:
+                - generic [ref=e917]: 👤 aaliyahchen
+                - generic [ref=e918]: 🔗 132923193
+                - generic [ref=e919]: ⏱️ 16天
+                - generic [ref=e920]: 📅 2026-03 第5周
+              - generic [ref=e922]: v_jjiayuliu
+              - generic [ref=e923]: 🎉 已完成
+            - generic [ref=e924] [cursor=pointer]:
+              - generic [ref=e925]:
+                - generic [ref=e926]: P0
+                - generic [ref=e927]: 产品中心
+              - generic [ref=e928]: 【IC平台】V5.5 审批后可以支持暂停和继续下发
+              - generic [ref=e929]:
+                - generic [ref=e930]: 👤 jesydong
+                - generic [ref=e931]: 🔗 133440532
+                - generic [ref=e932]: ⏱️ 3天
+                - generic [ref=e933]: 📅 2026-04 第3周
+              - generic [ref=e934]:
+                - generic [ref=e935]: allanwei
+                - generic [ref=e936]: lintonliu
+              - generic [ref=e937]: 🎉 已完成
+        - generic [ref=e938]:
+          - generic [ref=e939]:
+            - generic [ref=e940]: 🚫 已拒绝/挂起
+            - generic [ref=e941]: "1"
+          - generic [ref=e943] [cursor=pointer]:
+            - generic [ref=e944]:
+              - generic [ref=e945]: P1
+              - generic [ref=e946]: 商务中心
+            - generic [ref=e947]: 【定向流量&游戏王卡】用户画像数据维度与退订/投诉相关性分析调研需求
+            - generic [ref=e948]:
+              - generic [ref=e949]: 👤 jijiang
+              - generic [ref=e950]: 🔗 131798145
+              - generic [ref=e951]: ⏱️ 10天
+              - generic [ref=e952]: 📅 2026-04 第2周
+            - generic [ref=e953]: ⏸️ 挂起
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

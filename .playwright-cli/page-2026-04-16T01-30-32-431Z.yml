@@ -1,0 +1,354 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [active] [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e4263]:
+    - generic [ref=e4264]:
+      - generic [ref=e4265]:
+        - generic [ref=e4266]: 🏢
+        - generic [ref=e4267]: "1"
+        - generic [ref=e4268]: 周例会次数
+      - generic [ref=e4269]:
+        - generic [ref=e4270]: 💎
+        - generic [ref=e4271]: "1"
+        - generic [ref=e4272]: 权益站立会次数
+      - generic [ref=e4273]:
+        - generic [ref=e4274]: 📡
+        - generic [ref=e4275]: "2"
+        - generic [ref=e4276]: 通讯站立会次数
+      - generic [ref=e4277]:
+        - generic [ref=e4278]: ⚠️
+        - generic [ref=e4279]: "1"
+        - generic [ref=e4280]: 风险项总数
+    - generic [ref=e4281]:
+      - generic [ref=e4283]:
+        - generic [ref=e4284]: 📊
+        - text: 月度数据概览
+      - generic [ref=e4286]:
+        - generic [ref=e4287]:
+          - heading "📊 会议统计" [level=4] [ref=e4288]
+          - generic [ref=e4289]:
+            - generic [ref=e4290]:
+              - generic [ref=e4291]: 周例会
+              - generic [ref=e4293]: "1"
+              - generic [ref=e4294]: "1"
+            - generic [ref=e4295]:
+              - generic [ref=e4296]: 权益站立会
+              - generic [ref=e4298]: "1"
+              - generic [ref=e4299]: "1"
+            - generic [ref=e4300]:
+              - generic [ref=e4301]: 通讯站立会
+              - generic [ref=e4303]: "2"
+              - generic [ref=e4304]: "2"
+        - generic [ref=e4305]:
+          - heading "✅ Action完成率" [level=4] [ref=e4306]
+          - generic [ref=e4307]:
+            - generic [ref=e4308]: 40%
+            - generic [ref=e4309]: 2/5 已完成
+            - generic [ref=e4310]: ⚠️ 1 项已逾期
+        - generic [ref=e4311]:
+          - heading "⚠️ 风险分布" [level=4] [ref=e4312]
+          - generic [ref=e4313]:
+            - generic [ref=e4314]:
+              - generic [ref=e4315]: 🔴 高风险
+              - generic [ref=e4318]: "0"
+            - generic [ref=e4319]:
+              - generic [ref=e4320]: 🟡 中风险
+              - generic [ref=e4322]: "1"
+              - generic [ref=e4323]: "1"
+            - generic [ref=e4324]:
+              - generic [ref=e4325]: 🟢 低风险
+              - generic [ref=e4328]: "0"
+        - generic [ref=e4329]:
+          - heading "📅 排期变更分布" [level=4] [ref=e4330]
+          - generic [ref=e4331]:
+            - generic [ref=e4332]:
+              - generic [ref=e4333]: 延期
+              - generic [ref=e4335]: "8"
+              - generic [ref=e4336]: "8"
+            - generic [ref=e4337]:
+              - generic [ref=e4338]: 插队
+              - generic [ref=e4341]: "0"
+            - generic [ref=e4342]:
+              - generic [ref=e4343]: 提前
+              - generic [ref=e4346]: "0"
+            - generic [ref=e4347]:
+              - generic [ref=e4348]: 取消
+              - generic [ref=e4351]: "0"
+    - generic [ref=e4352]:
+      - generic [ref=e4354]:
+        - generic [ref=e4355]: 📋
+        - text: 需求状态总览（最近快照）
+      - table [ref=e4357]:
+        - rowgroup [ref=e4358]:
+          - row "TAPD ID 需求名称 业务线 负责人 最新状态 风险等级 最后更新" [ref=e4359]:
+            - columnheader "TAPD ID" [ref=e4360]
+            - columnheader "需求名称" [ref=e4361]
+            - columnheader "业务线" [ref=e4362]
+            - columnheader "负责人" [ref=e4363]
+            - columnheader "最新状态" [ref=e4364]
+            - columnheader "风险等级" [ref=e4365]
+            - columnheader "最后更新" [ref=e4366]
+        - rowgroup [ref=e4367]:
+          - row "131912549 【IC平台】5g阅信接口改造+计费 通讯 allanwei, kangkangran 🟢 正常 🟢 低 2026-04-02" [ref=e4368]:
+            - cell "131912549" [ref=e4369]
+            - cell "【IC平台】5g阅信接口改造+计费" [ref=e4370]
+            - cell "通讯" [ref=e4371]
+            - cell "allanwei, kangkangran" [ref=e4372]
+            - cell "🟢 正常" [ref=e4373]:
+              - generic [ref=e4374]: 🟢 正常
+            - cell "🟢 低" [ref=e4375]
+            - cell "2026-04-02" [ref=e4376]
+          - row "131916516 【数据处理需求】5G阅信报表 通讯 sigmoidguo 🟢 正常 🟢 低 2026-04-02" [ref=e4377]:
+            - cell "131916516" [ref=e4378]
+            - cell "【数据处理需求】5G阅信报表" [ref=e4379]
+            - cell "通讯" [ref=e4380]
+            - cell "sigmoidguo" [ref=e4381]
+            - cell "🟢 正常" [ref=e4382]:
+              - generic [ref=e4383]: 🟢 正常
+            - cell "🟢 低" [ref=e4384]
+            - cell "2026-04-02" [ref=e4385]
+          - row "131258962 【IC平台】ai智能投放 通讯 camdenwang, lintonliu,sigmoidguo 🟢 正常 🟢 低 2026-04-02" [ref=e4386]:
+            - cell "131258962" [ref=e4387]
+            - cell "【IC平台】ai智能投放" [ref=e4388]
+            - cell "通讯" [ref=e4389]
+            - cell "camdenwang, lintonliu,sigmoidguo" [ref=e4390]
+            - cell "🟢 正常" [ref=e4391]:
+              - generic [ref=e4392]: 🟢 正常
+            - cell "🟢 低" [ref=e4393]
+            - cell "2026-04-02" [ref=e4394]
+          - row "130016407 【企业短信】关于改造CMPP协议-子需求2 通讯 shuqigao 🟢 正常 🟢 低 2026-04-02" [ref=e4395]:
+            - cell "130016407" [ref=e4396]
+            - cell "【企业短信】关于改造CMPP协议-子需求2" [ref=e4397]
+            - cell "通讯" [ref=e4398]
+            - cell "shuqigao" [ref=e4399]
+            - cell "🟢 正常" [ref=e4400]:
+              - generic [ref=e4401]: 🟢 正常
+            - cell "🟢 低" [ref=e4402]
+            - cell "2026-04-02" [ref=e4403]
+          - row "131202478 【企业短信】关于改造CMPP协议-子需求1 通讯 shuqigao 🟢 正常 🟢 低 2026-04-01" [ref=e4404]:
+            - cell "131202478" [ref=e4405]
+            - cell "【企业短信】关于改造CMPP协议-子需求1" [ref=e4406]
+            - cell "通讯" [ref=e4407]
+            - cell "shuqigao" [ref=e4408]
+            - cell "🟢 正常" [ref=e4409]:
+              - generic [ref=e4410]: 🟢 正常
+            - cell "🟢 低" [ref=e4411]
+            - cell "2026-04-01" [ref=e4412]
+          - row "132463360 【功能短信】供应商配置页面字段补齐 通讯 tealyao 🟢 正常 🟢 低 2026-04-01" [ref=e4413]:
+            - cell "132463360" [ref=e4414]
+            - cell "【功能短信】供应商配置页面字段补齐" [ref=e4415]
+            - cell "通讯" [ref=e4416]
+            - cell "tealyao" [ref=e4417]
+            - cell "🟢 正常" [ref=e4418]:
+              - generic [ref=e4419]: 🟢 正常
+            - cell "🟢 低" [ref=e4420]
+            - cell "2026-04-01" [ref=e4421]
+          - row "131912980 【IC平台】批量录入+审批+通知 通讯 allanwei, kangkangran 🔴 延期 🟢 低 2026-04-01" [ref=e4422]:
+            - cell "131912980" [ref=e4423]
+            - cell "【IC平台】批量录入+审批+通知" [ref=e4424]
+            - cell "通讯" [ref=e4425]
+            - cell "allanwei, kangkangran" [ref=e4426]
+            - cell "🔴 延期" [ref=e4427]:
+              - generic [ref=e4428]: 🔴 延期
+            - cell "🟢 低" [ref=e4429]
+            - cell "2026-04-01" [ref=e4430]
+          - row "131912881 【IC平台】营销接口扣费+拦截 通讯 allanwei, kangkangran 🟢 正常 🟢 低 2026-04-02" [ref=e4431]:
+            - cell "131912881" [ref=e4432]
+            - cell "【IC平台】营销接口扣费+拦截" [ref=e4433]
+            - cell "通讯" [ref=e4434]
+            - cell "allanwei, kangkangran" [ref=e4435]
+            - cell "🟢 正常" [ref=e4436]:
+              - generic [ref=e4437]: 🟢 正常
+            - cell "🟢 低" [ref=e4438]
+            - cell "2026-04-02" [ref=e4439]
+          - row "131950328 【数据处理需求】通讯业务数据标签库 通讯 lintonliu, sigmoidguo 🟢 正常 🟢 低 2026-04-02" [ref=e4440]:
+            - cell "131950328" [ref=e4441]
+            - cell "【数据处理需求】通讯业务数据标签库" [ref=e4442]
+            - cell "通讯" [ref=e4443]
+            - cell "lintonliu, sigmoidguo" [ref=e4444]
+            - cell "🟢 正常" [ref=e4445]:
+              - generic [ref=e4446]: 🟢 正常
+            - cell "🟢 低" [ref=e4447]
+            - cell "2026-04-02" [ref=e4448]
+          - row "132764218 【定向流量】不支持订购的用户引导开通王卡功能 权益 guoleluo 🟢 正常 🟢 低 2026-04-02" [ref=e4449]:
+            - cell "132764218" [ref=e4450]
+            - cell "【定向流量】不支持订购的用户引导开通王卡功能" [ref=e4451]
+            - cell "权益" [ref=e4452]
+            - cell "guoleluo" [ref=e4453]
+            - cell "🟢 正常" [ref=e4454]:
+              - generic [ref=e4455]: 🟢 正常
+            - cell "🟢 低" [ref=e4456]
+            - cell "2026-04-02" [ref=e4457]
+          - row "132835157 【运营AI需求专项】活动配置-二期 权益 jiushugao 🟢 正常 🟢 低 2026-04-02" [ref=e4458]:
+            - cell "132835157" [ref=e4459]
+            - cell "【运营AI需求专项】活动配置-二期" [ref=e4460]
+            - cell "权益" [ref=e4461]
+            - cell "jiushugao" [ref=e4462]
+            - cell "🟢 正常" [ref=e4463]:
+              - generic [ref=e4464]: 🟢 正常
+            - cell "🟢 低" [ref=e4465]
+            - cell "2026-04-02" [ref=e4466]
+          - row "132974377 【数据处理需求】刷脸设备数据提取 权益 junyuzheng 🟢 正常 🟢 低 2026-04-02" [ref=e4467]:
+            - cell "132974377" [ref=e4468]
+            - cell "【数据处理需求】刷脸设备数据提取" [ref=e4469]
+            - cell "权益" [ref=e4470]
+            - cell "junyuzheng" [ref=e4471]
+            - cell "🟢 正常" [ref=e4472]:
+              - generic [ref=e4473]: 🟢 正常
+            - cell "🟢 低" [ref=e4474]
+            - cell "2026-04-02" [ref=e4475]
+          - row "132865871 物联网卡结算需求for深圳移动-三期 权益 jiushugao 🟢 正常 🟢 低 2026-04-02" [ref=e4476]:
+            - cell "132865871" [ref=e4477]
+            - cell "物联网卡结算需求for深圳移动-三期" [ref=e4478]
+            - cell "权益" [ref=e4479]
+            - cell "jiushugao" [ref=e4480]
+            - cell "🟢 正常" [ref=e4481]:
+              - generic [ref=e4482]: 🟢 正常
+            - cell "🟢 低" [ref=e4483]
+            - cell "2026-04-02" [ref=e4484]
+          - row "131610706 【统一发奖服务】发奖查询报表 权益 v_jjiayuliu 🟢 正常 🟢 低 2026-04-02" [ref=e4485]:
+            - cell "131610706" [ref=e4486]
+            - cell "【统一发奖服务】发奖查询报表" [ref=e4487]
+            - cell "权益" [ref=e4488]
+            - cell "v_jjiayuliu" [ref=e4489]
+            - cell "🟢 正常" [ref=e4490]:
+              - generic [ref=e4491]: 🟢 正常
+            - cell "🟢 低" [ref=e4492]
+            - cell "2026-04-02" [ref=e4493]
+          - row "132764413 【运营管理平台】活动ID新增上下线标签、开关 权益 guoleluo 🟢 正常 🟢 低 2026-04-02" [ref=e4494]:
+            - cell "132764413" [ref=e4495]
+            - cell "【运营管理平台】活动ID新增上下线标签、开关" [ref=e4496]
+            - cell "权益" [ref=e4497]
+            - cell "guoleluo" [ref=e4498]
+            - cell "🟢 正常" [ref=e4499]:
+              - generic [ref=e4500]: 🟢 正常
+            - cell "🟢 低" [ref=e4501]
+            - cell "2026-04-02" [ref=e4502]
+          - row "132838754 【定向流量】PC端活动页适配改造 权益 kangkangran 🟢 正常 🟢 低 2026-04-02" [ref=e4503]:
+            - cell "132838754" [ref=e4504]
+            - cell "【定向流量】PC端活动页适配改造" [ref=e4505]
+            - cell "权益" [ref=e4506]
+            - cell "kangkangran" [ref=e4507]
+            - cell "🟢 正常" [ref=e4508]:
+              - generic [ref=e4509]: 🟢 正常
+            - cell "🟢 低" [ref=e4510]
+            - cell "2026-04-02" [ref=e4511]
+          - row "132853552 【定向流量】电信翼支付全国计费点合规改造适配 权益 juibyyang 🟢 正常 🟢 低 2026-04-02" [ref=e4512]:
+            - cell "132853552" [ref=e4513]
+            - cell "【定向流量】电信翼支付全国计费点合规改造适配" [ref=e4514]
+            - cell "权益" [ref=e4515]
+            - cell "juibyyang" [ref=e4516]
+            - cell "🟢 正常" [ref=e4517]:
+              - generic [ref=e4518]: 🟢 正常
+            - cell "🟢 低" [ref=e4519]
+            - cell "2026-04-02" [ref=e4520]
+          - row "132922707 【【游戏王卡】端外投放接入货架配置】 权益 benzphuang 🟢 正常 🟢 低 2026-04-02" [ref=e4521]:
+            - cell "132922707" [ref=e4522]
+            - cell "【【游戏王卡】端外投放接入货架配置】" [ref=e4523]
+            - cell "权益" [ref=e4524]
+            - cell "benzphuang" [ref=e4525]
+            - cell "🟢 正常" [ref=e4526]:
+              - generic [ref=e4527]: 🟢 正常
+            - cell "🟢 低" [ref=e4528]
+            - cell "2026-04-02" [ref=e4529]
+          - row "132329672 【技术需求】taf老服务迁移--StationDataSvr迁移 公共技术 conniesun 🔴 延期 🟢 低 2026-04-02" [ref=e4530]:
+            - cell "132329672" [ref=e4531]
+            - cell "【技术需求】taf老服务迁移--StationDataSvr迁移" [ref=e4532]
+            - cell "公共技术" [ref=e4533]
+            - cell "conniesun" [ref=e4534]
+            - cell "🔴 延期" [ref=e4535]:
+              - generic [ref=e4536]: 🔴 延期
+            - cell "🟢 低" [ref=e4537]
+            - cell "2026-04-02" [ref=e4538]
+          - row "132838349 【技术需求】AI 巡检分析平台核心能力建设 公共技术 benzphuang 🟢 正常 🟢 低 2026-04-02" [ref=e4539]:
+            - cell "132838349" [ref=e4540]
+            - cell "【技术需求】AI 巡检分析平台核心能力建设" [ref=e4541]
+            - cell "公共技术" [ref=e4542]
+            - cell "benzphuang" [ref=e4543]
+            - cell "🟢 正常" [ref=e4544]:
+              - generic [ref=e4545]: 🟢 正常
+            - cell "🟢 低" [ref=e4546]
+            - cell "2026-04-02" [ref=e4547]
+          - row "132847681 【数据处理需求】梦网彩信升阅信端口彩信下发成功量数据回溯 通讯 v_jjiayuliu 🟢 正常 🟢 低 2026-04-02" [ref=e4548]:
+            - cell "132847681" [ref=e4549]
+            - cell "【数据处理需求】梦网彩信升阅信端口彩信下发成功量数据回溯" [ref=e4550]
+            - cell "通讯" [ref=e4551]
+            - cell "v_jjiayuliu" [ref=e4552]
+            - cell "🟢 正常" [ref=e4553]:
+              - generic [ref=e4554]: 🟢 正常
+            - cell "🟢 低" [ref=e4555]
+            - cell "2026-04-02" [ref=e4556]
+          - row "133106171 【IC平台】功能业务代码扣费 通讯 camdenwang, allanwei, kangkangran 🟢 正常 🟢 低 2026-04-02" [ref=e4557]:
+            - cell "133106171" [ref=e4558]
+            - cell "【IC平台】功能业务代码扣费" [ref=e4559]
+            - cell "通讯" [ref=e4560]
+            - cell "camdenwang, allanwei, kangkangran" [ref=e4561]
+            - cell "🟢 正常" [ref=e4562]:
+              - generic [ref=e4563]: 🟢 正常
+            - cell "🟢 低" [ref=e4564]
+            - cell "2026-04-02" [ref=e4565]
+          - row "133097634 【IC平台】营销接口按天聚合展示在IC 通讯 kangkangran, sigmoidguo 🟢 正常 🟢 低 2026-04-02" [ref=e4566]:
+            - cell "133097634" [ref=e4567]
+            - cell "【IC平台】营销接口按天聚合展示在IC" [ref=e4568]
+            - cell "通讯" [ref=e4569]
+            - cell "kangkangran, sigmoidguo" [ref=e4570]
+            - cell "🟢 正常" [ref=e4571]:
+              - generic [ref=e4572]: 🟢 正常
+            - cell "🟢 低" [ref=e4573]
+            - cell "2026-04-02" [ref=e4574]
+          - row "133081362 【IC平台】5g阅信在IC的扣费 通讯 camdenwang 🟢 正常 🟢 低 2026-04-02" [ref=e4575]:
+            - cell "133081362" [ref=e4576]
+            - cell "【IC平台】5g阅信在IC的扣费" [ref=e4577]
+            - cell "通讯" [ref=e4578]
+            - cell "camdenwang" [ref=e4579]
+            - cell "🟢 正常" [ref=e4580]:
+              - generic [ref=e4581]: 🟢 正常
+            - cell "🟢 低" [ref=e4582]
+            - cell "2026-04-02" [ref=e4583]
+          - row "133136713 【数据处理需求】转化追踪报表公平传输字段新增空白组数据 通讯 v_jjiayuliu 🟢 正常 🟢 低 2026-04-02" [ref=e4584]:
+            - cell "133136713" [ref=e4585]
+            - cell "【数据处理需求】转化追踪报表公平传输字段新增空白组数据" [ref=e4586]
+            - cell "通讯" [ref=e4587]
+            - cell "v_jjiayuliu" [ref=e4588]
+            - cell "🟢 正常" [ref=e4589]:
+              - generic [ref=e4590]: 🟢 正常
+            - cell "🟢 低" [ref=e4591]
+            - cell "2026-04-02" [ref=e4592]
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"

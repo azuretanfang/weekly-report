@@ -1,0 +1,623 @@
+- generic [ref=e1]:
+  - banner [ref=e18]:
+    - generic [ref=e19]:
+      - heading "📋 研发项管·会议记录&需求排期系统" [level=1] [ref=e20]
+      - generic [ref=e21]:
+        - generic [ref=e102]:
+          - generic [ref=e103]: 👑 项管 PM
+          - generic [ref=e104]: fangtan
+          - button "退出" [ref=e105] [cursor=pointer]
+        - textbox [ref=e23] [cursor=pointer]: 2026-04
+        - button "📤 导出月度数据" [ref=e24] [cursor=pointer]
+        - button "📥 导入数据" [ref=e25] [cursor=pointer]
+    - navigation [ref=e26]:
+      - button "📦 需求池" [ref=e27] [cursor=pointer]
+      - button "📅 排期表" [ref=e28] [cursor=pointer]
+      - button "✅ Action追踪" [ref=e29] [cursor=pointer]
+      - button "📊 月度变更日志" [active] [ref=e30] [cursor=pointer]
+      - button "📈 统计仪表盘" [ref=e31] [cursor=pointer]
+      - button "✏️ 新建会议" [ref=e32] [cursor=pointer]
+      - button "📅 月度记录" [ref=e33] [cursor=pointer]
+  - generic [ref=e5865]:
+    - generic [ref=e5866]:
+      - generic [ref=e5867]:
+        - generic [ref=e5868]: 📊
+        - generic [ref=e5869]: "69"
+        - generic [ref=e5870]: 本月排期变更
+      - generic [ref=e5871]:
+        - generic [ref=e5872]: ⏳
+        - generic [ref=e5873]: "8"
+        - generic [ref=e5874]: 延期
+      - generic [ref=e5875]:
+        - generic [ref=e5876]: 🆕
+        - generic [ref=e5877]: "0"
+        - generic [ref=e5878]: 插队
+      - generic [ref=e5879]:
+        - generic [ref=e5880]: ❌
+        - generic [ref=e5881]: "0"
+        - generic [ref=e5882]: 取消
+    - generic [ref=e5883]:
+      - generic [ref=e5885]:
+        - generic [ref=e5886]: 📊
+        - text: 排期变更日志
+      - generic [ref=e5887]:
+        - generic [ref=e5888]:
+          - generic [ref=e5889]: 📝
+          - generic [ref=e5890]:
+            - generic [ref=e5891]: "[按时] TAPD 133404101"
+            - generic [ref=e5892]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：IC 任务下发短信时 text 服务跳过冗余授权校验 — 交付状态：按时交付
+          - generic [ref=e5893]: 2026-04-15
+        - generic [ref=e5894]:
+          - generic [ref=e5895]: ⏳
+          - generic [ref=e5896]:
+            - generic [ref=e5897]: "[延期] TAPD 131950328"
+            - generic [ref=e5898]:
+              - text: "| 原因：产品体验阶段有 bug 要调整，4.14 重新提交体验，4.15 发布"
+              - text: 受影响：【数据处理需求】通讯业务数据标签库 — 交付状态：延期
+          - generic [ref=e5899]: 2026-04-15
+        - generic [ref=e5900]:
+          - generic [ref=e5901]: ⏳
+          - generic [ref=e5902]:
+            - generic [ref=e5903]: "[延期] TAPD 131258962"
+            - generic [ref=e5904]:
+              - text: "| 原因：前端休假 1 天，后台休假半天，联调进度受阻，导致转测延期，4.10 下午转测"
+              - text: 受影响：【IC平台】V5.0ai智能投放 — 交付状态：延期
+          - generic [ref=e5905]: 2026-04-10
+        - generic [ref=e5906]:
+          - generic [ref=e5907]: ⏳
+          - generic [ref=e5908]:
+            - generic [ref=e5909]: "[延期] TAPD 131950328"
+            - generic [ref=e5910]:
+              - text: "| 原因：4.10 延期处理其他事务 下午交付"
+              - text: 受影响：【数据处理需求】通讯业务数据标签库 — 交付状态：延期
+          - generic [ref=e5911]: 2026-04-10
+        - generic [ref=e5912]:
+          - generic [ref=e5913]: 📝
+          - generic [ref=e5914]:
+            - generic [ref=e5915]: "[按时] TAPD 131610315"
+            - generic [ref=e5916]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】端外投放接入外部统一接入服务 — 交付状态：按时交付
+          - generic [ref=e5917]: 2026-04-09
+        - generic [ref=e5918]:
+          - generic [ref=e5919]: ⏳
+          - generic [ref=e5920]:
+            - generic [ref=e5921]: "[延期] TAPD 128723972"
+            - generic [ref=e5922]:
+              - text: "| 原因：3.23 未完成交付，原因：新增取数需求，3.24 产品验收。2 个问题1、第一个问题：需求中写明是“时间”，但是没有指明是“账本金额更新时间”，还是“流水产生时间”，在db中是存在2个表中的，应该是在需求评审前需要对齐的，算是产品、开发共同的问题 2、第二个问题：展示问题，平台错误把thive中的备注当做了“字段名”，这个我手动修复一下，算是开发侧交付的质量问题"
+              - text: 受影响：【数据处理需求】账户充值消耗表 — 交付状态：延期
+          - generic [ref=e5923]: 2026-04-09
+        - generic [ref=e5924]:
+          - generic [ref=e5925]: ⏳
+          - generic [ref=e5926]:
+            - generic [ref=e5927]: "[延期] TAPD 131912980"
+            - generic [ref=e5928]:
+              - text: "| 原因：主要为后台环境问题；有几个问题昨天一直没有找到原因，反复复现上面多花了些时间。另外就是之前对角色权限这一块的细节不太清楚，测试账号有脏数据，所以权限测试也多花了些时间；3.25仍未发布 已经灰度，预计 3.30 发布"
+              - text: 受影响：【IC平台】批量录入+审批+通知 — 交付状态：延期
+          - generic [ref=e5929]: 2026-04-09
+        - generic [ref=e5930]:
+          - generic [ref=e5931]: 📝
+          - generic [ref=e5932]:
+            - generic [ref=e5933]: "[按时] TAPD 131932968"
+            - generic [ref=e5934]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【IC平台】余额告警 — 交付状态：按时交付
+          - generic [ref=e5935]: 2026-04-09
+        - generic [ref=e5936]:
+          - generic [ref=e5937]: 📝
+          - generic [ref=e5938]:
+            - generic [ref=e5939]: "[按时] TAPD 132568039"
+            - generic [ref=e5940]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】通信管理平台支持灰度发布 — 交付状态：按时交付
+          - generic [ref=e5941]: 2026-04-09
+        - generic [ref=e5942]:
+          - generic [ref=e5943]: 📝
+          - generic [ref=e5944]:
+            - generic [ref=e5945]: "[按时] TAPD 132853121"
+            - generic [ref=e5946]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】供应商短信错误码管理平台-存量数据清洗和导入 — 交付状态：按时交付
+          - generic [ref=e5947]: 2026-04-09
+        - generic [ref=e5948]:
+          - generic [ref=e5949]: 📝
+          - generic [ref=e5950]:
+            - generic [ref=e5951]: "[按时] TAPD 132947049"
+            - generic [ref=e5952]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【运营AI需求专项】AI 数据分析-dola质量分提升 — 交付状态：按时交付
+          - generic [ref=e5953]: 2026-04-09
+        - generic [ref=e5954]:
+          - generic [ref=e5955]: 📝
+          - generic [ref=e5956]:
+            - generic [ref=e5957]: "[按时] TAPD 133010946"
+            - generic [ref=e5958]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【IEG 通讯】全量解绑会导致用户绑定状态异常 — 交付状态：按时交付
+          - generic [ref=e5959]: 2026-04-09
+        - generic [ref=e5960]:
+          - generic [ref=e5961]: 📝
+          - generic [ref=e5962]:
+            - generic [ref=e5963]: "[按时] TAPD 133208541"
+            - generic [ref=e5964]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【营销短信】非 ABTest 模板场景 DataLoading 阶段预生成短链 — 交付状态：按时交付
+          - generic [ref=e5965]: 2026-04-09
+        - generic [ref=e5966]:
+          - generic [ref=e5967]: 📝
+          - generic [ref=e5968]:
+            - generic [ref=e5969]: "[按时] TAPD 133181275"
+            - generic [ref=e5970]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】oms省网端口配置筛选项数据来源修改 — 交付状态：按时交付
+          - generic [ref=e5971]: 2026-04-09
+        - generic [ref=e5972]:
+          - generic [ref=e5973]: 📝
+          - generic [ref=e5974]:
+            - generic [ref=e5975]: "[按时] TAPD 133161328"
+            - generic [ref=e5976]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】物联网卡开通其他错误：当前群组为非TOP群组，不允许添加TOP标识单卡用户。 — 交付状态：按时交付
+          - generic [ref=e5977]: 2026-04-09
+        - generic [ref=e5978]:
+          - generic [ref=e5979]: 📝
+          - generic [ref=e5980]:
+            - generic [ref=e5981]: "[按时] TAPD 133060915"
+            - generic [ref=e5982]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【线上问题】 通过openid上传的号码包，多场景id匹配号码变多 — 交付状态：按时交付
+          - generic [ref=e5983]: 2026-04-09
+        - generic [ref=e5984]:
+          - generic [ref=e5985]: 📝
+          - generic [ref=e5986]:
+            - generic [ref=e5987]: "[按时] TAPD 132865871"
+            - generic [ref=e5988]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：物联网卡结算需求for深圳移动-三期 — 交付状态：按时交付
+          - generic [ref=e5989]: 2026-04-09
+        - generic [ref=e5990]:
+          - generic [ref=e5991]: 📝
+          - generic [ref=e5992]:
+            - generic [ref=e5993]: "[按时] TAPD 131091967"
+            - generic [ref=e5994]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】供应商短信错误码管理平台前端 — 交付状态：按时交付
+          - generic [ref=e5995]: 2026-04-09
+        - generic [ref=e5996]:
+          - generic [ref=e5997]: 📝
+          - generic [ref=e5998]:
+            - generic [ref=e5999]: "[按时] TAPD 132777229"
+            - generic [ref=e6000]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量&游戏王卡】端外订购手机号绑定占比分析 — 交付状态：按时交付
+          - generic [ref=e6001]: 2026-04-09
+        - generic [ref=e6002]:
+          - generic [ref=e6003]: 📝
+          - generic [ref=e6004]:
+            - generic [ref=e6005]: "[按时] TAPD 128441211"
+            - generic [ref=e6006]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】在通管平台设立年度刊例价跨部门审批流 — 交付状态：按时交付
+          - generic [ref=e6007]: 2026-04-09
+        - generic [ref=e6008]:
+          - generic [ref=e6009]: 📝
+          - generic [ref=e6010]:
+            - generic [ref=e6011]: "[按时] TAPD 131618849"
+            - generic [ref=e6012]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【游戏权益中台】抖音电商-证书更新 — 交付状态：按时交付
+          - generic [ref=e6013]: 2026-04-09
+        - generic [ref=e6014]:
+          - generic [ref=e6015]: 📝
+          - generic [ref=e6016]:
+            - generic [ref=e6017]: "[按时] TAPD 128789820"
+            - generic [ref=e6018]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：供应商传输协议更新为HTTPS — 交付状态：按时交付
+          - generic [ref=e6019]: 2026-04-09
+        - generic [ref=e6020]:
+          - generic [ref=e6021]: 📝
+          - generic [ref=e6022]:
+            - generic [ref=e6023]: "[按时] TAPD 131610706"
+            - generic [ref=e6024]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【统一发奖服务】发奖查询报表 — 交付状态：按时交付
+          - generic [ref=e6025]: 2026-04-09
+        - generic [ref=e6026]:
+          - generic [ref=e6027]: 📝
+          - generic [ref=e6028]:
+            - generic [ref=e6029]: "[按时] TAPD 130516526"
+            - generic [ref=e6030]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【游戏王卡】订单表中开卡带来包订单的省份、pid录入优化 — 交付状态：按时交付
+          - generic [ref=e6031]: 2026-04-09
+        - generic [ref=e6032]:
+          - generic [ref=e6033]: 📝
+          - generic [ref=e6034]:
+            - generic [ref=e6035]: "[按时] TAPD 129758928"
+            - generic [ref=e6036]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【游戏王卡】手机号优先级&授权协议优化 — 交付状态：按时交付
+          - generic [ref=e6037]: 2026-04-09
+        - generic [ref=e6038]:
+          - generic [ref=e6039]: 📝
+          - generic [ref=e6040]:
+            - generic [ref=e6041]: "[按时] TAPD 130281600"
+            - generic [ref=e6042]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【测试支持】测试配置提效-knot工具 — 交付状态：按时交付
+          - generic [ref=e6043]: 2026-04-09
+        - generic [ref=e6044]:
+          - generic [ref=e6045]: 📝
+          - generic [ref=e6046]:
+            - generic [ref=e6047]: "[按时] TAPD 131901889"
+            - generic [ref=e6048]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】无畏契约语音外呼明文手机号转openid — 交付状态：按时交付
+          - generic [ref=e6049]: 2026-04-09
+        - generic [ref=e6050]:
+          - generic [ref=e6051]: 📝
+          - generic [ref=e6052]:
+            - generic [ref=e6053]: "[按时] TAPD 131976637"
+            - generic [ref=e6054]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】DNF端游33数据 — 交付状态：按时交付
+          - generic [ref=e6055]: 2026-04-09
+        - generic [ref=e6056]:
+          - generic [ref=e6057]: 📝
+          - generic [ref=e6058]:
+            - generic [ref=e6059]: "[按时] TAPD 131786514"
+            - generic [ref=e6060]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】CFM公平tdw人工加数 — 交付状态：按时交付
+          - generic [ref=e6061]: 2026-04-09
+        - generic [ref=e6062]:
+          - generic [ref=e6063]: 📝
+          - generic [ref=e6064]:
+            - generic [ref=e6065]: "[按时] TAPD 132222231"
+            - generic [ref=e6066]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】排查订单创建时间晚于订购成功时间问题 — 交付状态：按时交付
+          - generic [ref=e6067]: 2026-04-09
+        - generic [ref=e6068]:
+          - generic [ref=e6069]: 📝
+          - generic [ref=e6070]:
+            - generic [ref=e6071]: "[按时] TAPD 129748047"
+            - generic [ref=e6072]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【IC平台】V4.6创建任务时可以设置空白对照组 — 交付状态：按时交付
+          - generic [ref=e6073]: 2026-04-09
+        - generic [ref=e6074]:
+          - generic [ref=e6075]: 📝
+          - generic [ref=e6076]:
+            - generic [ref=e6077]: "[排期调整] TAPD 131912549"
+            - generic [ref=e6078]:
+              - text: "| 原因：需求有部分未完成，已拆分为其他需求跟进"
+              - text: 受影响：【IC平台】5g阅信接口改造+计费 — 交付状态：排期调整
+          - generic [ref=e6079]: 2026-04-09
+        - generic [ref=e6080]:
+          - generic [ref=e6081]: 📝
+          - generic [ref=e6082]:
+            - generic [ref=e6083]: "[按时] TAPD 131610691"
+            - generic [ref=e6084]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：[flowPack] UnsubscribeForOP接口对已失效订单返回系统繁忙优化 — 交付状态：按时交付
+          - generic [ref=e6085]: 2026-04-09
+        - generic [ref=e6086]:
+          - generic [ref=e6087]: 📝
+          - generic [ref=e6088]:
+            - generic [ref=e6089]: "[按时] TAPD 126032580"
+            - generic [ref=e6090]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：前端技术需求 — 交付状态：按时交付
+          - generic [ref=e6091]: 2026-04-09
+        - generic [ref=e6092]:
+          - generic [ref=e6093]: 📝
+          - generic [ref=e6094]:
+            - generic [ref=e6095]: "[按时] TAPD 131153779"
+            - generic [ref=e6096]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：企业短信日常运维 — 交付状态：按时交付
+          - generic [ref=e6097]: 2026-04-09
+        - generic [ref=e6098]:
+          - generic [ref=e6099]: 📝
+          - generic [ref=e6100]:
+            - generic [ref=e6101]: "[按时] TAPD 129172115"
+            - generic [ref=e6102]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【通信管理平台】ai自动化研发测试流程改造 — 交付状态：按时交付
+          - generic [ref=e6103]: 2026-04-09
+        - generic [ref=e6104]:
+          - generic [ref=e6105]: 📝
+          - generic [ref=e6106]:
+            - generic [ref=e6107]: "[按时] TAPD 132110702"
+            - generic [ref=e6108]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】因天穹数据格式未完成，需人工提取2022年某号码数据的需求 — 交付状态：按时交付
+          - generic [ref=e6109]: 2026-04-09
+        - generic [ref=e6110]:
+          - generic [ref=e6111]: 📝
+          - generic [ref=e6112]:
+            - generic [ref=e6113]: "[按时] TAPD 131026361"
+            - generic [ref=e6114]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】外部供应商登录安全加固 — 交付状态：按时交付
+          - generic [ref=e6115]: 2026-04-09
+        - generic [ref=e6116]:
+          - generic [ref=e6117]: 📝
+          - generic [ref=e6118]:
+            - generic [ref=e6119]: "[按时] TAPD 128373479"
+            - generic [ref=e6120]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】发奖服务优化-发奖记录写DB由gorm改公共库处理，优化监控 — 交付状态：按时交付
+          - generic [ref=e6121]: 2026-04-09
+        - generic [ref=e6122]:
+          - generic [ref=e6123]: 📝
+          - generic [ref=e6124]:
+            - generic [ref=e6125]: "[按时] TAPD 126272321"
+            - generic [ref=e6126]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】内审合规数据加密-短信部分 — 交付状态：按时交付
+          - generic [ref=e6127]: 2026-04-09
+        - generic [ref=e6128]:
+          - generic [ref=e6129]: 📝
+          - generic [ref=e6130]:
+            - generic [ref=e6131]: "[按时] TAPD 130488596"
+            - generic [ref=e6132]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】移动退订定时任务返回订单不存在错误根因分析 — 交付状态：按时交付
+          - generic [ref=e6133]: 2026-04-09
+        - generic [ref=e6134]:
+          - generic [ref=e6135]: 📝
+          - generic [ref=e6136]:
+            - generic [ref=e6137]: "[按时] TAPD 131930378"
+            - generic [ref=e6138]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】星迹打击平台接入-定向领奖活动影响确认跟进 — 交付状态：按时交付
+          - generic [ref=e6139]: 2026-04-09
+        - generic [ref=e6140]:
+          - generic [ref=e6141]: 📝
+          - generic [ref=e6142]:
+            - generic [ref=e6143]: "[按时] TAPD 129452094"
+            - generic [ref=e6144]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【ic】全流程自动化处理-自动开发与验证 — 交付状态：按时交付
+          - generic [ref=e6145]: 2026-04-09
+        - generic [ref=e6146]:
+          - generic [ref=e6147]: 📝
+          - generic [ref=e6148]:
+            - generic [ref=e6149]: "[按时] TAPD 132207549"
+            - generic [ref=e6150]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：UI自动化测试调试&升级devCloud版本， 确保可以使用cc sandboxing功能 — 交付状态：按时交付
+          - generic [ref=e6151]: 2026-04-09
+        - generic [ref=e6152]:
+          - generic [ref=e6153]: 📝
+          - generic [ref=e6154]:
+            - generic [ref=e6155]: "[按时] TAPD 128393060"
+            - generic [ref=e6156]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【话费代收】基地业务整体下线-权益清理 — 交付状态：按时交付
+          - generic [ref=e6157]: 2026-04-09
+        - generic [ref=e6158]:
+          - generic [ref=e6159]: 📝
+          - generic [ref=e6160]:
+            - generic [ref=e6161]: "[按时] TAPD 128760950"
+            - generic [ref=e6162]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【权益-王卡】限时任务新增王卡开卡任务 — 交付状态：按时交付
+          - generic [ref=e6163]: 2026-04-09
+        - generic [ref=e6164]:
+          - generic [ref=e6165]: 📝
+          - generic [ref=e6166]:
+            - generic [ref=e6167]: "[按时] TAPD 132224581"
+            - generic [ref=e6168]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】物联网卡结算需求for深圳移动-二期 — 交付状态：按时交付
+          - generic [ref=e6169]: 2026-04-09
+        - generic [ref=e6170]:
+          - generic [ref=e6171]: 📝
+          - generic [ref=e6172]:
+            - generic [ref=e6173]: "[按时] TAPD 129486397"
+            - generic [ref=e6174]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】物联网卡结算需求for深圳移动-一期 — 交付状态：按时交付
+          - generic [ref=e6175]: 2026-04-09
+        - generic [ref=e6176]:
+          - generic [ref=e6177]: 📝
+          - generic [ref=e6178]:
+            - generic [ref=e6179]: "[按时] TAPD 129007674"
+            - generic [ref=e6180]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】电信翼支付江西&湖北流量包接入适配 — 交付状态：按时交付
+          - generic [ref=e6181]: 2026-04-09
+        - generic [ref=e6182]:
+          - generic [ref=e6183]: 📝
+          - generic [ref=e6184]:
+            - generic [ref=e6185]: "[按时] TAPD 132008160"
+            - generic [ref=e6186]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：定向-联通小沃结算数据提需 — 交付状态：按时交付
+          - generic [ref=e6187]: 2026-04-09
+        - generic [ref=e6188]:
+          - generic [ref=e6189]: 📝
+          - generic [ref=e6190]:
+            - generic [ref=e6191]: "[按时] TAPD 130805605"
+            - generic [ref=e6192]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【物联网卡】【数据报表】运营商接口数据与运营商直给数据差异问题排查 — 交付状态：按时交付
+          - generic [ref=e6193]: 2026-04-09
+        - generic [ref=e6194]:
+          - generic [ref=e6195]: 📝
+          - generic [ref=e6196]:
+            - generic [ref=e6197]: "[按时] TAPD 126981431"
+            - generic [ref=e6198]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】通管--短信模板前端交互及配套需求（二期） — 交付状态：按时交付
+          - generic [ref=e6199]: 2026-04-09
+        - generic [ref=e6200]:
+          - generic [ref=e6201]: 📝
+          - generic [ref=e6202]:
+            - generic [ref=e6203]: "[按时] TAPD 127743854"
+            - generic [ref=e6204]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】微信小店业务预存超发管理后端 — 交付状态：按时交付
+          - generic [ref=e6205]: 2026-04-09
+        - generic [ref=e6206]:
+          - generic [ref=e6207]: 📝
+          - generic [ref=e6208]:
+            - generic [ref=e6209]: "[按时] TAPD 126604646"
+            - generic [ref=e6210]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【【企业短信】端口池权重和为0—oms允许发布】 — 交付状态：按时交付
+          - generic [ref=e6211]: 2026-04-09
+        - generic [ref=e6212]:
+          - generic [ref=e6213]: 📝
+          - generic [ref=e6214]:
+            - generic [ref=e6215]: "[按时] TAPD 128429645"
+            - generic [ref=e6216]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】国际短信自动化报价功能 — 交付状态：按时交付
+          - generic [ref=e6217]: 2026-04-09
+        - generic [ref=e6218]:
+          - generic [ref=e6219]: 📝
+          - generic [ref=e6220]:
+            - generic [ref=e6221]: "[按时] TAPD 130345764"
+            - generic [ref=e6222]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【【企业短信】供应商短信错误码管理平台】 — 交付状态：按时交付
+          - generic [ref=e6223]: 2026-04-09
+        - generic [ref=e6224]:
+          - generic [ref=e6225]: 📝
+          - generic [ref=e6226]:
+            - generic [ref=e6227]: "[按时] TAPD 130545788"
+            - generic [ref=e6228]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】sms-端口管理-新增端口-提示内返回互斥端口 — 交付状态：按时交付
+          - generic [ref=e6229]: 2026-04-09
+        - generic [ref=e6230]:
+          - generic [ref=e6231]: 📝
+          - generic [ref=e6232]:
+            - generic [ref=e6233]: "[按时] TAPD 132764218"
+            - generic [ref=e6234]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【定向流量】不支持订购的用户引导开通王卡功能 — 交付状态：按时交付
+          - generic [ref=e6235]: 2026-04-09
+        - generic [ref=e6236]:
+          - generic [ref=e6237]: 📝
+          - generic [ref=e6238]:
+            - generic [ref=e6239]: "[按时] TAPD 133148563"
+            - generic [ref=e6240]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【线上问题】国际短信报价系统缺陷 — 交付状态：按时交付
+          - generic [ref=e6241]: 2026-04-09
+        - generic [ref=e6242]:
+          - generic [ref=e6243]: 📝
+          - generic [ref=e6244]:
+            - generic [ref=e6245]: "[按时] TAPD 132946723"
+            - generic [ref=e6246]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【线上问题】洛克绑定异常数据从正式环境剔除 — 交付状态：按时交付
+          - generic [ref=e6247]: 2026-04-09
+        - generic [ref=e6248]:
+          - generic [ref=e6249]: 📝
+          - generic [ref=e6250]:
+            - generic [ref=e6251]: "[按时] TAPD 133014805"
+            - generic [ref=e6252]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【技术需求】业务网关频控优化 — 交付状态：按时交付
+          - generic [ref=e6253]: 2026-04-09
+        - generic [ref=e6254]:
+          - generic [ref=e6255]: 📝
+          - generic [ref=e6256]:
+            - generic [ref=e6257]: "[按时] TAPD 132923193"
+            - generic [ref=e6258]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】扣量分析数据取数需求和数据排查 — 交付状态：按时交付
+          - generic [ref=e6259]: 2026-04-09
+        - generic [ref=e6260]:
+          - generic [ref=e6261]: 📝
+          - generic [ref=e6262]:
+            - generic [ref=e6263]: "[按时] TAPD 132463360"
+            - generic [ref=e6264]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【功能短信】供应商配置页面字段补齐 — 交付状态：按时交付
+          - generic [ref=e6265]: 2026-04-09
+        - generic [ref=e6266]:
+          - generic [ref=e6267]: 📝
+          - generic [ref=e6268]:
+            - generic [ref=e6269]: "[按时] TAPD 132974377"
+            - generic [ref=e6270]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】刷脸设备数据提取 — 交付状态：按时交付
+          - generic [ref=e6271]: 2026-04-09
+        - generic [ref=e6272]:
+          - generic [ref=e6273]: 📝
+          - generic [ref=e6274]:
+            - generic [ref=e6275]: "[按时] TAPD 131916516"
+            - generic [ref=e6276]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【数据处理需求】5G阅信报表 — 交付状态：按时交付
+          - generic [ref=e6277]: 2026-04-09
+        - generic [ref=e6278]:
+          - generic [ref=e6279]: 📝
+          - generic [ref=e6280]:
+            - generic [ref=e6281]: "[按时] TAPD 132744796"
+            - generic [ref=e6282]:
+              - text: "| 原因：交付状态标记：未标记 → 按时交付"
+              - text: 受影响：【企业短信】通信管理平台 模版二期 异常报备体数据清理 — 交付状态：按时交付
+          - generic [ref=e6283]: 2026-04-09
+        - generic [ref=e6284]:
+          - generic [ref=e6285]: ⏳
+          - generic [ref=e6286]:
+            - generic [ref=e6287]: "[延期] TAPD 131202478"
+            - generic [ref=e6288]:
+              - text: "| 原因：由于线上 bug 处理延期一天； 3.25 开发休假一天，暂未发布； 3.26 逐步灰度中；"
+              - text: 受影响：【企业短信】关于改造CMPP协议-子需求1 — 交付状态：延期
+          - generic [ref=e6289]: 2026-04-09
+        - generic [ref=e6290]:
+          - generic [ref=e6291]: ⏳
+          - generic [ref=e6292]:
+            - generic [ref=e6293]: "[延期] TAPD 131912881"
+            - generic [ref=e6294]:
+              - text: "| 原因：同 功能业务代码扣费需求一起测试和发布；3.30 功能业务代码由于需求变更没有转测； 3.30 需求文档中有部分需求未实现 3.31 信息反馈 IC 的聚合展示没做"
+              - text: 受影响：【IC平台】营销接口扣费+拦截 — 交付状态：延期
+          - generic [ref=e6295]: 2026-04-09
+        - generic [ref=e6296]:
+          - generic [ref=e6297]: ⏳
+          - generic [ref=e6298]:
+            - generic [ref=e6299]: "[延期] TAPD 132329672"
+            - generic [ref=e6300]:
+              - text: "| 原因：预计 3.24 自测完，延期一天，原因处理福利鹅领奖问题；"
+              - text: 受影响：【技术需求】taf老服务迁移--StationDataSvr迁移 — 交付状态：延期
+          - generic [ref=e6301]: 2026-04-09
+    - generic [ref=e6302]:
+      - generic [ref=e6304]:
+        - generic [ref=e6305]: 🆕
+        - text: 需求插队记录汇总
+      - generic [ref=e6307]:
+        - generic [ref=e6308]: 📭
+        - heading "暂无插队记录" [level=3] [ref=e6309]
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "第 1 周" [selected]
+  - option "第 2 周"
+  - option "第 3 周"
+  - option "第 4 周"
+  - option "第 5 周"
+  - option "全部来源" [selected]
+  - option "综合中心"
+  - option "商务中心"
+  - option "公共"
+  - option "产品中心"
+  - option "全部未完成状态" [selected]
+  - option "开发中"
+  - option "测试/验收"
+  - option "待开发/已评审"
+  - option "规划中/未开始"
+  - option "挂起"
