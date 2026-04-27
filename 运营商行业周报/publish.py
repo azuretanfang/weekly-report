@@ -2,11 +2,12 @@
 # -*- coding: utf-8 -*-
 """
 运营商行业周报一键发布脚本
-串联完整流程：截图 → 更新归档 → 推送 GitHub → 邮件群发
+串联完整流程：校验 → 截图 → 更新归档 → 推送 GitHub → 邮件群发
 
 用法:
     python3 publish.py                    # 自动检测最新周报
     python3 publish.py 0309-0315          # 指定日期范围
+    python3 publish.py --skip-validate    # 跳过发布前校验（不推荐）
     python3 publish.py --skip-screenshot  # 跳过截图（已有 -hd.png 时）
     python3 publish.py --skip-email       # 跳过邮件发送
     python3 publish.py --skip-git         # 跳过 git 推送
@@ -15,12 +16,18 @@
 import os
 import sys
 import glob
+import json
 import subprocess
 import argparse
 from datetime import datetime
 
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+WORKSPACE_ROOT = os.path.dirname(SCRIPT_DIR)
+VALIDATOR_DIR = os.path.join(
+    WORKSPACE_ROOT, ".codebuddy", "skills", "telecom-weekly-report-validator"
+)
+VALIDATOR_SCRIPT = os.path.join(VALIDATOR_DIR, "scripts", "run_validation.sh")
 
 
 def find_latest_report():
@@ -49,6 +56,95 @@ def parse_prefix(prefix):
     week_num = (start_day - 1) // 7 + 1
     title = f"{year}年{start_month}月第{week_num}周运营商行业周报"
     return title, period
+
+
+def step_validate(prefix):
+    """步骤0: 发布前校验（Gate）
+
+    调用 telecom-weekly-report-validator 对 HTML 执行规则校验和关键词扫描。
+    返回 (success, gate_pass)：
+      - success: 校验脚本是否跑通
+      - gate_pass: 是否允许继续发布（红灯 = 不允许）
+    """
+    print("\n" + "=" * 50)
+    print("🛡️  步骤0: 发布前校验（Gate）")
+    print("=" * 50)
+
+    html_path = os.path.join(SCRIPT_DIR, f"{prefix}.html")
+    if not os.path.exists(html_path):
+        print(f"❌ 找不到 {html_path}，无法校验")
+        return False, False
+
+    if not os.path.exists(VALIDATOR_SCRIPT):
+        print(f"⚠️  校验脚本不存在：{VALIDATOR_SCRIPT}")
+        print("   跳过校验（建议排查校验 skill 安装情况）")
+        return True, True
+
+    try:
+        subprocess.run(
+            ["bash", VALIDATOR_SCRIPT, html_path],
+            cwd=WORKSPACE_ROOT, check=True, capture_output=True, text=True,
+            timeout=120,
+        )
+    except subprocess.CalledProcessError as e:
+        print(f"❌ 校验脚本执行失败：{e.stderr[-500:] if e.stderr else e}")
+        return False, False
+    except subprocess.TimeoutExpired:
+        print("❌ 校验超时（超过 120 秒）")
+        return False, False
+
+    # 解析 validation.json
+    validation_json = os.path.join(SCRIPT_DIR, "validation_output", "validation.json")
+    risk_json = os.path.join(SCRIPT_DIR, "validation_output", "risk-hits.json")
+
+    if not os.path.exists(validation_json):
+        print(f"❌ 未找到校验结果：{validation_json}")
+        return False, False
+
+    with open(validation_json, "r", encoding="utf-8") as f:
+        validation = json.load(f)
+    summary = validation.get("summary", {})
+    red = summary.get("red", 0)
+    yellow = summary.get("yellow", 0)
+    green = summary.get("green", 0)
+    total = summary.get("total", 0)
+
+    # 解析关键词扫描结果（可选）
+    risk_red = 0
+    risk_yellow = 0
+    if os.path.exists(risk_json):
+        with open(risk_json, "r", encoding="utf-8") as f:
+            risk = json.load(f)
+        for hit in risk.get("hits", []):
+            if hit.get("level") == "red":
+                risk_red += 1
+            elif hit.get("level") == "yellow":
+                risk_yellow += 1
+
+    print()
+    print(f"📊 规则校验：🔴 {red}  🟡 {yellow}  🟢 {green}  （共 {total} 条 claim）")
+    print(f"🔍 关键词扫描：🔴 {risk_red}  🟡 {risk_yellow}")
+
+    # Gate 逻辑
+    total_red = red + risk_red
+    if total_red > 0:
+        print()
+        print("=" * 50)
+        print(f"🚫 发布被阻断：检测到 {total_red} 个 🔴 红灯")
+        print("=" * 50)
+        print("请查看校验报告：")
+        print(f"   {SCRIPT_DIR}/validation_output/validation-*.html")
+        print()
+        print("修复后重新运行 publish.py，或使用 --skip-validate 强制跳过（不推荐）")
+        return True, False
+
+    if yellow + risk_yellow > 0:
+        print(f"\n⚠️  有 {yellow + risk_yellow} 个 🟡 黄灯（提示级，不阻断发布）")
+        print("   建议查看校验报告确认：")
+        print(f"   {SCRIPT_DIR}/validation_output/validation-*.html")
+
+    print("\n✅ 校验通过，允许发布")
+    return True, True
 
 
 def step_screenshot(prefix):
@@ -194,6 +290,8 @@ def main():
     parser = argparse.ArgumentParser(description="运营商行业周报一键发布")
     parser.add_argument("date_range", nargs="?", default=None,
                         help="日期范围，如 '0309-0315'。不传则自动检测最新")
+    parser.add_argument("--skip-validate", action="store_true",
+                        help="跳过发布前校验（不推荐）")
     parser.add_argument("--skip-screenshot", action="store_true",
                         help="跳过截图步骤（已有 -hd.png 时使用）")
     parser.add_argument("--skip-email", action="store_true",
@@ -218,12 +316,26 @@ def main():
     print(f"📋 文件前缀: {prefix}")
     print(f"📝 标题: {title}")
     print(f"📅 周期: {period}")
+    print(f"🛡️  校验: {'跳过' if args.skip_validate else '执行'}")
     print(f"📸 截图: {'跳过' if args.skip_screenshot else '执行'}")
     print(f"📝 归档: {'跳过' if args.skip_index else '执行'}")
     print(f"🚀 推送: {'跳过' if args.skip_git else '执行'}")
     print(f"📧 邮件: {'跳过' if args.skip_email else '执行'}")
 
     results = {}
+
+    # 步骤0: 发布前校验（Gate）
+    if not args.skip_validate:
+        ok, gate_pass = step_validate(prefix)
+        results["校验"] = ok and gate_pass
+        if not ok:
+            print("\n❌ 校验脚本出错，流程中止")
+            sys.exit(1)
+        if not gate_pass:
+            print("\n🛑 发布 Gate 未通过（存在红灯），流程终止")
+            sys.exit(2)
+    else:
+        print("\n⏭️  跳过发布前校验（--skip-validate）")
 
     # 步骤1: 截图
     if not args.skip_screenshot:

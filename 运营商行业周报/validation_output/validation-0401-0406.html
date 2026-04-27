@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<title>周报校验报告 0401-0406</title>
+<style>
+  body { font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+         background: #f9fafb; color: #111827; margin: 0; padding: 24px; }
+  .container { max-width: 1100px; margin: 0 auto; }
+  h1 { font-size: 22px; margin: 0 0 8px; }
+  .meta { color: #6b7280; font-size: 13px; margin-bottom: 20px; }
+  .overall { padding: 14px 18px; border-radius: 10px; font-weight: 600;
+              background: #dcfce7; margin-bottom: 20px; }
+  .summary { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+  .stat { background: #fff; padding: 16px; border-radius: 10px; text-align: center;
+           border: 1px solid #e5e7eb; }
+  .stat .num { font-size: 28px; font-weight: 700; }
+  .stat .label { font-size: 12px; color: #6b7280; margin-top: 4px; }
+  .stat.red .num { color: #dc2626; }
+  .stat.yellow .num { color: #d97706; }
+  .stat.green .num { color: #16a34a; }
+  h2 { font-size: 16px; margin: 28px 0 12px; padding-left: 10px; border-left: 4px solid #3b82f6; }
+  .claim { background: #fff; border-radius: 10px; padding: 14px 16px; margin-bottom: 10px;
+            border-left: 4px solid #e5e7eb; }
+  .claim.red { border-left-color: #ef4444; background: #fef2f2; }
+  .claim.yellow { border-left-color: #f59e0b; background: #fffbeb; }
+  .claim-head { display: flex; align-items: center; gap: 10px; margin-bottom: 6px; }
+  .claim-id { font-family: Menlo, monospace; font-size: 12px; color: #6b7280; }
+  .badge { display: inline-block; padding: 2px 8px; border-radius: 12px; font-size: 12px; font-weight: 600; }
+  .badge.red { background: #fee2e2; color: #991b1b; }
+  .badge.yellow { background: #fef3c7; color: #92400e; }
+  .badge.green { background: #dcfce7; color: #166534; }
+  .claim-text { font-size: 14px; line-height: 1.6; color: #1f2937; }
+  .issues { margin-top: 8px; padding-left: 18px; }
+  .issues li { font-size: 13px; color: #4b5563; margin-bottom: 4px; }
+  .risk-hit { background: #fff; border-radius: 8px; padding: 10px 14px; margin-bottom: 8px;
+               border-left: 4px solid #f59e0b; }
+  .risk-hit.red { border-left-color: #ef4444; background: #fef2f2; }
+  .risk-hit .word { font-weight: 600; color: #b91c1c; }
+  .risk-hit .ctx { font-size: 12px; color: #6b7280; margin-top: 4px; }
+  .empty { color: #9ca3af; font-style: italic; padding: 12px 0; }
+  footer { text-align: center; color: #9ca3af; font-size: 12px; margin-top: 40px; padding-top: 20px;
+           border-top: 1px solid #e5e7eb; }
+</style>
+</head>
+<body>
+<div class="container">
+  <h1>运营商行业周报 · 校验报告</h1>
+  <div class="meta">
+    报告文件：weekly-report-0401-0406.html ｜
+    周期：0401 ~ 0406 ｜
+    校验时间：2026-04-21T09:56:34
+  </div>
+
+  <div class="overall">🟢 通过校验，可发布</div>
+
+  <div class="summary">
+    <div class="stat"><div class="num">72</div><div class="label">总 claims 数</div></div>
+    <div class="stat red"><div class="num">0</div><div class="label">红灯</div></div>
+    <div class="stat yellow"><div class="num">0</div><div class="label">黄灯</div></div>
+    <div class="stat green"><div class="num">72</div><div class="label">绿灯</div></div>
+  </div>
+<div style="background:#eff6ff;border-left:4px solid #3b82f6;border-radius:8px;padding:12px 16px;margin-bottom:20px;">
+<b style="color:#1e40af;">📌 整体提示</b><ul style="margin:6px 0 0;padding-left:22px;color:#1e40af;font-size:13px;">
+<li>第一阶段未接入 sources 字段，19 条数字类 claim 无来源标注。建议 Plan A 打通后在生成环节附带 sources。</li>
+</ul></div>
+
+  <h2>一、规则校验异常（0 条）</h2>
+<div class="empty">无异常。</div>
+
+  <h2>二、高风险关键词扫描（命中 12 处）</h2>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">首个</span>
+    <div class="ctx">...   中国移动研究院院长黄宇红透露， 我国已牵头完成3GPP首个6G需求标准研究项目 ，定义6G六大核心场景。       ...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">唯一</span>
+    <div class="ctx">...：2024年同期AI相关业务收入）。 算力与AI已成为运营商唯一高速增长引擎。 👔 人事变动 中国移动总经理悬空中 🔥 中国...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">史上</span>
+    <div class="ctx">...速AI+算力的商业化变现。 📱 管控 流量卡管控全面升级，"史上最严"新规持续发力 2026年元旦起落地的"明白办、放心用"...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>unverified</b> ·
+    <span class="word">预计</span>
+    <div class="ctx">...星地融合"和"智能体通信"是6G两大标志性特征，全球统一标准预计三年后形成。 🤖 AI 2026年被定义为"智能体爆发年"，...</div>
+    <div class="ctx" style="color:#9ca3af;">— 未核实信息，需确认来源权威性</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">唯一</span>
+    <div class="ctx">...：2024年同期AI相关业务收入）。 算力与AI已成为运营商唯一高速增长引擎。...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">唯一</span>
+    <div class="ctx">...算力与AI已成为运营商唯一高速增长引擎。...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>unverified</b> ·
+    <span class="word">预计</span>
+    <div class="ctx">...星地融合"和"智能体通信"是6G两大标志性特征，全球统一标准预计三年后形成。...</div>
+    <div class="ctx" style="color:#9ca3af;">— 未核实信息，需确认来源权威性</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">首个</span>
+    <div class="ctx">...我国已牵头完成3GPP首个6G需求标准研究项目...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">史上</span>
+    <div class="ctx">...📱 管控 流量卡管控全面升级，"史上最严"新规持续发力 2026年元旦起落地的"明白办、放心用"...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">史上</span>
+    <div class="ctx">...📱 管控 流量卡管控全面升级，"史上最严"新规持续发力...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">史上</span>
+    <div class="ctx">...流量卡管控全面升级，"史上最严"新规持续发力...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <div class="risk-hit yellow">
+    <span class="badge yellow">🟡 黄</span>
+    <b>absolute_claim</b> ·
+    <span class="word">史上</span>
+    <div class="ctx">...流量卡集中清理。             四大运营商同步执行史上最严流量卡管控，从办卡渠道到资费套餐、从实名审核到售后保障全...</div>
+    <div class="ctx" style="color:#9ca3af;">— 绝对化表述，需确认事实与来源</div>
+  </div>
+
+  <footer>
+    由 telecom-weekly-report-validator skill 自动生成 ·
+    2026-04-21 09:56
+  </footer>
+</div>
+</body>
+</html>

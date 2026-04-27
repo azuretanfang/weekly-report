@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Passion for Pollinators - 英文精读报告</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f6b93b 0%, #e55039 50%, #667eea 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            overflow: hidden;
+        }
+        
+        /* ========== HEADER ========== */
+        .header {
+            background: linear-gradient(135deg, #f6b93b 0%, #e55039 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .header::before {
+            content: '🐝';
+            position: absolute;
+            font-size: 120px;
+            opacity: 0.1;
+            right: 30px;
+            top: -10px;
+        }
+        .header h1 {
+            font-size: 2.2em;
+            margin-bottom: 8px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+        .header .subtitle {
+            font-size: 1.1em;
+            opacity: 0.95;
+            font-style: italic;
+        }
+        .header .source-tag {
+            display: inline-block;
+            margin-top: 12px;
+            background: rgba(255,255,255,0.2);
+            padding: 4px 16px;
+            border-radius: 20px;
+            font-size: 0.85em;
+        }
+        
+        /* ========== META INFO ========== */
+        .meta-info {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+            gap: 15px;
+            padding: 20px 30px;
+            background: #fef9f0;
+            border-bottom: 2px solid #f6b93b33;
+            font-size: 0.92em;
+        }
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        .meta-label {
+            font-weight: bold;
+            color: #e55039;
+        }
+        .difficulty-badge {
+            display: inline-block;
+            padding: 3px 10px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            font-weight: bold;
+        }
+        .difficulty-B1 { background: #fff3cd; color: #856404; }
+        
+        /* ========== SUMMARY ========== */
+        .summary-box {
+            padding: 25px 30px;
+            background: linear-gradient(135deg, #fef9f0, #fff8e1);
+            border-bottom: 1px solid #eee;
+        }
+        .summary-box h3 {
+            color: #e55039;
+            margin-bottom: 10px;
+            font-size: 1.15em;
+        }
+        .summary-box p {
+            line-height: 1.8;
+            color: #444;
+            font-size: 0.95em;
+        }
+        .summary-box .cn {
+            color: #888;
+            font-size: 0.9em;
+            margin-top: 6px;
+            padding-left: 12px;
+            border-left: 3px solid #f6b93b;
+        }
+        
+        /* ========== DUAL-COLUMN ========== */
+        .content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 600px;
+        }
+        .original-text {
+            padding: 30px;
+            border-right: 2px solid #eee;
+            overflow-y: auto;
+            max-height: 700px;
+            background: #fff;
+        }
+        .annotations {
+            padding: 30px;
+            overflow-y: auto;
+            max-height: 700px;
+            background: #fafafa;
+        }
+        .col-title {
+            font-size: 1.1em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #333;
+        }
+        
+        /* Sentences */
+        .sentence {
+            margin: 10px 0;
+            padding: 12px 15px;
+            border-left: 4px solid transparent;
+            border-radius: 0 6px 6px 0;
+            line-height: 1.9;
+            font-size: 1.02em;
+            color: #333;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        .sentence:hover {
+            background: #fff8e1;
+            border-left-color: #f6b93b;
+        }
+        .sentence.highlighted {
+            background: #fff3cd;
+            border-left-color: #e55039;
+        }
+        .sentence .sent-num {
+            display: inline-block;
+            background: #667eea;
+            color: #fff;
+            width: 22px;
+            height: 22px;
+            text-align: center;
+            line-height: 22px;
+            border-radius: 50%;
+            font-size: 0.72em;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        
+        /* Words */
+        .word-common { color: #28a745; font-weight: 500; }
+        .word-intermediate {
+            background: #fff3cd;
+            padding: 1px 5px;
+            border-radius: 3px;
+            color: #ff9800;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .word-intermediate:hover { background: #ffe082; }
+        .word-advanced {
+            background: #fce4ec;
+            padding: 1px 5px;
+            border-radius: 3px;
+            color: #dc3545;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .word-advanced:hover { background: #f8bbd0; }
+        
+        /* Annotation cards */
+        .anno-card {
+            margin: 18px 0;
+            padding: 18px;
+            background: white;
+            border-left: 4px solid #667eea;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.06);
+        }
+        .anno-card.error { border-left-color: #dc3545; background: #fff5f5; }
+        .anno-card.complex { border-left-color: #17a2b8; background: #f0f9fb; }
+        .anno-card.vocab { border-left-color: #f6b93b; background: #fffbf0; }
+        .anno-card.phrase { border-left-color: #28a745; background: #f0faf0; }
+        
+        .anno-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+            font-size: 1.02em;
+        }
+        .anno-card.error .anno-title { color: #dc3545; }
+        .anno-card.complex .anno-title { color: #17a2b8; }
+        .anno-card.vocab .anno-title { color: #e67e22; }
+        .anno-card.phrase .anno-title { color: #28a745; }
+        
+        .anno-body { font-size: 0.93em; line-height: 1.75; color: #444; }
+        .anno-body .cn-note { color: #999; font-size: 0.88em; }
+        
+        .error-item {
+            margin: 12px 0;
+            padding: 12px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #fdd;
+        }
+        .error-type { font-weight: bold; color: #dc3545; margin-bottom: 4px; }
+        .incorrect { color: #dc3545; text-decoration: line-through; }
+        .correct { color: #28a745; font-weight: bold; }
+        .explanation { color: #666; font-size: 0.88em; margin-top: 6px; line-height: 1.6; }
+        
+        /* Complex sentence breakdown */
+        .breakdown-box {
+            margin: 10px 0;
+            padding: 12px;
+            background: #fff;
+            border-radius: 6px;
+            border: 1px solid #d1ecf1;
+        }
+        .breakdown-box strong { color: #17a2b8; }
+        .clause-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 12px;
+            font-size: 0.78em;
+            font-weight: bold;
+            margin: 2px;
+        }
+        .clause-main { background: #d4edda; color: #155724; }
+        .clause-sub { background: #d1ecf1; color: #0c5460; }
+        .clause-relative { background: #e2d5f1; color: #4a235a; }
+        
+        /* Vocab tags */
+        .vocab-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin: 10px 0;
+        }
+        .vocab-tag {
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.83em;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+        .vocab-tag:hover { transform: scale(1.05); box-shadow: 0 2px 6px rgba(0,0,0,0.1); }
+        .vocab-tag.advanced { background: #fce4ec; color: #c62828; }
+        .vocab-tag.intermediate { background: #fff8e1; color: #e65100; }
+        .vocab-tag.common { background: #e8f5e9; color: #2e7d32; }
+        
+        .ipa { color: #999; font-size: 0.85em; font-style: italic; }
+        .cn-def { color: #666; font-size: 0.88em; }
+        
+        /* ========== KEY PHRASES ========== */
+        .phrase-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 10px 0;
+        }
+        .phrase-item {
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            background: #667eea;
+            color: #fff;
+        }
+        
+        /* ========== BOTTOM SECTIONS ========== */
+        .bottom-section {
+            padding: 30px;
+            border-top: 2px solid #eee;
+        }
+        .bottom-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+        
+        .quiz-section {
+            background: #f5f0ff;
+        }
+        .quiz-section h3 { color: #667eea; }
+        .quiz-item {
+            margin: 15px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border: 1px solid #e0d5f5;
+        }
+        .quiz-item .q { font-weight: bold; margin-bottom: 8px; color: #333; }
+        .quiz-item .options label {
+            display: block;
+            padding: 6px 12px;
+            margin: 4px 0;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+        .quiz-item .options label:hover { background: #f0ebff; }
+        .quiz-item .answer {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background: #e8f5e9;
+            border-radius: 6px;
+            color: #2e7d32;
+            font-size: 0.9em;
+        }
+        
+        .learning-section {
+            background: #e8f4f8;
+        }
+        .learning-section h3 { color: #17a2b8; }
+        .tip-card {
+            margin: 10px 0;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            border-left: 4px solid #17a2b8;
+            line-height: 1.7;
+            font-size: 0.93em;
+        }
+        .tip-card strong { color: #17a2b8; }
+        
+        /* ========== FOOTER ========== */
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background: #f8f9fa;
+            color: #999;
+            font-size: 0.85em;
+            border-top: 1px solid #eee;
+        }
+        
+        /* ========== TOOLTIP ========== */
+        .tooltip-box {
+            display: none;
+            position: fixed;
+            background: #333;
+            color: #fff;
+            padding: 10px 14px;
+            border-radius: 8px;
+            font-size: 0.85em;
+            z-index: 999;
+            max-width: 300px;
+            line-height: 1.5;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+        }
+        
+        /* ========== RESPONSIVE ========== */
+        @media (max-width: 1024px) {
+            .content { grid-template-columns: 1fr; }
+            .original-text {
+                border-right: none;
+                border-bottom: 2px solid #eee;
+                max-height: none;
+            }
+            .annotations { max-height: none; }
+        }
+        
+        /* ========== BUTTONS ========== */
+        .btn {
+            display: inline-block;
+            padding: 8px 18px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 0.9em;
+            font-weight: 500;
+            transition: all 0.2s;
+        }
+        .btn-primary { background: #667eea; color: #fff; }
+        .btn-primary:hover { background: #5a6fd6; }
+        .btn-orange { background: #f6b93b; color: #fff; }
+        .btn-orange:hover { background: #e5a82a; }
+        .btn-sm { padding: 5px 12px; font-size: 0.82em; }
+
+        /* Word detail popup */
+        .word-detail {
+            margin: 10px 0;
+            padding: 12px 15px;
+            background: #fff;
+            border: 1px solid #eee;
+            border-radius: 8px;
+            display: flex;
+            gap: 12px;
+            align-items: flex-start;
+        }
+        .word-detail .wd-word {
+            font-size: 1.1em;
+            font-weight: bold;
+            color: #333;
+            min-width: 120px;
+        }
+        .word-detail .wd-ipa { color: #999; font-size: 0.88em; }
+        .word-detail .wd-def { color: #555; font-size: 0.9em; line-height: 1.5; }
+        .word-detail .wd-level {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 0.72em;
+            font-weight: bold;
+        }
+        .level-adv { background: #fce4ec; color: #c62828; }
+        .level-int { background: #fff8e1; color: #e65100; }
+    </style>
+</head>
+<body>
+    <div class="tooltip-box" id="tooltip"></div>
+    
+    <div class="container">
+        <!-- HEADER -->
+        <div class="header">
+            <h1>📖 A Passion for Pollinators</h1>
+            <div class="subtitle">Samuel Ramsey reveals surprising secrets of honeybee life in a new special.</div>
+            <div class="source-tag">📰 Source: <em>The Week Junior</em> · People Section · Earth Day 2026</div>
+        </div>
+        
+        <!-- META INFO -->
+        <div class="meta-info">
+            <div class="meta-item">
+                <span class="meta-label">📊 Difficulty:</span>
+                <span class="difficulty-badge difficulty-B1">B1 (Intermediate)</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">📝 Words:</span>
+                <span>~270</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">📚 Unique Words:</span>
+                <span>~180</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">🔍 Key Vocab:</span>
+                <span>15 words</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">🏷️ Topic:</span>
+                <span>Science / People / Nature</span>
+            </div>
+            <div class="meta-item">
+                <span class="meta-label">⏱️ Generated:</span>
+                <span>2026-04-24 18:33</span>
+            </div>
+        </div>
+        
+        <!-- SUMMARY -->
+        <div class="summary-box">
+            <h3>📋 Article Summary 文章摘要</h3>
+            <p>This article profiles <strong>Samuel Ramsey</strong> (aka "Dr. Sammy"), a renowned <span class="word-advanced" data-word="entomologist">entomologist</span> who has dedicated his career to studying and protecting honeybees. He grew up in Maryland and has loved bees since age 7. He earned a <span class="word-intermediate" data-word="doctorate">doctorate</span> in <span class="word-advanced" data-word="entomology">entomology</span>, founded the Ramsey Research Foundation, and currently serves as a professor at the University of Colorado Boulder. He recently served as science adviser for the National Geographic documentary <em>Secrets of the Bees</em>, now streaming on Disney+ and Hulu.</p>
+            <p class="cn">本文介绍了著名昆虫学家 Samuel Ramsey（"Sammy博士"），他毕生致力于研究和保护蜜蜂。他从7岁起热爱蜜蜂，获得昆虫学博士学位，创立了 Ramsey 研究基金会，并担任国家地理纪录片《蜜蜂的秘密》的科学顾问。他鼓励年轻人"保持好奇心"。</p>
+        </div>
+        
+        <!-- DUAL-COLUMN: Original Text + Annotations -->
+        <div class="content">
+            <!-- LEFT: Original Text with Highlights -->
+            <div class="original-text">
+                <div class="col-title">📄 Original Text 原文精读</div>
+                
+                <div class="sentence" data-id="1">
+                    <span class="sent-num">1</span>
+                    Renowned <span class="word-advanced" data-word="entomologist" data-cn="昆虫学家" data-ipa="/ˌen.təˈmɒl.ə.dʒɪst/">entomologist</span> (scientist who studies insects) Samuel Ramsey, known as "Dr. Sammy," has spent his career working to understand and protect honeybees.
+                </div>
+                
+                <div class="sentence" data-id="2">
+                    <span class="sent-num">2</span>
+                    He recently brought his <span class="word-intermediate" data-word="expertise" data-cn="专业知识" data-ipa="/ˌek.spɜːˈtiːz/">expertise</span> to the new National Geographic three-part documentary <em>Secrets of the Bees</em>, now streaming on Disney+ and Hulu.
+                </div>
+                
+                <div class="sentence" data-id="3">
+                    <span class="sent-num">3</span>
+                    Ramsey, who grew up in Maryland, has loved bees since the age of 7.
+                </div>
+                
+                <div class="sentence" data-id="4">
+                    <span class="sent-num">4</span>
+                    As bee <span class="word-intermediate" data-word="populations" data-cn="种群" data-ipa="/ˌpɒp.jʊˈleɪ.ʃənz/">populations</span> have fallen over the years, he shifted his focus to their protection.
+                </div>
+                
+                <div class="sentence" data-id="5">
+                    <span class="sent-num">5</span>
+                    "I am so <span class="word-advanced" data-word="enamored" data-cn="着迷的" data-ipa="/ɪˈnæm.əd/">enamored</span> of how smart these tiny creatures are," Ramsey told <em>The Week Junior</em>.
+                </div>
+                
+                <div class="sentence" data-id="6">
+                    <span class="sent-num">6</span>
+                    In pursuit of his passion, he earned a <span class="word-intermediate" data-word="doctorate" data-cn="博士学位" data-ipa="/ˈdɒk.tər.ɪt/">doctorate</span> in <span class="word-advanced" data-word="entomology" data-cn="昆虫学" data-ipa="/ˌen.təˈmɒl.ə.dʒi/">entomology</span> from the University of Maryland.
+                </div>
+                
+                <div class="sentence" data-id="7">
+                    <span class="sent-num">7</span>
+                    In 2021, he founded the Ramsey Research Foundation, a <span class="word-intermediate" data-word="nonprofit" data-cn="非营利组织" data-ipa="/nɒnˈprɒf.ɪt/">nonprofit</span> that works to make scientific information about bees more <span class="word-intermediate" data-word="accessible" data-cn="易获取的" data-ipa="/əkˈses.ə.bəl/">accessible</span>.
+                </div>
+                
+                <div class="sentence" data-id="8">
+                    <span class="sent-num">8</span>
+                    His research on <span class="word-advanced" data-word="parasites" data-cn="寄生虫" data-ipa="/ˈpær.ə.saɪts/">parasites</span> has helped scientists understand threats to honeybees.
+                </div>
+                
+                <div class="sentence" data-id="9">
+                    <span class="sent-num">9</span>
+                    He is currently an assistant professor and <span class="word-advanced" data-word="endowed" data-cn="捐赠的；获资助的" data-ipa="/ɪnˈdaʊd/">endowed</span> chair at the University of Colorado Boulder.
+                </div>
+                
+                <div class="sentence" data-id="10">
+                    <span class="sent-num">10</span>
+                    As a science adviser for <em>Secrets of the Bees</em>, Ramsey helped guide the <span class="word-intermediate" data-word="narrative" data-cn="叙事" data-ipa="/ˈnær.ə.tɪv/">narrative</span> and highlight surprising bee behaviors.
+                </div>
+                
+                <div class="sentence" data-id="11">
+                    <span class="sent-num">11</span>
+                    The documentary captured never-before-seen <span class="word-intermediate" data-word="footage" data-cn="影像片段" data-ipa="/ˈfʊt.ɪdʒ/">footage</span> of how bees move, work, and communicate up close.
+                </div>
+                
+                <div class="sentence" data-id="12">
+                    <span class="sent-num">12</span>
+                    One scene shows him in the UK, observing bees solving puzzles.
+                </div>
+                
+                <div class="sentence" data-id="13">
+                    <span class="sent-num">13</span>
+                    Ramsey said he hopes <em>Secrets of the Bees</em> inspires viewers to see these insects in a new way.
+                </div>
+                
+                <div class="sentence" data-id="14">
+                    <span class="sent-num">14</span>
+                    He advises young people to "stay curious" by watching bees around your home or examining why ants march in a line.
+                </div>
+                
+                <div class="sentence" data-id="15">
+                    <span class="sent-num">15</span>
+                    He said, "There are incredible discoveries at the end of your questions if you're just willing to ask them."
+                </div>
+                
+                <div style="margin-top:20px; padding:12px; background:#fffde7; border-radius:8px; border:1px dashed #f6b93b;">
+                    <strong>🐝 Busy Bug Fact:</strong> A single bee can visit as many as <strong>5,000 flowers</strong> in one day.
+                </div>
+            </div>
+            
+            <!-- RIGHT: Annotations & Analysis -->
+            <div class="annotations">
+                <div class="col-title">📝 Annotations & Analysis 精读注解</div>
+                
+                <!-- 1. Vocabulary Analysis -->
+                <div class="anno-card vocab">
+                    <div class="anno-title">📚 核心词汇 Key Vocabulary (15 words)</div>
+                    <div class="anno-body">
+                        <p style="margin-bottom:10px; font-size:0.88em; color:#888;">🟢 Common | 🟡 Intermediate | 🔴 Advanced &nbsp; — 点击单词查看释义</p>
+                        
+                        <!-- Advanced Words -->
+                        <div style="margin:12px 0;">
+                            <strong style="color:#c62828;">🔴 Advanced Words</strong>
+                            <div class="vocab-grid" style="margin-top:6px;">
+                                <span class="vocab-tag advanced">entomologist</span>
+                                <span class="vocab-tag advanced">entomology</span>
+                                <span class="vocab-tag advanced">enamored</span>
+                                <span class="vocab-tag advanced">parasites</span>
+                                <span class="vocab-tag advanced">endowed</span>
+                                <span class="vocab-tag advanced">renowned</span>
+                                <span class="vocab-tag advanced">pollinators</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Intermediate Words -->
+                        <div style="margin:12px 0;">
+                            <strong style="color:#e65100;">🟡 Intermediate Words</strong>
+                            <div class="vocab-grid" style="margin-top:6px;">
+                                <span class="vocab-tag intermediate">expertise</span>
+                                <span class="vocab-tag intermediate">populations</span>
+                                <span class="vocab-tag intermediate">doctorate</span>
+                                <span class="vocab-tag intermediate">nonprofit</span>
+                                <span class="vocab-tag intermediate">accessible</span>
+                                <span class="vocab-tag intermediate">narrative</span>
+                                <span class="vocab-tag intermediate">footage</span>
+                                <span class="vocab-tag intermediate">documentary</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Detailed Word List -->
+                        <div style="margin-top:15px; border-top:1px solid #eee; padding-top:12px;">
+                            <strong>📖 Detailed Definitions 详细释义</strong>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">entomologist <span class="wd-level level-adv">ADV</span></div>
+                                    <div class="wd-ipa">/ˌen.təˈmɒl.ə.dʒɪst/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>n.</strong> 昆虫学家<br>
+                                    A scientist who studies insects.<br>
+                                    <em style="color:#999;">📌 词根：entomo-（昆虫）+ -logist（研究者）</em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">enamored <span class="wd-level level-adv">ADV</span></div>
+                                    <div class="wd-ipa">/ɪˈnæm.əd/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>adj.</strong> 着迷的，倾心的<br>
+                                    Filled with love or admiration for something.<br>
+                                    <em style="color:#999;">📌 搭配：enamored <u>of</u> / enamored <u>with</u></em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">parasites <span class="wd-level level-adv">ADV</span></div>
+                                    <div class="wd-ipa">/ˈpær.ə.saɪts/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>n.</strong> 寄生虫<br>
+                                    Organisms that live on or inside another organism and cause harm.<br>
+                                    <em style="color:#999;">📌 Ramsey 的研究聚焦于威胁蜜蜂的寄生虫，如瓦螨（Varroa mite）</em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">endowed <span class="wd-level level-adv">ADV</span></div>
+                                    <div class="wd-ipa">/ɪnˈdaʊd/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>adj.</strong> 获资助的<br>
+                                    "Endowed chair" = 由捐赠基金资助的教授职位，是学术界的高荣誉。<br>
+                                    <em style="color:#999;">📌 endowed chair 冠名教授席位，通常由校友或机构捐赠设立</em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">expertise <span class="wd-level level-int">INT</span></div>
+                                    <div class="wd-ipa">/ˌek.spɜːˈtiːz/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>n.</strong> 专业知识，专长<br>
+                                    Expert skill or knowledge in a particular field.<br>
+                                    <em style="color:#999;">📌 注意重音在第三音节 -tise，不是 expert 的重音位置</em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">footage <span class="wd-level level-int">INT</span></div>
+                                    <div class="wd-ipa">/ˈfʊt.ɪdʒ/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>n.</strong> （电影/视频的）影像片段<br>
+                                    Recorded film or video material.<br>
+                                    <em style="color:#999;">📌 不可数名词！不能说 "a footage"，要说 "a piece of footage"</em>
+                                </div>
+                            </div>
+                            
+                            <div class="word-detail">
+                                <div>
+                                    <div class="wd-word">narrative <span class="wd-level level-int">INT</span></div>
+                                    <div class="wd-ipa">/ˈnær.ə.tɪv/</div>
+                                </div>
+                                <div class="wd-def">
+                                    <strong>n.</strong> 叙事，叙述方式<br>
+                                    A spoken or written account of connected events; a story.<br>
+                                    <em style="color:#999;">📌 常用搭配：guide the narrative（引导叙事）、shift the narrative（转变叙事）</em>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 2. Complex Sentences -->
+                <div class="anno-card complex">
+                    <div class="anno-title">🔍 长难句拆解 Complex Sentence Breakdown</div>
+                    <div class="anno-body">
+                        
+                        <!-- Sentence 1 -->
+                        <div class="breakdown-box">
+                            <strong>句子 ①</strong>
+                            <p style="margin:8px 0; font-style:italic; color:#555;">"Renowned entomologist (scientist who studies insects) Samuel Ramsey, known as 'Dr. Sammy,' has spent his career working to understand and protect honeybees."</p>
+                            <div style="margin:8px 0;">
+                                <span class="clause-tag clause-main">主句</span> Samuel Ramsey has spent his career working to understand and protect honeybees.
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-sub">同位语</span> Renowned entomologist — 修饰 Samuel Ramsey
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-relative">插入语</span> (scientist who studies insects) — 解释 entomologist
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-sub">分词短语</span> known as "Dr. Sammy" — 补充说明
+                            </div>
+                            <p class="cn-note" style="margin-top:8px;">
+                                🇨🇳 <strong>翻译：</strong>著名昆虫学家（研究昆虫的科学家）Samuel Ramsey，人称"Sammy博士"，他一直致力于理解和保护蜜蜂。<br>
+                                💡 <strong>句型要点：</strong>这是一个典型的"头重脚轻"句，主语前有大量修饰成分（同位语+插入解释+分词短语）。阅读时先找到主语 Samuel Ramsey 和谓语 has spent。
+                            </p>
+                        </div>
+                        
+                        <!-- Sentence 7 -->
+                        <div class="breakdown-box">
+                            <strong>句子 ⑦</strong>
+                            <p style="margin:8px 0; font-style:italic; color:#555;">"In 2021, he founded the Ramsey Research Foundation, a nonprofit that works to make scientific information about bees more accessible."</p>
+                            <div style="margin:8px 0;">
+                                <span class="clause-tag clause-main">主句</span> he founded the Ramsey Research Foundation
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-sub">同位语</span> a nonprofit — 解释 Foundation 是什么
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-relative">定语从句</span> that works to make ... accessible — 修饰 nonprofit
+                            </div>
+                            <p class="cn-note" style="margin-top:8px;">
+                                🇨🇳 <strong>翻译：</strong>2021年，他创立了Ramsey研究基金会——一个致力于让蜜蜂科学信息更易获取的非营利组织。<br>
+                                💡 <strong>句型要点：</strong>同位语 + 定语从句的嵌套结构。"make sth. more accessible" 是常用的 make + O + adj. 结构。
+                            </p>
+                        </div>
+                        
+                        <!-- Sentence 15 -->
+                        <div class="breakdown-box">
+                            <strong>句子 ⑮</strong>
+                            <p style="margin:8px 0; font-style:italic; color:#555;">"There are incredible discoveries at the end of your questions if you're just willing to ask them."</p>
+                            <div style="margin:8px 0;">
+                                <span class="clause-tag clause-main">主句</span> There are incredible discoveries at the end of your questions
+                            </div>
+                            <div style="margin:4px 0;">
+                                <span class="clause-tag clause-sub">条件状语从句</span> if you're just willing to ask them
+                            </div>
+                            <p class="cn-note" style="margin-top:8px;">
+                                🇨🇳 <strong>翻译：</strong>"如果你愿意去问，在你的问题尽头就有不可思议的发现。"<br>
+                                💡 <strong>句型要点：</strong>There be + if 条件句。"be willing to do" = 愿意做某事。这句话富有感染力，适合作为名言积累。
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 3. Key Phrases -->
+                <div class="anno-card phrase">
+                    <div class="anno-title">🔑 核心短语 Key Phrases & Collocations</div>
+                    <div class="anno-body">
+                        <table style="width:100%; border-collapse:collapse; font-size:0.9em;">
+                            <tr style="background:#f0faf0;">
+                                <td style="padding:8px; font-weight:bold; border-bottom:1px solid #ddd;">Phrase</td>
+                                <td style="padding:8px; border-bottom:1px solid #ddd;">含义</td>
+                                <td style="padding:8px; border-bottom:1px solid #ddd;">例句位置</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">spent his career working to...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">毕生致力于...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">①</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">brought his expertise to</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">将专业知识带到...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">②</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">shifted his focus to</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">将重心转向...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">④</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">be enamored of</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">着迷于...; 对...倾心</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">⑤</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">in pursuit of</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">为了追求...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">⑥</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">guide the narrative</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">引导叙事/故事线</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">⑩</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">never-before-seen footage</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">前所未见的影像</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">⑪</td>
+                            </tr>
+                            <tr>
+                                <td style="padding:8px; font-weight:500; border-bottom:1px solid #eee;">be willing to</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">愿意去做...</td>
+                                <td style="padding:8px; border-bottom:1px solid #eee;">⑮</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <!-- 4. Grammar Notes -->
+                <div class="anno-card error">
+                    <div class="anno-title">✏️ 语法要点 Grammar Notes</div>
+                    <div class="anno-body">
+                        
+                        <div class="error-item">
+                            <div class="error-type">📌 现在完成时 Present Perfect Tense</div>
+                            <p style="margin:6px 0;"><strong>原文：</strong>"has spent his career" / "has loved bees since the age of 7" / "has helped scientists"</p>
+                            <p class="explanation">
+                                文章大量使用现在完成时（has + past participle），表示从过去持续到现在的状态或动作。<br>
+                                🇨🇳 "has spent his career" = 一直在（从过去到现在）致力于...<br>
+                                💡 <strong>对比：</strong>"spent"（过去式）= 过去做了但现在可能不做了；"has spent" = 从过去到现在一直在做。
+                            </p>
+                        </div>
+                        
+                        <div class="error-item">
+                            <div class="error-type">📌 非限制性定语从句 Non-restrictive Relative Clause</div>
+                            <p style="margin:6px 0;"><strong>原文：</strong>"Ramsey, <u>who grew up in Maryland</u>, has loved bees since the age of 7."</p>
+                            <p class="explanation">
+                                用逗号隔开的 who 从句是补充说明，去掉不影响主句意思。<br>
+                                🇨🇳 Ramsey（在马里兰长大的）从7岁起就热爱蜜蜂。<br>
+                                💡 <strong>易错点：</strong>非限制性定语从句不能用 that 替代 who/which！<br>
+                                ❌ Ramsey, <span class="incorrect">that</span> grew up in Maryland...<br>
+                                ✅ Ramsey, <span class="correct">who</span> grew up in Maryland...
+                            </p>
+                        </div>
+                        
+                        <div class="error-item">
+                            <div class="error-type">📌 复合形容词 Compound Adjective</div>
+                            <p style="margin:6px 0;"><strong>原文：</strong>"<u>never-before-seen</u> footage"</p>
+                            <p class="explanation">
+                                多个单词用连字符连接构成复合形容词，修饰后面的名词。<br>
+                                🇨🇳 "前所未见的影像"<br>
+                                💡 <strong>类似用法：</strong>well-known（知名的）、three-part（三集的）、state-of-the-art（最先进的）
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- 5. Cultural Notes -->
+                <div class="anno-card" style="border-left-color: #9c27b0;">
+                    <div class="anno-title" style="color:#9c27b0;">🌍 背景知识 Cultural & Background Notes</div>
+                    <div class="anno-body">
+                        <div style="margin:8px 0; padding:10px; background:#f3e5f5; border-radius:6px;">
+                            <strong>🐝 Why Bees Matter 蜜蜂为什么重要？</strong><br>
+                            蜜蜂是最重要的<strong>授粉者（pollinators）</strong>之一，全球约75%的粮食作物依赖昆虫授粉。近年来蜜蜂种群大幅下降（bee populations have fallen），主要原因包括寄生虫、农药、栖息地丧失和气候变化。
+                        </div>
+                        <div style="margin:8px 0; padding:10px; background:#f3e5f5; border-radius:6px;">
+                            <strong>🎓 Endowed Chair 冠名教授席位</strong><br>
+                            "Endowed chair"是美国高校中的高级学术荣誉，由捐赠者出资设立永久基金，其利息用于支持教授的薪资和研究。获得冠名教授席位是对学者研究成就的极高认可。
+                        </div>
+                        <div style="margin:8px 0; padding:10px; background:#f3e5f5; border-radius:6px;">
+                            <strong>🌎 Earth Day 地球日</strong><br>
+                            文章标注 "Earth Day 2026"——每年4月22日是世界地球日，旨在提高公众的环保意识。本文发布于地球日前后，呼应了保护自然的主题。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- QUIZ SECTION -->
+        <div class="bottom-section quiz-section">
+            <h3>🎯 Reading Comprehension Quiz 阅读理解</h3>
+            
+            <div class="quiz-item">
+                <div class="q">1. What is Samuel Ramsey's nickname?</div>
+                <div class="options">
+                    <label><input type="radio" name="q1" value="a" onclick="checkAnswer(this, 'b')"> A. Dr. Bees</label>
+                    <label><input type="radio" name="q1" value="b" onclick="checkAnswer(this, 'b')"> B. Dr. Sammy</label>
+                    <label><input type="radio" name="q1" value="c" onclick="checkAnswer(this, 'b')"> C. Dr. Ramsey</label>
+                    <label><input type="radio" name="q1" value="d" onclick="checkAnswer(this, 'b')"> D. Dr. Honey</label>
+                </div>
+                <div class="answer" id="a1">✅ <strong>B. Dr. Sammy</strong> — 文章第一段提到 "known as 'Dr. Sammy'"</div>
+            </div>
+            
+            <div class="quiz-item">
+                <div class="q">2. What has Ramsey's research primarily focused on?</div>
+                <div class="options">
+                    <label><input type="radio" name="q2" value="a" onclick="checkAnswer(this, 'c')"> A. Bee honey production</label>
+                    <label><input type="radio" name="q2" value="b" onclick="checkAnswer(this, 'c')"> B. Ant behavior</label>
+                    <label><input type="radio" name="q2" value="c" onclick="checkAnswer(this, 'c')"> C. Parasites that threaten honeybees</label>
+                    <label><input type="radio" name="q2" value="d" onclick="checkAnswer(this, 'c')"> D. Climate change</label>
+                </div>
+                <div class="answer" id="a2">✅ <strong>C. Parasites that threaten honeybees</strong> — "His research on parasites has helped scientists understand threats to honeybees."</div>
+            </div>
+            
+            <div class="quiz-item">
+                <div class="q">3. The word "enamored" in the article is closest in meaning to:</div>
+                <div class="options">
+                    <label><input type="radio" name="q3" value="a" onclick="checkAnswer(this, 'a')"> A. Fascinated 着迷的</label>
+                    <label><input type="radio" name="q3" value="b" onclick="checkAnswer(this, 'a')"> B. Frightened 害怕的</label>
+                    <label><input type="radio" name="q3" value="c" onclick="checkAnswer(this, 'a')"> C. Confused 困惑的</label>
+                    <label><input type="radio" name="q3" value="d" onclick="checkAnswer(this, 'a')"> D. Annoyed 烦恼的</label>
+                </div>
+                <div class="answer" id="a3">✅ <strong>A. Fascinated</strong> — "enamored" 意为着迷的、倾心的，与 fascinated 最接近。原文语境："I am so enamored of how smart these tiny creatures are."</div>
+            </div>
+            
+            <div class="quiz-item">
+                <div class="q">4. What does Ramsey advise young people to do?</div>
+                <div class="options">
+                    <label><input type="radio" name="q4" value="a" onclick="checkAnswer(this, 'b')"> A. Study entomology at university</label>
+                    <label><input type="radio" name="q4" value="b" onclick="checkAnswer(this, 'b')"> B. Stay curious and observe nature</label>
+                    <label><input type="radio" name="q4" value="c" onclick="checkAnswer(this, 'b')"> C. Watch more documentaries</label>
+                    <label><input type="radio" name="q4" value="d" onclick="checkAnswer(this, 'b')"> D. Protect bees from parasites</label>
+                </div>
+                <div class="answer" id="a4">✅ <strong>B. Stay curious and observe nature</strong> — "He advises young people to 'stay curious' by watching bees around your home or examining why ants march in a line."</div>
+            </div>
+        </div>
+        
+        <!-- LEARNING TIPS -->
+        <div class="bottom-section learning-section">
+            <h3>💡 Learning Tips 学习要点总结</h3>
+            
+            <div class="tip-card">
+                <strong>📝 写作技巧 Writing Technique</strong><br>
+                本文是一篇典型的 <strong>人物特写（People Profile）</strong>，结构清晰：<br>
+                ① 开头点题 → ② 背景介绍（成长经历+教育+成就）→ ③ 具体事件（纪录片）→ ④ 引用原话（名言）→ ⑤ 结尾升华（对读者的建议）<br>
+                <em style="color:#999;">这个结构在英文新闻写作中非常常见，值得模仿！</em>
+            </div>
+            
+            <div class="tip-card">
+                <strong>🗣️ 可以积累的表达</strong><br>
+                ✨ "has spent his career working to..." — 适合描述某人长期从事某事<br>
+                ✨ "in pursuit of his passion" — 文雅地表达"追随热情"<br>
+                ✨ "incredible discoveries at the end of your questions" — 优美的名言，鼓励探索精神<br>
+                <em style="color:#999;">建议把这些短语添加到自己的 expression bank 中反复使用！</em>
+            </div>
+            
+            <div class="tip-card">
+                <strong>🎯 适合跟读的句子 Shadowing Practice</strong><br>
+                以下3句适合反复朗读，练习语感和节奏：<br>
+                1️⃣ "I am so enamored of how smart these tiny creatures are."<br>
+                2️⃣ "There are incredible discoveries at the end of your questions if you're just willing to ask them."<br>
+                3️⃣ "He advises young people to stay curious by watching bees around your home."
+            </div>
+        </div>
+        
+        <!-- FOOTER -->
+        <div class="footer">
+            <p>Generated by 英文精读报告生成器 🐝 | 2026-04-24</p>
+            <p>Article Source: <em>The Week Junior</em> · People Section · Earth Day 2026</p>
+        </div>
+    </div>
+    
+    <!-- SCRIPTS -->
+    <script>
+        // Sentence click highlight + sync
+        const sentences = document.querySelectorAll('.sentence');
+        sentences.forEach(sent => {
+            sent.addEventListener('click', function() {
+                sentences.forEach(s => s.classList.remove('highlighted'));
+                this.classList.add('highlighted');
+            });
+        });
+        
+        // Word tooltip
+        const tooltip = document.getElementById('tooltip');
+        const vocabWords = document.querySelectorAll('.word-advanced, .word-intermediate');
+        vocabWords.forEach(word => {
+            word.addEventListener('mouseenter', function(e) {
+                const w = this.dataset.word || this.textContent;
+                const cn = this.dataset.cn || '';
+                const ipa = this.dataset.ipa || '';
+                tooltip.innerHTML = `<strong>${w}</strong>${ipa ? ' ' + ipa : ''}<br>${cn}`;
+                tooltip.style.display = 'block';
+                tooltip.style.left = e.pageX + 10 + 'px';
+                tooltip.style.top = e.pageY - 40 + 'px';
+            });
+            word.addEventListener('mouseleave', function() {
+                tooltip.style.display = 'none';
+            });
+        });
+        
+        // Quiz check
+        function checkAnswer(el, correct) {
+            const name = el.querySelector('input') ? el.querySelector('input').name : el.name;
+            const val = el.value || el.querySelector('input').value;
+            const qNum = name.replace('q', '');
+            const answerDiv = document.getElementById('a' + qNum);
+            
+            if (val === correct) {
+                answerDiv.style.display = 'block';
+                answerDiv.style.background = '#e8f5e9';
+                answerDiv.style.color = '#2e7d32';
+            } else {
+                answerDiv.style.display = 'block';
+                answerDiv.style.background = '#ffebee';
+                answerDiv.style.color = '#c62828';
+                answerDiv.innerHTML = '❌ 不正确，再试试！正确答案是 ' + correct.toUpperCase() + '。' + answerDiv.innerHTML.replace('✅', '');
+                setTimeout(() => { answerDiv.style.display = 'none'; }, 3000);
+            }
+        }
+    </script>
+</body>
+</html>

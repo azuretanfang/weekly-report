@@ -1,0 +1,7 @@
+nltk==3.8.1
+requests==2.31.0
+anthropic==0.25.0
+gtts==2.4.0
+genanki==0.13.1
+g2p_en==2.1.0
+textstat==0.7.3

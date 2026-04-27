@@ -1,0 +1,31 @@
+name: 英文精读报告生成器
+version: 1.0.0
+author: fangtan
+description: |
+  AI驱动的英文文章精读分析工具。支持常见错误句型识别、生词标注、难度等级分析、
+  Anki卡片导出（含音标/例句音频）。
+
+keywords:
+  - 英文精读
+  - 词汇分析
+  - 语法识别
+  - Anki导出
+  - 英文学习
+
+features:
+  - 支持文本/URL/文件输入
+  - AI驱动常见错误句型识别（仅英文）
+  - 生词自动高亮和词汇等级标注
+  - 难度等级分析（A1-C2）
+  - 单词本管理（LocalStorage）
+  - Anki导出（含音标+Google TTS音频）
+  - PDF/Markdown导出
+
+requirements:
+  - claude-3-5-sonnet (API)
+  - nltk
+  - textstat
+  - g2p_en
+  - genanki
+  - gTTS
+  - requests
