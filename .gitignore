@@ -13,3 +13,6 @@ anydev-deploy/
 CT闭门会_260305.pptx
 skills-lock.json
 tapd-timesheet-skill.zip
+
+# Playwright CLI 临时产物（console log / page yml 等）
+.playwright-cli/
