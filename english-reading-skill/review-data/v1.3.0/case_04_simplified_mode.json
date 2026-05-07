@@ -1,0 +1,47 @@
+{
+  "id": "case_04_simplified_mode",
+  "label": "边界-极短文本(5词)",
+  "input_preview": "The cat sat on it.",
+  "input_type": "text",
+  "expected": "mode=simplified / 不调 Claude / notice 提示扩充输入",
+  "pre_check": {
+    "cjk_dominant": false,
+    "cjk_ratio": 0.0,
+    "injection_hit": false,
+    "injection_patterns_matched": []
+  },
+  "stdout": "============================================================\n🚀 Starting English Reading Analysis\n============================================================\n\n[1/6] Parsing input content...\n✅ Title: The cat sat on it.\n✅ Content length: 18 characters\n\n⚠️ 输入仅 5 词，低于最小阈值 10，进入简化模式（跳过 AI 深度分析以避免空洞输出）\n⚠️ 输入文本仅 5 词（阈值 10 词），已自动切换到简化模式。如需完整的错误句型识别、复杂句拆解，请提供至少 10 词的英文段落或文章。\n✅ HTML report (simplified) saved: /Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.3.0/html_reports/The cat sat on it._report.html\n",
+  "error_trace": null,
+  "result": {
+    "success": true,
+    "mode": "simplified",
+    "title": "The cat sat on it.",
+    "html_report": "/Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.3.0/html_reports/The cat sat on it._report.html",
+    "vocab_summary": {
+      "unique_words": 5,
+      "total_words": 5,
+      "difficulty_score": 0.3333333333333333,
+      "level_counts": {
+        "common": 3,
+        "intermediate": 2,
+        "advanced": 0,
+        "unknown": 0
+      },
+      "advanced_examples": [],
+      "unknown_examples": [],
+      "unknown_with_guess_count": 0,
+      "vocab_db_source": "self_built_v1.1 + wordfreq"
+    },
+    "readability_summary": {
+      "complexity_level": "A1",
+      "avg_sentence_length": 2.5,
+      "flesch_reading_ease": 117.16,
+      "flesch_kincaid_grade": -1.84,
+      "dale_chall_score": 0.25,
+      "readability_source": "textstat"
+    },
+    "error_patterns_count": 0,
+    "complex_sentences_count": 0,
+    "error": null
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "id": "case_05_ssrf_internal_url",
+  "label": "边界-SSRF内网URL",
+  "input_preview": "http://10.0.0.1/secret",
+  "input_type": "url",
+  "expected": "ContentParser.parse 抛 URLValidationError → success=False",
+  "pre_check": {
+    "cjk_dominant": false,
+    "cjk_ratio": 0.0,
+    "injection_hit": false,
+    "injection_patterns_matched": []
+  },
+  "stdout": "============================================================\n🚀 Starting English Reading Analysis\n============================================================\n\n[1/6] Parsing input content...\n❌ Parse error: 出于安全考虑，仅支持 HTTPS 协议（当前：http）\n",
+  "error_trace": null,
+  "result": {
+    "success": false,
+    "error_patterns_count": 0,
+    "complex_sentences_count": 0,
+    "error": "出于安全考虑，仅支持 HTTPS 协议（当前：http）"
+  }
+}

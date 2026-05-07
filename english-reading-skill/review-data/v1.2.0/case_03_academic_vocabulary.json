@@ -1,0 +1,36 @@
+{
+  "id": "case_03_academic_vocabulary",
+  "label": "正例-学术词汇文本",
+  "input_preview": "The hermeneutic methodology employed in this empirical investigation seeks to elucidate the dialectical relationship between epistemological frameworks and ontological assumptions. Researchers must sc...",
+  "input_type": "text",
+  "expected": "advanced词召回率≥50% / 出现 unknown_words_with_guess 兜底标识",
+  "pre_check": {
+    "cjk_dominant": false,
+    "cjk_ratio": 0.0,
+    "injection_hit": false,
+    "injection_patterns_matched": []
+  },
+  "stdout": "============================================================\n🚀 Starting English Reading Analysis\n============================================================\n\n[1/6] Parsing input content...\n✅ Title: The hermeneutic methodology employed in this empir\n✅ Content length: 357 characters\n\n[2/6] Performing NLP analysis...\n✅ Unique words: 38\n✅ Complexity level: C2\n✅ Difficulty score: 0.41\n\n[3-5/6] Running AI / key-sentence steps in parallel...\n⚠️ Error pattern analysis degraded: ⚠️ 语法分析服务暂时不可用，请稍后重试\n✅ Complex sentences found: 2\n✅ Summary generated: 355 characters\n\n[6/6] Generating HTML report...\n✅ HTML report saved: /Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.2.0/html_reports/The hermeneutic methodology employed in this empir_report.html\n\n============================================================\n✨ Analysis Complete!\n============================================================\n",
+  "error_trace": null,
+  "result": {
+    "success": true,
+    "mode": "full",
+    "injection_notice": null,
+    "title": "The hermeneutic methodology employed in this empir",
+    "html_report": "/Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.2.0/html_reports/The hermeneutic methodology employed in this empir_report.html",
+    "vocab_summary": {
+      "unique_words": 38,
+      "total_words": 40,
+      "difficulty_score": 0.41025641025641024,
+      "level_counts": {},
+      "unknown_with_guess_count": 21
+    },
+    "readability_summary": {
+      "complexity_level": "C2",
+      "avg_sentence_length": 13.33
+    },
+    "error_patterns_count": 0,
+    "complex_sentences_count": 2,
+    "error": null
+  }
+}

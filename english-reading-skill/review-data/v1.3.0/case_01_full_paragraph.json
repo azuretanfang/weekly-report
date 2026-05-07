@@ -1,0 +1,57 @@
+{
+  "id": "case_01_full_paragraph",
+  "label": "正例-中等英文段落-150词",
+  "input_preview": "Artificial intelligence is fundamentally transforming the landscape of modern education. By leveraging machine learning algorithms, educators can now provide personalized learning experiences tailored...",
+  "input_type": "text",
+  "expected": "full模式 / 至少6大区块 / CEFR=B2~C1 / advanced≥3",
+  "pre_check": {
+    "cjk_dominant": false,
+    "cjk_ratio": 0.0,
+    "injection_hit": false,
+    "injection_patterns_matched": []
+  },
+  "stdout": "============================================================\n🚀 Starting English Reading Analysis\n============================================================\n\n[1/6] Parsing input content...\n✅ Title: Artificial intelligence is fundamentally transform\n✅ Content length: 1057 characters\n\n[2/6] Performing NLP analysis...\n✅ Unique words: 113\n✅ Complexity level: C2\n✅ Difficulty score: 0.91\n\n[3-5/6] Running AI / key-sentence steps in parallel...\n⚠️ Error pattern analysis degraded: ⚠️ 语法分析服务暂时不可用，请稍后重试\n✅ Complex sentences found: 7\n✅ Summary generated: 437 characters\n\n[6/6] Generating HTML report...\n✅ HTML report saved: /Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.3.0/html_reports/Artificial intelligence is fundamentally transform_report.html\n\n============================================================\n✨ Analysis Complete!\n============================================================\n",
+  "error_trace": null,
+  "result": {
+    "success": true,
+    "mode": "full",
+    "injection_notice": null,
+    "title": "Artificial intelligence is fundamentally transform",
+    "html_report": "/Users/tanfang/CodeBuddy/fangtan的工作台/english-reading-skill/review-data/v1.3.0/html_reports/Artificial intelligence is fundamentally transform_report.html",
+    "vocab_summary": {
+      "unique_words": 113,
+      "total_words": 136,
+      "difficulty_score": 0.9122807017543859,
+      "level_counts": {
+        "common": 29,
+        "intermediate": 64,
+        "advanced": 20,
+        "unknown": 0
+      },
+      "advanced_examples": [
+        "irreplaceable",
+        "transforming",
+        "harnessing",
+        "transparency",
+        "mentorship",
+        "personalized",
+        "fundamentally",
+        "leveraging"
+      ],
+      "unknown_examples": [],
+      "unknown_with_guess_count": 0,
+      "vocab_db_source": "self_built_v1.1 + wordfreq"
+    },
+    "readability_summary": {
+      "complexity_level": "C2",
+      "avg_sentence_length": 17.25,
+      "flesch_reading_ease": -1.37,
+      "flesch_kincaid_grade": 18.31,
+      "dale_chall_score": 14.29,
+      "readability_source": "textstat"
+    },
+    "error_patterns_count": 0,
+    "complex_sentences_count": 7,
+    "error": null
+  }
+}
