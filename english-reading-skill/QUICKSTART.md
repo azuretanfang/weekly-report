@@ -1,5 +1,9 @@
 # 🚀 Quick Start Guide
 
+> ⚠️ **v1.2.0 公告**：自 v1.2.0 起已**移除 Anki 单词卡生成与导出**能力。本文档中涉及 `--no-anki`、`genanki`、`export_anki=...`、`anki_export` 的内容仅作历史参考，当前版本不再支持。请直接使用 HTML 精读报告。
+>
+> 🆕 **v1.3.0 公告**：CEFR 算法已从经验公式升级为 `textstat`（Flesch-Kincaid Grade + Dale-Chall），词汇分级新增 `wordfreq` 频率 fallback。新增依赖：`wordfreq>=3.0.0`（约 70MB）；缺失时自动降级，不影响主流程。安装命令请见 `requirements.txt`。
+
 ## 安装依赖
 
 ```bash

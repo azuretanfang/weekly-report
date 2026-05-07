@@ -1,5 +1,7 @@
 # 项目架构说明
 
+> ⚠️ **v1.2.0 公告**：自 v1.2.0 起已**移除 Anki 单词卡生成与导出**能力。本文档中关于 `VocabularyCardGenerator`、`AnkiExporter`、`--no-anki`、`anki_export`、`Anki导出 (genanki)` 等内容均为 v1.1.x 历史记录，当前版本不再提供。
+
 ## 📁 项目结构
 
 ```
@@ -353,6 +355,6 @@ ERROR_PATTERNS_PROMPT = """
 
 ---
 
-**最后更新**: 2026-04-24
-**版本**: 1.0.0
+**最后更新**: 2026-05-07
+**版本**: 1.3.0
 **维护者**: fangtan

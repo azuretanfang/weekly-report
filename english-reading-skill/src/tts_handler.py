@@ -1,320 +1,201 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """
-TTS音频处理器 - 生成例句音频和音标
+TTS 音频处理器 - 生成例句/单词音频和音标
+
+【v1.1.0 修复】
+- 移除"伪 IPA 占位符"反模式：g2p_en 失败时返回 "N/A"，**禁止返回 /word/ 假数据**
+- G2p 单例缓存（避免每次实例化耗 ~3s）
+- gTTS 失败不返回 True，失败/降级状态显式区分
+
+【v1.2.0 变更】
+- 移除 VocabularyCardGenerator / AnkiExporter（不再支持 Anki 卡片生成与导出）
+- 仅保留 PhoneticTranscriber（IPA 音标）与 TTSAudioGenerator（gTTS 音频）
 """
 
 import os
-import json
 import re
-from typing import Dict, List, Optional
-from pathlib import Path
-from gtts import gTTS
-import tempfile
+import logging
+import threading
+from concurrent.futures import ThreadPoolExecutor, as_completed
+from typing import Dict, List, Tuple
 
+logger = logging.getLogger(__name__)
+
+
+# ============= G2p 单例（线程安全）=============
+
+_g2p_instance = None
+_g2p_lock = threading.Lock()
+_g2p_init_failed = False
+
+
+def _get_g2p():
+    """单例 G2p；初始化失败后不再重试，避免重复 3s 加载。"""
+    global _g2p_instance, _g2p_init_failed
+    if _g2p_init_failed:
+        return None
+    if _g2p_instance is not None:
+        return _g2p_instance
+    with _g2p_lock:
+        if _g2p_instance is not None:
+            return _g2p_instance
+        try:
+            from g2p_en import G2p  # type: ignore
+            _g2p_instance = G2p()
+            return _g2p_instance
+        except Exception as e:
+            logger.warning("G2p 初始化失败，IPA 将降级为 N/A：%s", e)
+            _g2p_init_failed = True
+            return None
+
+
+# ARPAbet → IPA 简化映射（覆盖常见音素，未覆盖时保留 ARPAbet 标识，避免胡编）
+ARPABET_TO_IPA = {
+    "AA": "ɑ", "AE": "æ", "AH": "ʌ", "AO": "ɔ", "AW": "aʊ", "AY": "aɪ",
+    "B": "b", "CH": "tʃ", "D": "d", "DH": "ð",
+    "EH": "ɛ", "ER": "ɝ", "EY": "eɪ", "F": "f", "G": "ɡ",
+    "HH": "h", "IH": "ɪ", "IY": "i", "JH": "dʒ",
+    "K": "k", "L": "l", "M": "m", "N": "n", "NG": "ŋ",
+    "OW": "oʊ", "OY": "ɔɪ", "P": "p", "R": "r", "S": "s", "SH": "ʃ",
+    "T": "t", "TH": "θ", "UH": "ʊ", "UW": "u",
+    "V": "v", "W": "w", "Y": "j", "Z": "z", "ZH": "ʒ",
+}
+
+
+def _arpabet_to_ipa(phonemes: list) -> str:
+    """ARPAbet 列表转 IPA，去除重音数字（如 AH0/AH1/AH2 → AH）。"""
+    out = []
+    for p in phonemes:
+        if not p:
+            continue
+        # 跳过非音素（标点等）
+        if not p[0].isalpha():
+            continue
+        base = re.sub(r'\d+$', '', p).upper()
+        out.append(ARPABET_TO_IPA.get(base, base.lower()))  # 未知音素 fallback 为小写 ARPAbet
+    return ''.join(out)
+
+
+# ============= 音标生成 =============
 
 class PhoneticTranscriber:
-    """音标生成器"""
-    
-    # 简化的G2P映射（实际应使用g2p_en库）
-    PHONEME_MAP = {
-        'a': 'æ', 'e': 'ɛ', 'i': 'i', 'o': 'ɔ', 'u': 'ʊ',
-        'oa': 'oʊ', 'ai': 'eɪ', 'oi': 'ɔɪ', 'ou': 'aʊ',
-    }
-    
+    """音标生成器。失败明确返回 N/A，禁止返回假音标。"""
+
     @staticmethod
     def generate_ipa(word: str) -> str:
         """
-        生成IPA音标（简化版）
-        实际应集成g2p_en库
-        
-        Args:
-            word: 英文单词
-            
+        生成 IPA 音标。
+
         Returns:
-            IPA音标
+            "/ɪnˈtelɪdʒəns/" 形式的真实 IPA；
+            如果 g2p 库不可用 → 返回 "N/A"（**绝不返回 /word/ 这种假音标**）
         """
-        word_lower = word.lower()
-        
-        # 这里应使用g2p_en库：
-        # from g2p_en import G2p
-        # g2p = G2p()
-        # phonemes = g2p(word)
-        # return ''.join(phonemes)
-        
-        # 简化示例（实际应使用真实库）
-        return f"/{word_lower}/"  # 占位符
-    
-    @staticmethod
-    def generate_ipa_proper(word: str) -> str:
-        """
-        使用g2p_en生成真实的IPA音标
-        """
+        if not word or not isinstance(word, str):
+            return "N/A"
+
+        g2p = _get_g2p()
+        if g2p is None:
+            return "N/A"
+
         try:
-            from g2p_en import G2p
-            g2p = G2p()
             phonemes = g2p(word)
-            ipa = ''.join(phonemes)
+            ipa = _arpabet_to_ipa(phonemes)
+            if not ipa:
+                return "N/A"
             return f"/{ipa}/"
         except Exception as e:
-            # 降级处理
-            return f"/{word.lower()}/"
+            logger.warning("IPA 生成失败 word=%r: %s", word, e)
+            return "N/A"
 
+    # 向后兼容旧 API
+    @staticmethod
+    def generate_ipa_proper(word: str) -> str:
+        return PhoneticTranscriber.generate_ipa(word)
+
+
+# ============= TTS 音频 =============
 
 class TTSAudioGenerator:
-    """Google TTS音频生成器"""
-    
+    """Google TTS 音频生成器（gTTS）"""
+
     @staticmethod
-    def generate_sentence_audio(
-        sentence: str,
-        output_path: str,
-        language: str = 'en'
-    ) -> bool:
-        """
-        使用Google TTS生成句子音频
-        
-        Args:
-            sentence: 句子文本
-            output_path: 输出MP3文件路径
-            language: 语言代码 (默认 'en')
-            
-        Returns:
-            成功标志
-        """
+    def _safe_generate(text: str, output_path: str, language: str, slow: bool) -> bool:
         try:
-            tts = gTTS(text=sentence, lang=language, slow=False)
+            from gtts import gTTS  # type: ignore
+        except ImportError as e:
+            logger.warning("gTTS 未安装：%s", e)
+            return False
+
+        try:
+            tts = gTTS(text=text, lang=language, slow=slow)
             tts.save(output_path)
+            # 校验产物
+            if not os.path.exists(output_path) or os.path.getsize(output_path) == 0:
+                logger.warning("gTTS 保存后文件不存在或为空：%s", output_path)
+                return False
             return True
         except Exception as e:
-            print(f"Error generating audio: {str(e)}")
+            logger.warning("gTTS 生成失败 text=%r: %s", text[:50], e)
             return False
-    
+
     @staticmethod
-    def generate_word_audio(
-        word: str,
-        output_path: str,
-        language: str = 'en'
-    ) -> bool:
+    def generate_sentence_audio(sentence: str, output_path: str, language: str = 'en') -> bool:
+        return TTSAudioGenerator._safe_generate(sentence, output_path, language, slow=False)
+
+    @staticmethod
+    def generate_word_audio(word: str, output_path: str, language: str = 'en') -> bool:
+        return TTSAudioGenerator._safe_generate(word, output_path, language, slow=True)
+
+    # Y-29：并行批量生成音频
+    @staticmethod
+    def generate_batch(
+        tasks: List[Tuple[str, str]],
+        language: str = 'en',
+        slow: bool = False,
+        max_workers: int = 4,
+    ) -> Dict[str, bool]:
         """
-        生成单个单词的音频
-        
+        并行批量生成音频。
         Args:
-            word: 单词
-            output_path: 输出MP3文件路径
-            language: 语言代码
-            
+            tasks: [(text, output_path), ...]
+            language: 语种
+            slow: 是否慢速（单词场景常用 True）
+            max_workers: 并发数（gTTS 基于 Google 公开接口，过高会被限流，4 较稳）
         Returns:
-            成功标志
+            {output_path: success_bool}
         """
-        try:
-            tts = gTTS(text=word, lang=language, slow=True)
-            tts.save(output_path)
-            return True
-        except Exception as e:
-            print(f"Error generating word audio: {str(e)}")
-            return False
+        if not tasks:
+            return {}
+
+        results: Dict[str, bool] = {}
+        # 去重（同一文本多次生成毫无意义）
+        seen = {}
+        unique_tasks = []
+        for text, path in tasks:
+            key = (text, path)
+            if key in seen:
+                continue
+            seen[key] = True
+            unique_tasks.append((text, path))
+
+        def _run(text: str, path: str) -> Tuple[str, bool]:
+            ok = TTSAudioGenerator._safe_generate(text, path, language, slow)
+            return path, ok
+
+        with ThreadPoolExecutor(max_workers=max_workers) as pool:
+            futures = [pool.submit(_run, t, p) for t, p in unique_tasks]
+            for fut in as_completed(futures):
+                try:
+                    path, ok = fut.result()
+                    results[path] = ok
+                except Exception as e:
+                    logger.warning("batch TTS task failed: %s", e)
+        return results
 
 
-class VocabularyCardGenerator:
-    """Anki卡片生成器"""
-    
-    @staticmethod
-    def create_anki_card(
-        word: str,
-        pronunciation: str,
-        definition: str,
-        example_sentence: str,
-        example_translation: str,
-        example_audio_path: Optional[str] = None,
-        word_audio_path: Optional[str] = None,
-        difficulty_level: str = 'intermediate'
-    ) -> Dict:
-        """
-        创建Anki卡片数据
-        
-        Args:
-            word: 单词
-            pronunciation: 音标/发音
-            definition: 中文定义
-            example_sentence: 例句
-            example_translation: 例句翻译
-            example_audio_path: 例句音频路径
-            word_audio_path: 单词音频路径
-            difficulty_level: 难度等级
-            
-        Returns:
-            卡片数据字典
-        """
-        # 生成音频标记（Anki格式）
-        example_audio_tag = f'[sound:{Path(example_audio_path).name}]' if example_audio_path else ''
-        word_audio_tag = f'[sound:{Path(word_audio_path).name}]' if word_audio_path else ''
-        
-        return {
-            'front': f"""
-            <div style="font-size: 1.5em; font-weight: bold;">{word}</div>
-            <div style="color: #666; font-size: 1.1em;">{pronunciation}</div>
-            <div style="margin-top: 10px; font-size: 0.9em;">{word_audio_tag}</div>
-            """,
-            'back': f"""
-            <div style="font-size: 1.2em; font-weight: bold;">Definition</div>
-            <div style="margin: 10px 0; color: #333;">{definition}</div>
-            
-            <div style="font-size: 1.2em; font-weight: bold; margin-top: 15px;">Example Sentence</div>
-            <div style="margin: 10px 0; color: #333;">{example_sentence}</div>
-            <div style="margin: 10px 0; color: #999; font-size: 0.9em;">{example_translation}</div>
-            <div style="margin: 10px 0; font-size: 0.9em;">{example_audio_tag}</div>
-            
-            <div style="margin-top: 15px; padding-top: 10px; border-top: 1px solid #ddd; font-size: 0.8em; color: #999;">
-                Level: {difficulty_level}
-            </div>
-            """,
-            'audio_files': [f for f in [example_audio_path, word_audio_path] if f],
-            'difficulty_level': difficulty_level,
-            'word': word,
-            'pronunciation': pronunciation,
-        }
-
-
-class AnkiExporter:
-    """Anki导出器"""
-    
-    @staticmethod
-    def export_to_apkg(
-        cards: List[Dict],
-        deck_name: str = "English Reading",
-        output_path: str = "output.apkg"
-    ) -> bool:
-        """
-        导出为Anki格式（.apkg文件）
-        
-        Args:
-            cards: 卡片列表
-            deck_name: 卡牌组名称
-            output_path: 输出文件路径
-            
-        Returns:
-            成功标志
-        """
-        try:
-            import genanki
-            
-            # 创建卡片组
-            deck = genanki.Deck(2023, deck_name)
-            
-            # 定义卡片模型
-            model = genanki.Model(
-                1671467743,
-                'English Reading Card',
-                fields=[
-                    {'name': 'Front'},
-                    {'name': 'Back'},
-                    {'name': 'Word'},
-                    {'name': 'Pronunciation'},
-                    {'name': 'DifficultyLevel'},
-                ],
-                templates=[{
-                    'name': 'Card 1',
-                    'qfmt': '{{Front}}',
-                    'afmt': '{{Back}}',
-                }]
-            )
-            
-            # 添加卡片
-            for card_data in cards:
-                note = genanki.Note(
-                    model=model,
-                    fields=[
-                        card_data.get('front', ''),
-                        card_data.get('back', ''),
-                        card_data.get('word', ''),
-                        card_data.get('pronunciation', ''),
-                        card_data.get('difficulty_level', ''),
-                    ]
-                )
-                
-                # 添加音频文件
-                if 'audio_files' in card_data:
-                    for audio_file in card_data['audio_files']:
-                        if audio_file and os.path.exists(audio_file):
-                            note.fields[1] += f' [sound:{Path(audio_file).name}]'
-                
-                deck.add_notes(note)
-            
-            # 保存为.apkg
-            package = genanki.Package(deck)
-            
-            # 添加音频文件
-            for card_data in cards:
-                if 'audio_files' in card_data:
-                    for audio_file in card_data['audio_files']:
-                        if audio_file and os.path.exists(audio_file):
-                            package.media_files.append(audio_file)
-            
-            package.write_to_file(output_path)
-            return True
-            
-        except Exception as e:
-            print(f"Error exporting to Anki: {str(e)}")
-            return False
-    
-    @staticmethod
-    def export_to_csv(
-        cards: List[Dict],
-        output_path: str = "output.csv"
-    ) -> bool:
-        """
-        导出为CSV格式
-        """
-        try:
-            import csv
-            
-            with open(output_path, 'w', encoding='utf-8', newline='') as f:
-                writer = csv.writer(f)
-                writer.writerow(['Word', 'Pronunciation', 'Front', 'Back', 'Difficulty Level'])
-                
-                for card in cards:
-                    writer.writerow([
-                        card.get('word', ''),
-                        card.get('pronunciation', ''),
-                        card.get('front', '').replace('\n', ' '),
-                        card.get('back', '').replace('\n', ' '),
-                        card.get('difficulty_level', ''),
-                    ])
-            
-            return True
-        except Exception as e:
-            print(f"Error exporting to CSV: {str(e)}")
-            return False
-
-
-# 测试
+# ============= 测试 =============
 if __name__ == '__main__':
-    # 测试音标生成
-    word = "beautiful"
-    ipa = PhoneticTranscriber.generate_ipa(word)
-    print(f"Word: {word}, IPA: {ipa}")
-    
-    # 测试音频生成
-    print("\nGenerating audio...")
-    with tempfile.TemporaryDirectory() as tmpdir:
-        audio_path = os.path.join(tmpdir, "test.mp3")
-        success = TTSAudioGenerator.generate_sentence_audio(
-            "Artificial intelligence is transforming industries.",
-            audio_path
-        )
-        print(f"Audio generation success: {success}")
-        
-        if success:
-            print(f"Audio file size: {os.path.getsize(audio_path)} bytes")
-    
-    # 测试卡片生成
-    print("\nGenerating Anki card...")
-    card = VocabularyCardGenerator.create_anki_card(
-        word="intelligence",
-        pronunciation="/ɪnˈtelɪdʒəns/",
-        definition="智力，聪慧；信息",
-        example_sentence="Artificial intelligence is transforming industries.",
-        example_translation="人工智能正在改变各个行业。",
-        difficulty_level="intermediate"
-    )
-    print(f"Card created: {card['word']}")
+    print("=== IPA Test ===")
+    for w in ["beautiful", "intelligence", "infrastructure"]:
+        print(f"{w}: {PhoneticTranscriber.generate_ipa(w)}")

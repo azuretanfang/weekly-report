@@ -58,8 +58,7 @@ def run_integration_test():
         result = analyzer.analyze(
             content=test_article,
             input_type='text',
-            export_anki=True,
-            export_html=True
+            export_html=True,
         )
         
         if not result['success']:
@@ -111,13 +110,6 @@ def run_integration_test():
             print(f"   - HTML report: {Path(html_path).name} ({file_size} bytes)")
         else:
             print(f"   - HTML report: ❌ Not found")
-        
-        anki_path = result.get('anki_export')
-        if anki_path and Path(anki_path).exists():
-            file_size = Path(anki_path).stat().st_size
-            print(f"   - Anki export: {Path(anki_path).name} ({file_size} bytes)")
-        else:
-            print(f"   - Anki export: ⚠️ Not generated")
         
         # 检查摘要
         summary = result.get('summary', '')
