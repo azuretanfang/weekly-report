@@ -1,31 +1,33 @@
 {
   "report_meta": {
-    "html_file": "weekly-report-0420-0426.html",
-    "date_range": "0420 ~ 0426",
-    "date_start": "0420",
-    "date_end": "0426",
-    "title": "运营商行业周报 04.20 - 04.26",
-    "extracted_at": "2026-04-27T10:30:56",
-    "footer_source": "三大运营商财报公告、工信部、国资委、国新办、华为官网、新华网、央视网、C114通信网、路透社制作日期：2026年4月27日",
+    "html_file": "weekly-report-0518-0524.html",
+    "date_range": "0518 ~ 0524",
+    "date_start": "0518",
+    "date_end": "0524",
+    "title": "运营商行业周报 05.18 - 05.24",
+    "extracted_at": "2026-05-25T14:33:44",
+    "footer_source": "三大运营商公告、工信部、国家发改委、新华社、腾讯科技、新浪财经、C114 通信网制作日期：2026 年 5 月 25 日",
     "all_dates_in_content": [
-      "2026-04-20",
-      "2026-04-26",
-      "2026-02-10",
-      "2026-04-30",
-      "2026-04-23",
-      "2026-04-22",
-      "2026-04-27",
-      "2026-04-21"
+      "2026-05-13",
+      "2026-05-16",
+      "2026-05-09",
+      "2026-05-22",
+      "2026-05-20",
+      "2026-05-17",
+      "2026-05-25",
+      "2026-05-18",
+      "2026-04-28",
+      "2026-05-19"
     ]
   },
   "stats": {
-    "total_claims": 97,
+    "total_claims": 64,
     "by_section": {
-      "market_data": 26,
-      "personnel": 7,
-      "industry": 45,
-      "policy": 15,
-      "next_week": 4
+      "market_data": 27,
+      "personnel": 5,
+      "industry": 11,
+      "policy": 19,
+      "next_week": 2
     }
   },
   "claims": [
@@ -33,7 +35,7 @@
       "id": "M01",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "04.20 - 04.26",
+      "claim": "05.18 - 05.24",
       "type": "event",
       "values": null,
       "sources": [],
@@ -47,9 +49,12 @@
       "id": "M02",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "Q1财报集体\"倒春寒\" | 5G-A超级上行启航 | 全球6G大会南京开幕 | 工信部发布一季度通信业运行数据",
-      "type": "event",
-      "values": null,
+      "claim": "三大运营商集体推 Token 套餐 | \"六张网\"7 万亿基建落地 | 世界电信日聚焦\"双万兆\" | 中移铁通+电信省分公司密集人事调整",
+      "type": "numeric",
+      "values": {
+        "current": 7.0,
+        "current_unit": "万"
+      },
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -61,7 +66,7 @@
       "id": "M03",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "📊 市场数据 Q1财报·净利集体下滑",
+      "claim": "5元/月",
       "type": "event",
       "values": null,
       "sources": [],
@@ -75,21 +80,21 @@
       "id": "M04",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "Q1财报·净利集体下滑",
+      "claim": "5月20日全国上线起步价（来源：新华社）",
       "type": "event",
       "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
         "selector": "",
-        "tag": "span"
+        "tag": "div"
       }
     },
     {
       "id": "M05",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "Q1电信业务收入",
+      "claim": "9.9-299元",
       "type": "event",
       "values": null,
       "sources": [],
@@ -103,12 +108,9 @@
       "id": "M06",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "4394亿",
-      "type": "numeric",
-      "values": {
-        "current": 4394.0,
-        "current_unit": "亿"
-      },
+      "claim": "5月17日试商用·覆盖个人到企业（来源：腾讯科技）",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -120,11 +122,11 @@
       "id": "M07",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "同比-1.8%（来源：工信部）",
+      "claim": "7万亿+",
       "type": "numeric",
       "values": {
-        "ratio": -1.8,
-        "ratio_type": "yoy_pct"
+        "current": 7.0,
+        "current_unit": "万"
       },
       "sources": [],
       "risk_level": "medium",
@@ -137,7 +139,7 @@
       "id": "M08",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "5G基站总数",
+      "claim": "含算力网+新一代通信网（来源：发改委5/22发布会）",
       "type": "event",
       "values": null,
       "sources": [],
@@ -151,12 +153,9 @@
       "id": "M09",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "495.8万",
-      "type": "numeric",
-      "values": {
-        "current": 495.8,
-        "current_unit": "万"
-      },
+      "claim": "95.98元",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -168,7 +167,7 @@
       "id": "M10",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "截至2026年3月末（来源：工信部）",
+      "claim": "5/22收盘 周内一度冲至103.36元（来源：交易所行情）",
       "type": "event",
       "values": null,
       "sources": [],
@@ -182,12 +181,9 @@
       "id": "M11",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "10.09亿",
-      "type": "numeric",
-      "values": {
-        "current": 10.09,
-        "current_unit": "亿"
-      },
+      "claim": "较上期变化： 0501-0510 周报曾以\"战略共识\"角度报道\"从流量到 Token\"的行业转向",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -199,12 +195,9 @@
       "id": "M12",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "中移动Q1净增376万户（来源：中国移动公告）",
-      "type": "numeric",
-      "values": {
-        "current": 376.0,
-        "current_unit": "万户"
-      },
+      "claim": "本周（5/17-5/20）三大运营商集中将其转化为 面向 C 端用户的商业化套餐 ，标志着 Token 经济从战略口号进入资费上线、用户开通的执行阶段",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -216,7 +209,7 @@
       "id": "M13",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "23.4GB",
+      "claim": "（来源：新华社、腾讯科技 2026/05/20）",
       "type": "event",
       "values": null,
       "sources": [],
@@ -230,12 +223,9 @@
       "id": "M14",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "3月创历史新高 同比+13.8%",
-      "type": "numeric",
-      "values": {
-        "ratio": 13.8,
-        "ratio_type": "yoy_pct"
-      },
+      "claim": "三家 Token 套餐落地节奏： • 中国电信 ：5月17日全国试商用",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -247,15 +237,11 @@
       "id": "M15",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "本周三大运营商Q1财报密集披露，净利润罕见全线下滑： • 中国移动 （4月20日）：营收2665亿元（+1.0%），归母净利润293亿元（ -4.2% ）",
+      "claim": "个人/家庭三档（9.9 元/1000万 Tokens",
       "type": "numeric",
       "values": {
-        "current": 2665.0,
-        "current_unit": "亿元",
-        "percentages": [
-          1.0,
-          -4.2
-        ]
+        "current": 1000.0,
+        "current_unit": "万"
       },
       "sources": [],
       "risk_level": "medium",
@@ -268,15 +254,11 @@
       "id": "M16",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "• 中国联通 （4月21日）：营收1028亿元（-0.5%），归母净利润21.37亿元（ -18.0% ）",
+      "claim": "29.9 元/4000万",
       "type": "numeric",
       "values": {
-        "current": 1028.0,
-        "current_unit": "亿元",
-        "percentages": [
-          -0.5,
-          -18.0
-        ]
+        "current": 4000.0,
+        "current_unit": "万"
       },
       "sources": [],
       "risk_level": "medium",
@@ -289,15 +271,11 @@
       "id": "M17",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "• 中国电信 （4月23日）：营收1219亿元（-2.32%），归母净利润84.92亿元（ -17.08% ）",
+      "claim": "49.9 元/8000万）",
       "type": "numeric",
       "values": {
-        "current": 1219.0,
-        "current_unit": "亿元",
-        "percentages": [
-          -2.32,
-          -17.08
-        ]
+        "current": 8000.0,
+        "current_unit": "万"
       },
       "sources": [],
       "risk_level": "medium",
@@ -310,80 +288,67 @@
       "id": "M18",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "本周三大运营商Q1财报密集披露，净利润罕见全线下滑：",
+      "claim": "开发者及中小微企业另设 39.9-299.9 元档位（来源：腾讯科技 2026/05/20）",
       "type": "event",
       "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
         "selector": "",
-        "tag": "span"
+        "tag": "div"
       }
     },
     {
       "id": "M19",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "-4.2%",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          -4.2
-        ]
-      },
+      "claim": "• 中国移动 ：5月20日全国上线\"词元(Token)套餐\"",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
         "selector": "",
-        "tag": "span"
+        "tag": "div"
       }
     },
     {
       "id": "M20",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "-18.0%",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          -18.0
-        ]
-      },
+      "claim": "最低 5 元月包",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
         "selector": "",
-        "tag": "span"
+        "tag": "div"
       }
     },
     {
       "id": "M21",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "-17.08%",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          -17.08
-        ]
-      },
+      "claim": "可在腾讯 WorkBuddy 等主流 AI 应用通用（来源：新华社 2026/05/20）",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
         "selector": "",
-        "tag": "span"
+        "tag": "div"
       }
     },
     {
       "id": "M22",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "工信部同日发布数据显示：Q1电信业务收入同比下降1.8%，为近年来行业首次负增长",
+      "claim": "三档可选 600/1200/1800 万 Tokens",
       "type": "numeric",
       "values": {
-        "percentages": [
-          1.8
-        ]
+        "current": 1800.0,
+        "current_unit": "万"
       },
       "sources": [],
       "risk_level": "medium",
@@ -396,15 +361,9 @@
       "id": "M23",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "算力业务成为增长引擎： 中国联通Q1算力收入154亿元，占总营收约15%，增速显著高于传统业务",
-      "type": "numeric",
-      "values": {
-        "current": 154.0,
-        "current_unit": "亿元",
-        "percentages": [
-          15.0
-        ]
-      },
+      "claim": "价格 7.5-359 元/月",
+      "type": "event",
+      "values": null,
       "sources": [],
       "risk_level": "medium",
       "position": {
@@ -416,1059 +375,7 @@
       "id": "M24",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "中国移动\"其他业务\"（含算力）同比增长12.7%，形成对冲效应",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          12.7
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P01",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "👔 人事变动 移动总经理悬空超75天",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P02",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "移动总经理悬空超75天",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "P03",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "自2026年2月10日何飚离任中国移动总经理（调任国家广播电视总局副局长、党组成员）以来，至本周末（4月26日）已累计 76天 ，",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P04",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "Q1财报披露窗口已过，中国移动依然由董事长陈忠岳主持日常工作",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P05",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "中国移动 ：董事长陈忠岳（2025.10.28履新）",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P06",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "总经理 待定 （悬空76天）｜ 中国电信 ：董事长柯瑞文",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "P07",
-      "section": "personnel",
-      "section_cn": "人事变动",
-      "claim": "总经理刘桂清 ｜ 中国联通 ：董事长董昕（2025.11.19履新",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I01",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "🚀 行业动态 5G-A启航·6G大会·FCC风险",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I02",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "5G-A启航·6G大会·FCC风险",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I03",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "📶 5G-A 中国移动5G-A超级上行网络启航，上行速率突破1Gbps",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I04",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "📶 5G-A",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I05",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "中国移动5G-A超级上行网络启航，上行速率突破1Gbps",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I06",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月22日 ，中国移动5G-A超级上行启航大会在浙江杭州举行，主题为 \"超级上行·融智共生\"",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I07",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "大会宣布5G-A超级上行网络正式启用，上行速率突破 1Gbps ，成立\"5G-A超级上行中试基地\"，并发布《中国移动5G-A超级上行技术演进及规划白皮书》",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I08",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "中国移动副总经理李慧镝表示，AI时代网络架构逻辑正从\"下行为主\"转向\"上行爆发\"——当用户戴AI眼镜实时识别、操控机器人巡检、4K直播时，大上行能力成为刚需",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I09",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "核心意义：① 5G-A从\"能力升级\"进入\"场景落地\"阶段",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I10",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "（来源：华为官网、C114）",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I11",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月22日",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I12",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "1Gbps",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I13",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "🌐 6G 2026全球6G技术与产业生态大会在南京开幕，33亿元产业基金群亮相",
-      "type": "numeric",
-      "values": {
-        "current": 33.0,
-        "current_unit": "亿元"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I14",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "🌐 6G",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I15",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "2026全球6G技术与产业生态大会在南京开幕，33亿元产业基金群亮相",
-      "type": "numeric",
-      "values": {
-        "current": 33.0,
-        "current_unit": "亿元"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I16",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月21-23日 ，由紫金山实验室、未来移动通信论坛主办的 2026全球6G技术与产业生态大会 在南京召开，",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I17",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "邬贺铨、尤肖虎等7位两院院士出席",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I18",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "大会亮点：① 发布6G前沿技术丛书、6G技术系列白皮书及数据集",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I19",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "② 南京6G产业链基金群正式亮相，总规模达 33.12亿元 ，资本助力打造\"6G之城\"",
-      "type": "numeric",
-      "values": {
-        "current": 33.12,
-        "current_unit": "亿元"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I20",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "③ 国内首个覆盖9000平方公里的Pre6G试验网进展公布",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I21",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "④ 全球6G首个完整标准预计两年左右完成",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I22",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "信号：6G正从技术探索迈向未来产业，中国在标准制定和产业孵化上持续领跑",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I23",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月21-23日",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I24",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "2026全球6G技术与产业生态大会",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I25",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "33.12亿元",
-      "type": "numeric",
-      "values": {
-        "current": 33.12,
-        "current_unit": "亿元"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I26",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "📊 官方 工信部发布Q1通信业运行数据：收入负增长，5G/物联网持续扩张",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I27",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "工信部发布Q1通信业运行数据：收入负增长，5G/物联网持续扩张",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I28",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月23日 ，工信部发布2026年一季度通信业经济运行情况",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I29",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "核心数据： • 电信业务收入 4394亿元 ， 同比下降1.8% （为近年来首次负增长）",
-      "type": "numeric",
-      "values": {
-        "current": 4394.0,
-        "current_unit": "亿元",
-        "percentages": [
-          1.8
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I30",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "• 电信业务总量同比增长 8.3% （按不变价计算，\"量增价跌\"格局延续）",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          8.3
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I31",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "• 5G基站总数达 495.8万个",
-      "type": "numeric",
-      "values": {
-        "current": 495.8,
-        "current_unit": "万"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I32",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "占移动基站总数近40% • 移动互联网用户达 16.23亿户",
-      "type": "numeric",
-      "values": {
-        "current": 16.23,
-        "current_unit": "亿户",
-        "percentages": [
-          40.0
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I33",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "Q1净增1348万户 • 3月DOU（户均流量）达 23.4GB/户·月",
-      "type": "numeric",
-      "values": {
-        "current": 1348.0,
-        "current_unit": "万户"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I34",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "同比+13.8% 分析：收入端承压但基础设施和用户规模仍在扩张",
-      "type": "numeric",
-      "values": {
-        "ratio": 13.8,
-        "ratio_type": "yoy_pct"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I35",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4月23日",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I36",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "4394亿元",
-      "type": "numeric",
-      "values": {
-        "current": 4394.0,
-        "current_unit": "亿元"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I37",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "同比下降1.8%",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          1.8
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I38",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "8.3%",
-      "type": "numeric",
-      "values": {
-        "percentages": [
-          8.3
-        ]
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I39",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "495.8万个",
-      "type": "numeric",
-      "values": {
-        "current": 495.8,
-        "current_unit": "万"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I40",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "16.23亿户",
-      "type": "numeric",
-      "values": {
-        "current": 16.23,
-        "current_unit": "亿户"
-      },
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I41",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "23.4GB/户·月",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "I42",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "此举是继2025年12月FCC发出\"14天最后通牒\"后的进一步升级动作",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I43",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "市场关注4月30日FCC正式投票结果",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I44",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "这是运营商从2025年提出\"Token经营\"概念后，首次规模化商业落地",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "I45",
-      "section": "industry",
-      "section_cn": "行业动态",
-      "claim": "2026年成为检验Token模式可行性的关键窗口",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G01",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "根据国家发改委、工信部此前联合发布的 《算力互联互通行动计划》 ，2026年是落地关键年",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G02",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "计划明确：到2028年基本建成\"算力一张网\"，实现算力资源全国范围内统一调度和灵活配置",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G03",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "③ \"东数西算\"2.0升级，西部智算中心与东部需求的匹配效率将大幅提升",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G04",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "📈 发布 国新办发布会：一季度我国数字产业持续壮大，信息基础设施加快布局",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G05",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "📈 发布",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "G06",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "国新办发布会：一季度我国数字产业持续壮大，信息基础设施加快布局",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "G07",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "4月21日 ，国务院新闻办举行新闻发布会，工信部副部长张云明介绍一季度工业和信息通信业运行状况",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G08",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "核心信息：① 新型信息基础设施布局加快，5G、千兆光网、物联网等领域持续扩张",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G09",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "③ 强调加快构建 \"地面5G-A+低空通感+天基卫星\"一体化连接网络",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G10",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "4月21日",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "G11",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "\"地面5G-A+低空通感+天基卫星\"一体化连接网络",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "G12",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "🔧 监管 工信部2026年重点任务：深入整治\"内卷式\"竞争，电信央企必须执行",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G13",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "工信部2026年重点任务：深入整治\"内卷式\"竞争，电信央企必须执行",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "span"
-      }
-    },
-    {
-      "id": "G14",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "根据2025年底全国工业和信息化工作会议部署，2026年工信部将 深入整治\"内卷式\"竞争 作为重点任务",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "G15",
-      "section": "policy",
-      "section_cn": "政策动向",
-      "claim": "这与Q1财报中\"收入下滑、利润承压\"的现实形成呼应——行业亟需从\"规模竞争\"转向\"价值竞争\"",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "N01",
-      "section": "next_week",
-      "section_cn": "下周关注",
-      "claim": "4月30日FCC将对\"禁止中国运营商在美数据中心\"提案进行投票，关注中美科技博弈最新走向",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "N02",
-      "section": "next_week",
-      "section_cn": "下周关注",
-      "claim": "4月30日24时起中国移动关停多项长尾服务，影响百万级用户，\"瘦身聚焦\"战略落地",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "N03",
-      "section": "next_week",
-      "section_cn": "下周关注",
-      "claim": "👔 高管任命",
-      "type": "event",
-      "values": null,
-      "sources": [],
-      "risk_level": "medium",
-      "position": {
-        "selector": "",
-        "tag": "div"
-      }
-    },
-    {
-      "id": "N04",
-      "section": "next_week",
-      "section_cn": "下周关注",
-      "claim": "中国移动总经理（何飚离任已76天）人选持续悬空，任命时点或成资本市场催化剂",
+      "claim": "AI 云桌面捆绑（来源：腾讯网 2026/05/20）",
       "type": "event",
       "values": null,
       "sources": [],
@@ -1482,7 +389,105 @@
       "id": "M25",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "数据来源：三大运营商财报公告、工信部、国资委、国新办、华为官网、新华网、央视网、C114通信网、路透社",
+      "claim": "（来源：媒体综合分析 2026/05/20）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "P01",
+      "section": "personnel",
+      "section_cn": "人事变动",
+      "claim": "中移铁通： 5月19日前后多位省分公司领导调动，涉及子公司治理结构和市场经营条线的人员补位",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "P02",
+      "section": "personnel",
+      "section_cn": "人事变动",
+      "claim": "（来源：通信资讯·WXRedian 2026/05/19）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "P03",
+      "section": "personnel",
+      "section_cn": "人事变动",
+      "claim": "中国电信： 本周公告显示多位部门和子分公司领导调动，是继 4 月份董事会层面调整后又一轮中层级别的换防（来源：通信资讯·WXRedian 2026/05/19）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "P04",
+      "section": "personnel",
+      "section_cn": "人事变动",
+      "claim": "结合 5月16日\"常话短说\"汇总，铁塔尹文凯升任党委副书记，运营商整体处在\"新班子+新打法\"过渡期",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "P05",
+      "section": "personnel",
+      "section_cn": "人事变动",
+      "claim": "较上期变化： 陈扬帆出任中国移动总经理一事已在 0501-0510 周报中首发，本期不再展开",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "I01",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "📡 5G-A/6G",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "I02",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "2026 年世界电信和信息社会日大会在武汉召开",
       "type": "event",
       "values": null,
       "sources": [],
@@ -1493,10 +498,453 @@
       }
     },
     {
+      "id": "I03",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "（来源：腾讯网\"数智早参\"2026/05/18）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I04",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "会上集中展示了通信服务、算力服务、智能服务\"三大主业\"硬核实力，重磅发布三大产业联盟和合作伙伴十大权益",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I05",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "（来源：新浪新闻 2026/05/22）这是 0501-0510 周报\"算力新动能行动计划\"在 省级落地 的具体进展",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I06",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "（来源：新浪财经 2026/05/22）河北移动等省公司同步推出\"Coding Plan\"40 元/月套餐",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I07",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "将算力请求与 5G-A 极速网络绑定",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I08",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "中国移动 5月18日披露最新机构调研信息，机构关注点聚焦于\"算力新动能行动计划\"和全国一体化算力网建设",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I09",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "中国移动 A 股本周一度冲至 103.36 元，5/22 收报 95.98 元， 总市值约 2.08 万亿元 ，仍居通信服务板块首位",
+      "type": "numeric",
+      "values": {
+        "current": 2.08,
+        "current_unit": "万"
+      },
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I10",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "（来源：MSN 中文/搜狐财经 2026/05/22）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "I11",
+      "section": "industry",
+      "section_cn": "行业动态",
+      "claim": "总市值约 2.08 万亿元",
+      "type": "numeric",
+      "values": {
+        "current": 2.08,
+        "current_unit": "万"
+      },
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "span"
+      }
+    },
+    {
+      "id": "G01",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "新闻发言人李超在 5月22日发布会上介绍\"六张网\"的具体内容",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G02",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "投资规模和落实路径——4月28日中央政治局会议明确：\"水网",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G03",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "5月9日国务院常务会议进一步部署",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G04",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "今年初步估算\"六张网\"投资将超 7 万亿元",
+      "type": "numeric",
+      "values": {
+        "current": 7.0,
+        "current_unit": "万"
+      },
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G05",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "（来源：新浪财经 2026/05/22）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G06",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "5月25日新华社进一步透露\"六张网\"将迎来\"时间表\"\"任务书\"",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G07",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "（来源：新华网 2026/05/25）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G08",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "工信部本周发布 2026 年第 3 批（总第 56 批）侵害用户权益 APP/SDK 通报，依据《个人信息保护法》《电信条例》对 31 款产品进行点名",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G09",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "（来源：工信部官方公众号 2026/05）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G10",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "同期发布\"工信领域要闻回顾·2026 年第 21 周\"",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G11",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "工作重心在前期已发布的《算力互联互通行动计划》《通信建设工程质量提升和安全生产行动方案》落实推进",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G12",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "（来源：工信部 2026/05）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G13",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "🌐 6G",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "G14",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "新浪财经 5月13日发布的分析指出",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G15",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "全球 6G 研发已进入关键\"窗口期\"",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G16",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "6G 标准制定从\"技术指标比拼\"转向\"应用价值比拼\"",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G17",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "3GPP 已启动 6G 网络架构、无线空口、安全技术等研究项目，并形成 6G 标准化时间表",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G18",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "（来源：新浪财经 2026/05/13",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "G19",
+      "section": "policy",
+      "section_cn": "政策动向",
+      "claim": "数字中国建设峰会官网 2026/04/07）",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "N01",
+      "section": "next_week",
+      "section_cn": "下周关注",
+      "claim": "📊 4 月运营数据",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
+      "id": "N02",
+      "section": "next_week",
+      "section_cn": "下周关注",
+      "claim": "三大运营商 4 月经营数据预计陆续披露，重点关注 5G 网络用户、宽带净增及 AI 业务相关披露口径",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "div"
+      }
+    },
+    {
       "id": "M26",
       "section": "market_data",
       "section_cn": "市场数据",
-      "claim": "制作日期：2026年4月27日",
+      "claim": "数据来源：三大运营商公告、工信部、国家发改委、新华社、腾讯科技、新浪财经、C114 通信网",
+      "type": "event",
+      "values": null,
+      "sources": [],
+      "risk_level": "medium",
+      "position": {
+        "selector": "",
+        "tag": "p"
+      }
+    },
+    {
+      "id": "M27",
+      "section": "market_data",
+      "section_cn": "市场数据",
+      "claim": "制作日期：2026 年 5 月 25 日",
       "type": "event",
       "values": null,
       "sources": [],

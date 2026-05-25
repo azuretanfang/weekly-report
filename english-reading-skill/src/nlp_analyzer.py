@@ -44,10 +44,15 @@ except ImportError:
 
 # NLTK 改为延迟加载
 _nltk_punkt_ready: Optional[bool] = None
+_nltk_runtime_warned: bool = False  # 运行时异常仅 warning 一次
 
 
 def _ensure_nltk_punkt() -> bool:
-    """延迟检查 punkt；不可用时返回 False，调用方降级到正则切句。"""
+    """延迟检查 punkt；不可用时返回 False，调用方降级到正则切句。
+    
+    首次失败后缓存结果，后续调用直接返回，不重复打 warning。
+    NLTK 的 stderr 噪音在下载阶段被重定向抑制。
+    """
     global _nltk_punkt_ready
     if _nltk_punkt_ready is not None:
         return _nltk_punkt_ready
@@ -58,7 +63,13 @@ def _ensure_nltk_punkt() -> bool:
             _nltk_punkt_ready = True
         except LookupError:
             try:
-                nltk.download('punkt', quiet=True)
+                import sys, io
+                _saved_stderr = sys.stderr
+                sys.stderr = io.StringIO()  # 抑制 NLTK download 的 stderr 噪音
+                try:
+                    nltk.download('punkt', quiet=True)
+                finally:
+                    sys.stderr = _saved_stderr
                 nltk.data.find('tokenizers/punkt')
                 _nltk_punkt_ready = True
             except Exception as e:
@@ -417,24 +428,30 @@ class NLPAnalyzer:
 
     def tokenize_sentences(self, text: str) -> List[str]:
         """句子分词；NLTK 不可用时降级正则。"""
+        global _nltk_runtime_warned
         if _ensure_nltk_punkt():
             try:
                 import nltk  # type: ignore
                 sents = nltk.sent_tokenize(text)
                 return [s.strip() for s in sents if s.strip()]
             except Exception as e:
-                logger.warning("NLTK 切句异常，降级正则：%s", e)
+                if not _nltk_runtime_warned:
+                    logger.warning("NLTK 切句异常，降级正则：%s", e)
+                    _nltk_runtime_warned = True
         return _regex_sent_tokenize(text)
 
     def tokenize_words(self, text: str) -> List[str]:
         """单词分词；NLTK 不可用时降级正则。"""
+        global _nltk_runtime_warned
         if _ensure_nltk_punkt():
             try:
                 import nltk  # type: ignore
                 words = nltk.word_tokenize(text)
                 return [w for w in words if w.isalnum() or "'" in w]
             except Exception as e:
-                logger.warning("NLTK 分词异常，降级正则：%s", e)
+                if not _nltk_runtime_warned:
+                    logger.warning("NLTK 分词异常，降级正则：%s", e)
+                    _nltk_runtime_warned = True
         return _regex_word_tokenize(text)
 
     def extract_vocabulary(self, text: str) -> Dict[str, object]:

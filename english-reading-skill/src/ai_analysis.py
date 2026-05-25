@@ -45,6 +45,7 @@ except ValueError:
 _cache_lock = threading.Lock()
 _cache: "OrderedDict[str, Dict[str, Any]]" = OrderedDict()
 _cache_stats = {"hit": 0, "miss": 0}
+_CACHE_TTL_SECONDS = 3600  # 默认1小时过期，避免服务化场景返回过期数据
 
 
 def _cache_key(prompt: str, max_tokens: int, model: str) -> str:
@@ -61,12 +62,18 @@ def _cache_key(prompt: str, max_tokens: int, model: str) -> str:
 def _cache_get(key: str) -> Optional[Dict[str, Any]]:
     if _CACHE_SIZE <= 0:
         return None
+    import time as _time
     with _cache_lock:
         if key in _cache:
-            # 访问后移到末尾（LRU）
+            entry = _cache[key]
+            # TTL 检查：过期则淘汰
+            if _time.monotonic() - entry["ts"] > _CACHE_TTL_SECONDS:
+                del _cache[key]
+                _cache_stats["miss"] += 1
+                return None
             _cache.move_to_end(key)
             _cache_stats["hit"] += 1
-            return _cache[key]
+            return entry["data"]
     return None
 
 
@@ -76,8 +83,9 @@ def _cache_put(key: str, value: Dict[str, Any]) -> None:
     # 仅缓存成功结果；失败结果不入缓存以便下次重试
     if not value.get("ok"):
         return
+    import time as _time
     with _cache_lock:
-        _cache[key] = value
+        _cache[key] = {"data": value, "ts": _time.monotonic()}
         _cache.move_to_end(key)
         while len(_cache) > _CACHE_SIZE:
             _cache.popitem(last=False)
