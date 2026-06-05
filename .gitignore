@@ -15,3 +15,6 @@ tapd-timesheet-skill.zip
 
 # Playwright CLI 临时产物（console log / page yml 等）
 .playwright-cli/
+
+# 研发项管平台（独立仓库：git.woa.com/fangtan/dev-pm-management）
+研发项管/
