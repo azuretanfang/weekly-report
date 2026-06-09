@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>大模型工作选型 · 两表版 · 2026-05</title>
+<style>
+  :root {
+    --bg: #f6f7fb;
+    --card: #ffffff;
+    --ink: #1a1f2e;
+    --ink-soft: #4a5169;
+    --muted: #8a92a8;
+    --line: #e5e8f0;
+    --line-soft: #eef0f6;
+    --accent: #2354ff;
+    --accent-soft: #eaf0ff;
+    --tag-blue: #2354ff;
+    --tag-green: #1aa672;
+    --tag-orange: #e7811a;
+    --tag-red: #d63f3f;
+    --tag-purple: #7a4dff;
+    --tag-grey: #5a6378;
+    --price-strong: #1a1f2e;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 28px 64px;
+  }
+  header {
+    margin-bottom: 28px;
+  }
+  .kicker {
+    display: inline-block;
+    background: var(--accent-soft);
+    color: var(--accent);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    padding: 4px 10px;
+    border-radius: 999px;
+    margin-bottom: 12px;
+  }
+  h1 {
+    font-size: 28px;
+    margin: 0 0 8px;
+    letter-spacing: -0.01em;
+  }
+  .sub {
+    color: var(--ink-soft);
+    font-size: 14px;
+    margin: 0 0 4px;
+  }
+  .meta {
+    color: var(--muted);
+    font-size: 12px;
+  }
+  section {
+    background: var(--card);
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    margin-top: 28px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(20,28,55,0.04);
+  }
+  .section-head {
+    padding: 20px 24px;
+    border-bottom: 1px solid var(--line);
+    background: linear-gradient(180deg, #f4f7ff 0%, #ffffff 100%);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .section-head .tag {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 52px;
+    height: 26px;
+    padding: 0 10px;
+    background: var(--accent);
+    color: #fff;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+  }
+  .section-head h2 {
+    margin: 0;
+    font-size: 18px;
+    letter-spacing: -0.005em;
+  }
+  .table-scroll {
+    overflow-x: auto;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+    min-width: 980px;
+  }
+  thead th {
+    background: #f8f9fd;
+    color: var(--ink-soft);
+    font-weight: 600;
+    text-align: left;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    font-size: 12px;
+    letter-spacing: 0.02em;
+    white-space: nowrap;
+  }
+  tbody td {
+    padding: 14px;
+    border-bottom: 1px solid var(--line-soft);
+    vertical-align: top;
+  }
+  tbody tr:last-child td { border-bottom: none; }
+  tbody tr:hover { background: #fafbff; }
+
+  /* 模型名列 */
+  .model {
+    min-width: 170px;
+  }
+  .model .name {
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--ink);
+    margin-bottom: 4px;
+  }
+  .model .versions {
+    color: var(--ink-soft);
+    font-size: 12px;
+    line-height: 1.5;
+  }
+
+  /* 价格块（紧凑网格版） */
+  .price {
+    min-width: 220px;
+    font-size: 12px;
+    line-height: 1.45;
+  }
+  .price .pg {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    column-gap: 10px;
+    row-gap: 3px;
+    align-items: baseline;
+  }
+  .price .ver {
+    grid-column: 1 / 2;
+    font-weight: 700;
+    color: var(--ink);
+    font-size: 12px;
+    white-space: nowrap;
+  }
+  .price .io {
+    grid-column: 2 / 4;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .price .io .sep {
+    color: var(--line);
+    margin: 0 6px;
+  }
+  .price .io b {
+    color: var(--price-strong);
+    font-weight: 600;
+  }
+  .price .note {
+    color: var(--muted);
+    font-size: 11px;
+    margin-top: 6px;
+    line-height: 1.4;
+  }
+  .price .free-tip {
+    display: inline-block;
+    background: #fff4d6;
+    color: #8a5a00;
+    border: 1px solid #f0c870;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+
+  /* 判断/标签 */
+  .judge {
+    min-width: 150px;
+    font-size: 12.5px;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  .b-blue   { background: #eaf0ff; color: var(--tag-blue); }
+  .b-green  { background: #e8f7f0; color: var(--tag-green); }
+  .b-orange { background: #fdf1e3; color: var(--tag-orange); }
+  .b-red    { background: #fce9e9; color: var(--tag-red); }
+  .b-purple { background: #f1ecff; color: var(--tag-purple); }
+  .b-grey   { background: #eef0f4; color: var(--tag-grey); }
+
+  /* 适合 */
+  .fit {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+  .fit strong { color: var(--ink); }
+
+  /* 表 2 工作类型 */
+  .work {
+    min-width: 190px;
+    font-weight: 600;
+    color: var(--ink);
+  }
+  .pick {
+    min-width: 165px;
+    font-size: 12.5px;
+  }
+  .pick .primary {
+    font-weight: 600;
+    color: var(--accent);
+  }
+  .pick .secondary {
+    font-weight: 600;
+    color: var(--ink-soft);
+  }
+  .why {
+    font-size: 12.5px;
+    color: var(--ink-soft);
+    line-height: 1.6;
+  }
+
+  /* 最终建议 */
+  .takeaway {
+    margin-top: 28px;
+    padding: 22px 26px;
+    background: linear-gradient(135deg, #1a2444 0%, #2354ff 100%);
+    color: #fff;
+    border-radius: 14px;
+  }
+  .takeaway .label {
+    font-size: 12px;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+  .takeaway p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .takeaway b { color: #fff; }
+
+  footer {
+    margin-top: 28px;
+    color: var(--muted);
+    font-size: 12px;
+    text-align: center;
+  }
+
+  @media (max-width: 720px) {
+    .wrap { padding: 20px 14px 40px; }
+    h1 { font-size: 22px; }
+    .section-head { padding: 16px 16px 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <span class="kicker">LLM Selection · 2026-05</span>
+  <h1>大模型工作选型</h1>
+</header>
+
+<section>
+  <div class="section-head">
+    <h2>一. 模型特性&价格</h2>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th class="model">大模型家族</th>
+          <th>擅长工作</th>
+          <th class="price">当前定价（每 1M tokens）</th>
+          <th class="judge">综合判断</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="model">
+            <div class="name">GPT</div>
+            <div class="versions">GPT-5.5<br>GPT-5.5 Pro</div>
+          </td>
+          <td class="fit">极复杂推理、Agentic coding、工具链、前端 / UI、研究分析、关键材料复核。<br><strong>高价值任务专用，不适合高频低风险批处理（Batch 模式可省 5 折）。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">GPT-5.5</div>
+              <div class="io"><b>$5</b><span class="sep">/</span><b>$30</b></div>
+              <div class="ver">GPT-5.5 Pro</div>
+              <div class="io"><b>$30</b><span class="sep">/</span><b>$180</b></div>
+            </div>
+            <div class="note">输入 / 输出 · Batch / Flex 约 <b>5 折</b> · Priority 约 <b>2.5 倍</b></div>
+          </td>
+          <td class="judge">
+            <span class="badge b-red">最强但贵</span>
+            <div>高价值通用强模型，不做默认低成本模型。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">Claude</div>
+            <div class="versions">Opus 4.7<br>Sonnet 4.6<br>Haiku 4.5</div>
+          </td>
+          <td class="fit">长文档写作、复杂分析、代码代理、企业工作流。<br><strong>Sonnet 4.6 做默认生产，Opus 4.7 只给高价值难题（大量输出成本高，不要默认 Opus 承接全部流量），Haiku 4.5 做轻量任务。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">Opus 4.7</div>
+              <div class="io"><b>$5</b><span class="sep">/</span><b>$25</b></div>
+              <div class="ver">Sonnet 4.6</div>
+              <div class="io"><b>$3</b><span class="sep">/</span><b>$15</b></div>
+              <div class="ver">Haiku 4.5</div>
+              <div class="io"><b>$1</b><span class="sep">/</span><b>$5</b></div>
+            </div>
+            <div class="note">输入 / 输出 · 缓存命中约 <b>10%</b> 输入价 · Batch 约 <b>5 折</b></div>
+          </td>
+          <td class="judge">
+            <span class="badge b-blue">质量稳 · 价格中高</span>
+            <div>日常优先 Sonnet；Opus 只给高价值任务。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">Gemini</div>
+            <div class="versions">3.1 Pro<br>3 Flash<br>3.1 Flash-Lite</div>
+          </td>
+          <td class="fit">多模态输入、PDF / 视频 / 音频理解、长上下文、高吞吐任务。<br><strong>Pro 复杂分析，Flash 默认生产，Flash-Lite 批量任务。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">3.1 Pro ≤200K</div>
+              <div class="io"><b>$2</b><span class="sep">/</span><b>$12</b></div>
+              <div class="ver">3.1 Pro &gt;200K</div>
+              <div class="io"><b>$4</b><span class="sep">/</span><b>$18</b></div>
+              <div class="ver">3 Flash</div>
+              <div class="io"><b>$0.50</b><span class="sep">/</span><b>$3</b></div>
+              <div class="ver">3.1 Flash-Lite</div>
+              <div class="io"><b>$0.25</b><span class="sep">/</span><b>$1.50</b></div>
+            </div>
+            <div class="note">输入 / 输出 · Batch 约 <b>5 折</b></div>
+          </td>
+          <td class="judge">
+            <span class="badge b-green">性价比强</span>
+            <div>多模态和批处理优先看 Gemini。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">Kimi</div>
+            <div class="versions">K2.6</div>
+          </td>
+          <td class="fit">中文长文档、长程代码、Agent、自主执行、多模态输入、联网搜索。<br><strong>输出价偏高（¥27/M），适合高价值中文材料和代码任务，控制输出长度可显著降本。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">K2.6 输入（命中）</div>
+              <div class="io"><b>¥1.10</b></div>
+              <div class="ver">K2.6 输入（未命中）</div>
+              <div class="io"><b>¥6.50</b></div>
+              <div class="ver">K2.6 输出</div>
+              <div class="io"><b>¥27</b></div>
+            </div>
+            <div class="note">支持 ToolCalls / JSON / 联网搜索 / 自动上下文缓存</div>
+          </td>
+          <td class="judge">
+            <span class="badge b-purple">长文档 + Agent 强</span>
+            <div>输出贵，适合高价值中文材料和代码任务。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">GLM</div>
+            <div class="versions">GLM-5.1<br>GLM-5-Turbo<br>GLM-4.7-FlashX</div>
+          </td>
+          <td class="fit">中文 Agent、代码、复杂多步骤任务、中文交互式任务。<br><strong>GLM-5.1 做旗舰，FlashX 做低成本路由。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">GLM-5.1</div>
+              <div class="io"><b>6–8</b><span class="sep">/</span><b>24–28</b> 元</div>
+              <div class="ver">GLM-5-Turbo</div>
+              <div class="io"><b>5–7</b><span class="sep">/</span><b>22–26</b> 元</div>
+              <div class="ver">GLM-4.7-FlashX</div>
+              <div class="io"><b>0.5</b><span class="sep">/</span><b>3</b> 元</div>
+            </div>
+            <div class="note">输入 / 输出 · FlashX 缓存命中约 <b>0.1 元</b></div>
+          </td>
+          <td class="judge">
+            <span class="badge b-purple">中文 Agent 候选</span>
+            <div>旗舰做复杂任务，FlashX 做批量低成本。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">MiniMax</div>
+            <div class="versions">M2.7<br>M2.7-highspeed</div>
+          </td>
+          <td class="fit">编码 Agent、办公自动化、工具调用、搜索、全模态套餐试用。<br><strong>M2.7-highspeed 适合高吞吐，但成本翻倍。</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">M2.7</div>
+              <div class="io"><b>2.1</b><span class="sep">/</span><b>8.4</b> 元</div>
+              <div class="ver">M2.7-highspeed</div>
+              <div class="io"><b>4.2</b><span class="sep">/</span><b>16.8</b> 元</div>
+            </div>
+            <div class="note">输入 / 输出 · 缓存读 <b>0.42</b> · 写 <b>2.625</b> 元</div>
+          </td>
+          <td class="judge">
+            <span class="badge b-orange">中低价生产力</span>
+            <div>办公自动化和编码 Agent 可重点测。</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td class="model">
+            <div class="name">HY3</div>
+            <div class="versions">HY3 preview</div>
+          </td>
+          <td class="fit">涉及内部数据的 Agent、文档处理、数据分析、知识检索——数据留在腾讯内网，天然满足信息安全合规要求。<br><strong>适合积分捉襟见肘的同事</strong></td>
+          <td class="price">
+            <div class="pg">
+              <div class="ver">0–16K</div>
+              <div class="io"><b>1.2</b><span class="sep">/</span><b>4</b> 元（缓存 0.4）</div>
+              <div class="ver">16–32K</div>
+              <div class="io"><b>1.6</b><span class="sep">/</span><b>6.4</b> 元（缓存 0.6）</div>
+              <div class="ver">32–256K</div>
+              <div class="io"><b>2</b><span class="sep">/</span><b>8</b> 元（缓存 0.8）</div>
+            </div>
+            <div class="note">输入 / 输出 · 缓存为缓存输入价 · 外部刊例价</div>
+          </td>
+          <td class="judge">
+            <span class="badge b-blue">内网安全</span>
+            <div>内部数据合规首选，性价比极高。</div>
+          </td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<section>
+  <div class="section-head">
+    <h2>二. 工作场景优选模型速查</h2>
+  </div>
+  <div class="table-scroll">
+    <table>
+      <thead>
+        <tr>
+          <th class="work">工作类型</th>
+          <th class="pick">一选</th>
+          <th class="pick">二选</th>
+          <th>优选理由</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr>
+          <td class="work">数据、经营与策略分析：表格 / SQL / BI / 复杂推理 / 关键复核</td>
+          <td class="pick"><div class="primary">GPT-5.5<br>Claude Opus 4.7</div></td>
+          <td class="pick"><div class="secondary">多模态/长上下文：Gemini 3.1 Pro<br>中文场景：HY3 / GLM-5.1 / Kimi K2.6</div></td>
+          <td class="why"><strong>推理深度优先，价格其次。</strong>GPT-5.5、Opus 4.7 在多步推理、矛盾识别、逻辑链审查上稳定性最高。</td>
+        </tr>
+
+        <tr>
+          <td class="work">代码与 Agent：代码生成 / 审查 / 仓库理解 / 自动化办公 / 工具调用</td>
+          <td class="pick"><div class="primary">Claude Sonnet / Opus<br>GPT-5.5</div></td>
+          <td class="pick"><div class="secondary">腾讯生态 Agent：HY3<br>中文工具链：GLM-5.1 / MiniMax M2.7 / Kimi K2.6</div></td>
+          <td class="why"><strong>Claude 系是当前公认的代码王者</strong>，长仓库理解、重构、Diff 阅读最准；GPT-5.5 在 Agentic 工具调用和复杂任务规划上互补。HY3 / GLM / Kimi 可作为性价比补充。</td>
+        </tr>
+
+        <tr>
+          <td class="work">长文档与知识库：合同 / 研报 / 论文 / 知识库问答 / RAG</td>
+          <td class="pick"><div class="primary">Gemini 3.1 Pro<br>Claude Sonnet 4.6</div></td>
+          <td class="pick"><div class="secondary">中文长文档：Kimi K2.6<br>腾讯生态：HY3<br>复杂复核：GPT-5.5</div></td>
+          <td class="why"><strong>Gemini 1M 上下文 + 长文召回稳定性强</strong>，整本书 / 整套合同一次喂进去仍能精准引用，单价低、性价比突出；Sonnet 长文档总结质量更稳。Kimi 中文长文 + 缓存折扣大，适合反复查询同一份资料。</td>
+        </tr>
+
+        <tr>
+          <td class="work">多模态理解：图片 / 截图 / 图表 / 视频 / 音频</td>
+          <td class="pick"><div class="primary">Gemini 3.1 Pro<br>Gemini 3 Flash</div></td>
+          <td class="pick"><div class="secondary">视觉推理：GPT-5.5 / Claude Sonnet<br>中文材料：Kimi K2.6 / GLM-V / MiniMax</div></td>
+          <td class="why"><strong>Gemini 在视频与长音频理解上仍是体验最完整的</strong>，原生吃 mp4/音频，时间戳定位准；GPT-5.5 / Claude Sonnet 视觉与图表推理同样强但视频音频要走分段管线；中文图文场景 Kimi / GLM-V / MiniMax 也能打。</td>
+        </tr>
+
+        <tr>
+          <td class="work">日常内容与表达：写作 / 总结 / 邮件 / 纪要 / PPT / 方案 / 创意文案</td>
+          <td class="pick"><div class="primary">Claude Sonnet 4.6<br>Gemini 3 Flash</div></td>
+          <td class="pick"><div class="secondary">高价值材料：GPT-5.5<br>中文补位：GLM-5.1 / Kimi K2.6 / MiniMax M2.7 / HY3</div></td>
+          <td class="why"><strong>Sonnet 的中文文风和结构感最接近"人写的"</strong>，是日常生产的甜点；Flash 价格更低适合大量初稿。关键对外材料才上 GPT-5.5，避免日常烧钱。</td>
+        </tr>
+
+        <tr>
+          <td class="work">高频低难批处理：分类 / 抽取 / 标签 / 初稿 / 轻量改写</td>
+          <td class="pick"><div class="primary">Gemini 3.1 Flash-Lite<br>Claude Haiku 4.5</div></td>
+          <td class="pick"><div class="secondary">国内低成本：GLM-4.7-FlashX / MiniMax M2.7 / HY3</div></td>
+          <td class="why"><strong>规模化任务里，单价和延迟比"聪明一点"更重要。</strong>Flash-Lite 和 Haiku 在分类 / 抽取这类结构化任务上准确率够用，单价只有旗舰的 1/20–1/30，跑 10 万条不肉疼。</td>
+        </tr>
+
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<div class="takeaway">
+  <div class="label">最简执行建议</div>
+  <p>默认用 <b>Claude Sonnet 4.6 + Gemini 3 Flash</b>；复杂任务升级到 <b>GPT-5.5 / Claude Opus 4.7 / Gemini 3.1 Pro</b>；腾讯生态 Agent 优先用 <b>HY3</b>；中文 Agent 与成本补位用 <b>GLM-5.1 / MiniMax M2.7 / Kimi K2.6</b>。</p>
+</div>
+
+<footer>
+  数据截至 2026-05-26 · 价格保留原币种，正式预算以控制台 / 合同为准
+</footer>
+
+</div>
+</body>
+</html>
