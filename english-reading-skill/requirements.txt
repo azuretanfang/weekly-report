@@ -1,8 +1,0 @@
-nltk==3.8.1
-requests==2.31.0
-anthropic==0.25.0
-gtts==2.4.0
-g2p_en==2.1.0
-textstat==0.7.3
-# v1.3.0 新增：用于词汇频次分级（fallback 主链）。约 70MB；缺失时代码会优雅降级。
-wordfreq>=3.0.0
