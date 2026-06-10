@@ -1,0 +1,923 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Introduction to China — 精读笔记</title>
+<style>
+  /* ========== Reset & Base ========== */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: -apple-system, "PingFang SC", "Microsoft YaHei", "Helvetica Neue", serif;
+    background: #f0f4f8;
+    color: #2c3e50;
+    line-height: 1.8;
+  }
+
+  /* ========== Header ========== */
+  .header {
+    background: linear-gradient(135deg, #1a5276 0%, #2e86c1 50%, #5dade2 100%);
+    color: #fff;
+    padding: 40px 32px 32px;
+    text-align: center;
+    position: sticky; top: 0; z-index: 100;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+  }
+  .header h1 { font-size: 28px; font-weight: 700; letter-spacing: 2px; }
+  .header .subtitle { font-size: 14px; opacity: 0.85; margin-top: 8px; }
+
+  /* ========== Legend (词级图例) ========== */
+  .legend {
+    display: flex; gap: 16px; justify-content: center;
+    flex-wrap: wrap; margin-top: 16px; font-size: 13px;
+  }
+  .legend span { display: flex; align-items: center; gap: 5px; }
+  .legend .dot {
+    display: inline-block; width: 12px; height: 12px;
+    border-radius: 50%; flex-shrink: 0;
+  }
+
+  /* ========== Two-Column Layout ========== */
+  .container {
+    max-width: 1280px; margin: 0 auto; padding: 24px 16px 60px;
+  }
+
+  /* Sentence Card */
+  .sentence-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8edf2;
+    transition: box-shadow 0.2s;
+  }
+  .sentence-card:hover { box-shadow: 0 6px 24px rgba(0,0,0,0.10); }
+
+  .col-left, .col-right {
+    padding: 20px 24px;
+  }
+  .col-left {
+    background: #fafbff;
+    border-right: 1px solid #e8edf2;
+  }
+  .col-right {
+    background: #fff;
+  }
+
+  /* Sentence number badge */
+  .sent-num {
+    display: inline-block;
+    background: #2e86c1;
+    color: #fff;
+    font-size: 12px; font-weight: 700;
+    width: 28px; height: 28px;
+    border-radius: 50%;
+    text-align: center; line-height: 28px;
+    margin-right: 8px; vertical-align: middle;
+  }
+
+  /* ========== Word Level Tags ========== */
+  .w  { cursor: pointer; border-bottom: 2px solid transparent; transition: all 0.15s; }
+  .w:hover { background: #fff9e6; border-radius: 2px; }
+
+  .w-cet4   { border-bottom-color: #3498db; }
+  .w-cet6   { border-bottom-color: #2ecc71; }
+  .w-ielts  { border-bottom-color: #e67e22; }
+  .w-proper { border-bottom-color: #9b59b6; color: #6c3483; font-weight: 600; }
+  .w-basic  { border-bottom-color: #bdc3c7; }
+
+  /* Tooltip */
+  .w { position: relative; }
+  .w::after {
+    content: attr(data-tip);
+    position: absolute; bottom: calc(100% + 6px); left: 50%; transform: translateX(-50%);
+    background: #2c3e50; color: #fff; font-size: 12px;
+    padding: 4px 10px; border-radius: 6px; white-space: nowrap;
+    opacity: 0; pointer-events: none; transition: opacity 0.15s;
+    z-index: 200;
+  }
+  .w:hover::after { opacity: 1; }
+
+  /* ========== Right Column Content ========== */
+  .section-title {
+    font-size: 13px; font-weight: 700; color: #2e86c1;
+    text-transform: uppercase; letter-spacing: 1px;
+    margin-bottom: 8px; padding-bottom: 4px;
+    border-bottom: 2px solid #ebf5fb;
+  }
+  .grammar-block {
+    background: #fdfefe; border-left: 3px solid #2e86c1;
+    padding: 10px 14px; border-radius: 0 8px 8px 0;
+    margin-bottom: 14px; font-size: 14px; line-height: 1.9;
+  }
+  .grammar-block .label {
+    display: inline-block; background: #2e86c1; color: #fff;
+    font-size: 11px; padding: 1px 8px; border-radius: 4px;
+    margin-right: 6px; vertical-align: middle;
+  }
+  .vocab-block { margin-bottom: 14px; }
+  .vocab-item {
+    display: flex; gap: 10px; align-items: flex-start;
+    padding: 7px 0; border-bottom: 1px dashed #f0f0f0;
+    font-size: 13.5px;
+  }
+  .vocab-level {
+    flex-shrink: 0; font-size: 11px; font-weight: 700;
+    padding: 1px 7px; border-radius: 4px; color: #fff;
+  }
+  .lv-cet4   { background: #3498db; }
+  .lv-cet6   { background: #27ae60; }
+  .lv-ielts  { background: #e67e22; }
+  .lv-proper  { background: #9b59b6; }
+  .lv-basic   { background: #95a5a6; }
+  .vocab-word { font-weight: 700; color: #2c3e50; min-width: 110px; }
+  .vocab-pos  { color: #888; font-size: 12px; }
+  .vocab-mean { color: #555; }
+  .note-block {
+    background: #fffde7; border-left: 3px solid #f1c40f;
+    padding: 9px 13px; border-radius: 0 8px 8px 0;
+    font-size: 13px; color: #7d6608; line-height: 1.8;
+  }
+  .note-block .icon { margin-right: 4px; }
+
+  /* ========== Translation ========== */
+  .translation {
+    margin-top: 10px; padding: 8px 12px;
+    background: #eafaf1; border-radius: 6px;
+    font-size: 13.5px; color: #1e8449;
+    border-left: 3px solid #27ae60;
+  }
+
+  /* ========== Responsive ========== */
+  @media (max-width: 860px) {
+    .sentence-card { grid-template-columns: 1fr; }
+    .col-left { border-right: none; border-bottom: 1px solid #e8edf2; }
+  }
+
+  /* ========== Warning box ========== */
+  .warn-box {
+    background: #fdedec; border-left: 4px solid #e74c3c;
+    padding: 12px 16px; border-radius: 0 8px 8px 0;
+    margin-bottom: 20px; font-size: 14px; color: #922b21;
+  }
+  .warn-box strong { color: #e74c3c; }
+
+  /* ========== TOC ========== */
+  .toc {
+    background: #fff; border-radius: 12px; padding: 20px 24px;
+    margin-bottom: 24px; box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+    border: 1px solid #e8edf2;
+  }
+  .toc h2 { font-size: 16px; color: #2e86c1; margin-bottom: 10px; }
+  .toc ol { padding-left: 20px; font-size: 14px; color: #555; }
+  .toc li { margin-bottom: 4px; }
+</style>
+</head>
+<body>
+
+<!-- ==================== HEADER ==================== -->
+<div class="header">
+  <h1>📖 Introduction to China — 精读笔记</h1>
+  <div class="subtitle">逐句语法拆解 · 生词分级标注 · 双栏阅读笔记</div>
+  <div class="legend">
+    <span><span class="dot" style="background:#3498db"></span> CET-4 四级</span>
+    <span><span class="dot" style="background:#27ae60"></span> CET-6 六级</span>
+    <span><span class="dot" style="background:#e67e22"></span> IELTS 高级</span>
+    <span><span class="dot" style="background:#9b59b6"></span> 专有名词</span>
+    <span><span class="dot" style="background:#bdc3c7"></span> 基础词</span>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ==================== 说明 ==================== -->
+<div class="warn-box">
+  <strong>⚠️ 阅读提示：</strong>原文存在个别事实与语法问题，已在对应句子中标注说明，阅读时请注意甄别。
+</div>
+
+<!-- ==================== 目录 ==================== -->
+<div class="toc">
+  <h2>📑 文章目录（共11句）</h2>
+  <ol>
+    <li>The ancient Yellow River flows uninterrupted from east to west...</li>
+    <li>Silk was made into cloth, while clay was made into pottery...</li>
+    <li>Millions of stones were piled into the Great Wall.</li>
+    <li>The country created many wonders, such as the Great Wall...</li>
+    <li>Beijing is the capital of Zhongguo, or China, which opens to...</li>
+    <li>The Beijing Olympic Games 2008, and the Shanghai World Expo...</li>
+    <li>Peking Opera and Western Opera are performed on the same stage.</li>
+    <li>Cultures of the whole world show brilliant vitality...</li>
+    <li>This is Zhongguo.</li>
+    <li>Hope you can understand her, appreciate her and love her.</li>
+    <li>All the Chinese people, Black-eyed and yellow-skinned welcome you...</li>
+  </ol>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 1 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">1</span>
+      <span class="w w-cet6" data-tip="adj. 古老的">The ancient</span>
+      <span class="w w-proper" data-tip="n. 黄河">Yellow River</span>
+      <span class="w w-basic" data-tip="v. 流动">flows</span>
+      <span class="w w-ielts" data-tip="adj. 不间断的">uninterrupted</span>
+      <span class="w w-cet4" data-tip="prep. 从…（方向）">from</span>
+      <span class="w w-basic" data-tip="n. 东方">east</span>
+      <span class="w w-cet4" data-tip="prep. 到">to</span>
+      <span class="w w-basic" data-tip="n. 西方">west</span>
+      <span class="w w-cet4" data-tip="prep. 持续…">for</span>
+      <span class="w w-cet6" data-tip="n. 千（复数）">thousands</span>
+      <span class="w w-cet4" data-tip="prep. …的">of</span>
+      <span class="w w-basic" data-tip="n. 年">years</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>古老的黄河数千年来从东向西奔流不息。</div>
+    <div class="note-block" style="margin-top:10px">
+      <span class="icon">⚠️</span><strong>事实勘误：</strong>黄河流向实际为<strong>自西向东</strong>（west to east），原文 "from east to west" 方向有误。
+    </div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主谓结构（SV）：The ancient Yellow River (S) + flows (V)<br>
+      <span class="label">时态</span> <strong>一般现在时</strong> — 描述客观事实/永恒真理<br>
+      <span class="label">状语</span> uninterrupted（副词修饰动词 flows）<br>
+      <span class="label">状语</span> from east to west（方向状语）<br>
+      <span class="label">状语</span> for thousands of years（时间状语，常与完成时连用，此处用一般现在时表"持续至今"）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">ancient</span> <span class="vocab-pos">/ˈeɪnʃənt/ adj.</span>
+          <div class="vocab-mean">古老的，古代的（≈ old but grand）。常搭配：ancient civilization / ancient history</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">uninterrupted</span> <span class="vocab-pos">/ˌʌnˌɪntəˈrʌptɪd/ adj.</span>
+          <div class="vocab-mean">不间断的，持续的。un-（否定）+ interrupt（打断）+ -ed。反义词：interrupted</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">flow</span> <span class="vocab-pos">/fləʊ/ v.</span>
+          <div class="vocab-mean">流动，流淌（河流、空气等）。flow from A to B：从A流向B</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 句型仿写</div>
+    <div class="note-block">
+      The Yangtze River <strong>flows</strong> from west to east <strong>for</strong> thousands of miles.<br>
+      （长江自西向东奔流数千英里。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 2 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">2</span>
+      <span class="w w-cet4" data-tip="n. 丝绸">Silk</span>
+      <span class="w w-cet6" data-tip="v. 被制成（被动）">was made into</span>
+      <span class="w w-cet4" data-tip="n. 布料">cloth</span>,
+      <span class="w w-cet4" data-tip="conj. 而，然而（表对比）">while</span>
+      <span class="w w-cet4" data-tip="n. 粘土">clay</span>
+      <span class="w w-cet6" data-tip="v. 被制成（被动）">was made into</span>
+      <span class="w w-ielts" data-tip="n. 陶器">pottery</span>
+      <span class="w w-ielts" data-tip="n. 瓷器（复数）">and ceramics</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>丝绸被制成布料，而粘土被制成陶器和瓷器。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 并列复合句：A was made into B, <strong>while</strong> C was made into D.<br>
+      <span class="label">时态</span> <strong>一般过去时被动语态</strong>：was made into<br>
+      <span class="label">对比连词</span> while = 而，然而（表前后对比关系）<br>
+      <span class="label">被动结构</span> be made into = 被制成……（主动：make A into B）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">silk</span> <span class="vocab-pos">/sɪlk/ n.</span>
+          <div class="vocab-mean">丝绸。Silk Road = 丝绸之路</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">cloth</span> <span class="vocab-pos">/klɒθ/ n.</span>
+          <div class="vocab-mean">布料，织物。<u>不可数</u>名词。比较：clothes（衣服，复数）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">clay</span> <span class="vocab-pos">/kleɪ/ n.</span>
+          <div class="vocab-mean">粘土，泥土（制陶原料）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">pottery</span> <span class="vocab-pos">/ˈpɒtəri/ n.</span>
+          <div class="vocab-mean">陶器（低温烧制，较粗糙）。比较：ceramics（瓷器，高温烧制，更精细）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">ceramics</span> <span class="vocab-pos">/sɪˈræmɪks/ n.</span>
+          <div class="vocab-mean">瓷器；陶瓷工艺（总称，复数）。China is famous for its ceramics.</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">while</span> <span class="vocab-pos">/waɪl/ conj.</span>
+          <div class="vocab-mean">①当…时；②而，然而（表对比）；③虽然（表让步）。本句取义②</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 句型仿写</div>
+    <div class="note-block">
+      Bamboo <strong>was made into</strong> paper, <strong>while</strong> wood <strong>was made into</strong> furniture.<br>
+      （竹子被制成纸张，而木材被制成家具。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 3 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">3</span>
+      <span class="w w-cet6" data-tip="num. 数百万的">Millions of</span>
+      <span class="w w-cet4" data-tip="n. 石头">stones</span>
+      <span class="w w-cet6" data-tip="v. 被堆砌（被动）">were piled into</span>
+      <span class="w w-proper" data-tip="n. 长城">the Great Wall</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>数百万块石头被堆砌成长城。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主谓（被动）：Millions of stones (S) + were piled (V)<br>
+      <span class="label">时态</span> <strong>一般过去时被动</strong>：were piled（pile的过去分词piled）<br>
+      <span class="label">介词</span> into = 进入…成为…（pile A into B：把A堆成B）<br>
+      <span class="label">量词</span> millions of + 可数名词复数（模糊数量，表"无数的"）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">millions of</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">数百万的，无数的。比较：thousands of / billions of</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">pile</span> <span class="vocab-pos">/paɪl/ v.</span>
+          <div class="vocab-mean">堆砌，堆积。pile A into B；pile up（堆积起来）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">stone</span> <span class="vocab-pos">/stəʊn/ n.</span>
+          <div class="vocab-mean">石头（可数）。比较：rock（岩石，较大）</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 句型仿写</div>
+    <div class="note-block">
+      <strong>Millions of</strong> bricks <strong>were piled into</strong> the ancient city wall.<br>
+      （数百万块砖被堆砌成古老城墙。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 4 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">4</span>
+      <span class="w w-cet4" data-tip="n. 国家">The country</span>
+      <span class="w w-cet4" data-tip="v. 创造（过去式）">created</span>
+      <span class="w w-cet4" data-tip="det. 许多（修饰复数名词）">many</span>
+      <span class="w w-cet4" data-tip="n. 奇迹，奇观">wonders</span>,
+      <span class="w w-cet4" data-tip="phrase 例如">such as</span>
+      <span class="w w-proper" data-tip="n. 长城">the Great Wall</span>,
+      <span class="w w-ielts" data-tip="n. 莫高窟（大写M）">Mega Grottoes</span>
+      <span class="w w-cet4" data-tip="prep. 在…里">in</span>
+      <span class="w w-proper" data-tip="n. 敦煌">Dunhuang</span>,
+      <span class="w w-ielts" data-tip="n. 兵马俑（复数）">Terracotta Warriors</span>
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-cet6" data-tip="n. 中国功夫">Chinese Kung Fu</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>这个国家创造了许多奇迹，如长城、敦煌莫高窟、兵马俑和中国功夫。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主谓宾 + 举例状语：S + created + O, such as A, B, C and D.<br>
+      <span class="label">时态</span> <strong>一般过去时</strong>：created（主动语态，The country 是执行者）<br>
+      <span class="label">举例</span> such as + 并列名词短语（不用逗号隔离，直接列举）<br>
+      <span class="label">并列</span> A, B, C <strong>and</strong> D（牛津逗号风格，最后一项前加and）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">wonder</span> <span class="vocab-pos">/ˈwʌndə/ n.</span>
+          <div class="vocab-mean">奇迹，奇观；v. 想知道。the Seven Wonders of the World = 世界七大奇迹</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">such as</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">例如，比如（后接名词/名词短语，不用句子）。比较：for example（可接句子）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">grotto</span> <span class="vocab-pos">/ˈɡrɒtəʊ/ n.</span>
+          <div class="vocab-mean">石窟，洞穴。<u>复数</u>：grottoes 或 grottos。Dunhuang Grottoes = 敦煌莫高窟</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">terracotta</span> <span class="vocab-pos">/ˌterəˈkɒtə/ n.</span>
+          <div class="vocab-mean">赤陶（橙红色陶土）。Terracotta Warriors = 兵马俑（秦始皇陵出土）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">Kung Fu</span> <span class="vocab-pos">/ˌkʌŋ ˈfuː/ n.</span>
+          <div class="vocab-mean">中国功夫（拼音音译）。Chinese martial arts = 中国武术</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 句型仿写</div>
+    <div class="note-block">
+      Japan has created many cultural treasures, <strong>such as</strong> tea ceremony, bonsai, <strong>and</strong> anime.<br>
+      （日本创造了许多文化瑰宝，如茶道、盆栽和动漫。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 5 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">5</span>
+      <span class="w w-proper" data-tip="n. 北京">Beijing</span>
+      <span class="w w-cet4" data-tip="v. 是（be动词第三人称单数现在时）">is</span>
+      <span class="w w-cet4" data-tip="n. 首都">the capital</span>
+      <span class="w w-cet4" data-tip="prep. …的">of</span>
+      <span class="w w-proper" data-tip="n. 中国（拼音）">Zhongguo</span>,
+      <span class="w w-cet4" data-tip="conj. 或者说">or</span>
+      <span class="w w-proper" data-tip="n. 中国">China</span>,
+      <span class="w w-cet6" data-tip="pron. 先行词（指代China）">which</span>
+      <span class="w w-cet4" data-tip="v. 向…开放（第三人称单数）">opens to</span>
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-cet6" data-tip="v. 拥抱；接纳（第三人称单数）">embraces</span>
+      <span class="w w-cet4" data-tip="det. 定冠词">the</span>
+      <span class="w w-basic" data-tip="n. 世界">world</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>北京是中国的首都，中国向世界开放并拥抱世界。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主系表 + 非限制性定语从句<br>
+      <span class="label">主句</span> Beijing is the capital of Zhongguo, or China<br>
+      <span class="label">从句</span> , <strong>which</strong> opens to and embraces the world.（which 指代 China）<br>
+      <span class="label">时态</span> <strong>一般现在时</strong>（客观事实）<br>
+      <span class="label">定语从句</span> 非限制性（有逗号隔开），which 不可省略，不可用 that 替代
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">capital</span> <span class="vocab-pos">/ˈkæpɪtl/ n.</span>
+          <div class="vocab-mean">首都；资本。capital city = 首都。比较：capitol（美国国会大厦）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">embrace</span> <span class="vocab-pos">/ɪmˈbreɪs/ v.</span>
+          <div class="vocab-mean">①拥抱；②接纳，欢迎（比喻）。China embraces the world = 中国拥抱世界</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">open to</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">向…开放。open adj. 开放的；to prep. 向。比较：be open with（对…坦诚）</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 非限制性定语从句</div>
+    <div class="note-block">
+      <strong>结构：</strong>主句<strong>, which</strong> + 谓语…<br><br>
+      Beijing is the capital of China, <strong>which</strong> has a history of 3,000 years.<br>
+      （北京是中国的首都，它有3000年历史。which 指代 Beijing）<br><br>
+      <u>注意</u>：which 指代前句中的 Chin/a，不是 Beijing（从意思判断）。
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 6 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">6</span>
+      <span class="w w-proper" data-tip="n. 北京奥运会">The Beijing Olympic Games 2008</span>,
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-proper" data-tip="n. 上海世博会">the Shanghai World Expo 2010</span>
+      <span class="w w-cet6" data-tip="v. 被举办（被动过去式）">were held</span>
+      <span class="w w-cet4" data-tip="adv. 这里">here</span>
+      <span class="w w-cet4" data-tip="prep. 在">in</span>
+      <span class="w w-proper" data-tip="n. 中国（拼音）">Zhongguo</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>2008年北京奥运会和2010年上海世博会在中国举行。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主语（并列）+ 被动谓语：A and B <strong>were held</strong>...<br>
+      <span class="label">时态</span> <strong>一般过去时被动</strong>：were held（hold的过去分词held）<br>
+      <span class="label">主语</span> 两个并列事件（复数），故助动词用 <strong>were</strong><br>
+      <span class="label">地点状语</span> here in Zhongguo = 在中国（here 加强语气）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">Olympic Games</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">奥林匹克运动会（复数，谓语用复数）。the 2008 Beijing Olympics = 2008北京奥运</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">World Expo</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">世界博览会（Expo = Exposition 博览会）。2010 Shanghai World Expo = 2010上海世博会</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet6">CET-6</span>
+        <div><span class="vocab-word">hold</span> <span class="vocab-pos">/həʊld/ v.</span>
+          <div class="vocab-mean">举行，举办。<u>过去式/过去分词</u>：held。被动：be held。The meeting <strong>was held</strong> yesterday.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 被动语态复习</div>
+    <div class="note-block">
+      <strong>结构：</strong>be + 过去分词（done）<br><br>
+      一般现在时：is/are + done<br>
+      一般过去时：was/were + done ← <strong>本句</strong><br>
+      现在完成时：have/has + been done<br>
+      一般将来时：will be + done
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 7 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">7</span>
+      <span class="w w-proper" data-tip="n. 京剧">Peking Opera</span>
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-proper" data-tip="n. 西方歌剧">Western Opera</span>
+      <span class="w w-cet4" data-tip="v. 被演出（被动现在时）">are performed</span>
+      <span class="w w-cet4" data-tip="prep. 在…上">on</span>
+      <span class="w w-cet4" data-tip="det. 相同的">the same</span>
+      <span class="w w-cet4" data-tip="n. 舞台">stage</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>京剧和西方歌剧在同一舞台上演出。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主语（并列）+ 被动谓语 + 地点状语<br>
+      <span class="label">时态</span> <strong>一般现在时被动</strong>：are performed（常态性文化现象）<br>
+      <span class="label">主语</span> Peking Opera and Western Opera（两者，复数）→ are<br>
+      <span class="label">地点介词</span> <strong>on</strong> the stage（在舞台上，用 on）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-proper">专有</span>
+        <div><span class="vocab-word">Peking Opera</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">京剧（Peking = 北京旧式拼音，现国际通用）。比较：Beijing Opera（新式拼写）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">perform</span> <span class="vocab-pos">/pəˈfɔːm/ v.</span>
+          <div class="vocab-mean">演出，表演；执行。performance n. 演出；表现。performer n. 表演者</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">stage</span> <span class="vocab-pos">/steɪdʒ/ n.</span>
+          <div class="vocab-mean">舞台；阶段。on stage = 在舞台上（演出中）。比较：on the screen（在屏幕上）</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">Western</span> <span class="vocab-pos">/ˈwestən/ adj.</span>
+          <div class="vocab-mean">西方的。Western countries = 西方国家。比较：eastern（东方的）</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 文化交融表达</div>
+    <div class="note-block">
+      A and B are performed on the same stage.<br>
+      → 展现中西文化<strong>交融</strong>（fusion / integration）的经典句式。<br><br>
+      类似表达：A and B coexist / blend together / go hand in hand.
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 8 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">8</span>
+      <span class="w w-cet4" data-tip="n. 文化（复数）">Cultures</span>
+      <span class="w w-cet4" data-tip="prep. …的">of</span>
+      <span class="w w-cet4" data-tip="det. 全部的">the whole</span>
+      <span class="w w-basic" data-tip="n. 世界">world</span>
+      <span class="w w-cet4" data-tip="v. 展现（第三人称复数）">show</span>
+      <span class="w w-ielts" data-tip="adj. 绚烂的，杰出的">brilliant</span>
+      <span class="w w-ielts" data-tip="n. 活力，生命力">vitality</span>
+      <span class="w w-cet4" data-tip="prep. 在…">in</span>
+      <span class="w w-cet6" data-tip="det. 这个">this</span>
+      <span class="w w-cet6" data-tip="adj. 古老的">ancient</span>
+      <span class="w w-cet4" data-tip="n. 国家">country</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>世界各国的文化在这个古老的国家焕发出绚烂的活力。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主谓宾 + 地点状语：Cultures (S) + show (V) + vitality (O)...<br>
+      <span class="label">时态</span> <strong>一般现在时</strong>（常态现象，表"持续展现"）<br>
+      <span class="label">主语</span> Cultures of the whole world（复数）→ 谓语用原形 show<br>
+      <span class="label">定语</span> of the whole world（后置定语，修饰 Cultures）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">brilliant</span> <span class="vocab-pos">/ˈbrɪliənt/ adj.</span>
+          <div class="vocab-mean">①灿烂的，耀眼的；②杰出的，很棒的。a brilliant idea = 绝妙的主意</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">vitality</span> <span class="vocab-pos">/vaɪˈtæləti/ n.</span>
+          <div class="vocab-mean">活力，生命力。vital adj. 至关重要的；充满活力的。show vitality = 展现活力</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 句型仿写</div>
+    <div class="note-block">
+      Different ideas <strong>show brilliant vitality</strong> in this creative community.<br>
+      （不同的想法在这个创意社区中焕发出绚烂的活力。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 9 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">9</span>
+      <span class="w w-basic" data-tip="det. 这个">This</span>
+      <span class="w w-cet4" data-tip="v. 是（be动词第三人称单数现在时）">is</span>
+      <span class="w w-proper" data-tip="n. 中国（拼音）">Zhongguo</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>这就是中国。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主系表结构（SVC）：This (S) + is (V) + Zhongguo (C)<br>
+      <span class="label">时态</span> <strong>一般现在时</strong><br>
+      <span class="label">功能</span> 起到<strong>强调和过渡</strong>作用，独立成句，引出结尾抒情段落<br>
+      <span class="label">修辞</span> 简洁有力，类似 "This is China!" 的强调句式
+    </div>
+    <div class="section-title">💡 写作技巧</div>
+    <div class="note-block">
+      在长篇描写中，插入一个<strong>单句段落</strong>（one-sentence paragraph），可以起到：
+      <ul style="margin:6px 0 0 16px;">
+        <li>强调重点（emphasis）</li>
+        <li>分隔段落（transition）</li>
+        <li>增强节奏感（rhythm）</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 10 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">10</span>
+      <span class="w w-basic" data-tip="v. 希望（省略了I）">(I) Hope</span>
+      <span class="w w-cet4" data-tip="pron. 你">you</span>
+      <span class="w w-cet4" data-tip="modal verb 能">can</span>
+      <span class="w w-cet4" data-tip="v. 理解">understand</span>
+      <span class="w w-cet6" data-tip="pron. 她（拟人化指中国）">her</span>,
+      <span class="w w-ielts" data-tip="v. 欣赏；感激">appreciate</span>
+      <span class="w w-cet6" data-tip="pron. 她">her</span>
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-cet4" data-tip="v. 爱">love</span>
+      <span class="w w-cet6" data-tip="pron. 她">her</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>希望你能了解她、欣赏她、爱上她。</div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> (I) hope (that) + 宾语从句<br>
+      <span class="label">省略</span> 主语 I 省略（口语/书面简练表达）；that 省略（在 hope 后常省略）<br>
+      <span class="label">从句</span> you can understand..., appreciate..., and love...（三个并列动词）<br>
+      <span class="label">拟人</span> her 指代 China（国家拟人化，用 she/her 赋予温情）<br>
+      <span class="label">递进</span> understand → appreciate → love（认知递进：了解→欣赏→热爱）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">understand</span> <span class="vocab-pos">/ˌʌndəˈstænd/ v.</span>
+          <div class="vocab-mean">理解，了解。过去式/分词：understood。understanding n. 理解力</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-ielts">IELTS</span>
+        <div><span class="vocab-word">appreciate</span> <span class="vocab-pos">/əˈpriːʃieɪt/ v.</span>
+          <div class="vocab-mean">①欣赏；②感激；③认识到…的价值。<u>比 understand 更深层的认知</u>。appreciation n.</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 排比递进修辞</div>
+    <div class="note-block">
+      <strong>Understand → Appreciate → Love</strong><br>
+      三个动词构成<strong>情感递进</strong>（emotional progression），是英文演讲/散文中常见的修辞手法。<br><br>
+      类似结构：know → understand → master（认知→理解→掌握）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- SENTENCE 11 -->
+<!-- #################################################################### -->
+<div class="sentence-card">
+  <div class="col-left">
+    <p>
+      <span class="sent-num">11</span>
+      <span class="w w-cet4" data-tip="det. 所有的">All</span>
+      <span class="w w-cet4" data-tip="det. 特指中国人">the Chinese</span>
+      <span class="w w-cet4" data-tip="n. 人民（复数）">people</span>,
+      <span class="w w-basic" data-tip="adj. 黑眼睛的（小写）">Black-eyed</span>
+      <span class="w w-cet4" data-tip="conj. 和">and</span>
+      <span class="w w-basic" data-tip="adj. 黄皮肤的（小写）">yellow-skinned</span>
+      <span class="w w-cet4" data-tip="v. 欢迎">welcome</span>
+      <span class="w w-cet4" data-tip="pron. 你">you</span>
+      <span class="w w-cet4" data-tip="prep. 用">with</span>
+      <span class="w w-cet4" data-tip="adj. 张开的">open</span>
+      <span class="w w-cet4" data-tip="n. 手臂（复数）">arms</span>.
+    </p>
+    <div class="translation">📌 <strong>译文：</strong>所有黑眼睛、黄皮肤的中国人张开双臂欢迎你。</div>
+    <div class="note-block" style="margin-top:10px">
+      <span class="icon">⚠️</span><strong>语法问题：</strong>Black-eyed and yellow-skinned 是形容词短语作插入语，应用逗号隔开，原句标点不够规范。<br><br>
+      <span class="icon">⚠️</span><strong>文化敏感提示：</strong>"yellow-skinned" 在现代跨文化交流中较为敏感，建议使用更中性的表达，如 <em>people of Chinese descent</em> 或直接省略外貌描述。
+    </div>
+  </div>
+  <div class="col-right">
+    <div class="section-title">🔍 语法拆解</div>
+    <div class="grammar-block">
+      <span class="label">句型</span> 主谓宾 + 方式状语：All the Chinese people (S) + welcome (V) + you (O)...<br>
+      <span class="label">插入语</span> , Black-eyed and yellow-skinned, （形容词短语作补充说明，需逗号隔开）<br>
+      <span class="label">方式状语</span> with open arms（固定短语：热情地，张开双臂）<br>
+      <span class="label">时态</span> <strong>一般现在时</strong>（表常态/普遍事实）
+    </div>
+    <div class="section-title">📚 生词详解</div>
+    <div class="vocab-block">
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">welcome</span> <span class="vocab-pos">/ˈwelkəm/ v.</span>
+          <div class="vocab-mean">欢迎。You are welcome = 不客气（回应感谢）。welcome sb. with open arms = 热情欢迎</div>
+        </div>
+      </div>
+      <div class="vocab-item">
+        <span class="vocab-level lv-cet4">CET-4</span>
+        <div><span class="vocab-word">with open arms</span> <span class="vocab-pos">phrase</span>
+          <div class="vocab-mean">张开双臂，热情地（比喻）。比较：give sb. a warm welcome = 给予热情欢迎</div>
+        </div>
+      </div>
+    </div>
+    <div class="section-title">💡 插入语（Appositive / Parenthetical）</div>
+    <div class="note-block">
+      <strong>正确标点：</strong><br>
+      All the Chinese people<strong>,</strong> black-eyed and yellow-skinned<strong>,</strong> welcome you...<br><br>
+      插入语前后各加一个逗号，表示"补充说明"，去掉后句子仍完整。<br><br>
+      <u>比较</u>：My brother<strong>, a doctor,</strong> lives in Beijing.（我哥哥是个医生，住在北京。）
+    </div>
+  </div>
+</div>
+
+<!-- #################################################################### -->
+<!-- 总结区域 -->
+<!-- #################################################################### -->
+<div style="background:#fff;border-radius:12px;padding:28px 32px;margin-top:28px;box-shadow:0 2px 12px rgba(0,0,0,0.06);border:1px solid #e8edf2;">
+  <h2 style="color:#2e86c1;font-size:20px;margin-bottom:16px;">📝 全文语法总结</h2>
+
+  <table style="width:100%;border-collapse:collapse;font-size:14px;">
+    <thead>
+      <tr style="background:#2e86c1;color:#fff;">
+        <th style="padding:10px 14px;text-align:left;border-radius:6px 0 0 0;">时态/语态</th>
+        <th style="padding:10px 14px;text-align:left;">出现句子</th>
+        <th style="padding:10px 14px;text-align:left;border-radius:0 6px 0 0;">用法说明</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:9px 14px;font-weight:700;color:#2e86c1;">一般现在时（主动）</td>
+        <td style="padding:9px 14px;">句1, 5, 7, 8, 11</td>
+        <td style="padding:9px 14px;">描述客观事实、常态现象</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;background:#fafbff;">
+        <td style="padding:9px 14px;font-weight:700;color:#2e86c1;">一般过去时（主动）</td>
+        <td style="padding:9px 14px;">句4</td>
+        <td style="padding:9px 14px;">描述历史上已发生的动作</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;">
+        <td style="padding:9px 14px;font-weight:700;color:#e67e22;">一般过去时（被动）</td>
+        <td style="padding:9px 14px;">句2, 3, 6</td>
+        <td style="padding:9px 14px;">描述历史上被动发生的动作（was/were + done）</td>
+      </tr>
+      <tr style="border-bottom:1px solid #eee;background:#fafbff;">
+        <td style="padding:9px 14px;font-weight:700;color:#e67e22;">一般现在时（被动）</td>
+        <td style="padding:9px 14px;">句7</td>
+        <td style="padding:9px 14px;">描述常态性的被动现象（are + done）</td>
+      </tr>
+      <tr>
+        <td style="padding:9px 14px;font-weight:700;color:#9b59b6;">非限制性定语从句</td>
+        <td style="padding:9px 14px;">句5</td>
+        <td style="padding:9px 14px;">which 指代 China，补充说明</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h3 style="color:#2e86c1;font-size:16px;margin:24px 0 12px;">📊 生词分级统计</h3>
+  <div style="display:flex;gap:16px;flex-wrap:wrap;">
+    <div style="flex:1;min-width:140px;background:#ebf5fb;border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-size:28px;font-weight:700;color:#3498db;">8</div>
+      <div style="font-size:13px;color:#555;margin-top:4px;">CET-4 四级词</div>
+    </div>
+    <div style="flex:1;min-width:140px;background:#eafaf1;border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-size:28px;font-weight:700;color:#27ae60;">6</div>
+      <div style="font-size:13px;color:#555;margin-top:4px;">CET-6 六级词</div>
+    </div>
+    <div style="flex:1;min-width:140px;background:#fef9e7;border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-size:28px;font-weight:700;color:#e67e22;">8</div>
+      <div style="font-size:13px;color:#555;margin-top:4px;">IELTS 高级词</div>
+    </div>
+    <div style="flex:1;min-width:140px;background:#f4ecf7;border-radius:8px;padding:14px;text-align:center;">
+      <div style="font-size:28px;font-weight:700;color:#9b59b6;">7</div>
+      <div style="font-size:13px;color:#555;margin-top:4px;">专有名词/文化词</div>
+    </div>
+  </div>
+</div>
+
+</div><!-- end .container -->
+
+</body>
+</html>
