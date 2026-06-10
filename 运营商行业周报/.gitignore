@@ -2,3 +2,30 @@
 *.log
 node_modules/
 .env
+
+# 本地脚本和配置文件（不推送到GitHub）
+DEPLOY.md
+README.md
+auto_screenshot.py
+crop_image.py
+email-template.html
+package-lock.json
+package.json
+publish.py
+send_email.py
+
+# PPT文件
+ppt-*.html
+
+# 校验输出文件
+validation-*.csv
+validation-*.html
+validation-*.md
+validation_output/
+
+# Playwright CLI
+.playwright-cli/
+
+# Markdown文件
+运营商行业周报.md
+调研报告.md
